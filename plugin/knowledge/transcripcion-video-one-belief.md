@@ -81,7 +81,7 @@
 
 ---
 
-## INTEGRACIÓN CON LA SKILL `crea-ofertas-1pct`
+## INTEGRACIÓN CON LA SKILL `zenith-crea-ofertas`
 
 Esta transcripción **valida y refuerza** el knowledge `evaldo-albuquerque-one-belief.md`:
 - Joseph atribuye a Todd Brown la creación del concepto

@@ -189,6 +189,8 @@ Agrupo todas las citas en las 7 categorías y extraigo:
 
 ## OUTPUT
 
+**🎨 HTML output:** INTEGRA en `templates/13-research-mercado.html` (sección/columna específica). Otro agente del bloque genera el HTML maestro · este aporta su pieza JSON al ensamblaje.
+
 **⚡ TAMAÑO MÁXIMO DE OUTPUT:** 30-50 citas textuales + 7 categorías · NO me extiendo más.
 
 ### `reddit-research.json`

@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # ════════════════════════════════════════════════════════════════════════════
-# crea-ofertas-1pct · INSTALADOR AUTOMÁTICO
+# zenith-crea-ofertas · INSTALADOR AUTOMÁTICO
 # ════════════════════════════════════════════════════════════════════════════
 # Instala TODO lo necesario para que la skill funcione al 100%:
 # - Python 3.10+ + pip
@@ -180,7 +180,7 @@ title "7/7 · Instalando plugin en ~/.claude/skills/"
 
 CLAUDE_DIR="$HOME/.claude"
 SKILLS_DIR="$CLAUDE_DIR/skills"
-PLUGIN_NAME="crea-ofertas-1pct"
+PLUGIN_NAME="zenith-crea-ofertas"
 TARGET="$SKILLS_DIR/$PLUGIN_NAME"
 
 mkdir -p "$SKILLS_DIR"
@@ -214,7 +214,7 @@ cat <<'DONE'
    ║                                                                        ║
    ║                ✅  INSTALACIÓN COMPLETADA  ✅                           ║
    ║                                                                        ║
-   ║   La skill `crea-ofertas-1pct` está LISTA para usarse en Claude Code.  ║
+   ║   La skill `zenith-crea-ofertas` está LISTA para usarse en Claude Code.  ║
    ║                                                                        ║
    ║   Próximo paso:                                                        ║
    ║                                                                        ║

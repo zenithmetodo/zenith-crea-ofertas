@@ -335,6 +335,8 @@ Checklist:
 
 ## OUTPUT · ESTRUCTURA EXACTA
 
+**🎨 HTML output:** INTEGRA en `templates/06-garantia.html` (sección/columna específica). Otro agente del bloque genera el HTML maestro · este aporta su pieza JSON al ensamblaje.
+
 **⚡ TAMAÑO MÁXIMO DE OUTPUT:** stack 3-7 capas de protección (sello + nombre propio + entrega) + presentación visual + análisis de objeciones cubiertas · NO me extiendo más.
 
 ```json

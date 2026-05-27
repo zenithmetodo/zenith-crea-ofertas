@@ -284,6 +284,8 @@ Variantes para testear: cambio el power word principal, cambio el orden, cambio 
 
 ## OUTPUT · ESTRUCTURA EXACTA
 
+**🎨 HTML output:** INTEGRA en `templates/10-oferta-completa.html` (sección/columna específica). Otro agente del bloque genera el HTML maestro · este aporta su pieza JSON al ensamblaje.
+
 **⚡ TAMAÑO MÁXIMO DE OUTPUT:** 10 candidatos (1 línea cada uno, 8-15 palabras) en 8 categorías + UN ganador justificado + 3 variaciones A/B · NO me extiendo más.
 
 ```json

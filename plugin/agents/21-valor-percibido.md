@@ -478,6 +478,8 @@ Orden:
 
 ## OUTPUT
 
+**🎨 HTML output:** `templates/09-valor-percibido.html` · este agente genera el HTML completo print-to-PDF + Drive-friendly delegando al `25-output-architect`.
+
 **⚡ TAMAÑO MÁXIMO DE OUTPUT:** stack de valor (7-12 ítems) + 4 palancas Bencivenga aplicadas + cierre listo para ensamblar (máx 900 palabras) · NO me extiendo más.
 
 ### Formato JSON entregable

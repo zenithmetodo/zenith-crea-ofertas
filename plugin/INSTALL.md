@@ -1,4 +1,4 @@
-# 🚀 INSTALACIÓN · crea-ofertas-1pct
+# 🚀 INSTALACIÓN · zenith-crea-ofertas
 
 Sistema de instalación AUTOMÁTICA. Un comando y todo queda listo.
 
@@ -9,7 +9,7 @@ Sistema de instalación AUTOMÁTICA. Un comando y todo queda listo.
 ### macOS / Linux
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/TU_USUARIO/crea-ofertas-1pct/main/install.sh | bash
+curl -fsSL https://raw.githubusercontent.com/TU_USUARIO/zenith-crea-ofertas/main/install.sh | bash
 ```
 
 O si ya tienes el plugin descargado:
@@ -22,7 +22,7 @@ bash install.sh
 ### Windows (PowerShell · ejecutar como Administrador)
 
 ```powershell
-iwr -useb https://raw.githubusercontent.com/TU_USUARIO/crea-ofertas-1pct/main/install.ps1 | iex
+iwr -useb https://raw.githubusercontent.com/TU_USUARIO/zenith-crea-ofertas/main/install.ps1 | iex
 ```
 
 O si ya tienes el plugin descargado:
@@ -44,7 +44,7 @@ cd "C:\ruta\al\plugin"
 | **openai-whisper** | Transcripción de tus vídeos MP4 a knowledge files | ~500 MB (incluye modelo) |
 | **jq** | Procesamiento JSON | ~2 MB |
 | **requests + BeautifulSoup** | Para que los agentes consulten web cuando necesitan | ~5 MB |
-| **El plugin** | Enlazado en `~/.claude/skills/crea-ofertas-1pct/` | ~1.5 MB |
+| **El plugin** | Enlazado en `~/.claude/skills/zenith-crea-ofertas/` | ~1.5 MB |
 
 **Total descarga aproximada: ~700 MB** (primera vez · Whisper es lo más pesado).
 
@@ -88,7 +88,7 @@ jq --version
 # Debe mostrar: jq-1.6 (o superior)
 
 # Verifica plugin enlazado
-ls -la ~/.claude/skills/crea-ofertas-1pct
+ls -la ~/.claude/skills/zenith-crea-ofertas
 # Debe mostrar el enlace simbólico al plugin
 ```
 
@@ -104,7 +104,7 @@ Abre **Claude Code** y escribe:
 /crea-oferta-1pct
 ```
 
-El agente padre `crea-ofertas-1pct` arrancará el discovery (5 preguntas) y en ~60-90 min tendrás la oferta completa.
+El agente padre `zenith-crea-ofertas` arrancará el discovery (5 preguntas) y en ~60-90 min tendrás la oferta completa.
 
 ---
 
@@ -124,7 +124,7 @@ pip3 install --upgrade openai-whisper requests beautifulsoup4 lxml
 
 # 4. Enlazar plugin
 mkdir -p ~/.claude/skills
-ln -s "$(pwd)" ~/.claude/skills/crea-ofertas-1pct
+ln -s "$(pwd)" ~/.claude/skills/zenith-crea-ofertas
 ```
 
 ### Linux (Ubuntu/Debian)
@@ -139,7 +139,7 @@ pip3 install --user --upgrade openai-whisper requests beautifulsoup4 lxml
 
 # 3. Enlazar plugin
 mkdir -p ~/.claude/skills
-ln -s "$(pwd)" ~/.claude/skills/crea-ofertas-1pct
+ln -s "$(pwd)" ~/.claude/skills/zenith-crea-ofertas
 ```
 
 ### Linux (Fedora/RHEL)
@@ -148,7 +148,7 @@ ln -s "$(pwd)" ~/.claude/skills/crea-ofertas-1pct
 sudo dnf install -y python3 python3-pip ffmpeg jq
 pip3 install --user --upgrade openai-whisper requests beautifulsoup4 lxml
 mkdir -p ~/.claude/skills
-ln -s "$(pwd)" ~/.claude/skills/crea-ofertas-1pct
+ln -s "$(pwd)" ~/.claude/skills/zenith-crea-ofertas
 ```
 
 ### Windows (PowerShell · admin)
@@ -166,7 +166,7 @@ python -m pip install --upgrade openai-whisper requests beautifulsoup4 lxml
 
 # 4. Enlazar plugin
 New-Item -ItemType Directory -Force -Path "$env:USERPROFILE\.claude\skills"
-New-Item -ItemType SymbolicLink -Path "$env:USERPROFILE\.claude\skills\crea-ofertas-1pct" -Target (Get-Location)
+New-Item -ItemType SymbolicLink -Path "$env:USERPROFILE\.claude\skills\zenith-crea-ofertas" -Target (Get-Location)
 ```
 
 ---
@@ -209,9 +209,9 @@ sudo chown -R $(whoami) ~/.claude
 
 ### Plugin no aparece en Claude Code
 
-1. Verifica el enlace: `ls -la ~/.claude/skills/crea-ofertas-1pct`
+1. Verifica el enlace: `ls -la ~/.claude/skills/zenith-crea-ofertas`
 2. Reinicia Claude Code
-3. Verifica que el `SKILL.md` existe: `cat ~/.claude/skills/crea-ofertas-1pct/SKILL.md | head`
+3. Verifica que el `SKILL.md` existe: `cat ~/.claude/skills/zenith-crea-ofertas/SKILL.md | head`
 
 ---
 
@@ -219,7 +219,7 @@ sudo chown -R $(whoami) ~/.claude
 
 ```bash
 # Eliminar plugin enlazado
-rm ~/.claude/skills/crea-ofertas-1pct
+rm ~/.claude/skills/zenith-crea-ofertas
 
 # (Opcional) eliminar Whisper si no lo usas para otra cosa
 pip3 uninstall openai-whisper

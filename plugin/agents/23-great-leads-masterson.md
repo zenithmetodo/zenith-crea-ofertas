@@ -388,6 +388,8 @@ Por cada lead, explico:
 
 ## OUTPUT
 
+**🎨 HTML output:** INTEGRA en `templates/10-oferta-completa.html` (sección/columna específica). Otro agente del bloque genera el HTML maestro · este aporta su pieza JSON al ensamblaje.
+
 **⚡ TAMAÑO MÁXIMO DE OUTPUT:** elección de lead + texto real (primeras 100 palabras) × 4 piezas (anuncio, landing, oferta, email) + justificación · NO me extiendo más.
 
 ### Formato JSON entregable

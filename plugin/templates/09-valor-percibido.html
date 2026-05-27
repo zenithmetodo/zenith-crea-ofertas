@@ -9,8 +9,15 @@
 <html lang="es">
 <head>
 <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="color-scheme" content="dark">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Valor Percibido · {{NOMBRE_PRODUCTO}}</title>
+<!-- ═══════════════════════════════════════════════════════════════ -->
+<!-- ZENITH HTML · PRINT-TO-PDF + DRIVE-FRIENDLY                       -->
+<!-- Cmd+P → Save as PDF · estética preservada al 100%                 -->
+<!-- Drive viewer compatible · gradientes y dark theme preservados     -->
+<!-- ═══════════════════════════════════════════════════════════════ -->
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' stop-color='%2300E5CF'/%3E%3Cstop offset='100%25' stop-color='%23B845FF'/%3E%3C/linearGradient%3E%3C/defs%3E%3Cpath d='M32 4 L8 56 L56 56 Z' fill='url(%23g)' stroke='%2300E5CF' stroke-width='2' stroke-linejoin='round'/%3E%3Cpath d='M32 4 L20 32 L26 32 L18 56 L8 56 Z' fill='%23ffffff' opacity='0.15'/%3E%3Cpath d='M32 4 L18 28 L24 28 L32 4 Z' fill='%23ffffff' opacity='0.25'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -433,19 +440,113 @@
     letter-spacing: 1.5px;
   }
 
+  /* ═══════════════════════════════════════════════════════════════════════ */
+  /* PRINT-TO-PDF + GOOGLE DRIVE · ESTÉTICA ZENITH PRESERVADA AL 100%        */
+  /* ═══════════════════════════════════════════════════════════════════════ */
   @media print {
-    body {
-      background: var(--dark) !important;
-      color: var(--text) !important;
-      print-color-adjust: exact !important;
+    /* Forzar preservación de colores en TODOS los elementos */
+    *, *::before, *::after {
       -webkit-print-color-adjust: exact !important;
+      print-color-adjust: exact !important;
       color-adjust: exact !important;
     }
-    section { padding: 40px 0; page-break-inside: avoid; }
-    .card, .formula-box, .checklist, .core-quote, .stack-section, .warranty-block, .bonus-card, .bullet-card, .testimonial-card, .faq-item, .ps-block, .story-block, .core-section, .rule-block, .variant-card, .ingredient-card, .pipeline-step, .gauge-wrap, .data-row, .belief-card, .mech-step, .feature-row, .promise-block, .module-card, .lesson-row, .bonus-row, .value-row, .comp-card, .version-card, .recomendada, .block-card, .audit-collapsible, .fix-card, .veredicto-final, .global-score { page-break-inside: avoid; }
-    header.hero { min-height: auto; padding: 40px 0; }
-    /* Preservar gradientes y backgrounds en PDF */
-    * { print-color-adjust: exact !important; -webkit-print-color-adjust: exact !important; }
+
+    /* Body: mantener background dark Zenith */
+    html, body {
+      background: #050510 !important;
+      background-color: #050510 !important;
+      color: #ffffff !important;
+      margin: 0 !important;
+      padding: 0 !important;
+    }
+
+    /* Backgrounds radiales y FX preservados */
+    .bg-fx, .bg-fx::before, .bg-grid, .particles {
+      display: block !important;
+      visibility: visible !important;
+      opacity: 1 !important;
+    }
+
+    /* Secciones: evitar cortes feos */
+    section { padding: 40px 0 !important; page-break-inside: avoid; }
+    header.hero, .hero { min-height: auto !important; padding: 40px 0 !important; page-break-after: avoid; }
+
+    /* Cards / formulas / quotes / checklists / stacks: NO cortar a mitad */
+    .card, .formula-box, .checklist, .core-quote, .zenith-quote,
+    .stack-section, .warranty-block, .bonus-card, .bullet-card,
+    .testimonial-card, .faq-item, .ps-block, .story-block,
+    .core-section, .rule-block, .variant-card, .ingredient-card,
+    .ang-card, .comp-card, .ad-card, .gap-card, .diff-card,
+    .dm-card, .sub-card, .yt-vid-card, .gold-card, .empathy-card,
+    .desire-main, .enemy-card, .r-card, .ing-card, .test-deal,
+    .recommendation, .cta-strip, .cta-final, .mechanism-section,
+    .ingredients-section, .product-meta, .hero-promise-meta,
+    .meta-block, .promise-meta-block, .num-pill, .num-circ,
+    .stack-row, .stack-totals, .stack-totals-row,
+    .testimonials-grid, .bullets-grid, .bonus-grid, .variants-grid,
+    .ingredients-grid, .restate-grid, .card-grid-2, .card-grid-3, .card-grid-4 {
+      page-break-inside: avoid !important;
+      break-inside: avoid !important;
+    }
+
+    /* HUD sticky: deshabilitarlo en print (ocupa espacio) */
+    .zenith-hud { position: static !important; padding: 16px 32px !important; }
+
+    /* Gradientes inline (en backgrounds): forzar preservación */
+    [style*="gradient"], [style*="linear-gradient"], [style*="radial-gradient"] {
+      -webkit-print-color-adjust: exact !important;
+      print-color-adjust: exact !important;
+    }
+
+    /* SVGs: preservar colores y gradientes */
+    svg, svg * {
+      -webkit-print-color-adjust: exact !important;
+      print-color-adjust: exact !important;
+    }
+
+    /* Footer Zenith: preservar visualmente */
+    .zenith-footer, footer {
+      page-break-inside: avoid !important;
+      background: #050510 !important;
+    }
+    .zenith-footer .footer-brand, footer .footer-brand,
+    .zenith-footer .logo, footer .logo {
+      -webkit-print-color-adjust: exact !important;
+      print-color-adjust: exact !important;
+    }
+
+    /* Quitar animaciones (no se aprecian en PDF y rompen) */
+    *, *::before, *::after {
+      animation-duration: 0s !important;
+      animation-delay: 0s !important;
+      transition: none !important;
+    }
+
+    /* Page setup: A4 vertical estándar, márgenes mínimos */
+    @page {
+      size: A4 portrait;
+      margin: 8mm;
+    }
+
+    /* Tipografías: forzar Fraunces + Inter aunque Google Fonts no cargue */
+    body, p, div, span, li, td, th {
+      font-family: 'Inter', -apple-system, 'Helvetica Neue', sans-serif !important;
+    }
+    h1, h2, h3, h4, .display, .hero h1, .section-title,
+    .formula-box .formula, .zenith-quote, .footer-brand .name,
+    header.hero h1 {
+      font-family: 'Fraunces', 'Georgia', 'Times New Roman', serif !important;
+    }
+    .mono, code, pre, .label, .section-tag, .hero-tag {
+      font-family: 'JetBrains Mono', 'Courier New', monospace !important;
+    }
+  }
+
+  /* ═══════════════════════════════════════════════════════════════════════ */
+  /* DRIVE / VIEWER COMPATIBLE                                                 */
+  /* ═══════════════════════════════════════════════════════════════════════ */
+  @media screen and (max-width: 1px) {
+    /* No-op pero asegura que algunos viewers no rompan */
   }
   @media (max-width: 768px) {
     .container { padding: 0 20px; }

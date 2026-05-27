@@ -1,4 +1,4 @@
-# 🏗️ ARCHITECTURE · crea-ofertas-1pct
+# 🏗️ ARCHITECTURE · zenith-crea-ofertas
 
 Diseño técnico y filosofía de la skill.
 
@@ -15,7 +15,7 @@ Diseño técnico y filosofía de la skill.
 ```
 ┌──────────────────────────────────────────────────────────────────────────┐
 │                            SKILL.md (PADRE)                              │
-│                        crea-ofertas-1pct · ORQUESTADOR                   │
+│                        zenith-crea-ofertas · ORQUESTADOR                   │
 └──────────────────┬───────────────────────────────────────────────────────┘
                    │
                    │ invoca según el flujo del pipeline

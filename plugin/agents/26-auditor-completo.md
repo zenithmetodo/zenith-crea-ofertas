@@ -726,6 +726,8 @@ Cada ítem ✕ o ⚠ se convierte en una tarea:
 
 ## OUTPUT
 
+**🎨 HTML output:** `templates/11-auditoria.html` · este agente genera el HTML completo print-to-PDF + Drive-friendly delegando al `25-output-architect`.
+
 **⚡ TAMAÑO MÁXIMO DE OUTPUT:** 60 verificaciones priorizadas (rojo/ámbar/verde) + score global + roadmap fix · NO me extiendo en duplicar copy del proyecto.
 
 ### Formato JSON entregable

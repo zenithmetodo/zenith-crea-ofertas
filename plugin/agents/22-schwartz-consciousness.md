@@ -354,6 +354,8 @@ Output completo (ver abajo).
 
 ## OUTPUT
 
+**🎨 HTML output:** INTEGRA en `templates/11-auditoria.html` (sección/columna específica). Otro agente del bloque genera el HTML maestro · este aporta su pieza JSON al ensamblaje.
+
 **⚡ TAMAÑO MÁXIMO DE OUTPUT:** matriz auditoría pieza × nivel × stage con ✓/✕ + recomendaciones de ajuste · NO me extiendo más.
 
 ### Formato JSON entregable

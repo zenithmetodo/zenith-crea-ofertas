@@ -86,7 +86,7 @@ Esto lo SÉ sin abrir archivos externos. Es mi guía operativa durante el quick 
 
 - ❌ Hacer más de 5 preguntas críticas (eso lo hace `01-discovery-master`)
 - ❌ Lanzar el pipeline sin confirmación explícita del operador
-- ❌ Usar branding antiguo (`crea-ofertas-1pct`) en lugar de Zenith
+- ❌ Usar branding antiguo (`zenith-crea-ofertas`) en lugar de Zenith
 - ❌ Inventar datos cuando el operador no sabe responder
 - ❌ Saltar la pregunta de branding (si no la hago, el output sale genérico)
 
@@ -201,6 +201,8 @@ Después de las 5 respuestas, presento un resumen en formato tabla limpia:
 - Si dice **ajustar X** → Repito SOLO esa pregunta y vuelvo al resumen + confirmación.
 
 ## OUTPUT
+
+**🎨 HTML output:** `templates/00-brief.html` (versión Zenith) · este agente genera el HTML completo print-to-PDF + Drive-friendly delegando al `25-output-architect`.
 
 **⚡ TAMAÑO MÁXIMO DE OUTPUT:** 800 palabras / brief JSON estructurado · NO me extiendo más.
 
@@ -355,7 +357,7 @@ El HTML que genero usa la paleta Zenith pura:
 
 - ❌ Hacer las 10 preguntas del discovery-master (este es el rápido)
 - ❌ Lanzar el pipeline sin confirmación del operador
-- ❌ Usar `crea-ofertas-1pct` en los outputs (rebranded a Zenith)
+- ❌ Usar `zenith-crea-ofertas` en los outputs (rebranded a Zenith)
 - ❌ Inventar datos del avatar cuando el operador dice "no sé"
 - ❌ Olvidar la pregunta del branding (es la 5)
 - ❌ Saltarse el resumen visual antes de pedir confirmación

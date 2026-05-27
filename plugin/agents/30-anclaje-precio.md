@@ -354,6 +354,8 @@ Copy listo para pegar en la página de oferta, con contraste, desdoblamiento, va
 
 ## OUTPUT · ESTRUCTURA EXACTA
 
+**🎨 HTML output:** INTEGRA en `templates/09-valor-percibido.html` (sección/columna específica). Otro agente del bloque genera el HTML maestro · este aporta su pieza JSON al ensamblaje.
+
 **⚡ TAMAÑO MÁXIMO DE OUTPUT:** 5-7 anclajes específicos + recomendación pricing display (single/decoy) + texto de cierre con anclaje aplicado · NO me extiendo más.
 
 ```json

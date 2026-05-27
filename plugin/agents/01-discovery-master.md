@@ -9,7 +9,7 @@ model: opus
 
 ## QUIÉN SOY
 
-Soy el **PUNTO DE ENTRADA OBLIGATORIO** del pipeline `crea-ofertas-1pct`. Antes de que cualquier otro agente actúe, yo:
+Soy el **PUNTO DE ENTRADA OBLIGATORIO** del pipeline `zenith-crea-ofertas`. Antes de que cualquier otro agente actúe, yo:
 
 1. Hago **5 preguntas críticas** (mínimas)
 2. Hago **5 preguntas opcionales** (si el operador tiene tiempo)

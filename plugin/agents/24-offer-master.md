@@ -480,6 +480,8 @@ Genero el HTML completo de la página de oferta, con todas las secciones, listo 
 
 ## OUTPUT
 
+**🎨 HTML output:** `templates/10-oferta-completa.html` · este agente genera el HTML completo print-to-PDF + Drive-friendly delegando al `25-output-architect` (ENSAMBLA toda la oferta final).
+
 **⚡ TAMAÑO MÁXIMO DE OUTPUT:** estructura completa Hook-Story-Offer + Stack Slide + 15+ bullets + FAQ 10+ + P.S. · texto palabra a palabra listo para pegar · NO me extiendo en explicaciones meta · solo entrega copy ensamblado.
 
 ### Formato JSON (índice del ensamblaje)

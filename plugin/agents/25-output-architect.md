@@ -499,6 +499,8 @@ El HTML siempre tiene:
 
 ## OUTPUT
 
+**🎨 HTML output:** META · genera HTML para CUALQUIER agente que se lo pida usando los templates `templates/*.html`. NO produce un HTML específico propio.
+
 **⚡ TAMAÑO MÁXIMO DE OUTPUT:** HTML del template aplicado al JSON (NO improvisar contenido, NO añadir secciones que no estén en el template) · NO me extiendo más.
 
 ### Formato del HTML generado (ejemplo: discovery-master)

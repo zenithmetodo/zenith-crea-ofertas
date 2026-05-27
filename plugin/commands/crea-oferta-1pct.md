@@ -1,6 +1,6 @@
 ---
 name: crea-oferta-1pct
-description: Lanza el pipeline COMPLETO de la skill crea-ofertas-1pct (discovery + 12 etapas + 26 sub-agentes). Construye toda la oferta de cero, palabra por palabra, con HTML estético en cada carpeta. El comando estrella del plugin.
+description: Lanza el pipeline COMPLETO de la skill zenith-crea-ofertas (discovery + 12 etapas + 26 sub-agentes). Construye toda la oferta de cero, palabra por palabra, con HTML estético en cada carpeta. El comando estrella del plugin.
 argument-hint: "[opcional: idea del producto en 1 frase · ej: 'app glúteo en casa para mujeres 25-50']"
 ---
 
@@ -8,7 +8,7 @@ argument-hint: "[opcional: idea del producto en 1 frase · ej: 'app glúteo en c
 
 ## QUÉ HACE
 
-Ejecuta el **pipeline maestro completo** de la skill `crea-ofertas-1pct`. Es el comando que más usarás: arranca el discovery, decide qué sub-agentes lanzar y en qué orden, y entrega la oferta TOP 1% terminada — con sus 13 carpetas numeradas (00 → 12), su HTML estético dentro de cada una y un dashboard final con score, veredicto y roadmap de optimización.
+Ejecuta el **pipeline maestro completo** de la skill `zenith-crea-ofertas`. Es el comando que más usarás: arranca el discovery, decide qué sub-agentes lanzar y en qué orden, y entrega la oferta TOP 1% terminada — con sus 13 carpetas numeradas (00 → 12), su HTML estético dentro de cada una y un dashboard final con score, veredicto y roadmap de optimización.
 
 A diferencia de los comandos atómicos (`/one-belief`, `/mecanismo`…) que solo lanzan UN agente o un grupo pequeño, `/crea-oferta-1pct` **orquesta los 26 sub-agentes** en cascada, respetando dependencias entre etapas. Si te saltas este comando y vas pieza a pieza, te quedas sin la coherencia global que solo el orquestador garantiza.
 

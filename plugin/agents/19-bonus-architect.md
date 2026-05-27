@@ -328,6 +328,8 @@ Antes de entregar:
 
 ## OUTPUT
 
+**🎨 HTML output:** INTEGRA en `templates/08-bonus.html` (sección/columna específica). Otro agente del bloque genera el HTML maestro · este aporta su pieza JSON al ensamblaje.
+
 **⚡ TAMAÑO MÁXIMO DE OUTPUT:** 14 bonus distribuidos en 6 categorías (1-2 infalibles + 3 PRE + 3 POST + 3 aceleradores + 3 rompe-objeciones + 2 últimas horas) · NO me extiendo más.
 
 ### Formato JSON entregable

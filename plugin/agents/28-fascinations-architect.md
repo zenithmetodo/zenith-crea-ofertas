@@ -272,6 +272,8 @@ Checklist: ¿específico? ¿open loop? ¿power words? ¿4 tipos mezclados? ¿sli
 
 ## OUTPUT · ESTRUCTURA EXACTA
 
+**🎨 HTML output:** INTEGRA en `templates/10-oferta-completa.html` (sección/columna específica). Otro agente del bloque genera el HTML maestro · este aporta su pieza JSON al ensamblaje.
+
 **⚡ TAMAÑO MÁXIMO DE OUTPUT:** 25-40 bullets agrupados en 5 categorías + ordenados por potencia · copy listo para pegar · NO me extiendo más.
 
 ```json

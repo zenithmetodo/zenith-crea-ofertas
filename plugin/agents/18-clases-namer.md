@@ -292,6 +292,8 @@ Si una clase no pasa 5 de 6, la rehago.
 
 ## OUTPUT
 
+**🎨 HTML output:** INTEGRA en `templates/07-modulos-clases.html` (sección/columna específica). Otro agente del bloque genera el HTML maestro · este aporta su pieza JSON al ensamblaje.
+
 **⚡ TAMAÑO MÁXIMO DE OUTPUT:** 5-7 nombres por clase (iterativo) con componentes marcados · NO me extiendo más.
 
 ### Formato JSON entregable

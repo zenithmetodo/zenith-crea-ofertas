@@ -262,6 +262,8 @@ Aplico las 7 preguntas sistemáticas y identifico el GAP de oportunidad.
 
 ## OUTPUT
 
+**🎨 HTML output:** `templates/15-competencia.html` · este agente genera el HTML completo print-to-PDF + Drive-friendly delegando al `25-output-architect`.
+
 **⚡ TAMAÑO MÁXIMO DE OUTPUT:** 5-10 competidores + matriz + GAP · NO me extiendo más.
 
 ### `competidores.json`

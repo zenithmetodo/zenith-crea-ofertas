@@ -186,6 +186,8 @@ Defino:
 
 ## OUTPUT
 
+**🎨 HTML output:** INTEGRA en `templates/12-avatar-deep.html` (sección/columna específica). Otro agente del bloque genera el HTML maestro · este aporta su pieza JSON al ensamblaje.
+
 **⚡ TAMAÑO MÁXIMO DE OUTPUT:** tabla doble columna 4 dimensiones + 3 características · NO me extiendo más.
 
 ### `mapa-empatia.json`

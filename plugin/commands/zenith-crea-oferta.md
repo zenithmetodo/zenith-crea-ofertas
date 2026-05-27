@@ -8,7 +8,7 @@ argument-hint: "[opcional: idea del producto en 1 frase · ej: 'app glúteo en c
 
 ## QUÉ HACE
 
-Es el **comando estrella de la versión Zenith** — la línea premium del plugin `crea-ofertas-1pct`. A diferencia de `/crea-oferta-1pct` (que arranca con 5 preguntas largas y dispara el pipeline de inmediato), este comando hace un **quick-discovery de 5 preguntas cortas**, te muestra un resumen estratégico y **espera tu confirmación antes de gastar tokens** en el resto del pipeline. Es el flujo recomendado cuando trabajas con cliente real y necesitas validar el rumbo antes de tirar de Opus.
+Es el **comando estrella de la versión Zenith** — la línea premium del plugin `zenith-crea-ofertas`. A diferencia de `/crea-oferta-1pct` (que arranca con 5 preguntas largas y dispara el pipeline de inmediato), este comando hace un **quick-discovery de 5 preguntas cortas**, te muestra un resumen estratégico y **espera tu confirmación antes de gastar tokens** en el resto del pipeline. Es el flujo recomendado cuando trabajas con cliente real y necesitas validar el rumbo antes de tirar de Opus.
 
 Una vez confirmas, ejecuta las **13 etapas completas** (discovery → punto A→B → one belief → mecanismo → características → promesa → garantía → módulos → bonus → valor percibido → consciencia → oferta → auditoría) con **branding Zenith** aplicado a cada HTML (paleta dorada/oscura · tipografía Zenith · marca de agua imprimible). Encadena 30+ sub-agentes respetando dependencias y, al final, entrega el dashboard con score, veredicto y roadmap.
 

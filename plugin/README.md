@@ -1,25 +1,63 @@
-# 🏔️ Crea Ofertas 1% · Método Zenith™
+<div align="center">
 
-> *"De la cima se ve mejor el avatar."*
->
-> **Mega-skill TOP 1% para construir ofertas de alto valor percibido**
-> 1 agente padre + **41 sub-agentes especializados** (con conocimiento INTERNALIZADO + model optimizado) + **16 slash commands** + **18 templates HTML print-to-PDF + Drive-friendly** + **20 knowledge files** (12 frameworks canónicos + 8 transcripciones del autor) + auto-instalador multiplataforma + **branding Zenith™** (cian + purple + Fraunces).
+# 🏔️ ZENITH CREA OFERTAS™
 
-[![Version](https://img.shields.io/badge/version-2.0.0-purple)]() [![Brand](https://img.shields.io/badge/brand-Zenith%E2%84%A2-00E5CF)]() [![Quality](https://img.shields.io/badge/quality-TOP%201%25-purple)]() [![Made with](https://img.shields.io/badge/Opus%204.7-1M-blueviolet)]() [![Es-ES](https://img.shields.io/badge/lang-es--ES-red)]() [![Tokens](https://img.shields.io/badge/tokens-optimized-green)]() [![Auto-Install](https://img.shields.io/badge/install-auto-cyan)]()
+### *"De la cima se ve mejor el avatar."*
+
+**Mega-skill TOP 1% para Claude Code · Crea ofertas de alto valor percibido bajo el Método Zenith™**
+
+[![Version](https://img.shields.io/badge/version-2.0.0-B845FF?style=for-the-badge)]() [![Brand](https://img.shields.io/badge/Zenith%E2%84%A2-00E5CF?style=for-the-badge)]() [![Quality](https://img.shields.io/badge/quality-TOP%201%25-B845FF?style=for-the-badge)]()
+
+[![Opus 4.7](https://img.shields.io/badge/Opus%204.7-1M%20ctx-blueviolet)]() [![Es-ES](https://img.shields.io/badge/lang-es--ES-red)]() [![Tokens](https://img.shields.io/badge/tokens-optimized%2060--70%25-green)]() [![Auto-Install](https://img.shields.io/badge/install-1%20line-cyan)]() [![License](https://img.shields.io/badge/license-MIT-yellow)]()
+
+**1 agente padre + 41 sub-agentes (Opus/Sonnet/Haiku optimizado) + 17 slash commands + 18 templates HTML print-to-PDF + Drive-friendly + 20 knowledge files**
+
+[🚀 Quickstart](#-instalación-1-línea) · [🏗️ Arquitectura](#-arquitectura-jerárquica) · [🤖 Agentes](#-los-41-sub-agentes-especializados) · [📚 Knowledge](#-frameworks-aplicados-20) · [💎 Examples](#-ejemplos-canónicos-desmenuzados)
+
+</div>
 
 ---
 
-## ⚡ Instalación en 1 línea
+## 🚀 Instalación · 1 línea
+
+### Para clientes nuevos · Mac/Linux
 
 ```bash
-bash install.sh        # macOS / Linux
-.\install.ps1          # Windows (PowerShell admin)
-/setup-crea-ofertas    # Desde Claude Code
+git clone https://github.com/zenithmetodo/zenith-crea-ofertas.git ~/.claude/skills/zenith-crea-ofertas && bash ~/.claude/skills/zenith-crea-ofertas/plugin/install.sh
 ```
 
-✅ Instala: Python 3 · pip · ffmpeg · Whisper · jq · BeautifulSoup · y enlaza el plugin en `~/.claude/skills/`
+### Para clientes nuevos · Windows (PowerShell admin)
 
-📖 Detalles: [INSTALL.md](INSTALL.md)
+```powershell
+git clone https://github.com/zenithmetodo/zenith-crea-ofertas.git "$env:USERPROFILE\.claude\skills\zenith-crea-ofertas"; & "$env:USERPROFILE\.claude\skills\zenith-crea-ofertas\plugin\install.ps1"
+```
+
+### Si ya tienes Claude Code abierto
+
+```
+/setup-crea-ofertas
+```
+
+### Lo que se instala automáticamente
+
+✅ Python 3 · pip · ffmpeg · Whisper (transcripción vídeos) · jq · BeautifulSoup (scraping research)
+✅ Enlaza el plugin en `~/.claude/skills/zenith-crea-ofertas/`
+✅ Listo para usar con `/zenith-crea-oferta`
+
+📖 Guía detallada: [INSTALL.md](plugin/INSTALL.md)
+
+---
+
+## ⚡ Primer uso (3 pasos)
+
+```
+1. /zenith-crea-oferta
+2. Responde las 5 preguntas del Quick Discovery (~3 min)
+3. Confirma el brief → se ejecuta el pipeline completo (60-90 min)
+```
+
+→ Recibes una carpeta `proyecto-{tu-slug}/` con **22+ archivos HTML estéticos**
+   (imprimibles a PDF con Cmd+P · estética Zenith preservada al 100% · subibles a Drive sin perder branding).
 
 ---
 
@@ -69,7 +107,7 @@ Construye, **palabra por palabra**, una oferta completa de alto valor percibido 
 ## 🏗️ Arquitectura jerárquica
 
 ```
-crea-ofertas-1pct/
+zenith-crea-ofertas/
 │
 ├── 📄 SKILL.md                    ← Orquestador PADRE
 ├── 📄 README.md                   ← Este archivo

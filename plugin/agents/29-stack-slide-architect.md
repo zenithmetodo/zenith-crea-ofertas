@@ -343,6 +343,8 @@ Brunson manda: el stack se repite. Entrego ambos listos.
 
 ## OUTPUT · ESTRUCTURA EXACTA
 
+**🎨 HTML output:** INTEGRA en `templates/09-valor-percibido.html` (sección/columna específica). Otro agente del bloque genera el HTML maestro · este aporta su pieza JSON al ensamblaje.
+
 **⚡ TAMAÑO MÁXIMO DE OUTPUT:** stack slide 7-12 ítems con precio individual + valor total + precio HOY + % descuento · HTML + Markdown + plain text · NO me extiendo más.
 
 ```json

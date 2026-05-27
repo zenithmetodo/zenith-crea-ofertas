@@ -1,4 +1,4 @@
-# Contribuir a `crea-ofertas-1pct`
+# Contribuir a `zenith-crea-ofertas`
 
 Bienvenido. Si estás aquí es porque quieres aportar valor al sistema de creación de ofertas TOP 1%. Antes de hacer cualquier PR, lee las reglas.
 

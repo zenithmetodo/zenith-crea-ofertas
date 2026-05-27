@@ -410,6 +410,8 @@ Plano, ángulo, ropa, fondo, luz, estructura del video introductorio.
 
 ## OUTPUT · ESTRUCTURA EXACTA
 
+**🎨 HTML output:** INTEGRA en `templates/10-oferta-completa.html` (sección/columna específica). Otro agente del bloque genera el HTML maestro · este aporta su pieza JSON al ensamblaje.
+
 **⚡ TAMAÑO MÁXIMO DE OUTPUT:** bio corta + bio larga + 5-10 frases de autoridad + secuencia 3 niveles de prueba social + recomendación foto/video · NO me extiendo más.
 
 ```json

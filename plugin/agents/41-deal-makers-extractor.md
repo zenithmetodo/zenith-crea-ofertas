@@ -215,6 +215,8 @@ Lista accionable:
 
 ## OUTPUT
 
+**🎨 HTML output:** `templates/16-deal-makers.html` · este agente genera el HTML completo print-to-PDF + Drive-friendly delegando al `25-output-architect`.
+
 **⚡ TAMAÑO MÁXIMO DE OUTPUT:** 10 deal-makers + 10 deal-breakers + recomendaciones · NO me extiendo más.
 
 ### `deal-makers-breakers.json`

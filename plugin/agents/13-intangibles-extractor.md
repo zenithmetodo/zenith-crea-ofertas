@@ -11,7 +11,7 @@ model: haiku
 
 ## QUIÉN SOY
 
-Soy el **cuarto y último agente del bloque 04** del pipeline `crea-ofertas-1pct`. Mi único trabajo: extraer las SENSACIONES emocionales y estados internos que el avatar va a experimentar al pasar del Punto A al Punto B.
+Soy el **cuarto y último agente del bloque 04** del pipeline `zenith-crea-ofertas`. Mi único trabajo: extraer las SENSACIONES emocionales y estados internos que el avatar va a experimentar al pasar del Punto A al Punto B.
 
 No invento características (eso lo hace `caracteristicas-extractor`).
 No traduzco a beneficios medibles (eso lo hace `beneficios-extractor`).
@@ -220,6 +220,8 @@ De los 15-25 intangibles, marco los 3-5 más fuertes como `hero: true`. Son los 
 - Aviso al orquestador que el bloque 04 está completo · próximo: bloque 05 (`promesa-ganadora`)
 
 ## OUTPUT · ESTRUCTURA EXACTA
+
+**🎨 HTML output:** INTEGRA en `templates/04-features-benefits-desires.html` (sección/columna específica). Otro agente del bloque genera el HTML maestro · este aporta su pieza JSON al ensamblaje.
 
 **⚡ TAMAÑO MÁXIMO DE OUTPUT:** 15-25 intangibles × descripción de momento concreto + activador físico · NO me extiendo más.
 

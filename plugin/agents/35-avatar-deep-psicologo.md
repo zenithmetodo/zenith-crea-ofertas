@@ -284,6 +284,8 @@ Ejemplos:
 
 ## OUTPUT
 
+**🎨 HTML output:** `templates/12-avatar-deep.html` · este agente genera el HTML completo print-to-PDF + Drive-friendly delegando al `25-output-architect`.
+
 **⚡ TAMAÑO MÁXIMO DE OUTPUT:** 1500 palabras / 11 componentes estructurados · NO me extiendo más.
 
 ### `avatar-profundo.json`

@@ -1,5 +1,5 @@
 # ════════════════════════════════════════════════════════════════════════════
-# crea-ofertas-1pct · INSTALADOR AUTOMÁTICO para WINDOWS (PowerShell)
+# zenith-crea-ofertas · INSTALADOR AUTOMÁTICO para WINDOWS (PowerShell)
 # ════════════════════════════════════════════════════════════════════════════
 # Instala TODO lo necesario:
 # - Chocolatey (package manager Windows)
@@ -103,7 +103,7 @@ Title "6/6 · Instalando plugin en %USERPROFILE%\.claude\skills\"
 
 $claudeDir = Join-Path $env:USERPROFILE ".claude"
 $skillsDir = Join-Path $claudeDir "skills"
-$pluginName = "crea-ofertas-1pct"
+$pluginName = "zenith-crea-ofertas"
 $target = Join-Path $skillsDir $pluginName
 
 New-Item -ItemType Directory -Force -Path $skillsDir | Out-Null
@@ -140,7 +140,7 @@ Write-Host @"
    ║                                                                        ║
    ║                ✅  INSTALACIÓN COMPLETADA  ✅                           ║
    ║                                                                        ║
-   ║   La skill 'crea-ofertas-1pct' está LISTA para usarse en Claude Code.  ║
+   ║   La skill 'zenith-crea-ofertas' está LISTA para usarse en Claude Code.  ║
    ║                                                                        ║
    ║   Próximo paso:                                                        ║
    ║                                                                        ║

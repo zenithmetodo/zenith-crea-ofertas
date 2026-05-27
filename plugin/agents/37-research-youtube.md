@@ -208,6 +208,8 @@ Listo todos los mecanismos que aparecen en los videos analizados. Esta lista la 
 
 ## OUTPUT
 
+**🎨 HTML output:** INTEGRA en `templates/13-research-mercado.html` (sección/columna específica). Otro agente del bloque genera el HTML maestro · este aporta su pieza JSON al ensamblaje.
+
 **⚡ TAMAÑO MÁXIMO DE OUTPUT:** 5-10 creadores + 20-30 vídeos + 40-60 comentarios · NO me extiendo más.
 
 ### `youtube-research.json`

@@ -247,6 +247,8 @@ Identifico el ángulo más prometedor (mayor mercado + creencia más viva + meno
 
 ## OUTPUT
 
+**🎨 HTML output:** `templates/14-angulos.html` · este agente genera el HTML completo print-to-PDF + Drive-friendly delegando al `25-output-architect`.
+
 **⚡ TAMAÑO MÁXIMO DE OUTPUT:** 5-10 ángulos × 5 componentes + top 3 · NO me extiendo más.
 
 ### `angulos.json`

@@ -1,4 +1,4 @@
-# 🚀 QUICKSTART · crea-ofertas-1pct
+# 🚀 QUICKSTART · zenith-crea-ofertas
 
 Crea tu primera oferta TOP 1% en menos de 90 minutos.
 
@@ -22,7 +22,7 @@ Si el plugin está activo, verás que el orquestador padre arranca.
 /crea-oferta-1pct
 ```
 
-El agente padre `crea-ofertas-1pct` te pedirá:
+El agente padre `zenith-crea-ofertas` te pedirá:
 1. Responder las 5 preguntas críticas (~10 min)
 2. (Opcional) Responder las 5 preguntas opcionales (~10 min)
 

@@ -1,4 +1,4 @@
-# CHANGELOG · crea-ofertas-1pct · Método Zenith™
+# CHANGELOG · zenith-crea-ofertas · Método Zenith™
 
 Todos los cambios notables del plugin.
 

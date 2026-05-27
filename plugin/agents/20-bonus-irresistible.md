@@ -361,6 +361,8 @@ Cada bonus sale en una "card" maquetada con el design system del plugin. Ver tem
 
 ## OUTPUT
 
+**🎨 HTML output:** INTEGRA en `templates/08-bonus.html` (sección/columna específica). Otro agente del bloque genera el HTML maestro · este aporta su pieza JSON al ensamblaje.
+
 **⚡ TAMAÑO MÁXIMO DE OUTPUT:** 6 bonus irresistibles con plantilla 6 componentes (nombre sexy + obstáculo + beneficio + pruebas + valor + urgencia) · HTML maquetado · NO me extiendo más.
 
 ### Formato JSON entregable

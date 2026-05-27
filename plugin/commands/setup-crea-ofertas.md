@@ -8,7 +8,7 @@ argument-hint: "[opcional: --check-only para solo verificar sin instalar]"
 
 ## QUÉ HACE
 
-Instala TODO lo necesario para que el plugin `crea-ofertas-1pct` funcione al 100%:
+Instala TODO lo necesario para que el plugin `zenith-crea-ofertas` funcione al 100%:
 
 - ✅ Python 3.10+ (si no está)
 - ✅ pip3 (si no está)
@@ -16,7 +16,7 @@ Instala TODO lo necesario para que el plugin `crea-ofertas-1pct` funcione al 100
 - ✅ openai-whisper (transcripción de vídeos del usuario)
 - ✅ jq (procesamiento JSON)
 - ✅ requests + BeautifulSoup (para agentes que consultan web)
-- ✅ Enlaza el plugin en `~/.claude/skills/crea-ofertas-1pct`
+- ✅ Enlaza el plugin en `~/.claude/skills/zenith-crea-ofertas`
 
 Al final hace una verificación completa.
 
@@ -67,7 +67,7 @@ Al terminar, te muestra:
 ✓ ffmpeg 8.1
 ✓ whisper · disponible
 ✓ jq 1.6
-✓ Plugin enlazado en /Users/[tu_user]/.claude/skills/crea-ofertas-1pct
+✓ Plugin enlazado en /Users/[tu_user]/.claude/skills/zenith-crea-ofertas
 ```
 
 Si todo aparece con ✓, ya puedes usar:
@@ -98,7 +98,7 @@ Claude: Detecto que estás en macOS. Lanzando install.sh...
    - ffmpeg 8.1
    - whisper 20231117
    - jq 1.6
-   - Plugin enlazado en /Users/josep/.claude/skills/crea-ofertas-1pct
+   - Plugin enlazado en /Users/josep/.claude/skills/zenith-crea-ofertas
 
 🚀 Listo. Ya puedes lanzar:
    /crea-oferta-1pct

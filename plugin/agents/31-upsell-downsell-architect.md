@@ -334,6 +334,8 @@ Con benchmarks de take rate, proyecto el AOV final del funnel.
 
 ## OUTPUT · ESTRUCTURA EXACTA
 
+**🎨 HTML output:** INTEGRA en `templates/10-oferta-completa.html` (sección/columna específica). Otro agente del bloque genera el HTML maestro · este aporta su pieza JSON al ensamblaje.
+
 **⚡ TAMAÑO MÁXIMO DE OUTPUT:** 1 order bump + 2 upsells + 1 downsell · cada uno con nombre + descripción + pricing + pitch + métrica esperada · NO me extiendo más.
 
 ```json

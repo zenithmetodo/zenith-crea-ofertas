@@ -1,8 +1,11 @@
 {
-  "name": "crea-ofertas-1pct",
+  "name": "zenith-crea-ofertas",
+  "display_name": "Zenith Crea Ofertas™",
   "version": "2.0.0",
-  "brand": "Método Zenith™",
+  "brand": "Zenith™ · Método Zenith",
   "tagline": "De la cima se ve mejor el avatar.",
+  "repository": "https://github.com/zenithmetodo/zenith-crea-ofertas",
+  "install_command": "curl -fsSL https://raw.githubusercontent.com/zenithmetodo/zenith-crea-ofertas/main/plugin/install.sh | bash",
   "description": "Mega-skill TOP 1% para crear ofertas de alto valor percibido bajo el Método Zenith™. Orquesta 41 sub-agentes especializados (cada uno crack de UNA cosa · CONOCIMIENTO INTERNALIZADO desde el origen · MODEL OPTIMIZADO por complejidad), 16 slash commands, 18 templates HTML print-to-PDF + drive-friendly con branding Zenith (cian + purple + Fraunces), 20 knowledge files (12 frameworks canónicos + 8 transcripciones del autor), auto-instalador multiplataforma. Aplica Schwartz, Masterson+Forde, Bencivenga, Evaldo Albuquerque, Todd Brown, Halbert, Sugarman, Cialdini, Maslow+Robbins+Bauer, Brunson, Hormozi, Caples, Ogilvy, Stefan Georgi y Ariely. Investigación profunda en Reddit + YouTube + Biblioteca Anuncios Meta para avatar y competencia.",
   "author": {
     "name": "Josep (INDI) · Método Zenith™",
@@ -108,7 +111,7 @@
       "rich>=13.7.0"
     ],
     "claude_tools_required": ["Read", "Write", "Edit", "Grep", "Glob", "Bash", "WebSearch", "WebFetch"],
-    "install_target": "~/.claude/skills/crea-ofertas-1pct (symlink)"
+    "install_target": "~/.claude/skills/zenith-crea-ofertas (symlink)"
   },
   "pipeline_zenith_v2": [
     { "step": "00", "name": "quick-discovery", "agent": "zenith-quick-discovery", "model": "opus", "tokens_est": "2-4k", "confirmacion_obligatoria": true },
@@ -137,7 +140,7 @@
     { "name": "5 Stages de Sofisticación", "author": "Eugene Schwartz" },
     { "name": "Great Leads · 6 tipos", "authors": ["Michael Masterson", "John Forde"], "book": "Great Leads (2011)" },
     { "name": "Fórmula del Valor Percibido", "author": "Gary Bencivenga" },
-    { "name": "One Belief Statement", "author": "Evaldo Albuquerque", "book": "The 16-Word Sales Letter (2019)" },
+    { "name": "One Belief Statement (4 variantes)", "author": "Evaldo Albuquerque", "book": "The 16-Word Sales Letter (2019)", "adapted_by": "Joseph Moreno (Masterclass Low Ticket Quiz · es-ES/LATAM)" },
     { "name": "Mecanismo Único · E5", "author": "Todd Brown" },
     { "name": "Identidad vs Anti-Identidad", "author": "Síntesis canónica" },
     { "name": "Power Words + 4 Leyes", "author": "Gary Halbert" },
