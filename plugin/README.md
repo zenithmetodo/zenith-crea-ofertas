@@ -44,7 +44,33 @@ git clone https://github.com/zenithmetodo/zenith-crea-ofertas.git "$env:USERPROF
 ✅ Enlaza el plugin en `~/.claude/skills/zenith-crea-ofertas/`
 ✅ Listo para usar con `/zenith-crea-oferta`
 
-📖 Guía detallada: [INSTALL.md](plugin/INSTALL.md)
+📖 Guía detallada: [INSTALL.md](INSTALL.md)
+
+---
+
+## 🔌 APIs externas · ¿NECESITO algo más?
+
+### Respuesta corta: **NO**
+
+> **El plugin funciona al 100% SIN configurar ninguna API externa.**
+> Todo se hace con WebSearch + WebFetch nativos de Claude Code.
+
+### Power-ups OPCIONALES (solo si haces +20 ofertas/mes)
+
+| Power-up | ¿Para qué? | Setup |
+|---|---|---|
+| **Apify** | Scraping masivo (cientos de subreddits/canales) | `/setup-apis apify` |
+| **PRAW** | Reddit API oficial (gratis) | `/setup-apis praw` |
+| **YouTube Data API** | YouTube oficial (gratis · 10k/día) | `/setup-apis youtube` |
+| **Meta Ad Library API** | Biblioteca Anuncios oficial | `/setup-apis meta` |
+| **MCPs externos** | DataForSEO · Firecrawl · Notion · Drive | `/setup-apis mcp` |
+
+**Comando mágico (te guía):**
+```
+/setup-apis
+```
+
+📖 Detalles completos: [EXTERNAL_SERVICES.md](EXTERNAL_SERVICES.md)
 
 ---
 
