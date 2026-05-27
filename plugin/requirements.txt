@@ -1,0 +1,31 @@
+# ════════════════════════════════════════════════════════════════════════════
+# crea-ofertas-1pct · Python Dependencies
+# ════════════════════════════════════════════════════════════════════════════
+# Instalar con: pip install -r requirements.txt
+# ════════════════════════════════════════════════════════════════════════════
+
+# ── TRANSCRIPCIÓN DE VÍDEOS DEL USUARIO ─────────────────────────────────────
+# Whisper · OpenAI (CPU/GPU) · transcribe MP4/MP3/MOV/WAV en español
+openai-whisper>=20231117
+
+# ── INVESTIGACIÓN E INTERNET ────────────────────────────────────────────────
+# Para que los agentes puedan buscar en web cuando lo necesiten
+requests>=2.31.0
+beautifulsoup4>=4.12.0
+lxml>=4.9.0
+html5lib>=1.1
+
+# ── PROCESAMIENTO DE TEXTO/JSON ─────────────────────────────────────────────
+pyyaml>=6.0
+python-dotenv>=1.0.0
+markdown>=3.5
+jinja2>=3.1.0
+
+# ── EXTRACCIÓN DE CONTENIDO ─────────────────────────────────────────────────
+# Útil para los agentes que escanean páginas competidoras / Biblioteca de Anuncios
+readability-lxml>=0.8.1
+
+# ── UTILIDADES ──────────────────────────────────────────────────────────────
+rich>=13.7.0       # output bonito en terminal
+click>=8.1.0       # CLI tools si los necesitamos
+pathvalidate>=3.0  # sanitizar nombres de archivo

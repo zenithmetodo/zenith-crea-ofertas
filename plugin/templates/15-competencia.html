@@ -1,0 +1,669 @@
+<!--
+═════════════════════════════════════════════════════════════════════════════
+  ZENITH · TEMPLATE 15 · ANÁLISIS DE COMPETENCIA (SPY MODE)
+═════════════════════════════════════════════════════════════════════════════
+  Output del agente: 40-competidor-spy
+  Etapa: 12 / 12 · Espionaje táctico al mercado activo
+  Generado: {{FECHA}}
+
+  Ejemplo de uso:
+    {{NICHO}}            = "Cursos de copywriting en español"
+    {{N_COMPETIDORES}}   = "8"
+    {{PAIS}}             = "España + LATAM"
+═════════════════════════════════════════════════════════════════════════════
+-->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Competencia · {{NICHO}} · Zenith™</title>
+
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' stop-color='%2300E5CF'/%3E%3Cstop offset='100%25' stop-color='%23B845FF'/%3E%3C/linearGradient%3E%3C/defs%3E%3Cpath d='M32 4 L8 56 L56 56 Z' fill='url(%23g)' stroke='%2300E5CF' stroke-width='2' stroke-linejoin='round'/%3E%3Cpath d='M32 4 L20 32 L26 32 L18 56 L8 56 Z' fill='%23ffffff' opacity='0.15'/%3E%3Cpath d='M32 4 L18 28 L24 28 L32 4 Z' fill='%23ffffff' opacity='0.25'/%3E%3C/svg%3E">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500;9..144,600;9..144,700;9..144,800;9..144,900&family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --cian:#00E5CF; --cian-soft:#4DECDB;
+  --purple:#B845FF; --purple-soft:#C972FF; --purple-high:#D9A8FF; --purple-deep:#6E1FB8;
+  --dark:#050510; --card:#0B0B17; --card-2:#11111f;
+  --line: rgba(255,255,255,.08); --line-strong: rgba(255,255,255,.18);
+  --text:#fff; --text-2: rgba(255,255,255,.78); --text-3: rgba(255,255,255,.5);
+  --success:#10e0a1; --danger:#ff4d6d; --warning:#f59e0b; --meta:#1877f2;
+  --grad: linear-gradient(135deg, var(--cian) 0%, var(--purple) 100%);
+  --grad-soft: linear-gradient(135deg, rgba(0,229,207,.15) 0%, rgba(184,69,255,.15) 100%);
+}
+*{ box-sizing:border-box; margin:0; padding:0; }
+html{ scroll-behavior: smooth; }
+body{ font-family:'Inter', system-ui, sans-serif; background: var(--dark); color: var(--text); line-height: 1.6; -webkit-font-smoothing: antialiased; overflow-x: hidden; min-height: 100vh; }
+
+/* Background FX */
+.bg-fx{ position: fixed; inset:0; z-index:0; pointer-events:none; overflow:hidden; }
+.bg-fx::before{ content:""; position:absolute; inset:-50%; background: radial-gradient(circle at 20% 20%, rgba(0,229,207,.12), transparent 38%), radial-gradient(circle at 80% 80%, rgba(184,69,255,.15), transparent 42%); animation: drift 18s ease-in-out infinite alternate; }
+@keyframes drift{ to{ transform: translate(-3%, 4%) rotate(6deg); } }
+.bg-grid{ position: fixed; inset:0; z-index:0; pointer-events:none; background-image: linear-gradient(rgba(255,255,255,.03) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.03) 1px, transparent 1px); background-size: 48px 48px; mask-image: radial-gradient(ellipse at center, black 30%, transparent 80%); }
+
+.container{ max-width: 1240px; margin: 0 auto; padding: 0 32px; position: relative; z-index:1; }
+.container-narrow{ max-width: 980px; margin: 0 auto; padding: 0 32px; position: relative; z-index:1; }
+
+/* Tipografía */
+.display{ font-family:'Fraunces', serif; }
+.mono{ font-family:'JetBrains Mono', monospace; }
+h1,h2,h3,h4{ color: var(--text); letter-spacing:-.025em; }
+h1{ font-family:'Fraunces', serif; font-weight: 400; font-size: clamp(48px, 8vw, 96px); line-height: .95; }
+h1 em{ font-style: italic; font-weight: 500; background: var(--grad); -webkit-background-clip: text; background-clip: text; color: transparent; }
+h2{ font-family:'Fraunces', serif; font-weight: 400; font-size: clamp(36px, 5.5vw, 60px); line-height: 1.05; }
+h2 em{ font-style: italic; font-weight: 500; background: var(--grad); -webkit-background-clip: text; background-clip: text; color: transparent; }
+h3{ font-family:'Inter', sans-serif; font-weight: 700; font-size: clamp(20px, 2.4vw, 26px); line-height: 1.2; }
+h4{ font-family:'Inter', sans-serif; font-weight: 600; font-size: 18px; }
+p{ color: var(--text-2); line-height: 1.65; margin-bottom: 16px; }
+strong{ color: var(--text); font-weight: 600; }
+em{ font-style: italic; }
+em.cian{ color: var(--cian); font-style: normal; font-weight: 600; }
+em.purple{ color: var(--purple); font-style: normal; font-weight: 600; }
+
+/* HUD */
+.zenith-hud{ position: sticky; top:0; z-index:100; padding: 16px 32px; display:flex; justify-content: space-between; align-items: center; font-family:'JetBrains Mono', monospace; font-size:11px; letter-spacing:.08em; text-transform: uppercase; background: linear-gradient(180deg, rgba(5,5,16,.92), rgba(5,5,16,.6)); backdrop-filter: blur(16px); border-bottom: 1px solid var(--line); }
+.zenith-brand{ display:flex; align-items:center; gap:12px; }
+.zenith-brand .logo{ width: 32px; height: 32px; display:grid; place-items:center; background: var(--grad); border-radius: 8px; box-shadow: 0 0 20px rgba(0,229,207,.5); overflow: hidden; }
+.zenith-brand .logo svg{ width: 18px; height: 18px; filter: drop-shadow(0 0 4px rgba(0,0,0,.4)); }
+.zenith-brand .name{ font-family:'Fraunces', serif; font-style: italic; font-weight: 600; font-size: 20px; letter-spacing:-.01em; text-transform: none; background: var(--grad); -webkit-background-clip: text; background-clip: text; color: transparent; }
+.zenith-brand .name .tm{ font-size: 11px; vertical-align: super; opacity: .8; margin-left: 2px; }
+.zenith-brand .stage{ margin-left: 12px; padding-left: 12px; border-left: 1px solid var(--line); color: var(--text-3); font-family:'JetBrains Mono', monospace; font-size: 10px; }
+.zenith-brand .stage .num{ color: var(--cian); font-weight: 700; }
+.zenith-hud .right{ display:flex; align-items:center; gap: 14px; color: var(--text-3); }
+.zenith-hud .right .live{ color: var(--cian); display:inline-flex; align-items:center; gap:6px; }
+.zenith-hud .right .live .dot{ width: 6px; height: 6px; border-radius: 50%; background: var(--cian); box-shadow: 0 0 8px var(--cian); animation: pulse 1.4s infinite; }
+@keyframes pulse{ 0%,100%{ transform: scale(1); opacity: 1; } 50%{ transform: scale(1.5); opacity: .5; } }
+
+/* HERO */
+.hero{ min-height: 70vh; display:flex; flex-direction: column; justify-content: center; padding: 100px 0 80px; position: relative; }
+.hero-tag{ display:inline-flex; align-items:center; gap:10px; background: rgba(0,229,207,.12); border: 1px solid rgba(0,229,207,.3); color: var(--cian); padding: 8px 18px; border-radius: 100px; font-family:'JetBrains Mono', monospace; font-size: 11px; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; width: fit-content; margin-bottom: 28px; }
+.hero-tag::before{ content:''; width: 8px; height: 8px; border-radius: 50%; background: var(--cian); box-shadow: 0 0 14px var(--cian); animation: pulse 2s infinite; }
+.hero-lead{ font-family:'Fraunces', serif; font-style: italic; font-size: clamp(20px, 2.4vw, 26px); line-height: 1.45; color: var(--text-2); max-width: 760px; margin: 30px 0 50px; font-weight: 400; }
+.hero-lead b{ font-style: normal; font-weight: 600; color: var(--text); background: linear-gradient(180deg, transparent 60%, rgba(0,229,207,.28) 60%); padding: 0 3px; }
+.hero-meta-grid{ display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 24px; padding-top: 36px; border-top: 1px dashed var(--line); }
+.hero-meta-grid .block .label{ font-family:'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 2px; text-transform: uppercase; color: var(--text-3); margin-bottom: 8px; }
+.hero-meta-grid .block .value{ font-family:'Fraunces', serif; font-weight: 500; font-size: 24px; color: var(--text); }
+.hero-meta-grid .block .value em{ color: var(--cian); font-style: normal; }
+
+/* SECTIONS */
+section{ padding: 80px 0; position: relative; }
+section.alt{ background: linear-gradient(180deg, transparent 0%, rgba(184,69,255,.04) 50%, transparent 100%); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+.section-tag{ font-family:'JetBrains Mono', monospace; font-size: 12px; letter-spacing: 2px; text-transform: uppercase; color: var(--cian); margin-bottom: 16px; }
+.section-title{ font-family:'Fraunces', serif; font-weight: 400; font-size: clamp(36px, 5.5vw, 64px); line-height: 1; margin-bottom: 24px; letter-spacing:-.025em; }
+.section-title em{ font-style: italic; font-weight: 500; background: var(--grad); -webkit-background-clip: text; background-clip: text; color: transparent; }
+.section-lead{ font-family:'Fraunces', serif; font-style: italic; font-size: clamp(18px, 2vw, 22px); line-height: 1.5; color: var(--text-2); max-width: 720px; margin-bottom: 48px; font-weight: 400; }
+.section-lead b{ font-style: normal; font-weight: 600; color: var(--text); }
+
+/* COMPETIDOR CARDS */
+.comp-grid{ display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; }
+@media (max-width: 900px){ .comp-grid{ grid-template-columns: 1fr; } }
+.comp-card{
+  background: var(--card); border: 1px solid var(--line); border-radius: 22px; padding: 30px 32px; position: relative; overflow: hidden; transition: all .3s;
+}
+.comp-card:hover{ transform: translateY(-4px); border-color: rgba(0,229,207,.3); box-shadow: 0 16px 40px -16px rgba(0,229,207,.2); }
+.comp-card::before{ content:''; position:absolute; top:0; left:0; right:0; height: 3px; background: var(--grad); }
+.comp-card .top-row{ display:flex; align-items:center; gap: 16px; margin-bottom: 22px; padding-bottom: 22px; border-bottom: 1px dashed var(--line); }
+.comp-card .av{
+  width: 54px; height: 54px; border-radius: 16px; flex-shrink: 0;
+  background: var(--grad-soft);
+  border: 1px solid var(--line-strong);
+  display:grid; place-items:center;
+  font-family:'Fraunces', serif; font-style: italic; font-weight: 700;
+  font-size: 22px;
+  background: var(--grad); color: #000;
+  box-shadow: 0 0 18px rgba(0,229,207,.3);
+}
+.comp-card .meta{ flex: 1; }
+.comp-card .name{ font-family:'Inter', sans-serif; font-weight: 700; font-size: 19px; color: var(--text); margin-bottom: 4px; }
+.comp-card .url{ font-family:'JetBrains Mono', monospace; font-size: 11px; color: var(--cian); letter-spacing: .5px; word-break: break-all; }
+.comp-card .lead-tag{
+  padding: 5px 10px; border-radius: 100px;
+  background: rgba(184,69,255,.12); color: var(--purple-high); border: 1px solid rgba(184,69,255,.3);
+  font-family:'JetBrains Mono', monospace; font-size: 9px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase;
+}
+
+.comp-rows{ display: flex; flex-direction: column; gap: 12px; }
+.comp-row{ display: grid; grid-template-columns: 120px 1fr; gap: 14px; align-items: start; }
+.comp-row .lbl{ font-family:'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 1.5px; text-transform: uppercase; color: var(--text-3); padding-top: 3px; }
+.comp-row .val{ color: var(--text); font-size: 14px; line-height: 1.5; }
+.comp-row .val.price{ font-family:'Fraunces', serif; font-style: italic; font-size: 22px; background: var(--grad); -webkit-background-clip: text; background-clip: text; color: transparent; font-weight: 500; }
+
+/* TABLA COMPARATIVA */
+.table-wrap{ margin: 32px 0; border: 1px solid var(--line); border-radius: 16px; overflow: hidden; background: var(--card); }
+.table-scroll{ overflow-x: auto; }
+table{ width: 100%; border-collapse: collapse; font-size: 14px; min-width: 700px; }
+th{ background: var(--card-2); color: var(--cian); font-family:'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 1.5px; text-transform: uppercase; padding: 16px 20px; text-align: left; border-bottom: 1px solid var(--line); font-weight: 600; }
+td{ padding: 16px 20px; border-bottom: 1px solid var(--line); color: var(--text-2); vertical-align: top; }
+tr:last-child td{ border-bottom: none; }
+td strong{ color: var(--text); }
+td .check{ color: var(--success); font-weight: 700; }
+td .cross{ color: var(--danger); font-weight: 700; }
+
+/* AD PREVIEWS (placeholders Meta style) */
+.ad-grid{ display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
+@media (max-width: 900px){ .ad-grid{ grid-template-columns: 1fr; } }
+.ad-card{
+  background: #1c1c2e; border: 1px solid var(--line); border-radius: 16px; overflow: hidden; transition: all .3s; position: relative;
+}
+.ad-card:hover{ transform: translateY(-4px); border-color: rgba(24,119,242,.4); }
+.ad-head{
+  display: flex; align-items: center; gap: 10px; padding: 14px 16px;
+  border-bottom: 1px solid rgba(255,255,255,.06);
+  background: #2a2a40;
+}
+.ad-head .av{ width: 32px; height: 32px; border-radius: 50%; background: var(--grad); display:grid; place-items:center; color: #000; font-family:'JetBrains Mono', monospace; font-weight: 800; font-size: 12px; flex-shrink: 0; }
+.ad-head .info{ flex: 1; }
+.ad-head .sponsor{ font-family:'Inter', sans-serif; font-size: 13px; font-weight: 600; color: #e4e6eb; line-height: 1.2; }
+.ad-head .sub{ font-family:'JetBrains Mono', monospace; font-size: 10px; color: rgba(255,255,255,.4); margin-top: 2px; }
+.ad-head .sub::before{ content:'Patrocinado · '; }
+.ad-copy{ padding: 16px; color: #e4e6eb; font-size: 14px; line-height: 1.5; font-family:'Inter', sans-serif; }
+.ad-creative{
+  aspect-ratio: 1 / 1; background:
+    radial-gradient(circle at 30% 30%, rgba(0,229,207,.25) 0%, transparent 50%),
+    radial-gradient(circle at 70% 70%, rgba(184,69,255,.3) 0%, transparent 50%),
+    #0d0d1f;
+  display:grid; place-items: center; position: relative;
+}
+.ad-creative::before{ content:''; position:absolute; inset:0; background-image: linear-gradient(rgba(255,255,255,.04) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.04) 1px, transparent 1px); background-size: 24px 24px; }
+.ad-creative .play-pill{
+  position: relative; z-index: 1;
+  display: inline-flex; align-items: center; gap: 8px;
+  background: rgba(0,0,0,.5); color: #fff;
+  padding: 8px 16px 8px 14px; border-radius: 100px;
+  font-family:'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 1.5px; text-transform: uppercase;
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255,255,255,.2);
+}
+.ad-creative .play-pill::before{ content:'▶'; font-size: 10px; }
+.ad-cta-bar{
+  padding: 14px 16px; background: #2a2a40;
+  display: flex; align-items: center; justify-content: space-between; gap: 12px;
+}
+.ad-cta-bar .domain{ font-family:'JetBrains Mono', monospace; font-size: 11px; color: rgba(255,255,255,.5); letter-spacing: .5px; }
+.ad-cta-bar .cta{ background: #4a5568; color: #fff; padding: 6px 14px; border-radius: 6px; font-family:'Inter', sans-serif; font-size: 13px; font-weight: 600; }
+.ad-card .running-tag{
+  position: absolute; top: 12px; right: 12px; z-index: 2;
+  background: rgba(0,229,207,.9); color: #000;
+  padding: 4px 10px; border-radius: 100px;
+  font-family:'JetBrains Mono', monospace; font-size: 9px; font-weight: 800; letter-spacing: 1.5px; text-transform: uppercase;
+  box-shadow: 0 0 14px rgba(0,229,207,.5);
+}
+
+/* MECANISMOS NOMBRADOS */
+.card-grid-3{ display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+@media (max-width: 900px){ .card-grid-3{ grid-template-columns: 1fr; } }
+.mech-named{
+  background: var(--card-2); border: 1px solid var(--line); border-radius: 16px; padding: 24px; position: relative; transition: all .3s;
+}
+.mech-named:hover{ border-color: rgba(255,77,109,.3); transform: translateY(-3px); }
+.mech-named .x-tag{ position: absolute; top: 18px; right: 22px; display:inline-block; background: rgba(255,77,109,.12); color: var(--danger); padding: 4px 10px; border-radius: 100px; font-family:'JetBrains Mono', monospace; font-size: 10px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; border: 1px solid rgba(255,77,109,.3); }
+.mech-named h4{ font-family:'Fraunces', serif; font-style: italic; font-weight: 500; font-size: 22px; line-height: 1.2; margin-bottom: 10px; padding-right: 80px; }
+.mech-named .who-uses{ font-family:'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 1.5px; text-transform: uppercase; color: var(--text-3); margin-bottom: 12px; }
+.mech-named p{ font-size: 14px; color: var(--text-2); margin: 0; line-height: 1.5; }
+
+/* GAP COMPETITIVO destacado */
+.gap-card{
+  background: var(--grad);
+  border-radius: 28px;
+  padding: 56px 52px;
+  margin: 40px 0;
+  position: relative;
+  overflow: hidden;
+  color: #000;
+}
+.gap-card::before{ content:''; position: absolute; top: -50%; right: -30%; width: 80%; height: 200%; background: radial-gradient(circle, rgba(255,255,255,.18) 0%, transparent 60%); animation: rotate 30s linear infinite; pointer-events:none; }
+@keyframes rotate{ from{transform: rotate(0)} to{transform: rotate(360deg)} }
+.gap-card .lbl{ display:inline-block; background: #000; color: var(--cian); padding: 8px 16px; border-radius: 100px; font-family:'JetBrains Mono', monospace; font-size: 11px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 24px; position: relative; z-index: 1; }
+.gap-card h3{ font-family:'Fraunces', serif; font-style: italic; font-weight: 500; font-size: clamp(32px, 5vw, 52px); line-height: 1.1; color: #000; margin-bottom: 22px; position: relative; z-index: 1; }
+.gap-card h3 em{ font-style: italic; color: rgba(0,0,0,.75); background: none; -webkit-text-fill-color: rgba(0,0,0,.75); }
+.gap-card p{ color: rgba(0,0,0,.78); font-size: 18px; max-width: 720px; line-height: 1.55; margin: 0; position: relative; z-index: 1; }
+
+/* DIFERENCIACIÓN recomendada */
+.diff-card{
+  background: var(--card); border: 2px solid var(--cian); border-radius: 24px;
+  padding: 44px; margin: 32px 0; position: relative; overflow: hidden;
+  box-shadow: 0 0 60px -20px rgba(0,229,207,.4);
+}
+.diff-card .seal{
+  position: absolute; top: 28px; right: 32px;
+  display: inline-flex; align-items: center; gap: 8px;
+  background: var(--grad); color: #000;
+  padding: 8px 16px; border-radius: 100px;
+  font-family:'JetBrains Mono', monospace; font-size: 11px; font-weight: 800; letter-spacing: 2px; text-transform: uppercase;
+}
+.diff-card .seal::before{ content:'◆'; }
+.diff-card .lbl{ font-family:'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 2.5px; text-transform: uppercase; color: var(--cian); margin-bottom: 16px; }
+.diff-card h3{ font-family:'Fraunces', serif; font-style: italic; font-weight: 500; font-size: clamp(26px, 3.8vw, 38px); line-height: 1.15; margin-bottom: 18px; }
+.diff-card h3 em{ background: var(--grad); -webkit-background-clip: text; background-clip: text; color: transparent; }
+.diff-card p{ color: var(--text-2); font-size: 16px; line-height: 1.6; max-width: 720px; }
+
+/* ESTRATEGIA DE ENTRADA - 3 pasos */
+.steps-grid{ display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; margin: 32px 0; }
+@media (max-width: 900px){ .steps-grid{ grid-template-columns: 1fr; } }
+.step-card{
+  background: var(--card); border: 1px solid var(--line); border-radius: 20px; padding: 36px 28px; position: relative; transition: all .3s;
+}
+.step-card:hover{ transform: translateY(-4px); border-color: rgba(0,229,207,.3); }
+.step-card .big-step{
+  display: inline-flex; align-items: baseline; gap: 8px;
+  margin-bottom: 18px; padding-bottom: 14px; border-bottom: 1px dashed var(--line);
+}
+.step-card .big-step .word{ font-family:'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 2px; color: var(--text-3); text-transform: uppercase; }
+.step-card .big-step .num{ font-family:'Fraunces', serif; font-style: italic; font-weight: 500; font-size: 56px; line-height: 1; background: var(--grad); -webkit-background-clip: text; background-clip: text; color: transparent; }
+.step-card h4{ font-family:'Fraunces', serif; font-style: italic; font-weight: 500; font-size: 22px; line-height: 1.2; margin-bottom: 14px; color: var(--text); }
+.step-card p{ font-size: 15px; color: var(--text-2); margin: 0; line-height: 1.55; }
+
+/* FOOTER */
+.zenith-footer{ padding: 80px 0 50px; text-align: center; border-top: 1px solid var(--line); margin-top: 80px; position: relative; }
+.zenith-footer .footer-brand{ display: inline-flex; align-items: center; gap: 14px; margin-bottom: 24px; }
+.zenith-footer .footer-brand .logo{ width: 40px; height: 40px; display:grid; place-items:center; background: var(--grad); border-radius: 10px; box-shadow: 0 0 24px rgba(0,229,207,.4); }
+.zenith-footer .footer-brand .logo svg{ width: 22px; height: 22px; }
+.zenith-footer .footer-brand .name{ font-family:'Fraunces', serif; font-style: italic; font-weight: 600; font-size: 28px; letter-spacing:-.01em; background: var(--grad); -webkit-background-clip: text; background-clip: text; color: transparent; }
+.zenith-footer .footer-brand .tm{ font-size: 12px; vertical-align: super; opacity: .8; margin-left: 3px; color: var(--cian); -webkit-text-fill-color: var(--cian); }
+.zenith-footer .tagline{ font-family:'Fraunces', serif; font-style: italic; font-size: 18px; color: var(--text-2); margin-bottom: 16px; }
+.zenith-footer .made-by{ font-family:'JetBrains Mono', monospace; font-size: 12px; letter-spacing: 2px; text-transform: uppercase; color: var(--text-3); margin-bottom: 8px; }
+.zenith-footer .made-by .accent{ color: var(--cian); }
+.zenith-footer .print-tip{ margin-top: 24px; padding-top: 24px; border-top: 1px dashed var(--line); font-family:'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 1.5px; color: var(--purple); }
+.zenith-footer .drive-tip{ margin-top: 8px; font-family:'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 1.2px; color: var(--text-3); }
+
+/* Animaciones */
+.fade-up{ opacity: 0; transform: translateY(24px); animation: fadeUp .9s ease forwards; }
+.fade-up.d1{ animation-delay: .1s; } .fade-up.d2{ animation-delay: .2s; } .fade-up.d3{ animation-delay: .3s; } .fade-up.d4{ animation-delay: .4s; } .fade-up.d5{ animation-delay: .5s; }
+@keyframes fadeUp{ to{ opacity: 1; transform: translateY(0); } }
+
+/* PRINT */
+@media print{
+  body{ background: var(--dark) !important; color: var(--text) !important; print-color-adjust: exact !important; -webkit-print-color-adjust: exact !important; }
+  .bg-fx, .bg-grid{ display: block !important; print-color-adjust: exact !important; }
+  section{ padding: 40px 0; page-break-inside: avoid; }
+  .comp-card, .ad-card, .mech-named, .gap-card, .diff-card, .step-card, .table-wrap{ page-break-inside: avoid; }
+  .hero{ min-height: auto; padding: 50px 0; }
+  .zenith-hud{ position: static; }
+  .gap-card, .diff-card, .comp-card, .ad-creative{ print-color-adjust: exact !important; -webkit-print-color-adjust: exact !important; }
+}
+
+@media (max-width: 900px){
+  .container, .container-narrow{ padding: 0 20px; }
+  .hero{ min-height: auto; padding: 60px 0 40px; }
+  .gap-card{ padding: 36px 28px; }
+  .diff-card{ padding: 32px 24px; }
+}
+</style>
+</head>
+<body>
+
+<!-- HUD -->
+<header class="zenith-hud">
+  <div class="zenith-brand">
+    <div class="logo">
+      <svg viewBox="0 0 64 64" fill="none">
+        <path d="M32 6 L8 56 L56 56 Z" fill="#fff" stroke="#fff" stroke-width="2" stroke-linejoin="round"/>
+        <path d="M32 6 L20 32 L26 32 L18 56 L8 56 Z" fill="#000" opacity="0.18"/>
+        <path d="M32 6 L18 28 L24 28 L32 6 Z" fill="#fff" opacity="0.4"/>
+      </svg>
+    </div>
+    <div class="name">Zenith<span class="tm">™</span></div>
+    <div class="stage">Etapa <span class="num">12</span> / 12 · Competencia</div>
+  </div>
+  <div class="right">
+    <span class="live"><span class="dot"></span> Live</span>
+    <span>{{FECHA}}</span>
+  </div>
+</header>
+
+<div class="bg-fx"></div>
+<div class="bg-grid"></div>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="container">
+    <div class="hero-tag fade-up">Competidor Spy · Biblioteca Meta</div>
+    <h1 class="fade-up d1">Lo que está pasando <em>en {{NICHO}}</em>.</h1>
+    <p class="hero-lead fade-up d2">Biblioteca de Anuncios Meta + scrap manual de las landings de los <b>{{N_COMPETIDORES}} competidores principales</b>. Mecanismos, promesas, precios, garantías y ángulos — TODO sobre la mesa para encontrar <b>tu hueco</b>.</p>
+    <div class="hero-meta-grid fade-up d3">
+      <div class="block">
+        <div class="label">Competidores</div>
+        <div class="value"><em>{{N_COMPETIDORES}}</em> analizados</div>
+      </div>
+      <div class="block">
+        <div class="label">Anuncios activos</div>
+        <div class="value"><em>{{N_ADS}}</em> escalando</div>
+      </div>
+      <div class="block">
+        <div class="label">País / Zona</div>
+        <div class="value">{{PAIS}}</div>
+      </div>
+      <div class="block">
+        <div class="label">Cobertura</div>
+        <div class="value">{{COBERTURA}}</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 1 · COMPETIDORES PRINCIPALES -->
+<section>
+  <div class="container">
+    <div class="section-tag fade-up">01 · Competidores principales</div>
+    <h2 class="section-title fade-up">Los <em>{{N_COMPETIDORES}}</em> que dominan ahora.</h2>
+    <p class="section-lead fade-up">Cada uno con su mecanismo · su promesa · su precio · su garantía y su tipo de lead. <b>Memorízalos antes de escribir tu copy.</b></p>
+    <div class="comp-grid">
+      <div class="comp-card fade-up">
+        <div class="top-row">
+          <div class="av">{{COMP_1_INIT}}</div>
+          <div class="meta">
+            <div class="name">{{COMP_1_NAME}}</div>
+            <div class="url">{{COMP_1_URL}}</div>
+          </div>
+          <div class="lead-tag">{{COMP_1_LEAD}}</div>
+        </div>
+        <div class="comp-rows">
+          <div class="comp-row"><div class="lbl">Mecanismo</div><div class="val">{{COMP_1_MEC}}</div></div>
+          <div class="comp-row"><div class="lbl">Promesa</div><div class="val">{{COMP_1_PROM}}</div></div>
+          <div class="comp-row"><div class="lbl">Precio</div><div class="val price">{{COMP_1_PRICE}}</div></div>
+          <div class="comp-row"><div class="lbl">Garantía</div><div class="val">{{COMP_1_GAR}}</div></div>
+        </div>
+      </div>
+
+      <div class="comp-card fade-up d1">
+        <div class="top-row">
+          <div class="av">{{COMP_2_INIT}}</div>
+          <div class="meta">
+            <div class="name">{{COMP_2_NAME}}</div>
+            <div class="url">{{COMP_2_URL}}</div>
+          </div>
+          <div class="lead-tag">{{COMP_2_LEAD}}</div>
+        </div>
+        <div class="comp-rows">
+          <div class="comp-row"><div class="lbl">Mecanismo</div><div class="val">{{COMP_2_MEC}}</div></div>
+          <div class="comp-row"><div class="lbl">Promesa</div><div class="val">{{COMP_2_PROM}}</div></div>
+          <div class="comp-row"><div class="lbl">Precio</div><div class="val price">{{COMP_2_PRICE}}</div></div>
+          <div class="comp-row"><div class="lbl">Garantía</div><div class="val">{{COMP_2_GAR}}</div></div>
+        </div>
+      </div>
+
+      <div class="comp-card fade-up d2">
+        <div class="top-row">
+          <div class="av">{{COMP_3_INIT}}</div>
+          <div class="meta">
+            <div class="name">{{COMP_3_NAME}}</div>
+            <div class="url">{{COMP_3_URL}}</div>
+          </div>
+          <div class="lead-tag">{{COMP_3_LEAD}}</div>
+        </div>
+        <div class="comp-rows">
+          <div class="comp-row"><div class="lbl">Mecanismo</div><div class="val">{{COMP_3_MEC}}</div></div>
+          <div class="comp-row"><div class="lbl">Promesa</div><div class="val">{{COMP_3_PROM}}</div></div>
+          <div class="comp-row"><div class="lbl">Precio</div><div class="val price">{{COMP_3_PRICE}}</div></div>
+          <div class="comp-row"><div class="lbl">Garantía</div><div class="val">{{COMP_3_GAR}}</div></div>
+        </div>
+      </div>
+
+      <div class="comp-card fade-up">
+        <div class="top-row">
+          <div class="av">{{COMP_4_INIT}}</div>
+          <div class="meta">
+            <div class="name">{{COMP_4_NAME}}</div>
+            <div class="url">{{COMP_4_URL}}</div>
+          </div>
+          <div class="lead-tag">{{COMP_4_LEAD}}</div>
+        </div>
+        <div class="comp-rows">
+          <div class="comp-row"><div class="lbl">Mecanismo</div><div class="val">{{COMP_4_MEC}}</div></div>
+          <div class="comp-row"><div class="lbl">Promesa</div><div class="val">{{COMP_4_PROM}}</div></div>
+          <div class="comp-row"><div class="lbl">Precio</div><div class="val price">{{COMP_4_PRICE}}</div></div>
+          <div class="comp-row"><div class="lbl">Garantía</div><div class="val">{{COMP_4_GAR}}</div></div>
+        </div>
+      </div>
+
+      <div class="comp-card fade-up d1">
+        <div class="top-row">
+          <div class="av">{{COMP_5_INIT}}</div>
+          <div class="meta">
+            <div class="name">{{COMP_5_NAME}}</div>
+            <div class="url">{{COMP_5_URL}}</div>
+          </div>
+          <div class="lead-tag">{{COMP_5_LEAD}}</div>
+        </div>
+        <div class="comp-rows">
+          <div class="comp-row"><div class="lbl">Mecanismo</div><div class="val">{{COMP_5_MEC}}</div></div>
+          <div class="comp-row"><div class="lbl">Promesa</div><div class="val">{{COMP_5_PROM}}</div></div>
+          <div class="comp-row"><div class="lbl">Precio</div><div class="val price">{{COMP_5_PRICE}}</div></div>
+          <div class="comp-row"><div class="lbl">Garantía</div><div class="val">{{COMP_5_GAR}}</div></div>
+        </div>
+      </div>
+
+      <div class="comp-card fade-up d2">
+        <div class="top-row">
+          <div class="av">{{COMP_6_INIT}}</div>
+          <div class="meta">
+            <div class="name">{{COMP_6_NAME}}</div>
+            <div class="url">{{COMP_6_URL}}</div>
+          </div>
+          <div class="lead-tag">{{COMP_6_LEAD}}</div>
+        </div>
+        <div class="comp-rows">
+          <div class="comp-row"><div class="lbl">Mecanismo</div><div class="val">{{COMP_6_MEC}}</div></div>
+          <div class="comp-row"><div class="lbl">Promesa</div><div class="val">{{COMP_6_PROM}}</div></div>
+          <div class="comp-row"><div class="lbl">Precio</div><div class="val price">{{COMP_6_PRICE}}</div></div>
+          <div class="comp-row"><div class="lbl">Garantía</div><div class="val">{{COMP_6_GAR}}</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 2 · TABLA COMPARATIVA -->
+<section class="alt">
+  <div class="container">
+    <div class="section-tag fade-up">02 · Análisis comparativo</div>
+    <h2 class="section-title fade-up">Mecanismos × Promesas × Precios × <em>Ángulos</em>.</h2>
+    <p class="section-lead fade-up">Tabla cruzada para identificar patrones — y huecos.</p>
+    <div class="table-wrap fade-up">
+      <div class="table-scroll">
+        <table>
+          <thead>
+            <tr>
+              <th>Marca</th>
+              <th>Mecanismo</th>
+              <th>Promesa core</th>
+              <th>Precio</th>
+              <th>Ángulo dominante</th>
+              <th>Garantía</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td><strong>{{COMP_1_NAME}}</strong></td><td>{{COMP_1_MEC}}</td><td>{{COMP_1_PROM}}</td><td>{{COMP_1_PRICE}}</td><td>{{COMP_1_ANG}}</td><td>{{COMP_1_GAR}}</td></tr>
+            <tr><td><strong>{{COMP_2_NAME}}</strong></td><td>{{COMP_2_MEC}}</td><td>{{COMP_2_PROM}}</td><td>{{COMP_2_PRICE}}</td><td>{{COMP_2_ANG}}</td><td>{{COMP_2_GAR}}</td></tr>
+            <tr><td><strong>{{COMP_3_NAME}}</strong></td><td>{{COMP_3_MEC}}</td><td>{{COMP_3_PROM}}</td><td>{{COMP_3_PRICE}}</td><td>{{COMP_3_ANG}}</td><td>{{COMP_3_GAR}}</td></tr>
+            <tr><td><strong>{{COMP_4_NAME}}</strong></td><td>{{COMP_4_MEC}}</td><td>{{COMP_4_PROM}}</td><td>{{COMP_4_PRICE}}</td><td>{{COMP_4_ANG}}</td><td>{{COMP_4_GAR}}</td></tr>
+            <tr><td><strong>{{COMP_5_NAME}}</strong></td><td>{{COMP_5_MEC}}</td><td>{{COMP_5_PROM}}</td><td>{{COMP_5_PRICE}}</td><td>{{COMP_5_ANG}}</td><td>{{COMP_5_GAR}}</td></tr>
+            <tr><td><strong>{{COMP_6_NAME}}</strong></td><td>{{COMP_6_MEC}}</td><td>{{COMP_6_PROM}}</td><td>{{COMP_6_PRICE}}</td><td>{{COMP_6_ANG}}</td><td>{{COMP_6_GAR}}</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 3 · ANUNCIOS ESCALANDO -->
+<section>
+  <div class="container">
+    <div class="section-tag fade-up">03 · Anuncios escalando AHORA</div>
+    <h2 class="section-title fade-up">Los anuncios que <em>están ganando</em> hoy.</h2>
+    <p class="section-lead fade-up">Detectados con Biblioteca de Anuncios Meta. <b>Llevan más de 14 días activos</b> — señal clara de que rentan.</p>
+    <div class="ad-grid">
+      <div class="ad-card fade-up">
+        <span class="running-tag">{{AD_1_DAYS}}d activo</span>
+        <div class="ad-head">
+          <div class="av">{{AD_1_INIT}}</div>
+          <div class="info">
+            <div class="sponsor">{{AD_1_BRAND}}</div>
+            <div class="sub">{{AD_1_PLATFORM}}</div>
+          </div>
+        </div>
+        <div class="ad-copy">{{AD_1_COPY}}</div>
+        <div class="ad-creative"><span class="play-pill">Video · {{AD_1_DUR}}</span></div>
+        <div class="ad-cta-bar"><span class="domain">{{AD_1_DOMAIN}}</span><span class="cta">{{AD_1_CTA}}</span></div>
+      </div>
+
+      <div class="ad-card fade-up d1">
+        <span class="running-tag">{{AD_2_DAYS}}d activo</span>
+        <div class="ad-head">
+          <div class="av">{{AD_2_INIT}}</div>
+          <div class="info">
+            <div class="sponsor">{{AD_2_BRAND}}</div>
+            <div class="sub">{{AD_2_PLATFORM}}</div>
+          </div>
+        </div>
+        <div class="ad-copy">{{AD_2_COPY}}</div>
+        <div class="ad-creative"><span class="play-pill">Reel · {{AD_2_DUR}}</span></div>
+        <div class="ad-cta-bar"><span class="domain">{{AD_2_DOMAIN}}</span><span class="cta">{{AD_2_CTA}}</span></div>
+      </div>
+
+      <div class="ad-card fade-up d2">
+        <span class="running-tag">{{AD_3_DAYS}}d activo</span>
+        <div class="ad-head">
+          <div class="av">{{AD_3_INIT}}</div>
+          <div class="info">
+            <div class="sponsor">{{AD_3_BRAND}}</div>
+            <div class="sub">{{AD_3_PLATFORM}}</div>
+          </div>
+        </div>
+        <div class="ad-copy">{{AD_3_COPY}}</div>
+        <div class="ad-creative"><span class="play-pill">Imagen · estática</span></div>
+        <div class="ad-cta-bar"><span class="domain">{{AD_3_DOMAIN}}</span><span class="cta">{{AD_3_CTA}}</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 4 · MECANISMOS YA NOMBRADOS -->
+<section class="alt">
+  <div class="container">
+    <div class="section-tag fade-up">04 · Mecanismos ya nombrados</div>
+    <h2 class="section-title fade-up">Lo que <em>NO podemos repetir</em>.</h2>
+    <p class="section-lead fade-up">Estos nombres ya están <b>quemados</b> en el mercado. Si los usas — pareces uno más. Hay que crear el tuyo.</p>
+    <div class="card-grid-3">
+      <div class="mech-named fade-up">
+        <span class="x-tag">Ya usado</span>
+        <h4>"{{MARKET_MECH_1_NAME}}"</h4>
+        <div class="who-uses">Por {{MARKET_MECH_1_WHO}}</div>
+        <p>{{MARKET_MECH_1_DESC}}</p>
+      </div>
+      <div class="mech-named fade-up d1">
+        <span class="x-tag">Ya usado</span>
+        <h4>"{{MARKET_MECH_2_NAME}}"</h4>
+        <div class="who-uses">Por {{MARKET_MECH_2_WHO}}</div>
+        <p>{{MARKET_MECH_2_DESC}}</p>
+      </div>
+      <div class="mech-named fade-up d2">
+        <span class="x-tag">Ya usado</span>
+        <h4>"{{MARKET_MECH_3_NAME}}"</h4>
+        <div class="who-uses">Por {{MARKET_MECH_3_WHO}}</div>
+        <p>{{MARKET_MECH_3_DESC}}</p>
+      </div>
+      <div class="mech-named fade-up">
+        <span class="x-tag">Ya usado</span>
+        <h4>"{{MARKET_MECH_4_NAME}}"</h4>
+        <div class="who-uses">Por {{MARKET_MECH_4_WHO}}</div>
+        <p>{{MARKET_MECH_4_DESC}}</p>
+      </div>
+      <div class="mech-named fade-up d1">
+        <span class="x-tag">Ya usado</span>
+        <h4>"{{MARKET_MECH_5_NAME}}"</h4>
+        <div class="who-uses">Por {{MARKET_MECH_5_WHO}}</div>
+        <p>{{MARKET_MECH_5_DESC}}</p>
+      </div>
+      <div class="mech-named fade-up d2">
+        <span class="x-tag">Ya usado</span>
+        <h4>"{{MARKET_MECH_6_NAME}}"</h4>
+        <div class="who-uses">Por {{MARKET_MECH_6_WHO}}</div>
+        <p>{{MARKET_MECH_6_DESC}}</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 5 · GAP COMPETITIVO -->
+<section>
+  <div class="container">
+    <div class="section-tag fade-up">05 · Gap competitivo</div>
+    <h2 class="section-title fade-up">El <em>hueco</em> que vamos a llenar.</h2>
+    <p class="section-lead fade-up">Después de analizar competencia + research — esto es lo que <b>NADIE</b> está haciendo. Y aquí está nuestra oportunidad.</p>
+    <div class="gap-card fade-up">
+      <div class="lbl">Hueco detectado · Gap</div>
+      <h3>"<em>{{GAP_HEADLINE}}</em>"</h3>
+      <p>{{GAP_DESCRIPTION}}</p>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 6 · ÁNGULO DE DIFERENCIACIÓN -->
+<section class="alt">
+  <div class="container">
+    <div class="section-tag fade-up">06 · Ángulo de diferenciación</div>
+    <h2 class="section-title fade-up">Cómo te <em>posicionas</em> contra todos.</h2>
+    <p class="section-lead fade-up">Tu ángulo único, definido en una frase clara · que <b>no entra en colisión</b> con ninguno de los {{N_COMPETIDORES}} analizados.</p>
+    <div class="diff-card fade-up">
+      <div class="seal">Diferenciador</div>
+      <div class="lbl">Ángulo recomendado vs. mercado</div>
+      <h3>"<em>{{DIFF_ANGLE}}</em>"</h3>
+      <p>{{DIFF_RATIONALE}}</p>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 7 · ESTRATEGIA DE ENTRADA -->
+<section>
+  <div class="container">
+    <div class="section-tag fade-up">07 · Estrategia de entrada</div>
+    <h2 class="section-title fade-up">Los <em>3 pasos</em> para entrar pegando.</h2>
+    <p class="section-lead fade-up">No reinventes la rueda. Sigue este orden y entras con probabilidad de pegar en menos de <b>30 días</b>.</p>
+    <div class="steps-grid">
+      <div class="step-card fade-up">
+        <div class="big-step"><span class="word">Paso</span><span class="num">01</span></div>
+        <h4>{{STEP_1_TITLE}}</h4>
+        <p>{{STEP_1_DESC}}</p>
+      </div>
+      <div class="step-card fade-up d1">
+        <div class="big-step"><span class="word">Paso</span><span class="num">02</span></div>
+        <h4>{{STEP_2_TITLE}}</h4>
+        <p>{{STEP_2_DESC}}</p>
+      </div>
+      <div class="step-card fade-up d2">
+        <div class="big-step"><span class="word">Paso</span><span class="num">03</span></div>
+        <h4>{{STEP_3_TITLE}}</h4>
+        <p>{{STEP_3_DESC}}</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="zenith-footer">
+  <div class="container">
+    <div class="footer-brand">
+      <div class="logo">
+        <svg viewBox="0 0 64 64" fill="none">
+          <path d="M32 6 L8 56 L56 56 Z" fill="#fff" stroke="#fff" stroke-width="2" stroke-linejoin="round"/>
+          <path d="M32 6 L20 32 L26 32 L18 56 L8 56 Z" fill="#000" opacity="0.18"/>
+        </svg>
+      </div>
+      <div class="name">Zenith<span class="tm">™</span></div>
+    </div>
+    <div class="tagline">"Para subir más alto · primero hay que ver bien la montaña."</div>
+    <div class="made-by">Hecho con <span class="accent">Método Zenith™</span> · Crea Ofertas 1%</div>
+    <div class="made-by">© 2026 · Todos los derechos reservados</div>
+    <div class="print-tip">⌘ + P → Guardar como PDF · estética preservada</div>
+    <div class="drive-tip">📁 Drive-friendly · sube y comparte sin perder el diseño</div>
+  </div>
+</footer>
+
+</body>
+</html>

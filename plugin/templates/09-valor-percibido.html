@@ -1,0 +1,712 @@
+<!--
+  TEMPLATE 09 · VALOR PERCIBIDO · FÓRMULA BENCIVENGA
+  ─────────────────────────────────────────────
+  Output del agente: valor-percibido-master
+  Placeholders Mustache-like: {{NOMBRE_CAMPO}}
+  Imprimible a PDF: Cmd/Ctrl + P → Guardar como PDF
+-->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Valor Percibido · {{NOMBRE_PRODUCTO}}</title>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' stop-color='%2300E5CF'/%3E%3Cstop offset='100%25' stop-color='%23B845FF'/%3E%3C/linearGradient%3E%3C/defs%3E%3Cpath d='M32 4 L8 56 L56 56 Z' fill='url(%23g)' stroke='%2300E5CF' stroke-width='2' stroke-linejoin='round'/%3E%3Cpath d='M32 4 L20 32 L26 32 L18 56 L8 56 Z' fill='%23ffffff' opacity='0.15'/%3E%3Cpath d='M32 4 L18 28 L24 28 L32 4 Z' fill='%23ffffff' opacity='0.25'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500;9..144,600;9..144,700;9..144,800;9..144,900&family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --cian: #00E5CF;
+    --cian-soft: #4DECDB;
+    --purple: #B845FF;
+    --purple-soft: #C972FF;
+    --purple-deep: #6E1FB8;
+    --dark: #050510;
+    --card: #0B0B17;
+    --card-2: #11111f;
+    --card-hover: #22223a;
+    --line: rgba(255,255,255,.08);
+    --line-strong: rgba(255,255,255,.18);
+    --text: #ffffff;
+    --text-2: rgba(255,255,255,.78);
+    --text-3: rgba(255,255,255,.5);
+    --success: #10e0a1;
+    --success-soft: rgba(16, 224, 161, 0.15);
+    --danger: #ff4d6d;
+    --danger-soft: rgba(255, 77, 109, 0.15);
+    --warning: #f59e0b;
+    --grad: linear-gradient(135deg, var(--cian) 0%, var(--purple) 100%);
+    --grad-soft: linear-gradient(135deg, rgba(0,229,207,.15) 0%, rgba(184,69,255,.15) 100%);
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    background: var(--dark); color: var(--text);
+    line-height: 1.6; overflow-x: hidden;
+    background-image:
+      radial-gradient(circle at 15% 0%, rgba(168, 85, 247, 0.18) 0%, transparent 55%),
+      radial-gradient(circle at 85% 85%, rgba(245, 158, 11, 0.06) 0%, transparent 55%),
+      radial-gradient(circle at 50% 50%, rgba(168, 85, 247, 0.03) 0%, transparent 70%);
+    background-attachment: fixed;
+  }
+  .display { font-family: 'Fraunces', serif; }
+  .mono { font-family: 'JetBrains Mono', monospace; }
+  .container { max-width: 1180px; margin: 0 auto; padding: 0 32px; }
+
+  header.hero {
+    min-height: 100vh;
+    display: flex; flex-direction: column; justify-content: center;
+    padding: 80px 0 60px; position: relative; overflow: hidden;
+  }
+  header.hero::before {
+    content: ''; position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-image:
+      linear-gradient(rgba(168, 85, 247, 0.04) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(168, 85, 247, 0.04) 1px, transparent 1px);
+    background-size: 50px 50px;
+    pointer-events: none;
+    mask-image: radial-gradient(ellipse at center, black 30%, transparent 75%);
+  }
+  .hero-tag {
+    display: inline-flex; align-items: center; gap: 10px;
+    background: rgba(168, 85, 247, 0.12);
+    border: 1px solid var(--line-strong);
+    color: var(--cian);
+    padding: 8px 16px; border-radius: 100px;
+    font-size: 12px; font-weight: 600;
+    letter-spacing: 2px; text-transform: uppercase;
+    width: fit-content; margin-bottom: 30px;
+    position: relative; z-index: 2;
+  }
+  .hero-tag::before {
+    content: ''; width: 8px; height: 8px; border-radius: 50%;
+    background: var(--cian);
+    box-shadow: 0 0 14px rgba(0,229,207,.45);
+    animation: pulse 2s infinite;
+  }
+  @keyframes pulse {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.5; transform: scale(1.5); }
+  }
+  .hero-class-number {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 14px; color: var(--text-3);
+    letter-spacing: 4px; margin-bottom: 18px;
+    position: relative; z-index: 2;
+  }
+  .hero-class-number .num { color: var(--purple); font-weight: 700; }
+  header.hero h1 {
+    font-family: 'Fraunces', serif;
+    font-size: clamp(46px, 8vw, 96px);
+    font-weight: 700; line-height: 0.95;
+    letter-spacing: -2px; margin-bottom: 30px;
+    position: relative; z-index: 2;
+  }
+  header.hero h1 .highlight {
+    background: linear-gradient(135deg, var(--cian) 0%, var(--purple) 100%);
+    -webkit-background-clip: text; background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline-block;
+  }
+  .hero-lead {
+    font-size: 22px; color: var(--text-2);
+    max-width: 760px; margin-bottom: 50px;
+    font-weight: 300; line-height: 1.5;
+    position: relative; z-index: 2;
+  }
+  .hero-lead strong { color: var(--text); font-weight: 600; }
+
+  /* FORMULA BOX */
+  .formula-box {
+    background: linear-gradient(135deg, rgba(168, 85, 247, 0.12), rgba(245, 158, 11, 0.08));
+    border: 1px solid var(--cian);
+    border-radius: 20px;
+    padding: 50px;
+    margin: 40px 0;
+    text-align: center;
+    position: relative; overflow: hidden;
+  }
+  .formula-box::before {
+    content: '';
+    position: absolute;
+    top: -50%; left: -50%;
+    width: 200%; height: 200%;
+    background: radial-gradient(circle, rgba(168, 85, 247, 0.10) 0%, transparent 50%);
+    animation: rotate 30s linear infinite;
+    pointer-events: none;
+  }
+  @keyframes rotate { from { transform: rotate(0); } to { transform: rotate(360deg); } }
+  .formula-box .formula-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 12px; color: var(--cian);
+    letter-spacing: 3px; text-transform: uppercase;
+    margin-bottom: 22px;
+    position: relative; z-index: 1;
+  }
+  .formula-box .formula {
+    font-family: 'Fraunces', serif;
+    font-size: clamp(32px, 5vw, 56px);
+    font-weight: 700; color: var(--text);
+    line-height: 1.15; letter-spacing: -1.5px;
+    position: relative; z-index: 1;
+  }
+  .formula-box .formula .plus { color: var(--success); margin: 0 8px; }
+  .formula-box .formula .minus { color: var(--danger); margin: 0 8px; }
+  .formula-box .formula .eq { color: var(--purple); margin: 0 8px; }
+  .formula-box .formula-note {
+    font-size: 15px; color: var(--text-3);
+    margin-top: 22px; position: relative; z-index: 1;
+  }
+
+  section { padding: 100px 0; position: relative; }
+  section.alt {
+    background: linear-gradient(180deg, transparent 0%, rgba(168, 85, 247, 0.04) 50%, transparent 100%);
+    border-top: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+  }
+  .section-tag {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 13px; color: var(--cian);
+    letter-spacing: 2px; margin-bottom: 16px;
+    text-transform: uppercase;
+  }
+  .section-title {
+    font-family: 'Fraunces', serif;
+    font-size: clamp(34px, 5vw, 54px);
+    font-weight: 700; line-height: 1.05;
+    letter-spacing: -1px; margin-bottom: 24px;
+  }
+  .section-title .highlight { color: var(--purple); }
+  .section-title .primary { color: var(--cian); }
+  .section-title .verde { color: var(--success); }
+  .section-title .rojo { color: var(--danger); }
+  .section-lead {
+    font-size: 19px; color: var(--text-2);
+    max-width: 800px; margin-bottom: 50px;
+    font-weight: 300; line-height: 1.55;
+  }
+  h3 {
+    font-family: 'Fraunces', serif;
+    font-size: 22px; font-weight: 600;
+    margin-bottom: 14px; color: var(--text);
+  }
+  h4 {
+    font-family: 'Fraunces', serif;
+    font-size: 18px; font-weight: 600;
+    margin-bottom: 10px; color: var(--text);
+  }
+  p { color: var(--text-2); margin-bottom: 16px; }
+  strong { color: var(--text); font-weight: 600; }
+
+  /* STACK VALOR TABLA */
+  .stack-table {
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 20px;
+    overflow: hidden;
+    margin-top: 40px;
+  }
+  .stack-table table { width: 100%; border-collapse: collapse; }
+  .stack-table th {
+    background: var(--card-2);
+    color: var(--cian);
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    padding: 18px 22px;
+    text-align: left;
+    border-bottom: 1px solid var(--line);
+    font-weight: 600;
+  }
+  .stack-table th.r { text-align: right; }
+  .stack-table td {
+    padding: 18px 22px;
+    border-bottom: 1px solid var(--line);
+    color: var(--text-2);
+    font-size: 15px;
+  }
+  .stack-table td strong { color: var(--text); }
+  .stack-table td.r { text-align: right; font-family: 'JetBrains Mono', monospace; color: var(--purple); font-weight: 700; }
+  .stack-table tr:last-child td { border-bottom: none; }
+  .stack-table tr.total td {
+    background: var(--card-2);
+    font-family: 'Fraunces', serif;
+    font-size: 22px;
+    color: var(--text);
+    font-weight: 700;
+    border-top: 2px solid var(--cian);
+  }
+  .stack-table tr.total td.r { color: var(--success); font-size: 28px; }
+
+  /* PRUEBAS GRID */
+  .pruebas-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 18px;
+    margin-top: 40px;
+  }
+  .prueba-card {
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 18px;
+    padding: 28px;
+    transition: all 0.3s;
+    position: relative;
+  }
+  .prueba-card:hover { border-color: var(--cian); transform: translateY(-3px); }
+  .prueba-card .p-tipo {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px; letter-spacing: 2px;
+    color: var(--cian); text-transform: uppercase;
+    margin-bottom: 10px;
+  }
+  .prueba-card .p-quote {
+    font-family: 'Fraunces', serif;
+    font-size: 17px; font-weight: 500;
+    color: var(--text); line-height: 1.35;
+    margin-bottom: 14px;
+  }
+  .prueba-card .p-author {
+    font-size: 13px; color: var(--text-3);
+    border-top: 1px solid var(--line);
+    padding-top: 12px;
+  }
+  .prueba-card .p-data {
+    font-family: 'Fraunces', serif;
+    font-size: 36px; font-weight: 700;
+    color: var(--purple); margin-bottom: 8px;
+    line-height: 1;
+  }
+  .prueba-card .p-desc {
+    font-size: 14px; color: var(--text-2); margin: 0;
+  }
+
+  /* DESDOBLAR PRECIO */
+  .desdoblar {
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 20px;
+    padding: 40px;
+    margin-top: 40px;
+  }
+  .anclajes {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 14px;
+    margin-top: 24px;
+  }
+  .anclaje {
+    background: var(--card-2);
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    padding: 22px;
+    text-align: center;
+  }
+  .anclaje .a-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px; letter-spacing: 2px;
+    color: var(--text-3); text-transform: uppercase;
+    margin-bottom: 10px;
+  }
+  .anclaje .a-vs {
+    font-family: 'Fraunces', serif;
+    font-size: 28px; font-weight: 700;
+    color: var(--purple);
+    line-height: 1; margin-bottom: 8px;
+  }
+  .anclaje p {
+    font-size: 13px; color: var(--text-2); margin: 0;
+  }
+
+  /* COSTOS ROTOS */
+  .checklist {
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 18px;
+    padding: 36px;
+    margin-top: 40px;
+  }
+  .checklist h3 { color: var(--success); margin-bottom: 18px; }
+  .checklist ul { list-style: none; padding: 0; }
+  .checklist li {
+    padding: 16px 0 16px 44px;
+    position: relative;
+    color: var(--text-2);
+    border-bottom: 1px solid var(--line);
+    font-size: 15px;
+  }
+  .checklist li:last-child { border-bottom: none; }
+  .checklist li::before {
+    content: '✓';
+    position: absolute; left: 0; top: 16px;
+    color: var(--success);
+    font-weight: 700;
+    font-size: 18px;
+    width: 28px; height: 28px;
+    background: var(--success-soft);
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+  }
+  .checklist li strong { color: var(--text); }
+
+  /* FINAL RESULT */
+  .final-result {
+    background: linear-gradient(135deg, rgba(168, 85, 247, 0.20), rgba(245, 158, 11, 0.12));
+    border: 2px solid var(--cian);
+    border-radius: 24px;
+    padding: 60px;
+    margin-top: 40px;
+    text-align: center;
+    position: relative; overflow: hidden;
+  }
+  .final-result::before {
+    content: '';
+    position: absolute;
+    top: -50%; left: -50%; width: 200%; height: 200%;
+    background: radial-gradient(circle, rgba(168, 85, 247, 0.12) 0%, transparent 50%);
+    animation: rotate 30s linear infinite;
+    pointer-events: none;
+  }
+  .final-result > * { position: relative; z-index: 1; }
+  .final-result .f-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 12px; letter-spacing: 3px;
+    color: var(--cian); text-transform: uppercase;
+    margin-bottom: 22px;
+  }
+  .final-result .f-stacked {
+    font-family: 'Fraunces', serif;
+    font-size: clamp(50px, 9vw, 100px);
+    font-weight: 700;
+    background: linear-gradient(135deg, var(--cian), var(--purple));
+    -webkit-background-clip: text; background-clip: text;
+    -webkit-text-fill-color: transparent;
+    line-height: 1; letter-spacing: -3px;
+  }
+  .final-result .f-vs {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 14px; letter-spacing: 4px;
+    color: var(--text-3);
+    margin: 26px 0; text-transform: uppercase;
+  }
+  .final-result .f-precio {
+    font-family: 'Fraunces', serif;
+    font-size: clamp(36px, 6vw, 60px);
+    font-weight: 700;
+    color: var(--success);
+    line-height: 1;
+  }
+  .final-result .f-ratio {
+    margin-top: 30px;
+    padding: 16px 24px;
+    background: var(--card-2);
+    border: 1px solid var(--purple);
+    border-radius: 100px;
+    display: inline-block;
+    color: var(--purple);
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 14px; letter-spacing: 2px;
+  }
+  .final-result .f-ratio strong { color: var(--text); }
+
+  /* FOOTER */
+  footer {
+    padding: 60px 0 40px;
+    text-align: center;
+    color: var(--text-3);
+    border-top: 1px solid var(--line);
+    font-size: 14px;
+  }
+  footer .brand {
+    font-family: 'Fraunces', serif;
+    font-weight: 700; color: var(--text);
+    font-size: 16px; margin-bottom: 8px; display: block;
+  }
+  footer .print-tip {
+    margin-top: 18px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 12px; color: var(--cian);
+    letter-spacing: 1.5px;
+  }
+
+  @media print {
+    body {
+      background: var(--dark) !important;
+      color: var(--text) !important;
+      print-color-adjust: exact !important;
+      -webkit-print-color-adjust: exact !important;
+      color-adjust: exact !important;
+    }
+    section { padding: 40px 0; page-break-inside: avoid; }
+    .card, .formula-box, .checklist, .core-quote, .stack-section, .warranty-block, .bonus-card, .bullet-card, .testimonial-card, .faq-item, .ps-block, .story-block, .core-section, .rule-block, .variant-card, .ingredient-card, .pipeline-step, .gauge-wrap, .data-row, .belief-card, .mech-step, .feature-row, .promise-block, .module-card, .lesson-row, .bonus-row, .value-row, .comp-card, .version-card, .recomendada, .block-card, .audit-collapsible, .fix-card, .veredicto-final, .global-score { page-break-inside: avoid; }
+    header.hero { min-height: auto; padding: 40px 0; }
+    /* Preservar gradientes y backgrounds en PDF */
+    * { print-color-adjust: exact !important; -webkit-print-color-adjust: exact !important; }
+  }
+  @media (max-width: 768px) {
+    .container { padding: 0 20px; }
+    .final-result { padding: 30px; }
+    .formula-box { padding: 30px; }
+  }
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="container">
+    <div class="hero-tag">Valor Percibido</div>
+    <div class="hero-class-number">DOCUMENTO <span class="num">09</span> · VALOR-PERCIBIDO-MASTER · OUTPUT</div>
+    <h1>La fórmula<br/><span class="highlight">Bencivenga</span></h1>
+    <p class="hero-lead">La matemática invisible que decide si el avatar dice <strong>"qué barato"</strong> o <strong>"qué caro"</strong>. Aplicada a {{NOMBRE_PRODUCTO}}.</p>
+    <!-- ej NOMBRE_PRODUCTO: Método Glúteo Reverso 30 -->
+
+    <div class="formula-box" style="margin-top: 30px;">
+      <div class="formula-label">Fórmula maestra · Gary Bencivenga</div>
+      <div class="formula">Beneficio <span class="plus">+</span> Credibilidad <span class="minus">−</span> Costo <span class="eq">=</span> Valor</div>
+      <div class="formula-note">Si Valor &gt; Precio, hay venta. Si no, hay carrito abandonado.</div>
+    </div>
+  </div>
+</header>
+
+<!-- 1 · STACK DE VALOR -->
+<section>
+  <div class="container">
+    <div class="section-tag">01 · Beneficio · El stack de valor</div>
+    <h2 class="section-title">El <span class="verde">Beneficio</span> desglosado</h2>
+    <p class="section-lead">Cada cosa que recibe — con su precio individual de mercado. <strong>Para que el cerebro sume.</strong></p>
+
+    <div class="stack-table">
+      <table>
+        <thead>
+          <tr>
+            <th style="width: 60%">Lo que recibe</th>
+            <th>Justificación de precio</th>
+            <th class="r">Valor individual</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>{{STACK_1_ITEM}}</strong></td>
+            <!-- ej STACK_1_ITEM: Programa principal (18 clases video HD) -->
+            <td>{{STACK_1_JUST}}</td>
+            <!-- ej STACK_1_JUST: Cursos similares en Hotmart: 197-397€ -->
+            <td class="r">{{STACK_1_VAL}}</td>
+            <!-- ej STACK_1_VAL: 297€ -->
+          </tr>
+          <tr>
+            <td><strong>{{STACK_2_ITEM}}</strong></td>
+            <td>{{STACK_2_JUST}}</td>
+            <td class="r">{{STACK_2_VAL}}</td>
+          </tr>
+          <tr>
+            <td><strong>{{STACK_3_ITEM}}</strong></td>
+            <td>{{STACK_3_JUST}}</td>
+            <td class="r">{{STACK_3_VAL}}</td>
+          </tr>
+          <tr>
+            <td><strong>{{STACK_4_ITEM}}</strong></td>
+            <td>{{STACK_4_JUST}}</td>
+            <td class="r">{{STACK_4_VAL}}</td>
+          </tr>
+          <tr>
+            <td><strong>{{STACK_5_ITEM}}</strong></td>
+            <td>{{STACK_5_JUST}}</td>
+            <td class="r">{{STACK_5_VAL}}</td>
+          </tr>
+          <tr>
+            <td><strong>{{STACK_6_ITEM}}</strong></td>
+            <td>{{STACK_6_JUST}}</td>
+            <td class="r">{{STACK_6_VAL}}</td>
+          </tr>
+          <tr>
+            <td><strong>{{STACK_7_ITEM}}</strong></td>
+            <td>{{STACK_7_JUST}}</td>
+            <td class="r">{{STACK_7_VAL}}</td>
+          </tr>
+          <tr class="total">
+            <td colspan="2">VALOR TOTAL DEL STACK</td>
+            <td class="r">{{STACK_TOTAL}}</td>
+            <!-- ej STACK_TOTAL: 1.137€ -->
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- 2 · STACK DE PRUEBAS -->
+<section class="alt">
+  <div class="container">
+    <div class="section-tag">02 · Credibilidad · El stack de pruebas</div>
+    <h2 class="section-title">La <span class="primary">Credibilidad</span> visual</h2>
+    <p class="section-lead">3 capas: <strong>testimonios reales</strong>, <strong>datos duros</strong> y <strong>autoridad técnica</strong>. Cuanto más rica, mayor el "yes".</p>
+
+    <div class="pruebas-grid">
+      <div class="prueba-card">
+        <div class="p-tipo">Testimonio · Resultado</div>
+        <div class="p-quote">"{{TESTI_1_QUOTE}}"</div>
+        <!-- ej TESTI_1_QUOTE: A los 30 días el vaquero que tenía guardado hace 4 años me cierra otra vez. -->
+        <div class="p-author">— {{TESTI_1_AUTOR}}</div>
+        <!-- ej TESTI_1_AUTOR: María, 52, Sevilla · Alumna beta -->
+      </div>
+      <div class="prueba-card">
+        <div class="p-tipo">Testimonio · Emocional</div>
+        <div class="p-quote">"{{TESTI_2_QUOTE}}"</div>
+        <div class="p-author">— {{TESTI_2_AUTOR}}</div>
+      </div>
+      <div class="prueba-card">
+        <div class="p-tipo">Testimonio · Identidad</div>
+        <div class="p-quote">"{{TESTI_3_QUOTE}}"</div>
+        <div class="p-author">— {{TESTI_3_AUTOR}}</div>
+      </div>
+      <div class="prueba-card">
+        <div class="p-tipo">Dato duro</div>
+        <div class="p-data">{{DATA_1_BIG}}</div>
+        <!-- ej DATA_1_BIG: 240 -->
+        <p class="p-desc">{{DATA_1_DESC}}</p>
+        <!-- ej DATA_1_DESC: Alumnas beta que probaron el protocolo durante 6 meses antes del lanzamiento. -->
+      </div>
+      <div class="prueba-card">
+        <div class="p-tipo">Dato duro</div>
+        <div class="p-data">{{DATA_2_BIG}}</div>
+        <p class="p-desc">{{DATA_2_DESC}}</p>
+      </div>
+      <div class="prueba-card">
+        <div class="p-tipo">Dato duro</div>
+        <div class="p-data">{{DATA_3_BIG}}</div>
+        <p class="p-desc">{{DATA_3_DESC}}</p>
+      </div>
+      <div class="prueba-card">
+        <div class="p-tipo">Autoridad</div>
+        <div class="p-quote">{{AUT_1_TEXT}}</div>
+        <!-- ej AUT_1_TEXT: Aval del Dr. Méndez (fisioterapeuta dpto. Salud Mujer · Univ. Granada). -->
+        <div class="p-author">— {{AUT_1_REF}}</div>
+        <!-- ej AUT_1_REF: Estudio EMG glúteo 40+ -->
+      </div>
+      <div class="prueba-card">
+        <div class="p-tipo">Autoridad</div>
+        <div class="p-quote">{{AUT_2_TEXT}}</div>
+        <div class="p-author">— {{AUT_2_REF}}</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 3 · DESDOBLAR EL PRECIO -->
+<section>
+  <div class="container">
+    <div class="section-tag">03 · Anclajes</div>
+    <h2 class="section-title">Desdoblar el <span class="highlight">precio</span></h2>
+    <p class="section-lead">El cerebro no procesa precios absolutos. Procesa <strong>comparaciones</strong>. Le damos las que queremos.</p>
+
+    <div class="desdoblar">
+      <h3>Anclajes visuales para meter en sales page</h3>
+      <p>{{ANCLAJE_INTRO}}</p>
+      <!-- ej ANCLAJE_INTRO: El precio del programa (17€) comparado con cosas que el avatar gasta sin pensar. -->
+      <div class="anclajes">
+        <div class="anclaje">
+          <div class="a-label">vs cremas</div>
+          <div class="a-vs">{{ANC_1_BIG}}</div>
+          <!-- ej ANC_1_BIG: 5x menos -->
+          <p>{{ANC_1_DESC}}</p>
+          <!-- ej ANC_1_DESC: Una crema reafirmante de farmacia: 80€. El protocolo: 17€. -->
+        </div>
+        <div class="anclaje">
+          <div class="a-label">vs gimnasio</div>
+          <div class="a-vs">{{ANC_2_BIG}}</div>
+          <div class="anclaje"><p>{{ANC_2_DESC}}</p></div>
+        </div>
+        <div class="anclaje">
+          <div class="a-label">vs entrenador</div>
+          <div class="a-vs">{{ANC_3_BIG}}</div>
+          <p>{{ANC_3_DESC}}</p>
+        </div>
+        <div class="anclaje">
+          <div class="a-label">vs cena</div>
+          <div class="a-vs">{{ANC_4_BIG}}</div>
+          <p>{{ANC_4_DESC}}</p>
+        </div>
+        <div class="anclaje">
+          <div class="a-label">por día</div>
+          <div class="a-vs">{{ANC_5_BIG}}</div>
+          <!-- ej ANC_5_BIG: 0,56€/día -->
+          <p>{{ANC_5_DESC}}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 4 · COSTOS ROTOS -->
+<section class="alt">
+  <div class="container">
+    <div class="section-tag">04 · Costos rotos</div>
+    <h2 class="section-title">Los 5 <span class="rojo">costos</span> que ya no paga</h2>
+    <p class="section-lead">El "costo" no es solo dinero. Es tiempo, esfuerzo, fracaso, identidad y tecnología. <strong>Rompemos los 5 uno a uno.</strong></p>
+
+    <div class="checklist">
+      <h3>Costos que evita al comprar</h3>
+      <ul>
+        <li><strong>Costo tiempo:</strong> {{COSTO_TIEMPO}}</li>
+        <!-- ej COSTO_TIEMPO: 15 min/día en casa vs 1h+ desplazamiento + gimnasio + ducha. Recupera 5h/semana. -->
+        <li><strong>Costo esfuerzo:</strong> {{COSTO_ESFUERZO}}</li>
+        <!-- ej COSTO_ESFUERZO: Sin pesas, sin saltos, sin sudor extremo. Solo tumbada con un cojín. -->
+        <li><strong>Costo fracaso:</strong> {{COSTO_FRACASO}}</li>
+        <!-- ej COSTO_FRACASO: Garantía 30 días. Si no funciona, devolución. Cero riesgo a otra decepción. -->
+        <li><strong>Costo identitario:</strong> {{COSTO_IDENTITARIO}}</li>
+        <!-- ej COSTO_IDENTITARIO: No tiene que verse en clase con mujeres de 25. Sola, en casa, en pijama. Cero exposición. -->
+        <li><strong>Costo tecnológico:</strong> {{COSTO_TECNOLOGICO}}</li>
+        <!-- ej COSTO_TECNOLOGICO: Plataforma intuitiva. Acceso desde móvil. Botón play y listo. Cero tutorial. -->
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- 5 · RESULTADO FINAL -->
+<section>
+  <div class="container">
+    <div class="section-tag">05 · El veredicto</div>
+    <h2 class="section-title">El <span class="primary">valor total</span> vs el <span class="highlight">precio</span></h2>
+    <p class="section-lead">Suma de beneficio + credibilidad − costo. Esto es lo que el avatar percibe en su cabeza.</p>
+
+    <div class="final-result">
+      <div class="f-label">Valor percibido total</div>
+      <div class="f-stacked">{{VALOR_PERCIBIDO}}</div>
+      <!-- ej VALOR_PERCIBIDO: 1.880€ -->
+      <div class="f-vs">EL AVATAR PAGA</div>
+      <div class="f-precio">{{PRECIO_REAL}}</div>
+      <!-- ej PRECIO_REAL: 17€ -->
+      <div class="f-ratio">RATIO VALOR/PRECIO · <strong>{{RATIO}}x</strong></div>
+      <!-- ej RATIO: 110 -->
+    </div>
+  </div>
+</section>
+
+<!-- ZENITH FOOTER -->
+<footer class="zenith-footer" style="padding: 80px 0 50px; text-align: center; border-top: 1px solid var(--line); margin-top: 80px;">
+  <div class="container">
+    <div style="display: inline-flex; align-items: center; gap: 14px; margin-bottom: 24px;">
+      <div style="width: 40px; height: 40px; display: grid; place-items: center; background: var(--grad); border-radius: 10px; box-shadow: 0 0 24px rgba(0,229,207,.4);">
+        <svg viewBox="0 0 64 64" fill="none" style="width: 22px; height: 22px;">
+          <path d="M32 6 L8 56 L56 56 Z" fill="#ffffff" stroke="#ffffff" stroke-width="2" stroke-linejoin="round"/>
+          <path d="M32 6 L20 32 L26 32 L18 56 L8 56 Z" fill="#000" opacity="0.18"/>
+        </svg>
+      </div>
+      <div style="font-family: 'Fraunces', serif; font-style: italic; font-weight: 600; font-size: 28px; letter-spacing: -.01em; background: var(--grad); -webkit-background-clip: text; background-clip: text; color: transparent;">
+        Zenith<span style="font-size: 12px; vertical-align: super; opacity: .8; margin-left: 3px;">&trade;</span>
+      </div>
+    </div>
+    <div style="font-family: 'Fraunces', serif; font-style: italic; font-size: 18px; color: var(--text-2); margin-bottom: 16px;">&ldquo;De la cima se ve mejor el avatar.&rdquo;</div>
+    <div style="font-family: 'JetBrains Mono', monospace; font-size: 12px; letter-spacing: 2px; text-transform: uppercase; color: var(--text-3); margin-bottom: 8px;">Hecho con <span style="color: var(--cian);">M&eacute;todo Zenith&trade;</span> &middot; Crea Ofertas 1%</div>
+    <div style="font-family: 'JetBrains Mono', monospace; font-size: 12px; letter-spacing: 2px; text-transform: uppercase; color: var(--text-3); margin-bottom: 8px;">&copy; 2026 &middot; Todos los derechos reservados</div>
+    <div style="margin-top: 24px; padding-top: 24px; border-top: 1px dashed var(--line); font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 1.5px; color: var(--purple);">&#8984; + P &rarr; Guardar como PDF &middot; est&eacute;tica preservada</div>
+    <div style="margin-top: 8px; font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 1.2px; color: var(--text-3);">&#128193; Drive-friendly &middot; sube y comparte sin perder el dise&ntilde;o</div>
+  </div>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,53 @@
+# Carpetas personales del usuario (NO subir)
+AVATAR/
+ONE BELIEF/
+PUNTO A PUNTO B/
+caracteristicas beneficios deseo/
+carta de ventas/
+promesa/
+bonus/
+aumento valor percibido/
+explicaciones mecanismo/
+
+# Claude internal
+.claude/
+
+# OS
+.DS_Store
+.AppleDouble
+.LSOverride
+Thumbs.db
+
+# Audio/video
+*.mp4
+*.mov
+*.wav
+*.mp3
+*.MP4
+
+# Logs
+*.log
+_whisper*.log
+
+# Python
+__pycache__/
+*.pyc
+.cache/
+
+# Output del operador
+proyecto-*/
+proyectos/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.bak
+*.tmp
+
+# Env
+.env
+.env.local
+
+# Files raíz no necesarios
+excalidraw.log

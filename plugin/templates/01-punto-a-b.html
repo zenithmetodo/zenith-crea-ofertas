@@ -1,0 +1,730 @@
+<!--
+  TEMPLATE 01 · PUNTO A → PUNTO B
+  ─────────────────────────────────────────────
+  Output del agente: punto-a-b-master
+  Placeholders Mustache-like: {{NOMBRE_CAMPO}}
+  Imprimible a PDF: Cmd/Ctrl + P → Guardar como PDF
+-->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="color-scheme" content="dark">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Punto A → Punto B · {{NOMBRE_PRODUCTO}}</title>
+<!-- ═══════════════════════════════════════════════════════════════ -->
+<!-- ZENITH HTML · PRINT-TO-PDF + DRIVE-FRIENDLY                       -->
+<!-- Cmd+P → Save as PDF · estética preservada al 100%                 -->
+<!-- Drive viewer compatible · gradientes y dark theme preservados     -->
+<!-- ═══════════════════════════════════════════════════════════════ -->
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' stop-color='%2300E5CF'/%3E%3Cstop offset='100%25' stop-color='%23B845FF'/%3E%3C/linearGradient%3E%3C/defs%3E%3Cpath d='M32 4 L8 56 L56 56 Z' fill='url(%23g)' stroke='%2300E5CF' stroke-width='2' stroke-linejoin='round'/%3E%3Cpath d='M32 4 L20 32 L26 32 L18 56 L8 56 Z' fill='%23ffffff' opacity='0.15'/%3E%3Cpath d='M32 4 L18 28 L24 28 L32 4 Z' fill='%23ffffff' opacity='0.25'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500;9..144,600;9..144,700;9..144,800;9..144,900&family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --cian: #00E5CF;
+    --cian-soft: #4DECDB;
+    --purple: #B845FF;
+    --purple-soft: #C972FF;
+    --purple-deep: #6E1FB8;
+    --dark: #050510;
+    --card: #0B0B17;
+    --card-2: #11111f;
+    --card-hover: #22223a;
+    --line: rgba(255,255,255,.08);
+    --line-strong: rgba(255,255,255,.18);
+    --text: #ffffff;
+    --text-2: rgba(255,255,255,.78);
+    --text-3: rgba(255,255,255,.5);
+    --success: #10e0a1;
+    --success-soft: rgba(16, 224, 161, 0.15);
+    --danger: #ff4d6d;
+    --danger-soft: rgba(255, 77, 109, 0.15);
+    --warning: #f59e0b;
+    --grad: linear-gradient(135deg, var(--cian) 0%, var(--purple) 100%);
+    --grad-soft: linear-gradient(135deg, rgba(0,229,207,.15) 0%, rgba(184,69,255,.15) 100%);
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    background: var(--dark);
+    color: var(--text);
+    line-height: 1.6;
+    overflow-x: hidden;
+    background-image:
+      radial-gradient(circle at 15% 0%, rgba(168, 85, 247, 0.18) 0%, transparent 55%),
+      radial-gradient(circle at 85% 85%, rgba(245, 158, 11, 0.06) 0%, transparent 55%),
+      radial-gradient(circle at 50% 50%, rgba(168, 85, 247, 0.03) 0%, transparent 70%);
+    background-attachment: fixed;
+  }
+  .display { font-family: 'Fraunces', serif; }
+  .mono { font-family: 'JetBrains Mono', monospace; }
+  .container { max-width: 1200px; margin: 0 auto; padding: 0 32px; }
+
+  /* HERO */
+  header.hero {
+    min-height: 100vh;
+    display: flex; flex-direction: column; justify-content: center;
+    padding: 80px 0 60px;
+    position: relative; overflow: hidden;
+  }
+  header.hero::before {
+    content: ''; position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-image:
+      linear-gradient(rgba(168, 85, 247, 0.04) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(168, 85, 247, 0.04) 1px, transparent 1px);
+    background-size: 50px 50px;
+    pointer-events: none;
+    mask-image: radial-gradient(ellipse at center, black 30%, transparent 75%);
+  }
+  .hero-tag {
+    display: inline-flex; align-items: center; gap: 10px;
+    background: rgba(168, 85, 247, 0.12);
+    border: 1px solid var(--line-strong);
+    color: var(--cian);
+    padding: 8px 16px; border-radius: 100px;
+    font-size: 12px; font-weight: 600;
+    letter-spacing: 2px; text-transform: uppercase;
+    width: fit-content; margin-bottom: 30px;
+    position: relative; z-index: 2;
+  }
+  .hero-tag::before {
+    content: ''; width: 8px; height: 8px;
+    border-radius: 50%;
+    background: var(--cian);
+    box-shadow: 0 0 14px rgba(0,229,207,.45);
+    animation: pulse 2s infinite;
+  }
+  @keyframes pulse {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.5; transform: scale(1.5); }
+  }
+  .hero-class-number {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 14px; color: var(--text-3);
+    letter-spacing: 4px; margin-bottom: 18px;
+    position: relative; z-index: 2;
+  }
+  .hero-class-number .num { color: var(--purple); font-weight: 700; }
+  header.hero h1 {
+    font-family: 'Fraunces', serif;
+    font-size: clamp(46px, 8vw, 96px);
+    font-weight: 700; line-height: 0.95;
+    letter-spacing: -2px; margin-bottom: 30px;
+    position: relative; z-index: 2;
+  }
+  header.hero h1 .highlight {
+    background: linear-gradient(135deg, var(--cian) 0%, var(--purple) 100%);
+    -webkit-background-clip: text; background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline-block;
+  }
+  .hero-lead {
+    font-size: 22px; color: var(--text-2);
+    max-width: 760px; margin-bottom: 50px;
+    font-weight: 300; line-height: 1.5;
+    position: relative; z-index: 2;
+  }
+  .hero-lead strong { color: var(--text); font-weight: 600; }
+  .hero-meta {
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px;
+    padding-top: 40px; border-top: 1px solid var(--line);
+    position: relative; z-index: 2;
+  }
+  .meta-block .label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px; text-transform: uppercase;
+    letter-spacing: 2px; color: var(--text-3);
+    margin-bottom: 8px;
+  }
+  .meta-block .value { font-size: 16px; font-weight: 600; color: var(--text); }
+  .meta-block .value strong { color: var(--purple); }
+
+  /* SECTIONS */
+  section { padding: 100px 0; position: relative; }
+  section.alt {
+    background: linear-gradient(180deg, transparent 0%, rgba(168, 85, 247, 0.04) 50%, transparent 100%);
+    border-top: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+  }
+  .section-tag {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 13px; color: var(--cian);
+    letter-spacing: 2px; margin-bottom: 16px;
+    text-transform: uppercase;
+  }
+  .section-title {
+    font-family: 'Fraunces', serif;
+    font-size: clamp(34px, 5vw, 54px);
+    font-weight: 700; line-height: 1.05;
+    letter-spacing: -1px; margin-bottom: 24px;
+  }
+  .section-title .highlight { color: var(--purple); }
+  .section-title .primary { color: var(--cian); }
+  .section-lead {
+    font-size: 19px; color: var(--text-2);
+    max-width: 800px; margin-bottom: 50px;
+    font-weight: 300; line-height: 1.55;
+  }
+  .section-lead strong { color: var(--text); font-weight: 600; }
+  h3 {
+    font-family: 'Fraunces', serif;
+    font-size: 24px; font-weight: 600;
+    margin-bottom: 14px; color: var(--text);
+    letter-spacing: -0.5px;
+  }
+  h4 {
+    font-family: 'Fraunces', serif;
+    font-size: 19px; font-weight: 600;
+    margin-bottom: 10px; color: var(--text);
+  }
+  p { color: var(--text-2); margin-bottom: 16px; }
+  strong { color: var(--text); font-weight: 600; }
+
+  /* TABLE A vs B */
+  .ab-table {
+    display: grid; grid-template-columns: 220px 1fr 1fr;
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 24px;
+    overflow: hidden;
+    margin-top: 40px;
+  }
+  .ab-header {
+    padding: 24px 28px;
+    background: var(--card-2);
+    border-bottom: 1px solid var(--line);
+    display: flex; align-items: center; gap: 14px;
+  }
+  .ab-header.col-a { color: var(--danger); }
+  .ab-header.col-b { color: var(--success); }
+  .ab-header .icon {
+    width: 36px; height: 36px; border-radius: 12px;
+    background: rgba(255, 77, 109, 0.12);
+    display: flex; align-items: center; justify-content: center;
+    font-family: 'Fraunces', serif;
+    font-size: 18px; font-weight: 700;
+  }
+  .ab-header.col-b .icon { background: rgba(16, 224, 161, 0.12); }
+  .ab-header .title {
+    font-family: 'Fraunces', serif;
+    font-size: 18px; font-weight: 700;
+    letter-spacing: -0.3px;
+  }
+  .ab-header .subtitle {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px; letter-spacing: 2px;
+    color: var(--text-3); text-transform: uppercase;
+  }
+  .ab-corner {
+    padding: 24px 28px;
+    background: var(--card-2);
+    border-bottom: 1px solid var(--line);
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px; letter-spacing: 2px;
+    color: var(--text-3); text-transform: uppercase;
+    display: flex; align-items: center;
+  }
+  .ab-row {
+    display: contents;
+  }
+  .ab-cell {
+    padding: 26px 28px;
+    border-bottom: 1px solid var(--line);
+    color: var(--text-2);
+    font-size: 15px;
+    line-height: 1.55;
+  }
+  .ab-cell-key {
+    background: var(--card-2);
+    color: var(--text);
+    font-family: 'Fraunces', serif;
+    font-weight: 600;
+    border-right: 1px solid var(--line);
+    display: flex; flex-direction: column; gap: 8px;
+  }
+  .ab-cell-key .ico {
+    width: 36px; height: 36px;
+    border-radius: 10px;
+    background: rgba(0,229,207,.15);
+    color: var(--cian);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 16px;
+  }
+  .ab-cell-a {
+    border-right: 1px solid var(--line);
+    background: rgba(255, 77, 109, 0.03);
+  }
+  .ab-cell-b {
+    background: rgba(16, 224, 161, 0.03);
+  }
+  .ab-cell strong { color: var(--text); }
+  .ab-cell.last { border-bottom: none; }
+
+  /* TRANSFORM ARROW */
+  .transform-block {
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 24px;
+    padding: 60px;
+    margin-top: 40px;
+    position: relative;
+    overflow: hidden;
+  }
+  .transform-block::before {
+    content: ''; position: absolute;
+    top: -50%; left: -50%; width: 200%; height: 200%;
+    background: radial-gradient(circle, rgba(168, 85, 247, 0.08) 0%, transparent 50%);
+    animation: rotate 30s linear infinite;
+    pointer-events: none;
+  }
+  @keyframes rotate { from { transform: rotate(0); } to { transform: rotate(360deg); } }
+  .transform-flow {
+    display: grid; grid-template-columns: 1fr 80px 1fr;
+    gap: 30px; align-items: center;
+    position: relative; z-index: 1;
+  }
+  .transform-side {
+    text-align: center;
+    padding: 30px;
+    border-radius: 18px;
+    border: 1px solid var(--line);
+  }
+  .transform-side.a { background: rgba(255, 77, 109, 0.06); border-color: var(--danger); }
+  .transform-side.b { background: rgba(16, 224, 161, 0.06); border-color: var(--success); }
+  .transform-side .label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 12px; letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+  }
+  .transform-side.a .label { color: var(--danger); }
+  .transform-side.b .label { color: var(--success); }
+  .transform-side h3 {
+    font-size: 26px; line-height: 1.15; margin-bottom: 14px;
+  }
+  .transform-side .tags { display: flex; flex-wrap: wrap; gap: 6px; justify-content: center; margin-top: 14px; }
+  .transform-side .tag {
+    padding: 6px 12px;
+    background: rgba(255,255,255,0.05);
+    border: 1px solid var(--line);
+    border-radius: 100px;
+    font-size: 12px;
+    color: var(--text-2);
+  }
+  .arrow-svg {
+    width: 80px; height: 60px;
+  }
+  .arrow-svg path { fill: none; stroke: url(#gradient-arrow); stroke-width: 4; stroke-linecap: round; stroke-linejoin: round; }
+
+  /* RESULTADO */
+  .result-block {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 24px;
+    margin-top: 40px;
+  }
+  .result-card {
+    background: linear-gradient(135deg, rgba(168, 85, 247, 0.10), rgba(245, 158, 11, 0.05));
+    border: 1px solid var(--cian);
+    border-radius: 24px;
+    padding: 40px;
+    text-align: center;
+  }
+  .result-card .label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 12px; letter-spacing: 3px;
+    color: var(--cian); text-transform: uppercase;
+    margin-bottom: 18px;
+  }
+  .result-card .big {
+    font-family: 'Fraunces', serif;
+    font-size: clamp(32px, 4vw, 48px);
+    font-weight: 700; line-height: 1.1;
+    background: linear-gradient(135deg, var(--cian), var(--purple));
+    -webkit-background-clip: text; background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 14px;
+  }
+  .result-card p { color: var(--text-2); font-size: 15px; margin: 0; }
+
+  /* FOOTER */
+  footer {
+    padding: 60px 0 40px;
+    text-align: center;
+    color: var(--text-3);
+    border-top: 1px solid var(--line);
+    font-size: 14px;
+  }
+  footer .brand {
+    font-family: 'Fraunces', serif;
+    font-weight: 700; color: var(--text);
+    font-size: 16px; margin-bottom: 8px; display: block;
+  }
+  footer .print-tip {
+    margin-top: 18px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 12px; color: var(--cian);
+    letter-spacing: 1.5px;
+  }
+
+  /* ═══════════════════════════════════════════════════════════════════════ */
+  /* PRINT-TO-PDF + GOOGLE DRIVE · ESTÉTICA ZENITH PRESERVADA AL 100%        */
+  /* ═══════════════════════════════════════════════════════════════════════ */
+  @media print {
+    /* Forzar preservación de colores en TODOS los elementos */
+    *, *::before, *::after {
+      -webkit-print-color-adjust: exact !important;
+      print-color-adjust: exact !important;
+      color-adjust: exact !important;
+    }
+
+    /* Body: mantener background dark Zenith */
+    html, body {
+      background: #050510 !important;
+      background-color: #050510 !important;
+      color: #ffffff !important;
+      margin: 0 !important;
+      padding: 0 !important;
+    }
+
+    /* Backgrounds radiales y FX preservados */
+    .bg-fx, .bg-fx::before, .bg-grid, .particles {
+      display: block !important;
+      visibility: visible !important;
+      opacity: 1 !important;
+    }
+
+    /* Secciones: evitar cortes feos */
+    section { padding: 40px 0 !important; page-break-inside: avoid; }
+    header.hero, .hero { min-height: auto !important; padding: 40px 0 !important; page-break-after: avoid; }
+
+    /* Cards / formulas / quotes / checklists / stacks: NO cortar a mitad */
+    .card, .formula-box, .checklist, .core-quote, .zenith-quote,
+    .stack-section, .warranty-block, .bonus-card, .bullet-card,
+    .testimonial-card, .faq-item, .ps-block, .story-block,
+    .core-section, .rule-block, .variant-card, .ingredient-card,
+    .ang-card, .comp-card, .ad-card, .gap-card, .diff-card,
+    .dm-card, .sub-card, .yt-vid-card, .gold-card, .empathy-card,
+    .desire-main, .enemy-card, .r-card, .ing-card, .test-deal,
+    .recommendation, .cta-strip, .cta-final, .mechanism-section,
+    .ingredients-section, .product-meta, .hero-promise-meta,
+    .meta-block, .promise-meta-block, .num-pill, .num-circ,
+    .stack-row, .stack-totals, .stack-totals-row,
+    .testimonials-grid, .bullets-grid, .bonus-grid, .variants-grid,
+    .ingredients-grid, .restate-grid, .card-grid-2, .card-grid-3, .card-grid-4 {
+      page-break-inside: avoid !important;
+      break-inside: avoid !important;
+    }
+
+    /* HUD sticky: deshabilitarlo en print (ocupa espacio) */
+    .zenith-hud { position: static !important; padding: 16px 32px !important; }
+
+    /* Gradientes inline (en backgrounds): forzar preservación */
+    [style*="gradient"], [style*="linear-gradient"], [style*="radial-gradient"] {
+      -webkit-print-color-adjust: exact !important;
+      print-color-adjust: exact !important;
+    }
+
+    /* SVGs: preservar colores y gradientes */
+    svg, svg * {
+      -webkit-print-color-adjust: exact !important;
+      print-color-adjust: exact !important;
+    }
+
+    /* Footer Zenith: preservar visualmente */
+    .zenith-footer, footer {
+      page-break-inside: avoid !important;
+      background: #050510 !important;
+    }
+    .zenith-footer .footer-brand, footer .footer-brand,
+    .zenith-footer .logo, footer .logo {
+      -webkit-print-color-adjust: exact !important;
+      print-color-adjust: exact !important;
+    }
+
+    /* Quitar animaciones (no se aprecian en PDF y rompen) */
+    *, *::before, *::after {
+      animation-duration: 0s !important;
+      animation-delay: 0s !important;
+      transition: none !important;
+    }
+
+    /* Page setup: A4 vertical estándar, márgenes mínimos */
+    @page {
+      size: A4 portrait;
+      margin: 8mm;
+    }
+
+    /* Tipografías: forzar Fraunces + Inter aunque Google Fonts no cargue */
+    body, p, div, span, li, td, th {
+      font-family: 'Inter', -apple-system, 'Helvetica Neue', sans-serif !important;
+    }
+    h1, h2, h3, h4, .display, .hero h1, .section-title,
+    .formula-box .formula, .zenith-quote, .footer-brand .name,
+    header.hero h1 {
+      font-family: 'Fraunces', 'Georgia', 'Times New Roman', serif !important;
+    }
+    .mono, code, pre, .label, .section-tag, .hero-tag {
+      font-family: 'JetBrains Mono', 'Courier New', monospace !important;
+    }
+  }
+
+  /* ═══════════════════════════════════════════════════════════════════════ */
+  /* DRIVE / VIEWER COMPATIBLE                                                 */
+  /* ═══════════════════════════════════════════════════════════════════════ */
+  @media screen and (max-width: 1px) {
+    /* No-op pero asegura que algunos viewers no rompan */
+  }
+
+  /* RESPONSIVE */
+  @media (max-width: 900px) {
+    .ab-table { grid-template-columns: 1fr; }
+    .ab-cell-key { border-right: none; border-bottom: 1px solid var(--line); }
+    .ab-cell-a { border-right: none; }
+    .transform-flow { grid-template-columns: 1fr; }
+    .result-block { grid-template-columns: 1fr; }
+    .arrow-svg { transform: rotate(90deg); margin: 0 auto; }
+  }
+  @media (max-width: 768px) {
+    .container { padding: 0 20px; }
+    .hero-meta { grid-template-columns: 1fr; }
+    .transform-block { padding: 30px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- HERO -->
+<header class="hero">
+  <div class="container">
+    <div class="hero-tag">Punto A → Punto B</div>
+    <div class="hero-class-number">DOCUMENTO <span class="num">01</span> · PUNTO-A-B-MASTER · OUTPUT</div>
+    <h1>De donde está,<br/><span class="highlight">a donde sueña.</span></h1>
+    <p class="hero-lead">El mapa de la transformación de <strong>{{NOMBRE_PRODUCTO}}</strong>. 7 dimensiones del antes/después que activan al avatar a comprar.</p>
+    <!-- ej NOMBRE_PRODUCTO: Método Bumbum Reverso -->
+    <div class="hero-meta">
+      <div class="meta-block">
+        <div class="label">Resultado específico</div>
+        <div class="value"><strong>{{RESULTADO_ESPECIFICO}}</strong></div>
+        <!-- ej RESULTADO_ESPECIFICO: Glúteo 2-3 cm más firme y elevado -->
+      </div>
+      <div class="meta-block">
+        <div class="label">Tiempo de transformación</div>
+        <div class="value"><strong>{{TIEMPO_TRANSFORMACION}}</strong></div>
+        <!-- ej TIEMPO_TRANSFORMACION: 30 días · 15 min/día -->
+      </div>
+      <div class="meta-block">
+        <div class="label">Avatar</div>
+        <div class="value">{{AVATAR_CORTO}}</div>
+        <!-- ej AVATAR_CORTO: Mujeres 42-58 · clase media · sin gimnasio -->
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- TABLA A vs B (7 DIMENSIONES) -->
+<section>
+  <div class="container">
+    <div class="section-tag">El cambio en 7 dimensiones</div>
+    <h2 class="section-title">Punto A vs <span class="primary">Punto B</span></h2>
+    <p class="section-lead">No basta con prometer "estarás mejor". Hay que <strong>fotografiar la vida del antes</strong> y la <strong>vida del después</strong> en 7 capas. Así se construye deseo real.</p>
+
+    <div class="ab-table">
+      <!-- HEADER -->
+      <div class="ab-corner">Dimensión</div>
+      <div class="ab-header col-a">
+        <div class="icon">A</div>
+        <div>
+          <div class="title">Punto A — hoy</div>
+          <div class="subtitle">Estado actual</div>
+        </div>
+      </div>
+      <div class="ab-header col-b">
+        <div class="icon">B</div>
+        <div>
+          <div class="title">Punto B — después</div>
+          <div class="subtitle">Estado deseado</div>
+        </div>
+      </div>
+
+      <!-- ROW 1: FINANCIERA -->
+      <div class="ab-cell ab-cell-key">
+        <div class="ico">€</div>
+        Situación financiera
+      </div>
+      <div class="ab-cell ab-cell-a">{{A_FINANCIERA}}</div>
+      <!-- ej A_FINANCIERA: Gasta 80-150€/mes en cremas reafirmantes y cápsulas que no funcionan. Frustración acumulada en compras fallidas. -->
+      <div class="ab-cell ab-cell-b">{{B_FINANCIERA}}</div>
+      <!-- ej B_FINANCIERA: Una sola compra de 17€ resuelve el problema. Deja de tirar dinero en productos parche. -->
+
+      <!-- ROW 2: EMOCIONAL -->
+      <div class="ab-cell ab-cell-key">
+        <div class="ico">♥</div>
+        Situación emocional
+      </div>
+      <div class="ab-cell ab-cell-a">{{A_EMOCIONAL}}</div>
+      <!-- ej A_EMOCIONAL: Se siente vieja, derrotada, invisible. Evita espejos de cuerpo entero. Le da vergüenza cambiarse en vestuarios. -->
+      <div class="ab-cell ab-cell-b">{{B_EMOCIONAL}}</div>
+      <!-- ej B_EMOCIONAL: Se mira al espejo y sonríe. Recupera autoestima. Vuelve a coquetear con su pareja. -->
+
+      <!-- ROW 3: COMPORTAMIENTO -->
+      <div class="ab-cell ab-cell-key">
+        <div class="ico">⊕</div>
+        Comportamiento diario
+      </div>
+      <div class="ab-cell ab-cell-a">{{A_COMPORTAMIENTO}}</div>
+      <!-- ej A_COMPORTAMIENTO: Se viste con holgura para esconder. Rechaza planes de playa, piscina, sauna. -->
+      <div class="ab-cell ab-cell-b">{{B_COMPORTAMIENTO}}</div>
+      <!-- ej B_COMPORTAMIENTO: Vuelve al vaquero ajustado. Acepta el plan de piscina. Compra el bikini que llevaba 5 años en el armario. -->
+
+      <!-- ROW 4: IDENTIDAD -->
+      <div class="ab-cell ab-cell-key">
+        <div class="ico">★</div>
+        Identidad social
+      </div>
+      <div class="ab-cell ab-cell-a">{{A_IDENTIDAD}}</div>
+      <!-- ej A_IDENTIDAD: "Soy una señora de 50, ya está, esto es lo que hay." Se identifica con el deterioro. -->
+      <div class="ab-cell ab-cell-b">{{B_IDENTIDAD}}</div>
+      <!-- ej B_IDENTIDAD: "Soy la prueba de que se puede a los 50." Identidad de superadora, ejemplo para amigas. -->
+
+      <!-- ROW 5: FOTO MENTAL -->
+      <div class="ab-cell ab-cell-key">
+        <div class="ico">◉</div>
+        Fotografía mental
+      </div>
+      <div class="ab-cell ab-cell-a">{{A_FOTO_MENTAL}}</div>
+      <!-- ej A_FOTO_MENTAL: Se imagina con 60 años aún peor. Proyecta deterioro creciente. Miedo a "envejecer mal". -->
+      <div class="ab-cell ab-cell-b">{{B_FOTO_MENTAL}}</div>
+      <!-- ej B_FOTO_MENTAL: Se proyecta a los 60 firme, activa, deseable. Foto mental de "yo elegí cómo envejecer". -->
+
+      <!-- ROW 6: ENERGÍA -->
+      <div class="ab-cell ab-cell-key">
+        <div class="ico">⚡</div>
+        Energía y vitalidad
+      </div>
+      <div class="ab-cell ab-cell-a">{{A_ENERGIA}}</div>
+      <!-- ej A_ENERGIA: Cansada todo el día. Se sienta más, se mueve menos. Sensación de "el cuerpo no responde". -->
+      <div class="ab-cell ab-cell-b">{{B_ENERGIA}}</div>
+      <!-- ej B_ENERGIA: 15 min al día le devuelven activación. Sube escaleras sin asfixia. Sensación de "mi cuerpo es mío otra vez". -->
+
+      <!-- ROW 7: RELACIONES -->
+      <div class="ab-cell ab-cell-key last">
+        <div class="ico">👥</div>
+        Relaciones
+      </div>
+      <div class="ab-cell ab-cell-a last">{{A_RELACIONES}}</div>
+      <!-- ej A_RELACIONES: Distancia con la pareja. Envidia silenciosa hacia amigas más jóvenes. Aislamiento social. -->
+      <div class="ab-cell ab-cell-b last">{{B_RELACIONES}}</div>
+      <!-- ej B_RELACIONES: Reconecta con la pareja. Se convierte en referente para amigas ("¿cómo lo has hecho?"). -->
+    </div>
+  </div>
+</section>
+
+<!-- TRANSFORMACIÓN VISUAL -->
+<section class="alt">
+  <div class="container">
+    <div class="section-tag">La transformación en una imagen</div>
+    <h2 class="section-title">El <span class="highlight">salto</span> que vende</h2>
+    <p class="section-lead">Un vistazo. Eso es todo lo que tienes en el anuncio. <strong>Esta es la foto mental que tiene que quedarse grabada.</strong></p>
+
+    <div class="transform-block">
+      <svg width="0" height="0" style="position:absolute">
+        <defs>
+          <linearGradient id="gradient-arrow" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" stop-color="#00E5CF"/>
+            <stop offset="100%" stop-color="#B845FF"/>
+          </linearGradient>
+        </defs>
+      </svg>
+      <div class="transform-flow">
+        <div class="transform-side a">
+          <div class="label">Antes · Punto A</div>
+          <h3>{{TRANSFORMACION_A_TITULO}}</h3>
+          <!-- ej TRANSFORMACION_A_TITULO: "No me reconozco en el espejo" -->
+          <div class="tags">
+            <span class="tag">{{TRANSFORMACION_A_TAG_1}}</span>
+            <!-- ej TRANSFORMACION_A_TAG_1: Frustración -->
+            <span class="tag">{{TRANSFORMACION_A_TAG_2}}</span>
+            <!-- ej TRANSFORMACION_A_TAG_2: Esconderse -->
+            <span class="tag">{{TRANSFORMACION_A_TAG_3}}</span>
+            <!-- ej TRANSFORMACION_A_TAG_3: Vieja antes de tiempo -->
+            <span class="tag">{{TRANSFORMACION_A_TAG_4}}</span>
+            <!-- ej TRANSFORMACION_A_TAG_4: Invisible -->
+          </div>
+        </div>
+        <svg class="arrow-svg" viewBox="0 0 80 60">
+          <path d="M5,30 L65,30 M50,15 L65,30 L50,45"/>
+        </svg>
+        <div class="transform-side b">
+          <div class="label">Después · Punto B</div>
+          <h3>{{TRANSFORMACION_B_TITULO}}</h3>
+          <!-- ej TRANSFORMACION_B_TITULO: "Vuelvo a sentirme yo" -->
+          <div class="tags">
+            <span class="tag">{{TRANSFORMACION_B_TAG_1}}</span>
+            <!-- ej TRANSFORMACION_B_TAG_1: Confianza -->
+            <span class="tag">{{TRANSFORMACION_B_TAG_2}}</span>
+            <!-- ej TRANSFORMACION_B_TAG_2: Mostrarse -->
+            <span class="tag">{{TRANSFORMACION_B_TAG_3}}</span>
+            <!-- ej TRANSFORMACION_B_TAG_3: Rejuvenecida -->
+            <span class="tag">{{TRANSFORMACION_B_TAG_4}}</span>
+            <!-- ej TRANSFORMACION_B_TAG_4: Visible -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- RESULTADO + TIEMPO -->
+<section>
+  <div class="container">
+    <div class="section-tag">El compromiso medible</div>
+    <h2 class="section-title">El <span class="primary">qué</span> y el <span class="highlight">cuándo</span></h2>
+    <p class="section-lead">La promesa concreta que tiene que aparecer en cada copy, cada thumbnail, cada CTA.</p>
+
+    <div class="result-block">
+      <div class="result-card">
+        <div class="label">Resultado específico</div>
+        <div class="big">{{RESULTADO_ESPECIFICO}}</div>
+        <!-- ej RESULTADO_ESPECIFICO: Glúteo 2-3 cm más firme -->
+        <p>{{RESULTADO_ESPECIFICO_DESC}}</p>
+        <!-- ej RESULTADO_ESPECIFICO_DESC: Medible con cinta métrica. Fotografiable. El vaquero que antes apretaba ahora cae bien. -->
+      </div>
+      <div class="result-card">
+        <div class="label">Tiempo a resultado</div>
+        <div class="big">{{TIEMPO_TRANSFORMACION}}</div>
+        <!-- ej TIEMPO_TRANSFORMACION: 30 días -->
+        <p>{{TIEMPO_TRANSFORMACION_DESC}}</p>
+        <!-- ej TIEMPO_TRANSFORMACION_DESC: Primer cambio visible día 7. Resultado consolidado día 30. Sin gimnasio, sin pesas, sin salir de casa. -->
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ZENITH FOOTER -->
+<footer class="zenith-footer" style="padding: 80px 0 50px; text-align: center; border-top: 1px solid var(--line); margin-top: 80px;">
+  <div class="container">
+    <div style="display: inline-flex; align-items: center; gap: 14px; margin-bottom: 24px;">
+      <div style="width: 40px; height: 40px; display: grid; place-items: center; background: var(--grad); border-radius: 10px; box-shadow: 0 0 24px rgba(0,229,207,.4);">
+        <svg viewBox="0 0 64 64" fill="none" style="width: 22px; height: 22px;">
+          <path d="M32 6 L8 56 L56 56 Z" fill="#ffffff" stroke="#ffffff" stroke-width="2" stroke-linejoin="round"/>
+          <path d="M32 6 L20 32 L26 32 L18 56 L8 56 Z" fill="#000" opacity="0.18"/>
+        </svg>
+      </div>
+      <div style="font-family: 'Fraunces', serif; font-style: italic; font-weight: 600; font-size: 28px; letter-spacing: -.01em; background: var(--grad); -webkit-background-clip: text; background-clip: text; color: transparent;">
+        Zenith<span style="font-size: 12px; vertical-align: super; opacity: .8; margin-left: 3px;">&trade;</span>
+      </div>
+    </div>
+    <div style="font-family: 'Fraunces', serif; font-style: italic; font-size: 18px; color: var(--text-2); margin-bottom: 16px;">&ldquo;De la cima se ve mejor el avatar.&rdquo;</div>
+    <div style="font-family: 'JetBrains Mono', monospace; font-size: 12px; letter-spacing: 2px; text-transform: uppercase; color: var(--text-3); margin-bottom: 8px;">Hecho con <span style="color: var(--cian);">M&eacute;todo Zenith&trade;</span> &middot; Crea Ofertas 1%</div>
+    <div style="font-family: 'JetBrains Mono', monospace; font-size: 12px; letter-spacing: 2px; text-transform: uppercase; color: var(--text-3); margin-bottom: 8px;">&copy; 2026 &middot; Todos los derechos reservados</div>
+    <div style="margin-top: 24px; padding-top: 24px; border-top: 1px dashed var(--line); font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 1.5px; color: var(--purple);">&#8984; + P &rarr; Guardar como PDF &middot; est&eacute;tica preservada</div>
+    <div style="margin-top: 8px; font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 1.2px; color: var(--text-3);">&#128193; Drive-friendly &middot; sube y comparte sin perder el dise&ntilde;o</div>
+  </div>
+</footer>
+
+</body>
+</html>

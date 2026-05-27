@@ -1,0 +1,608 @@
+<!--
+═════════════════════════════════════════════════════════════════════════════
+  ZENITH · DESIGN SYSTEM v2.0
+═════════════════════════════════════════════════════════════════════════════
+
+  Sistema visual oficial del Método Zenith aplicado a TODOS los templates HTML
+  del plugin `crea-ofertas-1pct`.
+
+  COLORES MAESTROS:
+    --cian        #00E5CF   (primario · acción · luminosidad)
+    --cian-soft   #4DECDB   (hover · accent secondary)
+    --purple      #B845FF   (acento · misterio · profundidad)
+    --purple-soft #C972FF   (gradiente · hover)
+    --purple-deep #6E1FB8   (deep dark variant)
+    --dark        #050510   (background base)
+    --card        #0B0B17   (cards · panels)
+    --card-2      #11111f   (cards elevados)
+    --grad        cian → purple (gradiente maestro)
+
+  TIPOGRAFÍAS:
+    Fraunces       (display · serif · italics elegantes)
+    Inter          (body · sans-serif moderno)
+    JetBrains Mono (mono · labels · tags · números)
+
+  USO:
+    - Copia el bloque <style> entero a cada template específico
+    - Inyecta el favicon SVG montaña + footer Zenith en cada HTML
+    - Imprimible a PDF (Cmd+P) + Drive-friendly (estética preservada)
+
+  COPYRIGHT:
+    "Hecho con Método Zenith™" en footer de cada HTML
+═════════════════════════════════════════════════════════════════════════════
+-->
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Zenith · Design System v2.0</title>
+
+<!-- ═════════════════════════════════════════════════════════════════════ -->
+<!-- FAVICON SVG · MONTAÑA ZENITH (inline SVG · sin dependencias externas) -->
+<!-- ═════════════════════════════════════════════════════════════════════ -->
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' stop-color='%2300E5CF'/%3E%3Cstop offset='100%25' stop-color='%23B845FF'/%3E%3C/linearGradient%3E%3C/defs%3E%3Cpath d='M32 4 L8 56 L56 56 Z' fill='url(%23g)' stroke='%2300E5CF' stroke-width='2' stroke-linejoin='round'/%3E%3Cpath d='M32 4 L20 32 L26 32 L18 56 L8 56 Z' fill='%23ffffff' opacity='0.15'/%3E%3Cpath d='M32 4 L18 28 L24 28 L32 4 Z' fill='%23ffffff' opacity='0.25'/%3E%3C/svg%3E">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500;9..144,600;9..144,700;9..144,800;9..144,900&family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+/* ═══════════════════════════════════════════════════════════════════════ */
+/* VARIABLES MAESTRAS ZENITH                                                 */
+/* ═══════════════════════════════════════════════════════════════════════ */
+:root{
+  --cian:#00E5CF;
+  --cian-soft:#4DECDB;
+  --purple:#B845FF;
+  --purple-soft:#C972FF;
+  --purple-high:#D9A8FF;
+  --purple-deep:#6E1FB8;
+  --dark:#050510;
+  --card:#0B0B17;
+  --card-2:#11111f;
+  --line: rgba(255,255,255,.08);
+  --line-strong: rgba(255,255,255,.18);
+  --text: #ffffff;
+  --text-2: rgba(255,255,255,.78);
+  --text-3: rgba(255,255,255,.5);
+  --success: #10e0a1;
+  --danger: #ff4d6d;
+  --warning: #f59e0b;
+  --grad: linear-gradient(135deg, var(--cian) 0%, var(--purple) 100%);
+  --grad-soft: linear-gradient(135deg, rgba(0,229,207,.15) 0%, rgba(184,69,255,.15) 100%);
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  background: var(--dark);
+  color: var(--text);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+  min-height: 100vh;
+}
+
+/* Backgrounds ambient */
+.bg-fx {
+  position: fixed; inset: 0; z-index: 0; pointer-events: none; overflow: hidden;
+}
+.bg-fx::before {
+  content: ""; position: absolute; inset: -50%;
+  background:
+    radial-gradient(circle at 20% 20%, rgba(0,229,207,.12), transparent 38%),
+    radial-gradient(circle at 80% 80%, rgba(184,69,255,.15), transparent 42%);
+  animation: drift 18s ease-in-out infinite alternate;
+}
+@keyframes drift { to { transform: translate(-3%, 4%) rotate(6deg); } }
+
+.bg-grid {
+  position: fixed; inset: 0; z-index: 0; pointer-events: none;
+  background-image:
+    linear-gradient(rgba(255,255,255,.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,.03) 1px, transparent 1px);
+  background-size: 48px 48px;
+  mask-image: radial-gradient(ellipse at center, black 30%, transparent 80%);
+}
+
+.container { max-width: 1240px; margin: 0 auto; padding: 0 32px; position: relative; z-index: 1; }
+.container-narrow { max-width: 980px; margin: 0 auto; padding: 0 32px; position: relative; z-index: 1; }
+
+/* ═══════════════════════════════════════════════════════════════════════ */
+/* TIPOGRAFÍAS                                                                */
+/* ═══════════════════════════════════════════════════════════════════════ */
+.display { font-family: 'Fraunces', serif; }
+.mono { font-family: 'JetBrains Mono', monospace; }
+
+h1, h2, h3, h4 { color: var(--text); letter-spacing: -0.025em; }
+h1 { font-family: 'Fraunces', serif; font-weight: 400; font-size: clamp(48px, 8vw, 96px); line-height: 0.95; }
+h1 em { font-style: italic; font-weight: 500; background: var(--grad); -webkit-background-clip: text; background-clip: text; color: transparent; }
+h2 { font-family: 'Fraunces', serif; font-weight: 400; font-size: clamp(36px, 5.5vw, 60px); line-height: 1.05; }
+h2 em { font-style: italic; font-weight: 500; background: var(--grad); -webkit-background-clip: text; background-clip: text; color: transparent; }
+h3 { font-family: 'Inter', sans-serif; font-weight: 700; font-size: clamp(20px, 2.4vw, 26px); line-height: 1.2; }
+h4 { font-family: 'Inter', sans-serif; font-weight: 600; font-size: 18px; }
+p { color: var(--text-2); line-height: 1.65; margin-bottom: 16px; }
+strong { color: var(--text); font-weight: 600; }
+em { font-style: italic; }
+em.cian { color: var(--cian); font-style: normal; font-weight: 600; }
+em.purple { color: var(--purple); font-style: normal; font-weight: 600; }
+em.grad { background: var(--grad); -webkit-background-clip: text; background-clip: text; color: transparent; font-style: italic; font-weight: 600; }
+
+/* ═══════════════════════════════════════════════════════════════════════ */
+/* HUD · TOP BAR ZENITH                                                       */
+/* ═══════════════════════════════════════════════════════════════════════ */
+.zenith-hud {
+  position: sticky; top: 0; z-index: 100;
+  padding: 16px 32px;
+  display: flex; justify-content: space-between; align-items: center;
+  font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: .08em; text-transform: uppercase;
+  background: linear-gradient(180deg, rgba(5,5,16,.92), rgba(5,5,16,.6));
+  backdrop-filter: blur(16px);
+  border-bottom: 1px solid var(--line);
+}
+.zenith-brand { display: flex; align-items: center; gap: 12px; }
+.zenith-brand .logo {
+  width: 32px; height: 32px;
+  display: grid; place-items: center;
+  background: var(--grad);
+  border-radius: 8px;
+  box-shadow: 0 0 20px rgba(0,229,207,.5);
+  position: relative;
+  overflow: hidden;
+}
+.zenith-brand .logo svg { width: 18px; height: 18px; filter: drop-shadow(0 0 4px rgba(0,0,0,.4)); }
+.zenith-brand .name {
+  font-family: 'Fraunces', serif;
+  font-style: italic; font-weight: 600;
+  font-size: 20px; letter-spacing: -.01em;
+  text-transform: none;
+  background: var(--grad); -webkit-background-clip: text; background-clip: text; color: transparent;
+}
+.zenith-brand .name .tm { font-size: 11px; vertical-align: super; opacity: .8; margin-left: 2px; }
+.zenith-brand .stage {
+  margin-left: 12px; padding-left: 12px; border-left: 1px solid var(--line);
+  color: var(--text-3); font-family: 'JetBrains Mono', monospace; font-size: 10px;
+}
+.zenith-brand .stage .num { color: var(--cian); font-weight: 700; }
+.zenith-hud .right {
+  display: flex; align-items: center; gap: 14px;
+  color: var(--text-3);
+}
+.zenith-hud .right .live { color: var(--cian); display: inline-flex; align-items: center; gap: 6px; }
+.zenith-hud .right .live .dot {
+  width: 6px; height: 6px; border-radius: 50%; background: var(--cian);
+  box-shadow: 0 0 8px var(--cian); animation: pulse 1.4s infinite;
+}
+@keyframes pulse { 0%,100% { transform: scale(1); opacity: 1; } 50% { transform: scale(1.5); opacity: .5; } }
+
+/* ═══════════════════════════════════════════════════════════════════════ */
+/* HERO SECTION                                                                */
+/* ═══════════════════════════════════════════════════════════════════════ */
+.hero {
+  min-height: 80vh;
+  display: flex; flex-direction: column; justify-content: center;
+  padding: 100px 0 80px;
+  position: relative;
+}
+.hero-tag {
+  display: inline-flex; align-items: center; gap: 10px;
+  background: rgba(0,229,207,.12);
+  border: 1px solid rgba(0,229,207,.3);
+  color: var(--cian);
+  padding: 8px 18px; border-radius: 100px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px; font-weight: 600; letter-spacing: 2px; text-transform: uppercase;
+  width: fit-content; margin-bottom: 28px;
+}
+.hero-tag::before {
+  content: ''; width: 8px; height: 8px; border-radius: 50%;
+  background: var(--cian); box-shadow: 0 0 14px var(--cian);
+  animation: pulse 2s infinite;
+}
+.hero-stage-meta {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 13px; letter-spacing: .14em; text-transform: uppercase;
+  color: var(--text-3); margin-bottom: 24px;
+}
+.hero-stage-meta .num { color: var(--cian); font-weight: 700; }
+.hero h1 .em-strike {
+  text-decoration: line-through; text-decoration-thickness: 4px;
+  text-decoration-color: var(--purple); color: var(--text-3); font-style: normal;
+}
+.hero-lead {
+  font-family: 'Fraunces', serif; font-style: italic;
+  font-size: clamp(20px, 2.4vw, 26px); line-height: 1.45;
+  color: var(--text-2); max-width: 760px; margin: 30px 0 50px; font-weight: 400;
+}
+.hero-lead b {
+  font-style: normal; font-weight: 600; color: var(--text);
+  background: linear-gradient(180deg, transparent 60%, rgba(0,229,207,.28) 60%);
+  padding: 0 3px;
+}
+.hero-meta-grid {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 24px; padding-top: 36px; border-top: 1px dashed var(--line);
+}
+.hero-meta-grid .block .label {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px; letter-spacing: 2px; text-transform: uppercase;
+  color: var(--text-3); margin-bottom: 8px;
+}
+.hero-meta-grid .block .value {
+  font-family: 'Fraunces', serif; font-weight: 500;
+  font-size: 24px; color: var(--text);
+}
+.hero-meta-grid .block .value .arrow { color: var(--cian); }
+
+/* ═══════════════════════════════════════════════════════════════════════ */
+/* SECTIONS                                                                    */
+/* ═══════════════════════════════════════════════════════════════════════ */
+section { padding: 80px 0; position: relative; }
+section.alt {
+  background: linear-gradient(180deg, transparent 0%, rgba(184,69,255,.04) 50%, transparent 100%);
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+.section-tag {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 12px; letter-spacing: 2px; text-transform: uppercase;
+  color: var(--cian); margin-bottom: 16px;
+}
+.section-title {
+  font-family: 'Fraunces', serif; font-weight: 400;
+  font-size: clamp(36px, 5.5vw, 64px); line-height: 1.0;
+  margin-bottom: 24px; letter-spacing: -.025em;
+}
+.section-title em { font-style: italic; font-weight: 500; background: var(--grad); -webkit-background-clip: text; background-clip: text; color: transparent; }
+.section-lead {
+  font-family: 'Fraunces', serif; font-style: italic;
+  font-size: clamp(18px, 2vw, 22px); line-height: 1.5;
+  color: var(--text-2); max-width: 720px; margin-bottom: 48px; font-weight: 400;
+}
+.section-lead b { font-style: normal; font-weight: 600; color: var(--text); }
+
+/* ═══════════════════════════════════════════════════════════════════════ */
+/* CARDS                                                                       */
+/* ═══════════════════════════════════════════════════════════════════════ */
+.card-grid-2 { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
+.card-grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+.card-grid-4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; }
+@media (max-width: 900px) {
+  .card-grid-2, .card-grid-3, .card-grid-4 { grid-template-columns: 1fr; }
+}
+
+.card {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  padding: 28px;
+  transition: all .3s;
+  position: relative;
+  overflow: hidden;
+}
+.card:hover {
+  border-color: rgba(0,229,207,.3);
+  transform: translateY(-4px);
+  box-shadow: 0 16px 50px -16px rgba(0,229,207,.25);
+}
+.card .ic {
+  width: 44px; height: 44px; border-radius: 12px;
+  background: var(--grad-soft);
+  border: 1px solid var(--line);
+  display: grid; place-items: center; margin-bottom: 18px;
+  color: var(--cian);
+}
+.card .num {
+  position: absolute; top: 22px; right: 26px;
+  font-family: 'Fraunces', serif; font-style: italic; font-weight: 400;
+  font-size: 36px; line-height: 1;
+  background: var(--grad); -webkit-background-clip: text; background-clip: text; color: transparent;
+}
+.card h3 { margin-bottom: 12px; font-size: 20px; }
+.card p { font-size: 15px; line-height: 1.55; color: var(--text-2); margin: 0; }
+
+/* ═══════════════════════════════════════════════════════════════════════ */
+/* FORMULA BOX                                                                 */
+/* ═══════════════════════════════════════════════════════════════════════ */
+.formula-box {
+  background: linear-gradient(135deg, rgba(0,229,207,.08), rgba(184,69,255,.08));
+  border: 1px solid rgba(0,229,207,.3);
+  border-radius: 24px;
+  padding: 56px 48px;
+  margin: 40px 0;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+.formula-box::before {
+  content: ''; position: absolute; top: -50%; left: -50%; width: 200%; height: 200%;
+  background: radial-gradient(circle, rgba(0,229,207,.06) 0%, transparent 50%);
+  animation: rotate 30s linear infinite; pointer-events: none;
+}
+@keyframes rotate { from { transform: rotate(0); } to { transform: rotate(360deg); } }
+.formula-box .label {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px; letter-spacing: 3px; text-transform: uppercase;
+  color: var(--cian); margin-bottom: 20px;
+}
+.formula-box .formula {
+  font-family: 'Fraunces', serif; font-weight: 400;
+  font-size: clamp(28px, 4vw, 44px); line-height: 1.2; letter-spacing: -.02em;
+  position: relative; z-index: 1;
+}
+.formula-box .formula em { font-style: italic; font-weight: 500; background: var(--grad); -webkit-background-clip: text; background-clip: text; color: transparent; }
+.formula-box .formula .var { color: var(--cian); font-weight: 600; font-style: normal; }
+.formula-box .author {
+  margin-top: 24px;
+  font-family: 'JetBrains Mono', monospace; font-size: 12px;
+  letter-spacing: 2px; text-transform: uppercase; color: var(--text-3);
+}
+
+/* ═══════════════════════════════════════════════════════════════════════ */
+/* TABLE                                                                       */
+/* ═══════════════════════════════════════════════════════════════════════ */
+.table-wrap { margin: 32px 0; border: 1px solid var(--line); border-radius: 16px; overflow: hidden; background: var(--card); }
+table { width: 100%; border-collapse: collapse; font-size: 15px; }
+th {
+  background: var(--card-2);
+  color: var(--cian);
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px; letter-spacing: 1.5px; text-transform: uppercase;
+  padding: 18px 22px; text-align: left;
+  border-bottom: 1px solid var(--line);
+  font-weight: 600;
+}
+td { padding: 18px 22px; border-bottom: 1px solid var(--line); color: var(--text-2); vertical-align: top; }
+tr:last-child td { border-bottom: none; }
+td strong { color: var(--text); }
+td .check { color: var(--success); font-weight: 700; }
+td .cross { color: var(--danger); font-weight: 700; }
+
+/* ═══════════════════════════════════════════════════════════════════════ */
+/* QUOTE                                                                       */
+/* ═══════════════════════════════════════════════════════════════════════ */
+.zenith-quote {
+  font-family: 'Fraunces', serif; font-weight: 400;
+  font-size: clamp(22px, 3vw, 32px); line-height: 1.35; letter-spacing: -.015em;
+  padding: 36px 40px;
+  background: var(--card);
+  border-left: 4px solid var(--cian);
+  border-radius: 8px;
+  margin: 28px 0;
+  position: relative;
+}
+.zenith-quote::before {
+  content: '"'; position: absolute; top: -10px; left: 24px;
+  font-size: 80px; line-height: 1; color: var(--cian); opacity: .3;
+}
+.zenith-quote em { font-style: italic; font-weight: 500; color: var(--cian); }
+.zenith-quote .author {
+  display: block; margin-top: 18px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 12px; letter-spacing: 2px; text-transform: uppercase;
+  color: var(--text-3); font-weight: 400;
+}
+
+/* ═══════════════════════════════════════════════════════════════════════ */
+/* CHECKLIST                                                                   */
+/* ═══════════════════════════════════════════════════════════════════════ */
+.checklist {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  padding: 32px;
+  margin: 24px 0;
+}
+.checklist h3 { color: var(--cian); margin-bottom: 18px; font-family: 'Fraunces', serif; font-weight: 500; }
+.checklist ul { list-style: none; padding: 0; }
+.checklist li {
+  padding: 14px 0 14px 36px; position: relative; color: var(--text-2);
+  border-bottom: 1px dashed var(--line); line-height: 1.55;
+}
+.checklist li:last-child { border-bottom: none; }
+.checklist li::before {
+  content: '✓'; position: absolute; left: 0; top: 12px;
+  color: var(--cian); font-weight: 700; font-size: 18px;
+}
+.checklist li.x::before { content: '✕'; color: var(--danger); }
+.checklist li b { color: var(--text); font-weight: 600; }
+
+/* ═══════════════════════════════════════════════════════════════════════ */
+/* CTA STRIP                                                                   */
+/* ═══════════════════════════════════════════════════════════════════════ */
+.cta-strip {
+  background: var(--grad);
+  border-radius: 24px;
+  padding: 60px 48px;
+  text-align: center;
+  margin: 50px 0;
+  color: #000;
+  position: relative;
+  overflow: hidden;
+}
+.cta-strip h2 {
+  font-family: 'Fraunces', serif; font-weight: 500;
+  font-size: clamp(32px, 5vw, 48px); line-height: 1.1;
+  color: #000; margin-bottom: 16px;
+}
+.cta-strip h2 em { font-style: italic; color: rgba(0,0,0,.85); }
+.cta-strip p { color: rgba(0,0,0,.75); font-size: 18px; margin-bottom: 28px; }
+.cta-button {
+  display: inline-block;
+  background: #000; color: var(--cian);
+  padding: 20px 44px; border-radius: 100px;
+  font-weight: 700; text-decoration: none; font-size: 17px;
+  letter-spacing: .04em;
+  transition: transform .2s;
+  border: 2px solid #000;
+}
+.cta-button:hover { transform: scale(1.05); background: var(--cian); color: #000; border-color: var(--cian); }
+
+/* ═══════════════════════════════════════════════════════════════════════ */
+/* TAGS                                                                        */
+/* ═══════════════════════════════════════════════════════════════════════ */
+.tag-badge {
+  display: inline-block;
+  background: rgba(0,229,207,.12);
+  color: var(--cian);
+  padding: 6px 14px; border-radius: 100px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px; font-weight: 600; letter-spacing: 1px; text-transform: uppercase;
+  border: 1px solid rgba(0,229,207,.3);
+  margin-right: 8px; margin-bottom: 6px;
+}
+.tag-badge.purple { background: rgba(184,69,255,.12); color: var(--purple); border-color: rgba(184,69,255,.3); }
+.tag-badge.green { background: rgba(16,224,161,.12); color: var(--success); border-color: rgba(16,224,161,.3); }
+.tag-badge.red { background: rgba(255,77,109,.12); color: var(--danger); border-color: rgba(255,77,109,.3); }
+
+/* ═══════════════════════════════════════════════════════════════════════ */
+/* ZENITH FOOTER (BRANDING OBLIGATORIO en CADA HTML)                          */
+/* ═══════════════════════════════════════════════════════════════════════ */
+.zenith-footer {
+  padding: 80px 0 50px;
+  text-align: center;
+  border-top: 1px solid var(--line);
+  margin-top: 80px;
+  position: relative;
+}
+.zenith-footer .footer-brand {
+  display: inline-flex; align-items: center; gap: 14px;
+  margin-bottom: 24px;
+}
+.zenith-footer .footer-brand .logo {
+  width: 40px; height: 40px; display: grid; place-items: center;
+  background: var(--grad); border-radius: 10px;
+  box-shadow: 0 0 24px rgba(0,229,207,.4);
+}
+.zenith-footer .footer-brand .logo svg { width: 22px; height: 22px; }
+.zenith-footer .footer-brand .name {
+  font-family: 'Fraunces', serif; font-style: italic; font-weight: 600;
+  font-size: 28px; letter-spacing: -.01em;
+  background: var(--grad); -webkit-background-clip: text; background-clip: text; color: transparent;
+}
+.zenith-footer .footer-brand .tm {
+  font-size: 12px; vertical-align: super; opacity: .8; margin-left: 3px;
+  color: var(--cian); -webkit-text-fill-color: var(--cian);
+}
+.zenith-footer .tagline {
+  font-family: 'Fraunces', serif; font-style: italic;
+  font-size: 18px; color: var(--text-2); margin-bottom: 16px;
+}
+.zenith-footer .made-by {
+  font-family: 'JetBrains Mono', monospace; font-size: 12px;
+  letter-spacing: 2px; text-transform: uppercase; color: var(--text-3);
+  margin-bottom: 8px;
+}
+.zenith-footer .made-by .accent { color: var(--cian); }
+.zenith-footer .print-tip {
+  margin-top: 24px; padding-top: 24px; border-top: 1px dashed var(--line);
+  font-family: 'JetBrains Mono', monospace; font-size: 11px;
+  letter-spacing: 1.5px; color: var(--purple);
+}
+.zenith-footer .drive-tip {
+  margin-top: 8px;
+  font-family: 'JetBrains Mono', monospace; font-size: 10px;
+  letter-spacing: 1.2px; color: var(--text-3);
+}
+
+/* ═══════════════════════════════════════════════════════════════════════ */
+/* PRINT-FRIENDLY · ESTÉTICA PRESERVADA EN PDF                                 */
+/* ═══════════════════════════════════════════════════════════════════════ */
+@media print {
+  body {
+    background: var(--dark) !important;
+    color: var(--text) !important;
+    print-color-adjust: exact !important;
+    -webkit-print-color-adjust: exact !important;
+    color-adjust: exact !important;
+  }
+  .bg-fx, .bg-grid { display: block !important; print-color-adjust: exact !important; }
+  section { padding: 40px 0; page-break-inside: avoid; }
+  .card, .formula-box, .zenith-quote, .checklist, .cta-strip, .table-wrap { page-break-inside: avoid; }
+  .hero { min-height: auto; padding: 50px 0; }
+  .zenith-hud { position: static; }
+  /* Mantener gradientes y backgrounds en PDF */
+  .formula-box, .cta-strip, .card, .hero-tag, .zenith-brand .logo, .zenith-footer .footer-brand .logo {
+    print-color-adjust: exact !important;
+    -webkit-print-color-adjust: exact !important;
+  }
+}
+
+/* ═══════════════════════════════════════════════════════════════════════ */
+/* RESPONSIVE                                                                  */
+/* ═══════════════════════════════════════════════════════════════════════ */
+@media (max-width: 900px) {
+  .container, .container-narrow { padding: 0 20px; }
+  .hero { min-height: auto; padding: 60px 0 40px; }
+  .hero-meta-grid { grid-template-columns: 1fr; }
+  .formula-box { padding: 40px 28px; }
+  .cta-strip { padding: 40px 28px; }
+}
+</style>
+</head>
+<body>
+
+<!-- ═════════════════════════════════════════════════════════════════════ -->
+<!-- ZENITH HUD (TOP BAR · STICKY)                                            -->
+<!-- ═════════════════════════════════════════════════════════════════════ -->
+<header class="zenith-hud">
+  <div class="zenith-brand">
+    <div class="logo">
+      <svg viewBox="0 0 64 64" fill="none">
+        <defs>
+          <linearGradient id="zen-mtn" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#ffffff" stop-opacity=".95"/>
+            <stop offset="100%" stop-color="#ffffff" stop-opacity=".7"/>
+          </linearGradient>
+        </defs>
+        <path d="M32 6 L8 56 L56 56 Z" fill="url(#zen-mtn)" stroke="#fff" stroke-width="2" stroke-linejoin="round"/>
+        <path d="M32 6 L20 32 L26 32 L18 56 L8 56 Z" fill="#000" opacity="0.18"/>
+        <path d="M32 6 L18 28 L24 28 L32 6 Z" fill="#fff" opacity="0.4"/>
+      </svg>
+    </div>
+    <div class="name">Zenith<span class="tm">™</span></div>
+    <div class="stage">Etapa <span class="num">{{ETAPA_NUM}}</span> / 12 · {{ETAPA_NAME}}</div>
+  </div>
+  <div class="right">
+    <span class="live"><span class="dot"></span> Live</span>
+    <span>{{FECHA}}</span>
+  </div>
+</header>
+
+<!-- BACKGROUND FX -->
+<div class="bg-fx"></div>
+<div class="bg-grid"></div>
+
+<!-- ═════════════════════════════════════════════════════════════════════ -->
+<!-- AQUÍ va el contenido específico del template                              -->
+<!-- ═════════════════════════════════════════════════════════════════════ -->
+
+<!-- ... HERO ... SECTIONS ... CARDS ... etc ... -->
+
+<!-- ═════════════════════════════════════════════════════════════════════ -->
+<!-- ZENITH FOOTER (OBLIGATORIO EN CADA HTML)                                  -->
+<!-- ═════════════════════════════════════════════════════════════════════ -->
+<footer class="zenith-footer">
+  <div class="container">
+    <div class="footer-brand">
+      <div class="logo">
+        <svg viewBox="0 0 64 64" fill="none">
+          <path d="M32 6 L8 56 L56 56 Z" fill="#ffffff" stroke="#ffffff" stroke-width="2" stroke-linejoin="round"/>
+          <path d="M32 6 L20 32 L26 32 L18 56 L8 56 Z" fill="#000" opacity="0.18"/>
+        </svg>
+      </div>
+      <div class="name">Zenith<span class="tm">™</span></div>
+    </div>
+    <div class="tagline">"De la cima se ve mejor el avatar."</div>
+    <div class="made-by">Hecho con <span class="accent">Método Zenith™</span> · Crea Ofertas 1%</div>
+    <div class="made-by">© 2026 · Todos los derechos reservados</div>
+    <div class="print-tip">⌘ + P → Guardar como PDF · estética preservada</div>
+    <div class="drive-tip">📁 Drive-friendly · sube y comparte sin perder el diseño</div>
+  </div>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,761 @@
+<!--
+  TEMPLATE 00 · BRIEF ESTRATÉGICO
+  ─────────────────────────────────────────────
+  Output del agente: discovery-master
+  Placeholders Mustache-like: {{NOMBRE_CAMPO}}
+  Ejemplos realistas comentados <!-- ej: ... -->
+  Imprimible a PDF: Cmd/Ctrl + P → Guardar como PDF
+-->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="color-scheme" content="dark">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Brief Estratégico · {{NOMBRE_PRODUCTO}}</title>
+<!-- ═══════════════════════════════════════════════════════════════ -->
+<!-- ZENITH HTML · PRINT-TO-PDF + DRIVE-FRIENDLY                       -->
+<!-- Cmd+P → Save as PDF · estética preservada al 100%                 -->
+<!-- Drive viewer compatible · gradientes y dark theme preservados     -->
+<!-- ═══════════════════════════════════════════════════════════════ -->
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' stop-color='%2300E5CF'/%3E%3Cstop offset='100%25' stop-color='%23B845FF'/%3E%3C/linearGradient%3E%3C/defs%3E%3Cpath d='M32 4 L8 56 L56 56 Z' fill='url(%23g)' stroke='%2300E5CF' stroke-width='2' stroke-linejoin='round'/%3E%3Cpath d='M32 4 L20 32 L26 32 L18 56 L8 56 Z' fill='%23ffffff' opacity='0.15'/%3E%3Cpath d='M32 4 L18 28 L24 28 L32 4 Z' fill='%23ffffff' opacity='0.25'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500;9..144,600;9..144,700;9..144,800;9..144,900&family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --cian: #00E5CF;
+    --cian-soft: #4DECDB;
+    --purple: #B845FF;
+    --purple-soft: #C972FF;
+    --purple-deep: #6E1FB8;
+    --dark: #050510;
+    --card: #0B0B17;
+    --card-2: #11111f;
+    --card-hover: #22223a;
+    --line: rgba(255,255,255,.08);
+    --line-strong: rgba(255,255,255,.18);
+    --text: #ffffff;
+    --text-2: rgba(255,255,255,.78);
+    --text-3: rgba(255,255,255,.5);
+    --success: #10e0a1;
+    --success-soft: rgba(16, 224, 161, 0.15);
+    --danger: #ff4d6d;
+    --danger-soft: rgba(255, 77, 109, 0.15);
+    --warning: #f59e0b;
+    --grad: linear-gradient(135deg, var(--cian) 0%, var(--purple) 100%);
+    --grad-soft: linear-gradient(135deg, rgba(0,229,207,.15) 0%, rgba(184,69,255,.15) 100%);
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    background: var(--dark);
+    color: var(--text);
+    line-height: 1.6;
+    overflow-x: hidden;
+    background-image:
+      radial-gradient(circle at 15% 0%, rgba(168, 85, 247, 0.18) 0%, transparent 55%),
+      radial-gradient(circle at 85% 85%, rgba(245, 158, 11, 0.06) 0%, transparent 55%),
+      radial-gradient(circle at 50% 50%, rgba(168, 85, 247, 0.03) 0%, transparent 70%);
+    background-attachment: fixed;
+  }
+  .display { font-family: 'Fraunces', serif; }
+  .mono { font-family: 'JetBrains Mono', monospace; }
+  .container { max-width: 1140px; margin: 0 auto; padding: 0 32px; }
+
+  /* HERO */
+  header.hero {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 80px 0 60px;
+    position: relative;
+    overflow: hidden;
+  }
+  header.hero::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-image:
+      linear-gradient(rgba(168, 85, 247, 0.04) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(168, 85, 247, 0.04) 1px, transparent 1px);
+    background-size: 50px 50px;
+    pointer-events: none;
+    mask-image: radial-gradient(ellipse at center, black 30%, transparent 75%);
+  }
+  .hero-tag {
+    display: inline-flex; align-items: center; gap: 10px;
+    background: rgba(168, 85, 247, 0.12);
+    border: 1px solid var(--line-strong);
+    color: var(--cian);
+    padding: 8px 16px; border-radius: 100px;
+    font-size: 12px; font-weight: 600;
+    letter-spacing: 2px; text-transform: uppercase;
+    width: fit-content; margin-bottom: 30px;
+    position: relative; z-index: 2;
+  }
+  .hero-tag::before {
+    content: ''; width: 8px; height: 8px;
+    border-radius: 50%;
+    background: var(--cian);
+    box-shadow: 0 0 14px rgba(0,229,207,.45);
+    animation: pulse 2s infinite;
+  }
+  @keyframes pulse {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.5; transform: scale(1.5); }
+  }
+  .hero-class-number {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 14px; color: var(--text-3);
+    letter-spacing: 4px; margin-bottom: 18px;
+    position: relative; z-index: 2;
+  }
+  .hero-class-number .num { color: var(--purple); font-weight: 700; }
+  header.hero h1 {
+    font-family: 'Fraunces', serif;
+    font-size: clamp(46px, 8vw, 96px);
+    font-weight: 700; line-height: 0.95;
+    letter-spacing: -2px; margin-bottom: 30px;
+    position: relative; z-index: 2;
+  }
+  header.hero h1 .highlight {
+    background: linear-gradient(135deg, var(--cian) 0%, var(--purple) 100%);
+    -webkit-background-clip: text; background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline-block;
+  }
+  .hero-lead {
+    font-size: 22px; color: var(--text-2);
+    max-width: 760px; margin-bottom: 50px;
+    font-weight: 300; line-height: 1.5;
+    position: relative; z-index: 2;
+  }
+  .hero-lead strong { color: var(--text); font-weight: 600; }
+  .hero-meta {
+    display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px;
+    padding-top: 40px; border-top: 1px solid var(--line);
+    position: relative; z-index: 2;
+  }
+  .meta-block .label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px; text-transform: uppercase;
+    letter-spacing: 2px; color: var(--text-3);
+    margin-bottom: 8px;
+  }
+  .meta-block .value { font-size: 16px; font-weight: 600; color: var(--text); }
+
+  /* SECTIONS */
+  section { padding: 100px 0; position: relative; }
+  section.alt {
+    background: linear-gradient(180deg, transparent 0%, rgba(168, 85, 247, 0.04) 50%, transparent 100%);
+    border-top: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+  }
+  .section-tag {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 13px; color: var(--cian);
+    letter-spacing: 2px; margin-bottom: 16px;
+    text-transform: uppercase;
+  }
+  .section-title {
+    font-family: 'Fraunces', serif;
+    font-size: clamp(34px, 5vw, 54px);
+    font-weight: 700; line-height: 1.05;
+    letter-spacing: -1px; margin-bottom: 24px;
+  }
+  .section-title .highlight { color: var(--purple); }
+  .section-title .primary { color: var(--cian); }
+  .section-lead {
+    font-size: 19px; color: var(--text-2);
+    max-width: 800px; margin-bottom: 60px;
+    font-weight: 300; line-height: 1.55;
+  }
+  .section-lead strong { color: var(--text); font-weight: 600; }
+  h3 {
+    font-family: 'Fraunces', serif;
+    font-size: 24px; font-weight: 600;
+    margin-bottom: 14px; color: var(--text);
+    letter-spacing: -0.5px;
+  }
+  h4 {
+    font-family: 'Fraunces', serif;
+    font-size: 19px; font-weight: 600;
+    margin-bottom: 10px; color: var(--text);
+  }
+  p { color: var(--text-2); margin-bottom: 16px; }
+  strong { color: var(--text); font-weight: 600; }
+  em.morado { color: var(--cian); font-style: normal; font-weight: 600; }
+  em.ambar { color: var(--purple); font-style: normal; font-weight: 600; }
+  em.verde { color: var(--success); font-style: normal; font-weight: 600; }
+  em.rojo { color: var(--danger); font-style: normal; font-weight: 600; }
+
+  /* CARDS */
+  .card-grid-2 { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; margin-top: 30px; }
+  .card-grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 30px; }
+  .card {
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 18px; padding: 32px;
+    transition: all 0.3s; position: relative; overflow: hidden;
+  }
+  .card:hover {
+    transform: translateY(-4px);
+    border-color: var(--cian);
+    box-shadow: 0 18px 50px rgba(168, 85, 247, 0.15);
+  }
+  .card .tag {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px; color: var(--purple);
+    letter-spacing: 2px; text-transform: uppercase;
+    margin-bottom: 14px;
+  }
+
+  /* CORE SECTION */
+  .core-section {
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 20px; padding: 40px;
+    margin-bottom: 32px; position: relative; overflow: hidden;
+  }
+  .core-section::before {
+    content: ''; position: absolute;
+    top: 0; left: 0; width: 4px; height: 100%;
+    background: linear-gradient(180deg, var(--cian), var(--purple));
+  }
+
+  /* DATA ROWS */
+  .data-list { display: grid; grid-template-columns: 1fr; gap: 14px; margin-top: 24px; }
+  .data-row {
+    display: grid; grid-template-columns: 220px 1fr;
+    padding: 18px 24px;
+    background: var(--card-2);
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    align-items: start;
+    transition: border-color 0.3s;
+  }
+  .data-row:hover { border-color: var(--cian); }
+  .data-row .key {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 12px; letter-spacing: 1.5px;
+    color: var(--text-3); text-transform: uppercase;
+  }
+  .data-row .val { font-size: 16px; color: var(--text); font-weight: 500; }
+  .data-row .val strong { color: var(--purple); }
+
+  /* GAUGE */
+  .gauge-wrap {
+    display: grid; grid-template-columns: 280px 1fr;
+    gap: 50px; align-items: center;
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 24px;
+    padding: 50px;
+    margin-top: 30px;
+  }
+  .gauge-svg { width: 260px; height: 260px; }
+  .gauge-bg { fill: none; stroke: var(--line); stroke-width: 22; }
+  .gauge-fill { fill: none; stroke: url(#gradient-score); stroke-width: 22; stroke-linecap: round; }
+  .gauge-center {
+    font-family: 'Fraunces', serif;
+    font-size: 72px; font-weight: 700;
+    fill: var(--text);
+    text-anchor: middle;
+    dominant-baseline: central;
+  }
+  .gauge-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px; fill: var(--text-3);
+    text-anchor: middle; letter-spacing: 2px;
+    text-transform: uppercase;
+  }
+  .gauge-verdict h3 { font-size: 28px; margin-bottom: 12px; }
+  .gauge-verdict .badge {
+    display: inline-block; padding: 8px 18px;
+    border-radius: 100px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 12px; font-weight: 700;
+    letter-spacing: 2px; text-transform: uppercase;
+    background: var(--success-soft); color: var(--success);
+    border: 1px solid var(--success);
+    margin-bottom: 14px;
+  }
+  .gauge-verdict .badge.amber { background: rgba(184,69,255,.15); color: var(--purple); border-color: var(--purple); }
+  .gauge-verdict .badge.red { background: var(--danger-soft); color: var(--danger); border-color: var(--danger); }
+
+  /* PIPELINE */
+  .pipeline-step {
+    display: grid; grid-template-columns: 80px 1fr;
+    gap: 24px; align-items: center;
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 16px;
+    padding: 24px 28px;
+    margin-bottom: 14px;
+    transition: all 0.3s;
+  }
+  .pipeline-step:hover { border-color: var(--cian); transform: translateX(6px); }
+  .pipeline-step .step-num {
+    font-family: 'Fraunces', serif;
+    font-size: 44px; font-weight: 700;
+    background: linear-gradient(135deg, var(--cian), var(--purple));
+    -webkit-background-clip: text; background-clip: text;
+    -webkit-text-fill-color: transparent;
+    line-height: 1;
+  }
+  .pipeline-step h4 { margin-bottom: 4px; }
+  .pipeline-step p { margin: 0; font-size: 14px; color: var(--text-2); }
+
+  /* FOOTER */
+  footer {
+    padding: 60px 0 40px;
+    text-align: center;
+    color: var(--text-3);
+    border-top: 1px solid var(--line);
+    font-size: 14px;
+  }
+  footer .brand {
+    font-family: 'Fraunces', serif;
+    font-weight: 700; color: var(--text);
+    font-size: 16px; margin-bottom: 8px; display: block;
+  }
+  footer .print-tip {
+    margin-top: 18px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 12px; color: var(--cian);
+    letter-spacing: 1.5px;
+  }
+
+  /* ═══════════════════════════════════════════════════════════════════════ */
+  /* PRINT-TO-PDF + GOOGLE DRIVE · ESTÉTICA ZENITH PRESERVADA AL 100%        */
+  /* ═══════════════════════════════════════════════════════════════════════ */
+  @media print {
+    /* Forzar preservación de colores en TODOS los elementos */
+    *, *::before, *::after {
+      -webkit-print-color-adjust: exact !important;
+      print-color-adjust: exact !important;
+      color-adjust: exact !important;
+    }
+
+    /* Body: mantener background dark Zenith */
+    html, body {
+      background: #050510 !important;
+      background-color: #050510 !important;
+      color: #ffffff !important;
+      margin: 0 !important;
+      padding: 0 !important;
+    }
+
+    /* Backgrounds radiales y FX preservados */
+    .bg-fx, .bg-fx::before, .bg-grid, .particles {
+      display: block !important;
+      visibility: visible !important;
+      opacity: 1 !important;
+    }
+
+    /* Secciones: evitar cortes feos */
+    section { padding: 40px 0 !important; page-break-inside: avoid; }
+    header.hero, .hero { min-height: auto !important; padding: 40px 0 !important; page-break-after: avoid; }
+
+    /* Cards / formulas / quotes / checklists / stacks: NO cortar a mitad */
+    .card, .formula-box, .checklist, .core-quote, .zenith-quote,
+    .stack-section, .warranty-block, .bonus-card, .bullet-card,
+    .testimonial-card, .faq-item, .ps-block, .story-block,
+    .core-section, .rule-block, .variant-card, .ingredient-card,
+    .ang-card, .comp-card, .ad-card, .gap-card, .diff-card,
+    .dm-card, .sub-card, .yt-vid-card, .gold-card, .empathy-card,
+    .desire-main, .enemy-card, .r-card, .ing-card, .test-deal,
+    .recommendation, .cta-strip, .cta-final, .mechanism-section,
+    .ingredients-section, .product-meta, .hero-promise-meta,
+    .meta-block, .promise-meta-block, .num-pill, .num-circ,
+    .stack-row, .stack-totals, .stack-totals-row,
+    .testimonials-grid, .bullets-grid, .bonus-grid, .variants-grid,
+    .ingredients-grid, .restate-grid, .card-grid-2, .card-grid-3, .card-grid-4 {
+      page-break-inside: avoid !important;
+      break-inside: avoid !important;
+    }
+
+    /* HUD sticky: deshabilitarlo en print (ocupa espacio) */
+    .zenith-hud { position: static !important; padding: 16px 32px !important; }
+
+    /* Gradientes inline (en backgrounds): forzar preservación */
+    [style*="gradient"], [style*="linear-gradient"], [style*="radial-gradient"] {
+      -webkit-print-color-adjust: exact !important;
+      print-color-adjust: exact !important;
+    }
+
+    /* SVGs: preservar colores y gradientes */
+    svg, svg * {
+      -webkit-print-color-adjust: exact !important;
+      print-color-adjust: exact !important;
+    }
+
+    /* Footer Zenith: preservar visualmente */
+    .zenith-footer, footer {
+      page-break-inside: avoid !important;
+      background: #050510 !important;
+    }
+    .zenith-footer .footer-brand, footer .footer-brand,
+    .zenith-footer .logo, footer .logo {
+      -webkit-print-color-adjust: exact !important;
+      print-color-adjust: exact !important;
+    }
+
+    /* Quitar animaciones (no se aprecian en PDF y rompen) */
+    *, *::before, *::after {
+      animation-duration: 0s !important;
+      animation-delay: 0s !important;
+      transition: none !important;
+    }
+
+    /* Page setup: A4 vertical estándar, márgenes mínimos */
+    @page {
+      size: A4 portrait;
+      margin: 8mm;
+    }
+
+    /* Tipografías: forzar Fraunces + Inter aunque Google Fonts no cargue */
+    body, p, div, span, li, td, th {
+      font-family: 'Inter', -apple-system, 'Helvetica Neue', sans-serif !important;
+    }
+    h1, h2, h3, h4, .display, .hero h1, .section-title,
+    .formula-box .formula, .zenith-quote, .footer-brand .name,
+    header.hero h1 {
+      font-family: 'Fraunces', 'Georgia', 'Times New Roman', serif !important;
+    }
+    .mono, code, pre, .label, .section-tag, .hero-tag {
+      font-family: 'JetBrains Mono', 'Courier New', monospace !important;
+    }
+  }
+
+  /* ═══════════════════════════════════════════════════════════════════════ */
+  /* DRIVE / VIEWER COMPATIBLE                                                 */
+  /* ═══════════════════════════════════════════════════════════════════════ */
+  @media screen and (max-width: 1px) {
+    /* No-op pero asegura que algunos viewers no rompan */
+  }
+
+  /* RESPONSIVE */
+  @media (max-width: 768px) {
+    .container { padding: 0 20px; }
+    .hero-meta, .card-grid-2, .card-grid-3 { grid-template-columns: 1fr !important; }
+    .data-row { grid-template-columns: 1fr; gap: 6px; }
+    .gauge-wrap { grid-template-columns: 1fr; gap: 30px; padding: 30px; }
+    .pipeline-step { grid-template-columns: 56px 1fr; padding: 18px 20px; }
+    .pipeline-step .step-num { font-size: 32px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- HERO -->
+<header class="hero">
+  <div class="container">
+    <div class="hero-tag">Brief Estratégico</div>
+    <div class="hero-class-number">DOCUMENTO <span class="num">00</span> · DISCOVERY MASTER · OUTPUT</div>
+    <h1>{{NOMBRE_PRODUCTO}}<br/><span class="highlight">{{TAGLINE_PRODUCTO}}</span></h1>
+    <!-- ej NOMBRE_PRODUCTO: Método Bumbum Reverso -->
+    <!-- ej TAGLINE_PRODUCTO: el atajo que rebobina 10 años en 30 días -->
+    <p class="hero-lead">{{DESCRIPCION_CORTA}}</p>
+    <!-- ej DESCRIPCION_CORTA: Protocolo de 30 días para mujeres 40-60 que devuelve firmeza al glúteo SIN gimnasio, SIN pesas y SIN salir de casa. Brief estratégico validado por el agente Discovery Master. -->
+    <div class="hero-meta">
+      <div class="meta-block">
+        <div class="label">Slug</div>
+        <div class="value mono">{{SLUG}}</div>
+        <!-- ej SLUG: bumbum-reverso -->
+      </div>
+      <div class="meta-block">
+        <div class="label">Categoría</div>
+        <div class="value">{{CATEGORIA}}</div>
+        <!-- ej CATEGORIA: Salud / Estética femenina -->
+      </div>
+      <div class="meta-block">
+        <div class="label">Viabilidad</div>
+        <div class="value"><strong>{{SCORE_VIABILIDAD}}</strong>/100</div>
+        <!-- ej SCORE_VIABILIDAD: 87 -->
+      </div>
+      <div class="meta-block">
+        <div class="label">Fecha</div>
+        <div class="value mono">{{FECHA}}</div>
+        <!-- ej FECHA: 2026-05-27 -->
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- 1 · PRODUCTO -->
+<section>
+  <div class="container">
+    <div class="section-tag">01 · Producto</div>
+    <h2 class="section-title">El <span class="primary">qué</span> exactamente</h2>
+    <p class="section-lead">Definición operativa del producto: <strong>qué se vende, cómo se entrega y en qué estado está</strong>. Punto de partida para todo el pipeline.</p>
+    <div class="core-section">
+      <div class="data-list">
+        <div class="data-row"><div class="key">Tipo</div><div class="val">{{TIPO_PRODUCTO}}</div></div>
+        <!-- ej TIPO_PRODUCTO: Curso digital + PDF + acceso a comunidad -->
+        <div class="data-row"><div class="key">Formato</div><div class="val">{{FORMATO_PRODUCTO}}</div></div>
+        <!-- ej FORMATO_PRODUCTO: Video on demand (12 clases) + ebook 80 pág + grupo Telegram -->
+        <div class="data-row"><div class="key">Estado</div><div class="val"><strong>{{ESTADO_PRODUCTO}}</strong></div></div>
+        <!-- ej ESTADO_PRODUCTO: Producto ya creado · listo para vender -->
+        <div class="data-row"><div class="key">Duración del consumo</div><div class="val">{{DURACION_CONSUMO}}</div></div>
+        <!-- ej DURACION_CONSUMO: 30 días con 15 minutos diarios -->
+        <div class="data-row"><div class="key">Acceso</div><div class="val">{{ACCESO_PRODUCTO}}</div></div>
+        <!-- ej ACCESO_PRODUCTO: Plataforma Hotmart · acceso vitalicio -->
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 2 · AVATAR -->
+<section class="alt">
+  <div class="container">
+    <div class="section-tag">02 · Avatar</div>
+    <h2 class="section-title">A <span class="highlight">quién</span> le hablamos</h2>
+    <p class="section-lead">Avatar quirúrgico: ni demasiado amplio (pierde fuerza) ni demasiado nicho (pierde volumen). <strong>El público objetivo verificable con tráfico de pago.</strong></p>
+    <div class="core-section">
+      <div class="data-list">
+        <div class="data-row"><div class="key">Demografía</div><div class="val">{{AVATAR_DEMOGRAFIA}}</div></div>
+        <!-- ej AVATAR_DEMOGRAFIA: Mujeres 42-58 años · clase media · vive en ciudad · hijos adolescentes/adultos -->
+        <div class="data-row"><div class="key">Dolor principal</div><div class="val"><strong>{{AVATAR_DOLOR}}</strong></div></div>
+        <!-- ej AVATAR_DOLOR: Se mira al espejo y no se reconoce · el glúteo cae · ya no entra en el bikini -->
+        <div class="data-row"><div class="key">Deseo principal</div><div class="val"><strong>{{AVATAR_DESEO}}</strong></div></div>
+        <!-- ej AVATAR_DESEO: Volver a sentirse atractiva sin pasar por quirófano ni pisar un gimnasio -->
+        <div class="data-row"><div class="key">Nivel económico</div><div class="val">{{AVATAR_ECONOMICO}}</div></div>
+        <!-- ej AVATAR_ECONOMICO: Ingreso 1.500-3.000€/mes · gasta 30-80€ en productos de cuidado personal -->
+        <div class="data-row"><div class="key">Nivel Schwartz</div><div class="val"><em class="morado">{{AVATAR_SCHWARTZ}}</em></div></div>
+        <!-- ej AVATAR_SCHWARTZ: Nivel 3 (consciente de la solución, no del producto) -->
+        <div class="data-row"><div class="key">Lenguaje propio</div><div class="val">{{AVATAR_LENGUAJE}}</div></div>
+        <!-- ej AVATAR_LENGUAJE: "ya no me cabe el vaquero", "se me cae el culo", "parezco mi madre" -->
+        <div class="data-row"><div class="key">Dónde vive online</div><div class="val">{{AVATAR_CANALES}}</div></div>
+        <!-- ej AVATAR_CANALES: Instagram (60%), Facebook (30%), YouTube/búsqueda Google (10%) -->
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 3 · RESULTADO DESEADO -->
+<section>
+  <div class="container">
+    <div class="section-tag">03 · Resultado deseado</div>
+    <h2 class="section-title">El <span class="primary">qué</span> consigue al final</h2>
+    <p class="section-lead">Resultado <strong>concreto, medible y temporalizado</strong>. La transformación que valida la oferta.</p>
+    <div class="card-grid-2">
+      <div class="card">
+        <div class="tag">Resultado tangible</div>
+        <h3>{{RESULTADO_TANGIBLE}}</h3>
+        <!-- ej RESULTADO_TANGIBLE: Glúteo 2-3 cm más firme y elevado, medible con cinta métrica -->
+        <p>{{RESULTADO_TANGIBLE_DESC}}</p>
+        <!-- ej RESULTADO_TANGIBLE_DESC: Antes/después fotografiable. Cambio visible en el vaquero. Cinturilla más ajustada. -->
+      </div>
+      <div class="card">
+        <div class="tag">Tiempo a resultado</div>
+        <h3>{{RESULTADO_TIEMPO}}</h3>
+        <!-- ej RESULTADO_TIEMPO: 30 días (con 15 min/día) -->
+        <p>{{RESULTADO_TIEMPO_DESC}}</p>
+        <!-- ej RESULTADO_TIEMPO_DESC: Primeros cambios visibles en día 7. Resultado consolidado día 30. -->
+      </div>
+      <div class="card">
+        <div class="tag">Tasa de éxito</div>
+        <h3>{{RESULTADO_TASA}}</h3>
+        <!-- ej RESULTADO_TASA: 8 de cada 10 alumnas que hacen mín. 5 días/semana -->
+        <p>{{RESULTADO_TASA_DESC}}</p>
+        <!-- ej RESULTADO_TASA_DESC: Basado en 240 alumnas piloto durante 6 meses. -->
+      </div>
+      <div class="card">
+        <div class="tag">Componente identitario</div>
+        <h3>{{RESULTADO_IDENTITARIO}}</h3>
+        <!-- ej RESULTADO_IDENTITARIO: "La mujer que recupera SU cuerpo a los 50" -->
+        <p>{{RESULTADO_IDENTITARIO_DESC}}</p>
+        <!-- ej RESULTADO_IDENTITARIO_DESC: Tribu de mujeres que demuestran que el reloj se puede rebobinar sin cirugía. -->
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 4 · PRECIO -->
+<section class="alt">
+  <div class="container">
+    <div class="section-tag">04 · Precio y modelo</div>
+    <h2 class="section-title">El <span class="highlight">ticket</span> y el embudo</h2>
+    <p class="section-lead">Modelo económico que sostiene la oferta. Define todo lo demás (anuncios, claims, garantía).</p>
+    <div class="core-section">
+      <div class="data-list">
+        <div class="data-row"><div class="key">Ticket inicial</div><div class="val"><strong>{{PRECIO_TICKET}}</strong></div></div>
+        <!-- ej PRECIO_TICKET: 17€ (low ticket España) -->
+        <div class="data-row"><div class="key">Modelo</div><div class="val">{{PRECIO_MODELO}}</div></div>
+        <!-- ej PRECIO_MODELO: Low ticket + order bumps + upsell 1 + upsell 2 -->
+        <div class="data-row"><div class="key">Embudo</div><div class="val">{{PRECIO_EMBUDO}}</div></div>
+        <!-- ej PRECIO_EMBUDO: Anuncio Meta → Quiz 12 preguntas → Mini VSL → Checkout 17€ + bumps + 2 upsells -->
+        <div class="data-row"><div class="key">AOV objetivo</div><div class="val"><strong>{{PRECIO_AOV}}</strong></div></div>
+        <!-- ej PRECIO_AOV: 38-45€ con bumps + upsells -->
+        <div class="data-row"><div class="key">CPA objetivo</div><div class="val">{{PRECIO_CPA}}</div></div>
+        <!-- ej PRECIO_CPA: 12€ máximo (ROAS 3+) -->
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 5 · COMPETENCIA -->
+<section>
+  <div class="container">
+    <div class="section-tag">05 · Competencia</div>
+    <h2 class="section-title">El <span class="primary">mapa</span> del mercado</h2>
+    <p class="section-lead">Quién más vende algo parecido y <strong>en qué nivel de sofisticación está el mercado</strong>. El gap = la oportunidad.</p>
+    <div class="card-grid-2">
+      <div class="card">
+        <div class="tag">Competidores principales</div>
+        <h3>{{COMPETENCIA_PRINCIPALES}}</h3>
+        <!-- ej COMPETENCIA_PRINCIPALES: Bumbum na Nuca, Glúteo 360, Reto 28 días Marina -->
+        <p>{{COMPETENCIA_DESC}}</p>
+        <!-- ej COMPETENCIA_DESC: 3 jugadores que facturan 6 cifras/mes. Saturados de claims genéricos. -->
+      </div>
+      <div class="card">
+        <div class="tag">Stage de sofisticación</div>
+        <h3>Nivel {{COMPETENCIA_STAGE}}</h3>
+        <!-- ej COMPETENCIA_STAGE: 4 (mecanismos sofisticados) -->
+        <p>{{COMPETENCIA_STAGE_DESC}}</p>
+        <!-- ej COMPETENCIA_STAGE_DESC: El público ya escuchó "haz 100 sentadillas". Necesita mecanismo nuevo. -->
+      </div>
+      <div class="card">
+        <div class="tag">Validación orgánica</div>
+        <h3>{{COMPETENCIA_VALIDACION}}</h3>
+        <!-- ej COMPETENCIA_VALIDACION: Sí · 1.2M views en TikTok #gluteoa50 -->
+        <p>{{COMPETENCIA_VALIDACION_DESC}}</p>
+        <!-- ej COMPETENCIA_VALIDACION_DESC: Tema validado en orgánico. Anuncios pagos escasos = oportunidad. -->
+      </div>
+      <div class="card">
+        <div class="tag">El gap (la oportunidad)</div>
+        <h3>{{COMPETENCIA_GAP}}</h3>
+        <!-- ej COMPETENCIA_GAP: Nadie habla del "ángulo reverso del glúteo" -->
+        <p>{{COMPETENCIA_GAP_DESC}}</p>
+        <!-- ej COMPETENCIA_GAP_DESC: Mecanismo del problema sin nombrar. Si nosotros lo nombramos, dominamos. -->
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 6 · VIABILIDAD SCORE -->
+<section class="alt">
+  <div class="container">
+    <div class="section-tag">06 · Viabilidad</div>
+    <h2 class="section-title">Score de <span class="primary">viabilidad</span></h2>
+    <p class="section-lead">Cálculo ponderado: producto + avatar + mercado + competencia + precio. <strong>Sobre 100, ¿luz verde para invertir?</strong></p>
+    <div class="gauge-wrap">
+      <svg class="gauge-svg" viewBox="0 0 200 200">
+        <defs>
+          <linearGradient id="gradient-score" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#00E5CF"/>
+            <stop offset="100%" stop-color="#B845FF"/>
+          </linearGradient>
+        </defs>
+        <circle class="gauge-bg" cx="100" cy="100" r="80"/>
+        <!-- gauge-fill: stroke-dasharray = (score/100) * 502.65, 502.65 -->
+        <circle class="gauge-fill" cx="100" cy="100" r="80"
+                stroke-dasharray="{{SCORE_DASHARRAY}}"
+                transform="rotate(-90 100 100)"/>
+        <!-- ej SCORE_DASHARRAY: 437.3, 502.65   (= 87/100 * 502.65) -->
+        <text class="gauge-center" x="100" y="100">{{SCORE_VIABILIDAD}}</text>
+        <text class="gauge-label" x="100" y="140">/ 100</text>
+      </svg>
+      <div class="gauge-verdict">
+        <span class="badge">{{SCORE_VEREDICTO}}</span>
+        <!-- ej SCORE_VEREDICTO: Luz verde · adelante -->
+        <!-- usar .badge | .badge.amber | .badge.red según corresponda -->
+        <h3>{{SCORE_TITULAR}}</h3>
+        <!-- ej SCORE_TITULAR: Oferta con potencial top 1% si se ejecuta el pipeline completo. -->
+        <p>{{SCORE_JUSTIFICACION}}</p>
+        <!-- ej SCORE_JUSTIFICACION: Producto listo, avatar nítido, mercado validado, gap claro, precio bien posicionado. Único riesgo: ejecución creativa del mecanismo. -->
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 7 · PIPELINE RECOMENDADO -->
+<section>
+  <div class="container">
+    <div class="section-tag">07 · Pipeline</div>
+    <h2 class="section-title">El <span class="highlight">orden</span> de juego</h2>
+    <p class="section-lead">Agentes recomendados a ejecutar y en qué orden para construir la oferta completa.</p>
+
+    <div class="pipeline-step">
+      <div class="step-num">01</div>
+      <div>
+        <h4>{{PIPELINE_01_TITULO}}</h4>
+        <!-- ej PIPELINE_01_TITULO: punto-a-b-master · Define el A→B emocional y físico -->
+        <p>{{PIPELINE_01_DESC}}</p>
+        <!-- ej PIPELINE_01_DESC: 7 dimensiones (financiera, emocional, comportamiento, identidad, foto mental, energía, relaciones) -->
+      </div>
+    </div>
+    <div class="pipeline-step">
+      <div class="step-num">02</div>
+      <div>
+        <h4>{{PIPELINE_02_TITULO}}</h4>
+        <p>{{PIPELINE_02_DESC}}</p>
+      </div>
+    </div>
+    <div class="pipeline-step">
+      <div class="step-num">03</div>
+      <div>
+        <h4>{{PIPELINE_03_TITULO}}</h4>
+        <p>{{PIPELINE_03_DESC}}</p>
+      </div>
+    </div>
+    <div class="pipeline-step">
+      <div class="step-num">04</div>
+      <div>
+        <h4>{{PIPELINE_04_TITULO}}</h4>
+        <p>{{PIPELINE_04_DESC}}</p>
+      </div>
+    </div>
+    <div class="pipeline-step">
+      <div class="step-num">05</div>
+      <div>
+        <h4>{{PIPELINE_05_TITULO}}</h4>
+        <p>{{PIPELINE_05_DESC}}</p>
+      </div>
+    </div>
+    <div class="pipeline-step">
+      <div class="step-num">06</div>
+      <div>
+        <h4>{{PIPELINE_06_TITULO}}</h4>
+        <p>{{PIPELINE_06_DESC}}</p>
+      </div>
+    </div>
+    <div class="pipeline-step">
+      <div class="step-num">07</div>
+      <div>
+        <h4>{{PIPELINE_07_TITULO}}</h4>
+        <p>{{PIPELINE_07_DESC}}</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ZENITH FOOTER -->
+<footer class="zenith-footer" style="padding: 80px 0 50px; text-align: center; border-top: 1px solid var(--line); margin-top: 80px;">
+  <div class="container">
+    <div style="display: inline-flex; align-items: center; gap: 14px; margin-bottom: 24px;">
+      <div style="width: 40px; height: 40px; display: grid; place-items: center; background: var(--grad); border-radius: 10px; box-shadow: 0 0 24px rgba(0,229,207,.4);">
+        <svg viewBox="0 0 64 64" fill="none" style="width: 22px; height: 22px;">
+          <path d="M32 6 L8 56 L56 56 Z" fill="#ffffff" stroke="#ffffff" stroke-width="2" stroke-linejoin="round"/>
+          <path d="M32 6 L20 32 L26 32 L18 56 L8 56 Z" fill="#000" opacity="0.18"/>
+        </svg>
+      </div>
+      <div style="font-family: 'Fraunces', serif; font-style: italic; font-weight: 600; font-size: 28px; letter-spacing: -.01em; background: var(--grad); -webkit-background-clip: text; background-clip: text; color: transparent;">
+        Zenith<span style="font-size: 12px; vertical-align: super; opacity: .8; margin-left: 3px;">&trade;</span>
+      </div>
+    </div>
+    <div style="font-family: 'Fraunces', serif; font-style: italic; font-size: 18px; color: var(--text-2); margin-bottom: 16px;">&ldquo;De la cima se ve mejor el avatar.&rdquo;</div>
+    <div style="font-family: 'JetBrains Mono', monospace; font-size: 12px; letter-spacing: 2px; text-transform: uppercase; color: var(--text-3); margin-bottom: 8px;">Hecho con <span style="color: var(--cian);">M&eacute;todo Zenith&trade;</span> &middot; Crea Ofertas 1%</div>
+    <div style="font-family: 'JetBrains Mono', monospace; font-size: 12px; letter-spacing: 2px; text-transform: uppercase; color: var(--text-3); margin-bottom: 8px;">&copy; 2026 &middot; Todos los derechos reservados</div>
+    <div style="margin-top: 24px; padding-top: 24px; border-top: 1px dashed var(--line); font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 1.5px; color: var(--purple);">&#8984; + P &rarr; Guardar como PDF &middot; est&eacute;tica preservada</div>
+    <div style="margin-top: 8px; font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 1.2px; color: var(--text-3);">&#128193; Drive-friendly &middot; sube y comparte sin perder el dise&ntilde;o</div>
+  </div>
+</footer>
+
+</body>
+</html>

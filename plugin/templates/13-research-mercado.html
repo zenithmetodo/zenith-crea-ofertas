@@ -1,0 +1,783 @@
+<!--
+═════════════════════════════════════════════════════════════════════════════
+  ZENITH · TEMPLATE 13 · RESEARCH DE MERCADO (REDDIT + YOUTUBE)
+═════════════════════════════════════════════════════════════════════════════
+  Output combinado de los agentes: 36-research-reddit + 37-research-youtube
+  Etapa: 12 / 12 · Investigación cualitativa del mercado
+  Generado: {{FECHA}}
+
+  Ejemplo de uso:
+    {{NICHO}}          = "Fitness para hombres 35+"
+    {{AVATAR_NAME}}    = "El padre fofo"
+    {{IDIOMA}}         = "ES"
+═════════════════════════════════════════════════════════════════════════════
+-->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Research de Mercado · {{NICHO}} · Zenith™</title>
+
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' stop-color='%2300E5CF'/%3E%3Cstop offset='100%25' stop-color='%23B845FF'/%3E%3C/linearGradient%3E%3C/defs%3E%3Cpath d='M32 4 L8 56 L56 56 Z' fill='url(%23g)' stroke='%2300E5CF' stroke-width='2' stroke-linejoin='round'/%3E%3Cpath d='M32 4 L20 32 L26 32 L18 56 L8 56 Z' fill='%23ffffff' opacity='0.15'/%3E%3Cpath d='M32 4 L18 28 L24 28 L32 4 Z' fill='%23ffffff' opacity='0.25'/%3E%3C/svg%3E">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500;9..144,600;9..144,700;9..144,800;9..144,900&family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --cian:#00E5CF; --cian-soft:#4DECDB;
+  --purple:#B845FF; --purple-soft:#C972FF; --purple-high:#D9A8FF; --purple-deep:#6E1FB8;
+  --dark:#050510; --card:#0B0B17; --card-2:#11111f;
+  --line: rgba(255,255,255,.08); --line-strong: rgba(255,255,255,.18);
+  --text:#fff; --text-2: rgba(255,255,255,.78); --text-3: rgba(255,255,255,.5);
+  --success:#10e0a1; --danger:#ff4d6d; --warning:#f59e0b;
+  --reddit:#ff4500; --youtube:#ff0033;
+  --grad: linear-gradient(135deg, var(--cian) 0%, var(--purple) 100%);
+  --grad-soft: linear-gradient(135deg, rgba(0,229,207,.15) 0%, rgba(184,69,255,.15) 100%);
+}
+*{ box-sizing:border-box; margin:0; padding:0; }
+html{ scroll-behavior: smooth; }
+body{ font-family:'Inter', system-ui, sans-serif; background: var(--dark); color: var(--text); line-height: 1.6; -webkit-font-smoothing: antialiased; overflow-x: hidden; min-height: 100vh; }
+
+/* Background FX */
+.bg-fx{ position: fixed; inset:0; z-index:0; pointer-events:none; overflow:hidden; }
+.bg-fx::before{ content:""; position:absolute; inset:-50%; background: radial-gradient(circle at 20% 20%, rgba(0,229,207,.12), transparent 38%), radial-gradient(circle at 80% 80%, rgba(184,69,255,.15), transparent 42%); animation: drift 18s ease-in-out infinite alternate; }
+@keyframes drift{ to{ transform: translate(-3%, 4%) rotate(6deg); } }
+.bg-grid{ position: fixed; inset:0; z-index:0; pointer-events:none; background-image: linear-gradient(rgba(255,255,255,.03) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.03) 1px, transparent 1px); background-size: 48px 48px; mask-image: radial-gradient(ellipse at center, black 30%, transparent 80%); }
+
+.container{ max-width: 1240px; margin: 0 auto; padding: 0 32px; position: relative; z-index:1; }
+.container-narrow{ max-width: 980px; margin: 0 auto; padding: 0 32px; position: relative; z-index:1; }
+
+/* Tipografía */
+.display{ font-family:'Fraunces', serif; }
+.mono{ font-family:'JetBrains Mono', monospace; }
+h1,h2,h3,h4{ color: var(--text); letter-spacing:-.025em; }
+h1{ font-family:'Fraunces', serif; font-weight: 400; font-size: clamp(48px, 8vw, 96px); line-height: .95; }
+h1 em{ font-style: italic; font-weight: 500; background: var(--grad); -webkit-background-clip: text; background-clip: text; color: transparent; }
+h2{ font-family:'Fraunces', serif; font-weight: 400; font-size: clamp(36px, 5.5vw, 60px); line-height: 1.05; }
+h2 em{ font-style: italic; font-weight: 500; background: var(--grad); -webkit-background-clip: text; background-clip: text; color: transparent; }
+h3{ font-family:'Inter', sans-serif; font-weight: 700; font-size: clamp(20px, 2.4vw, 26px); line-height: 1.2; }
+h4{ font-family:'Inter', sans-serif; font-weight: 600; font-size: 18px; }
+p{ color: var(--text-2); line-height: 1.65; margin-bottom: 16px; }
+strong{ color: var(--text); font-weight: 600; }
+em{ font-style: italic; }
+em.cian{ color: var(--cian); font-style: normal; font-weight: 600; }
+em.purple{ color: var(--purple); font-style: normal; font-weight: 600; }
+
+/* HUD */
+.zenith-hud{ position: sticky; top:0; z-index:100; padding: 16px 32px; display:flex; justify-content: space-between; align-items: center; font-family:'JetBrains Mono', monospace; font-size:11px; letter-spacing:.08em; text-transform: uppercase; background: linear-gradient(180deg, rgba(5,5,16,.92), rgba(5,5,16,.6)); backdrop-filter: blur(16px); border-bottom: 1px solid var(--line); }
+.zenith-brand{ display:flex; align-items:center; gap:12px; }
+.zenith-brand .logo{ width: 32px; height: 32px; display:grid; place-items:center; background: var(--grad); border-radius: 8px; box-shadow: 0 0 20px rgba(0,229,207,.5); overflow: hidden; }
+.zenith-brand .logo svg{ width: 18px; height: 18px; filter: drop-shadow(0 0 4px rgba(0,0,0,.4)); }
+.zenith-brand .name{ font-family:'Fraunces', serif; font-style: italic; font-weight: 600; font-size: 20px; letter-spacing:-.01em; text-transform: none; background: var(--grad); -webkit-background-clip: text; background-clip: text; color: transparent; }
+.zenith-brand .name .tm{ font-size: 11px; vertical-align: super; opacity: .8; margin-left: 2px; }
+.zenith-brand .stage{ margin-left: 12px; padding-left: 12px; border-left: 1px solid var(--line); color: var(--text-3); font-family:'JetBrains Mono', monospace; font-size: 10px; }
+.zenith-brand .stage .num{ color: var(--cian); font-weight: 700; }
+.zenith-hud .right{ display:flex; align-items:center; gap: 14px; color: var(--text-3); }
+.zenith-hud .right .live{ color: var(--cian); display:inline-flex; align-items:center; gap:6px; }
+.zenith-hud .right .live .dot{ width: 6px; height: 6px; border-radius: 50%; background: var(--cian); box-shadow: 0 0 8px var(--cian); animation: pulse 1.4s infinite; }
+@keyframes pulse{ 0%,100%{ transform: scale(1); opacity: 1; } 50%{ transform: scale(1.5); opacity: .5; } }
+
+/* HERO */
+.hero{ min-height: 70vh; display:flex; flex-direction: column; justify-content: center; padding: 100px 0 80px; position: relative; }
+.hero-tag{ display:inline-flex; align-items:center; gap:10px; background: rgba(0,229,207,.12); border: 1px solid rgba(0,229,207,.3); color: var(--cian); padding: 8px 18px; border-radius: 100px; font-family:'JetBrains Mono', monospace; font-size: 11px; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; width: fit-content; margin-bottom: 28px; }
+.hero-tag::before{ content:''; width: 8px; height: 8px; border-radius: 50%; background: var(--cian); box-shadow: 0 0 14px var(--cian); animation: pulse 2s infinite; }
+.hero-lead{ font-family:'Fraunces', serif; font-style: italic; font-size: clamp(20px, 2.4vw, 26px); line-height: 1.45; color: var(--text-2); max-width: 760px; margin: 30px 0 50px; font-weight: 400; }
+.hero-lead b{ font-style: normal; font-weight: 600; color: var(--text); background: linear-gradient(180deg, transparent 60%, rgba(0,229,207,.28) 60%); padding: 0 3px; }
+.hero-meta-grid{ display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 24px; padding-top: 36px; border-top: 1px dashed var(--line); }
+.hero-meta-grid .block .label{ font-family:'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 2px; text-transform: uppercase; color: var(--text-3); margin-bottom: 8px; }
+.hero-meta-grid .block .value{ font-family:'Fraunces', serif; font-weight: 500; font-size: 24px; color: var(--text); }
+.hero-meta-grid .block .value em{ color: var(--cian); font-style: normal; }
+
+/* SECTIONS */
+section{ padding: 80px 0; position: relative; }
+section.alt{ background: linear-gradient(180deg, transparent 0%, rgba(184,69,255,.04) 50%, transparent 100%); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+.section-tag{ font-family:'JetBrains Mono', monospace; font-size: 12px; letter-spacing: 2px; text-transform: uppercase; color: var(--cian); margin-bottom: 16px; }
+.section-title{ font-family:'Fraunces', serif; font-weight: 400; font-size: clamp(36px, 5.5vw, 64px); line-height: 1; margin-bottom: 24px; letter-spacing:-.025em; }
+.section-title em{ font-style: italic; font-weight: 500; background: var(--grad); -webkit-background-clip: text; background-clip: text; color: transparent; }
+.section-lead{ font-family:'Fraunces', serif; font-style: italic; font-size: clamp(18px, 2vw, 22px); line-height: 1.5; color: var(--text-2); max-width: 720px; margin-bottom: 48px; font-weight: 400; }
+.section-lead b{ font-style: normal; font-weight: 600; color: var(--text); }
+
+/* CARDS GENERIC */
+.card-grid-2{ display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
+.card-grid-3{ display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+.card-grid-4{ display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; }
+@media (max-width: 900px){ .card-grid-2, .card-grid-3, .card-grid-4{ grid-template-columns: 1fr; } }
+
+/* SUBREDDIT CARDS */
+.sub-card{
+  background: var(--card); border: 1px solid var(--line); border-radius: 16px; padding: 24px; transition: all .3s; position: relative; overflow: hidden;
+}
+.sub-card:hover{ border-color: rgba(255,69,0,.4); transform: translateY(-4px); box-shadow: 0 16px 40px -12px rgba(255,69,0,.2); }
+.sub-card::before{ content:''; position:absolute; top:0; left:0; right:0; height: 3px; background: var(--reddit); }
+.sub-card .reddit-row{ display:flex; align-items:center; gap:14px; margin-bottom: 16px; }
+.sub-card .reddit-ic{ width: 38px; height: 38px; border-radius: 50%; background: var(--reddit); display:grid; place-items:center; color: #fff; font-weight: 800; font-family:'JetBrains Mono', monospace; font-size: 13px; box-shadow: 0 0 16px rgba(255,69,0,.4); }
+.sub-card .reddit-meta{ flex: 1; }
+.sub-card .sub-name{ font-family:'JetBrains Mono', monospace; font-weight: 700; font-size: 17px; color: var(--text); }
+.sub-card .sub-members{ font-family:'JetBrains Mono', monospace; font-size: 11px; color: var(--text-3); letter-spacing: 1px; }
+.sub-card .cat-badge{ display:inline-block; background: rgba(0,229,207,.12); color: var(--cian); border: 1px solid rgba(0,229,207,.3); padding: 4px 10px; border-radius: 100px; font-family:'JetBrains Mono', monospace; font-size: 10px; font-weight: 600; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 12px; }
+.sub-card p{ font-size: 14px; color: var(--text-2); margin: 0 0 12px; line-height: 1.5; }
+.sub-card .link{ font-family:'JetBrains Mono', monospace; font-size: 11px; color: var(--cian); text-decoration: none; letter-spacing: 1px; }
+
+/* FRASE TEXTUAL CARDS - BLOCKQUOTE STYLE */
+.quote-grid{ display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 32px 0; }
+@media (max-width: 900px){ .quote-grid{ grid-template-columns: 1fr; } }
+.qt{
+  background: var(--card); border: 1px solid var(--line); border-left: 4px solid var(--cian);
+  border-radius: 4px 16px 16px 4px; padding: 24px 28px; transition: all .3s; position: relative;
+}
+.qt:hover{ border-left-color: var(--purple); transform: translateX(4px); }
+.qt::before{ content:'"'; position: absolute; top: -8px; left: 16px; font-size: 56px; color: var(--cian); opacity: .3; font-family:'Fraunces', serif; }
+.qt .text{ font-family:'Fraunces', serif; font-style: italic; font-size: 17px; line-height: 1.5; color: var(--text); margin-bottom: 18px; }
+.qt .meta{ display:flex; justify-content: space-between; align-items: center; padding-top: 14px; border-top: 1px dashed var(--line); }
+.qt .meta .src{ font-family:'JetBrains Mono', monospace; font-size: 11px; color: var(--text-3); letter-spacing: 1px; text-transform: uppercase; }
+.qt .meta .upvotes{ display: inline-flex; align-items: center; gap: 6px; font-family:'JetBrains Mono', monospace; font-size: 12px; color: var(--cian); font-weight: 700; }
+.qt .meta .upvotes::before{ content:'↑'; font-size: 14px; }
+.qt .link{ display: block; margin-top: 8px; font-family:'JetBrains Mono', monospace; font-size: 10px; color: var(--purple); text-decoration: none; word-break: break-all; }
+
+/* YOUTUBE CREATOR CARDS */
+.yt-creator-card{
+  background: var(--card); border: 1px solid var(--line); border-radius: 18px; padding: 22px; transition: all .3s; position: relative; overflow: hidden;
+}
+.yt-creator-card:hover{ border-color: rgba(255,0,51,.4); transform: translateY(-4px); }
+.yt-creator-card::before{ content:''; position:absolute; top:0; left:0; right:0; height: 3px; background: var(--youtube); }
+.yt-creator-card .row{ display:flex; align-items:center; gap: 14px; margin-bottom: 16px; }
+.yt-creator-card .avatar{ width: 52px; height: 52px; border-radius: 50%; background: var(--grad); display:grid; place-items:center; font-family:'JetBrains Mono', monospace; font-weight: 800; font-size: 16px; color: #000; box-shadow: 0 0 18px rgba(0,229,207,.3); }
+.yt-creator-card .meta{ flex: 1; }
+.yt-creator-card .channel{ font-family:'Inter', sans-serif; font-weight: 700; font-size: 17px; color: var(--text); margin-bottom: 4px; }
+.yt-creator-card .subs{ display: inline-flex; align-items: center; gap: 6px; font-family:'JetBrains Mono', monospace; font-size: 11px; color: var(--youtube); font-weight: 700; letter-spacing: 1px; }
+.yt-creator-card .subs::before{ content:'▶'; font-size: 10px; }
+.yt-creator-card .niche{ font-family:'JetBrains Mono', monospace; font-size: 10px; color: var(--text-3); letter-spacing: 1.5px; text-transform: uppercase; margin-bottom: 12px; padding-bottom: 12px; border-bottom: 1px dashed var(--line); }
+.yt-creator-card p{ font-size: 14px; color: var(--text-2); margin: 0 0 12px; line-height: 1.5; }
+.yt-creator-card .link{ font-family:'JetBrains Mono', monospace; font-size: 11px; color: var(--cian); text-decoration: none; letter-spacing: 1px; }
+
+/* YOUTUBE VIDEO CARDS */
+.yt-vid-card{
+  background: var(--card); border: 1px solid var(--line); border-radius: 16px; overflow: hidden; transition: all .3s; position: relative;
+}
+.yt-vid-card:hover{ border-color: rgba(0,229,207,.3); transform: translateY(-4px); box-shadow: 0 16px 40px -12px rgba(0,0,0,.6); }
+.yt-thumb{
+  aspect-ratio: 16 / 9; background:
+    linear-gradient(135deg, rgba(0,229,207,.2), rgba(184,69,255,.3)),
+    radial-gradient(circle at 50% 50%, rgba(255,0,51,.5) 0%, transparent 70%),
+    #1a1a2e;
+  position: relative; display:grid; place-items: center;
+}
+.yt-thumb::before{ content:''; position:absolute; inset:0; background-image: linear-gradient(rgba(0,0,0,.1) 1px, transparent 1px), linear-gradient(90deg, rgba(0,0,0,.1) 1px, transparent 1px); background-size: 12px 12px; }
+.yt-thumb .play{ width: 64px; height: 64px; border-radius: 50%; background: var(--youtube); display:grid; place-items: center; color: #fff; font-size: 22px; box-shadow: 0 8px 24px rgba(255,0,51,.5); position: relative; z-index: 1; }
+.yt-thumb .play::before{ content:'▶'; padding-left: 4px; }
+.yt-thumb .dur{ position: absolute; bottom: 10px; right: 10px; background: rgba(0,0,0,.85); color: #fff; padding: 3px 8px; border-radius: 4px; font-family:'JetBrains Mono', monospace; font-size: 11px; font-weight: 700; z-index: 1; }
+.yt-vid-info{ padding: 20px; }
+.yt-vid-info .title{ font-family:'Inter', sans-serif; font-weight: 700; font-size: 16px; line-height: 1.3; color: var(--text); margin-bottom: 10px; }
+.yt-vid-info .channel-line{ font-family:'JetBrains Mono', monospace; font-size: 11px; color: var(--text-3); letter-spacing: 1px; margin-bottom: 10px; }
+.yt-vid-info .stats{ display:flex; gap: 16px; padding-top: 12px; border-top: 1px dashed var(--line); }
+.yt-vid-info .stats span{ font-family:'JetBrains Mono', monospace; font-size: 11px; color: var(--cian); letter-spacing: 1px; font-weight: 700; }
+
+/* YT COMMENT CARDS */
+.yt-comment{
+  background: var(--card); border: 1px solid var(--line); border-radius: 14px; padding: 22px 26px; position: relative; transition: all .3s;
+}
+.yt-comment:hover{ border-color: rgba(255,0,51,.3); }
+.yt-comment::before{ content:''; position: absolute; left: 0; top: 0; bottom: 0; width: 3px; background: var(--youtube); border-radius: 3px 0 0 3px; }
+.yt-comment .head{ display:flex; align-items: center; gap: 10px; margin-bottom: 12px; }
+.yt-comment .user-av{ width: 32px; height: 32px; border-radius: 50%; background: var(--grad-soft); display:grid; place-items:center; font-family:'JetBrains Mono', monospace; font-weight: 700; font-size: 12px; color: var(--cian); }
+.yt-comment .user{ font-family:'Inter', sans-serif; font-weight: 600; font-size: 14px; color: var(--text); }
+.yt-comment .likes{ margin-left: auto; font-family:'JetBrains Mono', monospace; font-size: 11px; color: var(--text-3); }
+.yt-comment .likes b{ color: var(--cian); font-weight: 700; }
+.yt-comment .body{ font-family:'Fraunces', serif; font-style: italic; font-size: 16px; line-height: 1.5; color: var(--text); }
+
+/* TABLE */
+.table-wrap{ margin: 32px 0; border: 1px solid var(--line); border-radius: 16px; overflow: hidden; background: var(--card); }
+table{ width: 100%; border-collapse: collapse; font-size: 15px; }
+th{ background: var(--card-2); color: var(--cian); font-family:'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 1.5px; text-transform: uppercase; padding: 18px 22px; text-align: left; border-bottom: 1px solid var(--line); font-weight: 600; }
+td{ padding: 18px 22px; border-bottom: 1px solid var(--line); color: var(--text-2); vertical-align: top; }
+tr:last-child td{ border-bottom: none; }
+td strong{ color: var(--text); }
+td .check{ color: var(--success); font-weight: 700; }
+td .cross{ color: var(--danger); font-weight: 700; }
+
+/* MECANISMOS CARDS */
+.mech-card{
+  background: var(--card-2); border: 1px solid var(--line); border-radius: 16px; padding: 24px; transition: all .3s; position: relative; overflow: hidden;
+}
+.mech-card:hover{ border-color: rgba(184,69,255,.4); transform: translateY(-3px); }
+.mech-card .num{ position: absolute; top: 20px; right: 24px; font-family:'Fraunces', serif; font-style: italic; font-size: 32px; line-height: 1; background: var(--grad); -webkit-background-clip: text; background-clip: text; color: transparent; }
+.mech-card h4{ font-family:'Fraunces', serif; font-style: italic; font-weight: 500; font-size: 22px; line-height: 1.2; margin-bottom: 12px; padding-right: 60px; }
+.mech-card .who{ font-family:'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 1.5px; text-transform: uppercase; color: var(--purple); margin-bottom: 10px; }
+.mech-card p{ font-size: 14px; color: var(--text-2); margin: 0; line-height: 1.5; }
+
+/* INSIGHTS DE ORO */
+.gold-card{
+  background: linear-gradient(135deg, rgba(245,158,11,.08), rgba(0,229,207,.06));
+  border: 1px solid rgba(245,158,11,.3);
+  border-radius: 20px; padding: 32px;
+  position: relative; overflow: hidden; transition: all .3s;
+}
+.gold-card:hover{ transform: translateY(-4px); box-shadow: 0 16px 50px -16px rgba(245,158,11,.3); }
+.gold-card::before{ content:'★'; position: absolute; top: 18px; right: 22px; font-size: 32px; color: var(--warning); opacity: .35; }
+.gold-card .lbl{ font-family:'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 2px; text-transform: uppercase; color: var(--warning); margin-bottom: 14px; }
+.gold-card h3{ font-family:'Fraunces', serif; font-style: italic; font-weight: 500; font-size: 22px; line-height: 1.3; margin-bottom: 12px; }
+.gold-card h3 em{ color: var(--cian); }
+.gold-card p{ font-size: 15px; color: var(--text-2); margin: 0; line-height: 1.55; }
+
+/* FRUSTRACIONES LATENTES */
+.frust-list{ margin: 32px 0; background: var(--card); border: 1px solid var(--line); border-radius: 16px; padding: 32px; }
+.frust-list .head{ display:flex; align-items: center; gap: 12px; padding-bottom: 20px; margin-bottom: 20px; border-bottom: 1px dashed var(--line); }
+.frust-list .head .ic{ width: 38px; height: 38px; border-radius: 10px; background: rgba(255,77,109,.15); display:grid; place-items:center; color: var(--danger); }
+.frust-list .head h3{ font-family:'Fraunces', serif; font-style: italic; font-weight: 500; font-size: 24px; }
+.frust-item{ display: flex; gap: 16px; padding: 18px 0; border-bottom: 1px solid rgba(255,255,255,.04); }
+.frust-item:last-child{ border-bottom: none; }
+.frust-item .num{ width: 32px; height: 32px; flex-shrink: 0; border-radius: 8px; background: rgba(255,77,109,.12); color: var(--danger); display:grid; place-items: center; font-family:'JetBrains Mono', monospace; font-weight: 700; font-size: 13px; }
+.frust-item .body{ flex: 1; }
+.frust-item .label{ font-family:'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 1.5px; text-transform: uppercase; color: var(--danger); margin-bottom: 6px; }
+.frust-item .text{ color: var(--text); font-size: 16px; line-height: 1.55; }
+
+/* FOOTER */
+.zenith-footer{ padding: 80px 0 50px; text-align: center; border-top: 1px solid var(--line); margin-top: 80px; position: relative; }
+.zenith-footer .footer-brand{ display: inline-flex; align-items: center; gap: 14px; margin-bottom: 24px; }
+.zenith-footer .footer-brand .logo{ width: 40px; height: 40px; display:grid; place-items:center; background: var(--grad); border-radius: 10px; box-shadow: 0 0 24px rgba(0,229,207,.4); }
+.zenith-footer .footer-brand .logo svg{ width: 22px; height: 22px; }
+.zenith-footer .footer-brand .name{ font-family:'Fraunces', serif; font-style: italic; font-weight: 600; font-size: 28px; letter-spacing:-.01em; background: var(--grad); -webkit-background-clip: text; background-clip: text; color: transparent; }
+.zenith-footer .footer-brand .tm{ font-size: 12px; vertical-align: super; opacity: .8; margin-left: 3px; color: var(--cian); -webkit-text-fill-color: var(--cian); }
+.zenith-footer .tagline{ font-family:'Fraunces', serif; font-style: italic; font-size: 18px; color: var(--text-2); margin-bottom: 16px; }
+.zenith-footer .made-by{ font-family:'JetBrains Mono', monospace; font-size: 12px; letter-spacing: 2px; text-transform: uppercase; color: var(--text-3); margin-bottom: 8px; }
+.zenith-footer .made-by .accent{ color: var(--cian); }
+.zenith-footer .print-tip{ margin-top: 24px; padding-top: 24px; border-top: 1px dashed var(--line); font-family:'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 1.5px; color: var(--purple); }
+.zenith-footer .drive-tip{ margin-top: 8px; font-family:'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 1.2px; color: var(--text-3); }
+
+/* Animaciones */
+.fade-up{ opacity: 0; transform: translateY(24px); animation: fadeUp .9s ease forwards; }
+.fade-up.d1{ animation-delay: .1s; } .fade-up.d2{ animation-delay: .2s; } .fade-up.d3{ animation-delay: .3s; } .fade-up.d4{ animation-delay: .4s; } .fade-up.d5{ animation-delay: .5s; }
+@keyframes fadeUp{ to{ opacity: 1; transform: translateY(0); } }
+
+/* PRINT */
+@media print{
+  body{ background: var(--dark) !important; color: var(--text) !important; print-color-adjust: exact !important; -webkit-print-color-adjust: exact !important; }
+  .bg-fx, .bg-grid{ display: block !important; print-color-adjust: exact !important; }
+  section{ padding: 40px 0; page-break-inside: avoid; }
+  .sub-card, .yt-creator-card, .yt-vid-card, .yt-comment, .qt, .gold-card, .mech-card, .frust-list, .table-wrap{ page-break-inside: avoid; }
+  .hero{ min-height: auto; padding: 50px 0; }
+  .zenith-hud{ position: static; }
+  .sub-card, .yt-creator-card, .yt-thumb, .gold-card, .qt{ print-color-adjust: exact !important; -webkit-print-color-adjust: exact !important; }
+}
+
+@media (max-width: 900px){
+  .container, .container-narrow{ padding: 0 20px; }
+  .hero{ min-height: auto; padding: 60px 0 40px; }
+}
+</style>
+</head>
+<body>
+
+<!-- HUD -->
+<header class="zenith-hud">
+  <div class="zenith-brand">
+    <div class="logo">
+      <svg viewBox="0 0 64 64" fill="none">
+        <path d="M32 6 L8 56 L56 56 Z" fill="#fff" stroke="#fff" stroke-width="2" stroke-linejoin="round"/>
+        <path d="M32 6 L20 32 L26 32 L18 56 L8 56 Z" fill="#000" opacity="0.18"/>
+        <path d="M32 6 L18 28 L24 28 L32 6 Z" fill="#fff" opacity="0.4"/>
+      </svg>
+    </div>
+    <div class="name">Zenith<span class="tm">™</span></div>
+    <div class="stage">Etapa <span class="num">12</span> / 12 · Research</div>
+  </div>
+  <div class="right">
+    <span class="live"><span class="dot"></span> Live</span>
+    <span>{{FECHA}}</span>
+  </div>
+</header>
+
+<div class="bg-fx"></div>
+<div class="bg-grid"></div>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="container">
+    <div class="hero-tag fade-up">Research de mercado · Reddit + YouTube</div>
+    <h1 class="fade-up d1">Lo que dice el avatar <em>en sus propias palabras</em>.</h1>
+    <p class="hero-lead fade-up d2">No te inventes el copy. <b>Cópialo.</b> Aquí están las frases textuales · los subreddits · los creadores · los vídeos virales · los comentarios reales que demuestran qué arde y qué no en el mercado de <b>{{NICHO}}</b>.</p>
+    <div class="hero-meta-grid fade-up d3">
+      <div class="block">
+        <div class="label">Subreddits</div>
+        <div class="value"><em>{{N_SUBREDDITS}}</em> top</div>
+      </div>
+      <div class="block">
+        <div class="label">Frases textuales</div>
+        <div class="value"><em>{{N_FRASES}}</em> recogidas</div>
+      </div>
+      <div class="block">
+        <div class="label">YouTubers</div>
+        <div class="value"><em>{{N_CREATORS}}</em> top</div>
+      </div>
+      <div class="block">
+        <div class="label">Idioma</div>
+        <div class="value">{{IDIOMA}}</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 1 · SUBREDDITS -->
+<section>
+  <div class="container">
+    <div class="section-tag fade-up">01 · Top subreddits</div>
+    <h2 class="section-title fade-up">Donde el avatar <em>vive</em>.</h2>
+    <p class="section-lead fade-up">Las comunidades exactas donde el avatar lee, comenta y pide ayuda. <b>Sumérgete una hora en cada una</b> antes de escribir cualquier hook.</p>
+    <div class="card-grid-3">
+      <div class="sub-card fade-up">
+        <div class="reddit-row">
+          <div class="reddit-ic">r/</div>
+          <div class="reddit-meta">
+            <div class="sub-name">r/{{SUB_1_NAME}}</div>
+            <div class="sub-members">{{SUB_1_MEMBERS}} miembros</div>
+          </div>
+        </div>
+        <div class="cat-badge">{{SUB_1_CATEGORY}}</div>
+        <p>{{SUB_1_DESC}}</p>
+        <a href="{{SUB_1_LINK}}" class="link">→ Abrir comunidad</a>
+      </div>
+      <div class="sub-card fade-up d1">
+        <div class="reddit-row">
+          <div class="reddit-ic">r/</div>
+          <div class="reddit-meta">
+            <div class="sub-name">r/{{SUB_2_NAME}}</div>
+            <div class="sub-members">{{SUB_2_MEMBERS}} miembros</div>
+          </div>
+        </div>
+        <div class="cat-badge">{{SUB_2_CATEGORY}}</div>
+        <p>{{SUB_2_DESC}}</p>
+        <a href="{{SUB_2_LINK}}" class="link">→ Abrir comunidad</a>
+      </div>
+      <div class="sub-card fade-up d2">
+        <div class="reddit-row">
+          <div class="reddit-ic">r/</div>
+          <div class="reddit-meta">
+            <div class="sub-name">r/{{SUB_3_NAME}}</div>
+            <div class="sub-members">{{SUB_3_MEMBERS}} miembros</div>
+          </div>
+        </div>
+        <div class="cat-badge">{{SUB_3_CATEGORY}}</div>
+        <p>{{SUB_3_DESC}}</p>
+        <a href="{{SUB_3_LINK}}" class="link">→ Abrir comunidad</a>
+      </div>
+      <div class="sub-card fade-up">
+        <div class="reddit-row">
+          <div class="reddit-ic">r/</div>
+          <div class="reddit-meta">
+            <div class="sub-name">r/{{SUB_4_NAME}}</div>
+            <div class="sub-members">{{SUB_4_MEMBERS}} miembros</div>
+          </div>
+        </div>
+        <div class="cat-badge">{{SUB_4_CATEGORY}}</div>
+        <p>{{SUB_4_DESC}}</p>
+        <a href="{{SUB_4_LINK}}" class="link">→ Abrir comunidad</a>
+      </div>
+      <div class="sub-card fade-up d1">
+        <div class="reddit-row">
+          <div class="reddit-ic">r/</div>
+          <div class="reddit-meta">
+            <div class="sub-name">r/{{SUB_5_NAME}}</div>
+            <div class="sub-members">{{SUB_5_MEMBERS}} miembros</div>
+          </div>
+        </div>
+        <div class="cat-badge">{{SUB_5_CATEGORY}}</div>
+        <p>{{SUB_5_DESC}}</p>
+        <a href="{{SUB_5_LINK}}" class="link">→ Abrir comunidad</a>
+      </div>
+      <div class="sub-card fade-up d2">
+        <div class="reddit-row">
+          <div class="reddit-ic">r/</div>
+          <div class="reddit-meta">
+            <div class="sub-name">r/{{SUB_6_NAME}}</div>
+            <div class="sub-members">{{SUB_6_MEMBERS}} miembros</div>
+          </div>
+        </div>
+        <div class="cat-badge">{{SUB_6_CATEGORY}}</div>
+        <p>{{SUB_6_DESC}}</p>
+        <a href="{{SUB_6_LINK}}" class="link">→ Abrir comunidad</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 2 · FRASES TEXTUALES -->
+<section class="alt">
+  <div class="container">
+    <div class="section-tag fade-up">02 · 30+ frases textuales</div>
+    <h2 class="section-title fade-up">El avatar <em>habla</em>. Tú copias.</h2>
+    <p class="section-lead fade-up">Cada frase tiene su upvote y su fuente. Las que tienen más upvotes son <b>oro puro</b> — úsalas tal cual como hook o headline.</p>
+    <div class="quote-grid">
+      <div class="qt fade-up">
+        <div class="text">"{{FRASE_1}}"</div>
+        <div class="meta">
+          <span class="src">Reddit · r/{{FRASE_1_SUB}}</span>
+          <span class="upvotes">{{FRASE_1_UPVOTES}}</span>
+        </div>
+        <a href="{{FRASE_1_LINK}}" class="link">{{FRASE_1_LINK}}</a>
+      </div>
+      <div class="qt fade-up d1">
+        <div class="text">"{{FRASE_2}}"</div>
+        <div class="meta">
+          <span class="src">Reddit · r/{{FRASE_2_SUB}}</span>
+          <span class="upvotes">{{FRASE_2_UPVOTES}}</span>
+        </div>
+        <a href="{{FRASE_2_LINK}}" class="link">{{FRASE_2_LINK}}</a>
+      </div>
+      <div class="qt fade-up d2">
+        <div class="text">"{{FRASE_3}}"</div>
+        <div class="meta">
+          <span class="src">Reddit · r/{{FRASE_3_SUB}}</span>
+          <span class="upvotes">{{FRASE_3_UPVOTES}}</span>
+        </div>
+        <a href="{{FRASE_3_LINK}}" class="link">{{FRASE_3_LINK}}</a>
+      </div>
+      <div class="qt fade-up">
+        <div class="text">"{{FRASE_4}}"</div>
+        <div class="meta">
+          <span class="src">YouTube · comentario</span>
+          <span class="upvotes">{{FRASE_4_UPVOTES}}</span>
+        </div>
+        <a href="{{FRASE_4_LINK}}" class="link">{{FRASE_4_LINK}}</a>
+      </div>
+      <div class="qt fade-up d1">
+        <div class="text">"{{FRASE_5}}"</div>
+        <div class="meta">
+          <span class="src">Reddit · r/{{FRASE_5_SUB}}</span>
+          <span class="upvotes">{{FRASE_5_UPVOTES}}</span>
+        </div>
+        <a href="{{FRASE_5_LINK}}" class="link">{{FRASE_5_LINK}}</a>
+      </div>
+      <div class="qt fade-up d2">
+        <div class="text">"{{FRASE_6}}"</div>
+        <div class="meta">
+          <span class="src">YouTube · comentario</span>
+          <span class="upvotes">{{FRASE_6_UPVOTES}}</span>
+        </div>
+        <a href="{{FRASE_6_LINK}}" class="link">{{FRASE_6_LINK}}</a>
+      </div>
+      <div class="qt fade-up">
+        <div class="text">"{{FRASE_7}}"</div>
+        <div class="meta">
+          <span class="src">Reddit · r/{{FRASE_7_SUB}}</span>
+          <span class="upvotes">{{FRASE_7_UPVOTES}}</span>
+        </div>
+        <a href="{{FRASE_7_LINK}}" class="link">{{FRASE_7_LINK}}</a>
+      </div>
+      <div class="qt fade-up d1">
+        <div class="text">"{{FRASE_8}}"</div>
+        <div class="meta">
+          <span class="src">Reddit · r/{{FRASE_8_SUB}}</span>
+          <span class="upvotes">{{FRASE_8_UPVOTES}}</span>
+        </div>
+        <a href="{{FRASE_8_LINK}}" class="link">{{FRASE_8_LINK}}</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 3 · YT CREATORS -->
+<section>
+  <div class="container">
+    <div class="section-tag fade-up">03 · Top creadores YouTube</div>
+    <h2 class="section-title fade-up">Quién <em>educa</em> al avatar.</h2>
+    <p class="section-lead fade-up">Estudia sus thumbnails · sus títulos · sus 8 primeros segundos. Aprende su <b>argot visual</b> y róbalo legalmente.</p>
+    <div class="card-grid-3">
+      <div class="yt-creator-card fade-up">
+        <div class="row">
+          <div class="avatar">{{YT1_INIT}}</div>
+          <div class="meta">
+            <div class="channel">{{YT1_CHANNEL}}</div>
+            <div class="subs">{{YT1_SUBS}} subs</div>
+          </div>
+        </div>
+        <div class="niche">{{YT1_NICHE}}</div>
+        <p>{{YT1_DESC}}</p>
+        <a href="{{YT1_LINK}}" class="link">→ Ver canal</a>
+      </div>
+      <div class="yt-creator-card fade-up d1">
+        <div class="row">
+          <div class="avatar">{{YT2_INIT}}</div>
+          <div class="meta">
+            <div class="channel">{{YT2_CHANNEL}}</div>
+            <div class="subs">{{YT2_SUBS}} subs</div>
+          </div>
+        </div>
+        <div class="niche">{{YT2_NICHE}}</div>
+        <p>{{YT2_DESC}}</p>
+        <a href="{{YT2_LINK}}" class="link">→ Ver canal</a>
+      </div>
+      <div class="yt-creator-card fade-up d2">
+        <div class="row">
+          <div class="avatar">{{YT3_INIT}}</div>
+          <div class="meta">
+            <div class="channel">{{YT3_CHANNEL}}</div>
+            <div class="subs">{{YT3_SUBS}} subs</div>
+          </div>
+        </div>
+        <div class="niche">{{YT3_NICHE}}</div>
+        <p>{{YT3_DESC}}</p>
+        <a href="{{YT3_LINK}}" class="link">→ Ver canal</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 4 · YT VIDEOS VIRALES -->
+<section class="alt">
+  <div class="container">
+    <div class="section-tag fade-up">04 · Vídeos virales del dolor</div>
+    <h2 class="section-title fade-up">Qué <em>está reventando</em> ahora.</h2>
+    <p class="section-lead fade-up">Los vídeos con más views demuestran qué dolor está más activo. <b>Replica su ángulo</b>, no su contenido.</p>
+    <div class="card-grid-3">
+      <div class="yt-vid-card fade-up">
+        <div class="yt-thumb"><div class="play"></div><div class="dur">{{VID1_DUR}}</div></div>
+        <div class="yt-vid-info">
+          <div class="title">{{VID1_TITLE}}</div>
+          <div class="channel-line">{{VID1_CHANNEL}}</div>
+          <div class="stats"><span>{{VID1_VIEWS}} views</span><span>{{VID1_LIKES}} likes</span></div>
+        </div>
+      </div>
+      <div class="yt-vid-card fade-up d1">
+        <div class="yt-thumb"><div class="play"></div><div class="dur">{{VID2_DUR}}</div></div>
+        <div class="yt-vid-info">
+          <div class="title">{{VID2_TITLE}}</div>
+          <div class="channel-line">{{VID2_CHANNEL}}</div>
+          <div class="stats"><span>{{VID2_VIEWS}} views</span><span>{{VID2_LIKES}} likes</span></div>
+        </div>
+      </div>
+      <div class="yt-vid-card fade-up d2">
+        <div class="yt-thumb"><div class="play"></div><div class="dur">{{VID3_DUR}}</div></div>
+        <div class="yt-vid-info">
+          <div class="title">{{VID3_TITLE}}</div>
+          <div class="channel-line">{{VID3_CHANNEL}}</div>
+          <div class="stats"><span>{{VID3_VIEWS}} views</span><span>{{VID3_LIKES}} likes</span></div>
+        </div>
+      </div>
+      <div class="yt-vid-card fade-up">
+        <div class="yt-thumb"><div class="play"></div><div class="dur">{{VID4_DUR}}</div></div>
+        <div class="yt-vid-info">
+          <div class="title">{{VID4_TITLE}}</div>
+          <div class="channel-line">{{VID4_CHANNEL}}</div>
+          <div class="stats"><span>{{VID4_VIEWS}} views</span><span>{{VID4_LIKES}} likes</span></div>
+        </div>
+      </div>
+      <div class="yt-vid-card fade-up d1">
+        <div class="yt-thumb"><div class="play"></div><div class="dur">{{VID5_DUR}}</div></div>
+        <div class="yt-vid-info">
+          <div class="title">{{VID5_TITLE}}</div>
+          <div class="channel-line">{{VID5_CHANNEL}}</div>
+          <div class="stats"><span>{{VID5_VIEWS}} views</span><span>{{VID5_LIKES}} likes</span></div>
+        </div>
+      </div>
+      <div class="yt-vid-card fade-up d2">
+        <div class="yt-thumb"><div class="play"></div><div class="dur">{{VID6_DUR}}</div></div>
+        <div class="yt-vid-info">
+          <div class="title">{{VID6_TITLE}}</div>
+          <div class="channel-line">{{VID6_CHANNEL}}</div>
+          <div class="stats"><span>{{VID6_VIEWS}} views</span><span>{{VID6_LIKES}} likes</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 5 · COMENTARIOS VIRALES YT -->
+<section>
+  <div class="container-narrow">
+    <div class="section-tag fade-up">05 · Comentarios virales YouTube</div>
+    <h2 class="section-title fade-up">Lo que la gente dice <em>debajo</em>.</h2>
+    <p class="section-lead fade-up">Los comentarios con más likes son la <b>respuesta no filtrada</b> del avatar. Aquí está el verdadero sentimiento de mercado.</p>
+    <div class="card-grid-2" style="grid-template-columns: 1fr; gap: 16px;">
+      <div class="yt-comment fade-up">
+        <div class="head">
+          <div class="user-av">{{COM1_INIT}}</div>
+          <div class="user">@{{COM1_USER}}</div>
+          <div class="likes"><b>{{COM1_LIKES}}</b> likes</div>
+        </div>
+        <div class="body">"{{COM1_TEXT}}"</div>
+      </div>
+      <div class="yt-comment fade-up d1">
+        <div class="head">
+          <div class="user-av">{{COM2_INIT}}</div>
+          <div class="user">@{{COM2_USER}}</div>
+          <div class="likes"><b>{{COM2_LIKES}}</b> likes</div>
+        </div>
+        <div class="body">"{{COM2_TEXT}}"</div>
+      </div>
+      <div class="yt-comment fade-up d2">
+        <div class="head">
+          <div class="user-av">{{COM3_INIT}}</div>
+          <div class="user">@{{COM3_USER}}</div>
+          <div class="likes"><b>{{COM3_LIKES}}</b> likes</div>
+        </div>
+        <div class="body">"{{COM3_TEXT}}"</div>
+      </div>
+      <div class="yt-comment fade-up">
+        <div class="head">
+          <div class="user-av">{{COM4_INIT}}</div>
+          <div class="user">@{{COM4_USER}}</div>
+          <div class="likes"><b>{{COM4_LIKES}}</b> likes</div>
+        </div>
+        <div class="body">"{{COM4_TEXT}}"</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 6 · SOLUCIONES YA PROBADAS -->
+<section class="alt">
+  <div class="container">
+    <div class="section-tag fade-up">06 · Soluciones que probó y fallaron</div>
+    <h2 class="section-title fade-up">Lo que <em>NO le funcionó</em>.</h2>
+    <p class="section-lead fade-up">El avatar tiene cicatrices. Si tu mecanismo se parece a algo que <b>ya falló</b> — tu anuncio muere antes del segundo 2.</p>
+    <div class="table-wrap fade-up">
+      <table>
+        <thead>
+          <tr>
+            <th>Solución que probó</th>
+            <th>Por qué no funcionó</th>
+            <th>Frustración generada</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td><strong>{{SOL_1}}</strong></td><td>{{SOL_1_WHY}}</td><td>{{SOL_1_FRUST}}</td></tr>
+          <tr><td><strong>{{SOL_2}}</strong></td><td>{{SOL_2_WHY}}</td><td>{{SOL_2_FRUST}}</td></tr>
+          <tr><td><strong>{{SOL_3}}</strong></td><td>{{SOL_3_WHY}}</td><td>{{SOL_3_FRUST}}</td></tr>
+          <tr><td><strong>{{SOL_4}}</strong></td><td>{{SOL_4_WHY}}</td><td>{{SOL_4_FRUST}}</td></tr>
+          <tr><td><strong>{{SOL_5}}</strong></td><td>{{SOL_5_WHY}}</td><td>{{SOL_5_FRUST}}</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 7 · MECANISMOS DEL MERCADO -->
+<section>
+  <div class="container">
+    <div class="section-tag fade-up">07 · Mecanismos ya nombrados</div>
+    <h2 class="section-title fade-up">Lo que <em>ya existe</em> en el mercado.</h2>
+    <p class="section-lead fade-up">Los mecanismos que <b>NO debes repetir</b> · y la oportunidad para nombrar el tuyo de forma única.</p>
+    <div class="card-grid-3">
+      <div class="mech-card fade-up">
+        <div class="num">01</div>
+        <div class="who">Por {{MECH_1_WHO}}</div>
+        <h4>{{MECH_1_NAME}}</h4>
+        <p>{{MECH_1_DESC}}</p>
+      </div>
+      <div class="mech-card fade-up d1">
+        <div class="num">02</div>
+        <div class="who">Por {{MECH_2_WHO}}</div>
+        <h4>{{MECH_2_NAME}}</h4>
+        <p>{{MECH_2_DESC}}</p>
+      </div>
+      <div class="mech-card fade-up d2">
+        <div class="num">03</div>
+        <div class="who">Por {{MECH_3_WHO}}</div>
+        <h4>{{MECH_3_NAME}}</h4>
+        <p>{{MECH_3_DESC}}</p>
+      </div>
+      <div class="mech-card fade-up">
+        <div class="num">04</div>
+        <div class="who">Por {{MECH_4_WHO}}</div>
+        <h4>{{MECH_4_NAME}}</h4>
+        <p>{{MECH_4_DESC}}</p>
+      </div>
+      <div class="mech-card fade-up d1">
+        <div class="num">05</div>
+        <div class="who">Por {{MECH_5_WHO}}</div>
+        <h4>{{MECH_5_NAME}}</h4>
+        <p>{{MECH_5_DESC}}</p>
+      </div>
+      <div class="mech-card fade-up d2">
+        <div class="num">06</div>
+        <div class="who">Por {{MECH_6_WHO}}</div>
+        <h4>{{MECH_6_NAME}}</h4>
+        <p>{{MECH_6_DESC}}</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 8 · INSIGHTS DE ORO -->
+<section class="alt">
+  <div class="container">
+    <div class="section-tag fade-up">08 · Insights de oro</div>
+    <h2 class="section-title fade-up">Los <em>tres patrones</em> que no se ven a simple vista.</h2>
+    <p class="section-lead fade-up">Después de leer cientos de posts y comentarios — estos son los <b>insights ocultos</b> que el avatar no diría jamás en voz alta.</p>
+    <div class="card-grid-3">
+      <div class="gold-card fade-up">
+        <div class="lbl">Insight 01 · El miedo oculto</div>
+        <h3>"<em>{{INSIGHT_1_TITLE}}</em>"</h3>
+        <p>{{INSIGHT_1_DESC}}</p>
+      </div>
+      <div class="gold-card fade-up d1">
+        <div class="lbl">Insight 02 · La contradicción</div>
+        <h3>"<em>{{INSIGHT_2_TITLE}}</em>"</h3>
+        <p>{{INSIGHT_2_DESC}}</p>
+      </div>
+      <div class="gold-card fade-up d2">
+        <div class="lbl">Insight 03 · La pregunta no formulada</div>
+        <h3>"<em>{{INSIGHT_3_TITLE}}</em>"</h3>
+        <p>{{INSIGHT_3_DESC}}</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 9 · FRUSTRACIONES LATENTES -->
+<section>
+  <div class="container-narrow">
+    <div class="section-tag fade-up">09 · Frustraciones latentes</div>
+    <h2 class="section-title fade-up">El <em>fuego que arde</em> debajo.</h2>
+    <p class="section-lead fade-up">Las frustraciones que nadie nombra todavía — y por eso son tu mejor <b>territorio de ángulo</b>.</p>
+    <div class="frust-list fade-up">
+      <div class="head"><div class="ic">⚠</div><h3>Frustraciones detectadas en el mercado</h3></div>
+      <div class="frust-item">
+        <div class="num">01</div>
+        <div class="body"><div class="label">Frustración profunda</div><div class="text">{{FRUST_1}}</div></div>
+      </div>
+      <div class="frust-item">
+        <div class="num">02</div>
+        <div class="body"><div class="label">Frustración profunda</div><div class="text">{{FRUST_2}}</div></div>
+      </div>
+      <div class="frust-item">
+        <div class="num">03</div>
+        <div class="body"><div class="label">Frustración profunda</div><div class="text">{{FRUST_3}}</div></div>
+      </div>
+      <div class="frust-item">
+        <div class="num">04</div>
+        <div class="body"><div class="label">Frustración profunda</div><div class="text">{{FRUST_4}}</div></div>
+      </div>
+      <div class="frust-item">
+        <div class="num">05</div>
+        <div class="body"><div class="label">Frustración profunda</div><div class="text">{{FRUST_5}}</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="zenith-footer">
+  <div class="container">
+    <div class="footer-brand">
+      <div class="logo">
+        <svg viewBox="0 0 64 64" fill="none">
+          <path d="M32 6 L8 56 L56 56 Z" fill="#fff" stroke="#fff" stroke-width="2" stroke-linejoin="round"/>
+          <path d="M32 6 L20 32 L26 32 L18 56 L8 56 Z" fill="#000" opacity="0.18"/>
+        </svg>
+      </div>
+      <div class="name">Zenith<span class="tm">™</span></div>
+    </div>
+    <div class="tagline">"El que escucha al mercado · llega antes a la cima."</div>
+    <div class="made-by">Hecho con <span class="accent">Método Zenith™</span> · Crea Ofertas 1%</div>
+    <div class="made-by">© 2026 · Todos los derechos reservados</div>
+    <div class="print-tip">⌘ + P → Guardar como PDF · estética preservada</div>
+    <div class="drive-tip">📁 Drive-friendly · sube y comparte sin perder el diseño</div>
+  </div>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,929 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="color-scheme" content="dark">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>One Belief · 4 Variantes · {{NOMBRE_PRODUCTO}}</title>
+<!-- ═══════════════════════════════════════════════════════════════ -->
+<!-- ZENITH HTML · PRINT-TO-PDF + DRIVE-FRIENDLY                       -->
+<!-- Cmd+P → Save as PDF · estética preservada al 100%                 -->
+<!-- Drive viewer compatible · gradientes y dark theme preservados     -->
+<!-- ═══════════════════════════════════════════════════════════════ -->
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' stop-color='%2300E5CF'/%3E%3Cstop offset='100%25' stop-color='%23B845FF'/%3E%3C/linearGradient%3E%3C/defs%3E%3Cpath d='M32 4 L8 56 L56 56 Z' fill='url(%23g)' stroke='%2300E5CF' stroke-width='2' stroke-linejoin='round'/%3E%3Cpath d='M32 4 L20 32 L26 32 L18 56 L8 56 Z' fill='%23ffffff' opacity='0.15'/%3E%3Cpath d='M32 4 L18 28 L24 28 L32 4 Z' fill='%23ffffff' opacity='0.25'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500;9..144,600;9..144,700;9..144,800;9..144,900&family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --cian: #00E5CF;
+    --cian-soft: #4DECDB;
+    --purple: #B845FF;
+    --purple-soft: #C972FF;
+    --purple-deep: #6E1FB8;
+    --dark: #050510;
+    --card: #0B0B17;
+    --card-2: #11111f;
+    --card-hover: #22223a;
+    --line: rgba(255,255,255,.08);
+    --line-strong: rgba(255,255,255,.18);
+    --text: #ffffff;
+    --text-2: rgba(255,255,255,.78);
+    --text-3: rgba(255,255,255,.5);
+    --success: #10e0a1;
+    --success-soft: rgba(16, 224, 161, 0.15);
+    --danger: #ff4d6d;
+    --danger-soft: rgba(255, 77, 109, 0.15);
+    --warning: #f59e0b;
+    --grad: linear-gradient(135deg, var(--cian) 0%, var(--purple) 100%);
+    --grad-soft: linear-gradient(135deg, rgba(0,229,207,.15) 0%, rgba(184,69,255,.15) 100%);
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    background: var(--dark);
+    color: var(--text);
+    line-height: 1.6;
+    overflow-x: hidden;
+    background-image:
+      radial-gradient(circle at 15% 0%, rgba(168, 85, 247, 0.18) 0%, transparent 55%),
+      radial-gradient(circle at 85% 85%, rgba(245, 158, 11, 0.06) 0%, transparent 55%);
+    background-attachment: fixed;
+  }
+  .display { font-family: 'Fraunces', serif; }
+  .mono { font-family: 'JetBrains Mono', monospace; }
+  .container { max-width: 1280px; margin: 0 auto; padding: 0 32px; }
+
+  /* HERO */
+  header.hero {
+    min-height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 80px 0 60px;
+    position: relative;
+    overflow: hidden;
+  }
+  header.hero::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-image:
+      linear-gradient(rgba(168, 85, 247, 0.04) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(168, 85, 247, 0.04) 1px, transparent 1px);
+    background-size: 50px 50px;
+    pointer-events: none;
+    mask-image: radial-gradient(ellipse at center, black 30%, transparent 75%);
+  }
+  .hero-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: rgba(168, 85, 247, 0.12);
+    border: 1px solid var(--line-strong);
+    color: var(--cian);
+    padding: 8px 16px;
+    border-radius: 100px;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    width: fit-content;
+    margin-bottom: 30px;
+    position: relative;
+    z-index: 2;
+  }
+  .hero-tag::before {
+    content: '';
+    width: 8px; height: 8px;
+    border-radius: 50%;
+    background: var(--cian);
+    box-shadow: 0 0 14px rgba(0,229,207,.45);
+    animation: pulse 2s infinite;
+  }
+  @keyframes pulse {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.5; transform: scale(1.5); }
+  }
+  .hero-class-number {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 14px;
+    color: var(--text-3);
+    letter-spacing: 4px;
+    margin-bottom: 18px;
+    position: relative;
+    z-index: 2;
+  }
+  .hero-class-number .num { color: var(--purple); font-weight: 700; }
+  header.hero h1 {
+    font-family: 'Fraunces', serif;
+    font-size: clamp(46px, 8vw, 84px);
+    font-weight: 700;
+    line-height: 0.95;
+    letter-spacing: -2px;
+    margin-bottom: 30px;
+    position: relative;
+    z-index: 2;
+  }
+  header.hero h1 .highlight {
+    background: linear-gradient(135deg, var(--cian) 0%, var(--purple) 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline-block;
+  }
+  .hero-lead {
+    font-size: 22px;
+    color: var(--text-2);
+    max-width: 800px;
+    margin-bottom: 50px;
+    font-weight: 300;
+    line-height: 1.5;
+    position: relative;
+    z-index: 2;
+  }
+  .hero-lead strong { color: var(--text); font-weight: 600; }
+
+  /* PRODUCT META */
+  .product-meta {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    padding-top: 40px;
+    border-top: 1px solid var(--line);
+    position: relative;
+    z-index: 2;
+  }
+  .meta-block .label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--text-3);
+    margin-bottom: 8px;
+  }
+  .meta-block .value { font-size: 18px; font-weight: 600; color: var(--text); }
+  .meta-block .value .arrow { color: var(--cian); }
+
+  /* SECTIONS */
+  section { padding: 80px 0; position: relative; }
+  .section-tag {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 13px;
+    color: var(--cian);
+    letter-spacing: 2px;
+    margin-bottom: 16px;
+    text-transform: uppercase;
+  }
+  .section-title {
+    font-family: 'Fraunces', serif;
+    font-size: clamp(34px, 5vw, 54px);
+    font-weight: 700;
+    line-height: 1.05;
+    letter-spacing: -1px;
+    margin-bottom: 24px;
+  }
+  .section-title .highlight { color: var(--purple); }
+  .section-lead {
+    font-size: 19px;
+    color: var(--text-2);
+    max-width: 800px;
+    margin-bottom: 60px;
+    font-weight: 300;
+    line-height: 1.55;
+  }
+  .section-lead strong { color: var(--text); font-weight: 600; }
+
+  /* FORMULA */
+  .formula-box {
+    background: linear-gradient(135deg, rgba(168, 85, 247, 0.12), rgba(245, 158, 11, 0.08));
+    border: 1px solid var(--cian);
+    border-radius: 20px;
+    padding: 60px 50px;
+    margin: 40px 0 60px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .formula-box::before {
+    content: '';
+    position: absolute;
+    top: -50%; left: -50%;
+    width: 200%; height: 200%;
+    background: radial-gradient(circle, rgba(168, 85, 247, 0.1) 0%, transparent 50%);
+    animation: rotate 30s linear infinite;
+    pointer-events: none;
+  }
+  @keyframes rotate { from { transform: rotate(0); } to { transform: rotate(360deg); } }
+  .formula-box .formula-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 12px;
+    color: var(--cian);
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    position: relative; z-index: 1;
+  }
+  .formula-box .formula {
+    font-family: 'Fraunces', serif;
+    font-size: clamp(22px, 3vw, 34px);
+    font-weight: 600;
+    color: var(--text);
+    line-height: 1.4;
+    letter-spacing: -0.5px;
+    position: relative; z-index: 1;
+  }
+  .formula-box .formula .var {
+    color: var(--purple);
+    font-weight: 700;
+  }
+  .formula-box .formula-author {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 13px;
+    color: var(--text-3);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-top: 24px;
+    position: relative; z-index: 1;
+  }
+
+  /* VARIANTS GRID */
+  .variants-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 28px;
+    margin-top: 40px;
+  }
+  .variant-card {
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 24px;
+    padding: 40px;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s;
+  }
+  .variant-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0;
+    width: 6px; height: 100%;
+  }
+  .variant-card.v1::before { background: linear-gradient(180deg, var(--success), var(--purple)); }
+  .variant-card.v2::before { background: linear-gradient(180deg, var(--danger), var(--cian)); }
+  .variant-card.v3::before { background: linear-gradient(180deg, var(--purple), var(--cian)); }
+  .variant-card.v4::before { background: linear-gradient(180deg, var(--cian), var(--success)); }
+  .variant-card:hover {
+    transform: translateY(-6px);
+    border-color: var(--cian);
+    box-shadow: 0 24px 60px rgba(168, 85, 247, 0.18);
+  }
+  .variant-card .variant-num {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 12px;
+    color: var(--cian);
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+  }
+  .variant-card .variant-type {
+    font-family: 'Fraunces', serif;
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 24px;
+    line-height: 1.1;
+  }
+  .variant-card .variant-belief {
+    font-size: 19px;
+    color: var(--text-2);
+    line-height: 1.6;
+    margin-bottom: 28px;
+    padding: 24px;
+    background: var(--card-2);
+    border-radius: 16px;
+    border-left: 4px solid var(--cian);
+  }
+  .variant-card .variant-belief em {
+    color: var(--purple);
+    font-style: normal;
+    font-weight: 700;
+  }
+  .variant-card .variant-belief .opportunity { color: var(--cian); font-weight: 700; }
+  .variant-card .variant-belief .result { color: var(--purple); font-weight: 700; }
+  .variant-card .variant-belief .mechanism { color: var(--success); font-weight: 700; }
+
+  .variant-card .when-use {
+    background: var(--card-2);
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    padding: 18px;
+    margin-top: 20px;
+  }
+  .variant-card .when-use-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    color: var(--purple);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+  }
+  .variant-card .when-use-text {
+    font-size: 14px;
+    color: var(--text-2);
+    line-height: 1.5;
+  }
+
+  /* INGREDIENTS TABLE */
+  .ingredients-section {
+    background: linear-gradient(180deg, transparent 0%, rgba(168, 85, 247, 0.04) 50%, transparent 100%);
+    border-top: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+  }
+  .ingredients-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    margin-top: 40px;
+  }
+  .ingredient-card {
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 18px;
+    padding: 32px;
+    position: relative;
+  }
+  .ingredient-card .ing-num {
+    font-family: 'Fraunces', serif;
+    font-size: 60px;
+    font-weight: 700;
+    background: linear-gradient(135deg, var(--cian), var(--purple));
+    -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;
+    line-height: 1;
+    position: absolute; top: 20px; right: 24px; opacity: 0.6;
+  }
+  .ingredient-card .ing-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    color: var(--purple);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 14px;
+  }
+  .ingredient-card .ing-name {
+    font-family: 'Fraunces', serif;
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 14px;
+  }
+  .ingredient-card .ing-value {
+    font-size: 20px;
+    color: var(--cian);
+    font-weight: 600;
+    margin-bottom: 16px;
+    padding: 12px 16px;
+    background: rgba(0,229,207,.15);
+    border-radius: 10px;
+    display: inline-block;
+  }
+  .ingredient-card .ing-desc {
+    font-size: 14px;
+    color: var(--text-2);
+    line-height: 1.5;
+  }
+
+  /* DECISION TABLE */
+  .table-wrap {
+    margin: 40px 0;
+    border: 1px solid var(--line);
+    border-radius: 16px;
+    overflow: hidden;
+    background: var(--card);
+  }
+  table { width: 100%; border-collapse: collapse; font-size: 15px; }
+  th {
+    background: var(--card-2);
+    color: var(--cian);
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    padding: 18px 22px;
+    text-align: left;
+    border-bottom: 1px solid var(--line);
+    font-weight: 600;
+  }
+  td {
+    padding: 18px 22px;
+    border-bottom: 1px solid var(--line);
+    color: var(--text-2);
+    vertical-align: top;
+  }
+  tr:last-child td { border-bottom: none; }
+  td strong { color: var(--text); }
+  td .recommended {
+    color: var(--success);
+    font-weight: 700;
+    background: var(--success-soft);
+    padding: 4px 10px;
+    border-radius: 6px;
+    font-size: 12px;
+    font-family: 'JetBrains Mono', monospace;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+
+  /* RECOMMENDATION */
+  .recommendation {
+    background: linear-gradient(135deg, var(--success-soft), rgba(16, 224, 161, 0.05));
+    border: 2px solid var(--success);
+    border-radius: 24px;
+    padding: 50px 40px;
+    margin: 50px 0;
+    position: relative;
+    overflow: hidden;
+  }
+  .recommendation::before {
+    content: '★';
+    position: absolute;
+    top: 24px; right: 32px;
+    font-size: 80px;
+    color: var(--success);
+    opacity: 0.18;
+  }
+  .recommendation .rec-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 12px;
+    color: var(--success);
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+    font-weight: 700;
+  }
+  .recommendation .rec-title {
+    font-family: 'Fraunces', serif;
+    font-size: 32px;
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 16px;
+  }
+  .recommendation .rec-text {
+    font-size: 17px;
+    color: var(--text-2);
+    line-height: 1.6;
+    margin-bottom: 12px;
+  }
+  .recommendation .rec-text strong { color: var(--success); }
+
+  /* FOOTER */
+  footer {
+    padding: 60px 0 40px;
+    text-align: center;
+    color: var(--text-3);
+    border-top: 1px solid var(--line);
+    font-size: 14px;
+  }
+  footer .brand {
+    font-family: 'Fraunces', serif;
+    font-weight: 700;
+    color: var(--text);
+    font-size: 16px;
+    margin-bottom: 8px;
+    display: block;
+  }
+  footer .print-tip {
+    margin-top: 18px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 12px;
+    color: var(--cian);
+    letter-spacing: 1.5px;
+  }
+
+  /* ═══════════════════════════════════════════════════════════════════════ */
+  /* PRINT-TO-PDF + GOOGLE DRIVE · ESTÉTICA ZENITH PRESERVADA AL 100%        */
+  /* ═══════════════════════════════════════════════════════════════════════ */
+  @media print {
+    /* Forzar preservación de colores en TODOS los elementos */
+    *, *::before, *::after {
+      -webkit-print-color-adjust: exact !important;
+      print-color-adjust: exact !important;
+      color-adjust: exact !important;
+    }
+
+    /* Body: mantener background dark Zenith */
+    html, body {
+      background: #050510 !important;
+      background-color: #050510 !important;
+      color: #ffffff !important;
+      margin: 0 !important;
+      padding: 0 !important;
+    }
+
+    /* Backgrounds radiales y FX preservados */
+    .bg-fx, .bg-fx::before, .bg-grid, .particles {
+      display: block !important;
+      visibility: visible !important;
+      opacity: 1 !important;
+    }
+
+    /* Secciones: evitar cortes feos */
+    section { padding: 40px 0 !important; page-break-inside: avoid; }
+    header.hero, .hero { min-height: auto !important; padding: 40px 0 !important; page-break-after: avoid; }
+
+    /* Cards / formulas / quotes / checklists / stacks: NO cortar a mitad */
+    .card, .formula-box, .checklist, .core-quote, .zenith-quote,
+    .stack-section, .warranty-block, .bonus-card, .bullet-card,
+    .testimonial-card, .faq-item, .ps-block, .story-block,
+    .core-section, .rule-block, .variant-card, .ingredient-card,
+    .ang-card, .comp-card, .ad-card, .gap-card, .diff-card,
+    .dm-card, .sub-card, .yt-vid-card, .gold-card, .empathy-card,
+    .desire-main, .enemy-card, .r-card, .ing-card, .test-deal,
+    .recommendation, .cta-strip, .cta-final, .mechanism-section,
+    .ingredients-section, .product-meta, .hero-promise-meta,
+    .meta-block, .promise-meta-block, .num-pill, .num-circ,
+    .stack-row, .stack-totals, .stack-totals-row,
+    .testimonials-grid, .bullets-grid, .bonus-grid, .variants-grid,
+    .ingredients-grid, .restate-grid, .card-grid-2, .card-grid-3, .card-grid-4 {
+      page-break-inside: avoid !important;
+      break-inside: avoid !important;
+    }
+
+    /* HUD sticky: deshabilitarlo en print (ocupa espacio) */
+    .zenith-hud { position: static !important; padding: 16px 32px !important; }
+
+    /* Gradientes inline (en backgrounds): forzar preservación */
+    [style*="gradient"], [style*="linear-gradient"], [style*="radial-gradient"] {
+      -webkit-print-color-adjust: exact !important;
+      print-color-adjust: exact !important;
+    }
+
+    /* SVGs: preservar colores y gradientes */
+    svg, svg * {
+      -webkit-print-color-adjust: exact !important;
+      print-color-adjust: exact !important;
+    }
+
+    /* Footer Zenith: preservar visualmente */
+    .zenith-footer, footer {
+      page-break-inside: avoid !important;
+      background: #050510 !important;
+    }
+    .zenith-footer .footer-brand, footer .footer-brand,
+    .zenith-footer .logo, footer .logo {
+      -webkit-print-color-adjust: exact !important;
+      print-color-adjust: exact !important;
+    }
+
+    /* Quitar animaciones (no se aprecian en PDF y rompen) */
+    *, *::before, *::after {
+      animation-duration: 0s !important;
+      animation-delay: 0s !important;
+      transition: none !important;
+    }
+
+    /* Page setup: A4 vertical estándar, márgenes mínimos */
+    @page {
+      size: A4 portrait;
+      margin: 8mm;
+    }
+
+    /* Tipografías: forzar Fraunces + Inter aunque Google Fonts no cargue */
+    body, p, div, span, li, td, th {
+      font-family: 'Inter', -apple-system, 'Helvetica Neue', sans-serif !important;
+    }
+    h1, h2, h3, h4, .display, .hero h1, .section-title,
+    .formula-box .formula, .zenith-quote, .footer-brand .name,
+    header.hero h1 {
+      font-family: 'Fraunces', 'Georgia', 'Times New Roman', serif !important;
+    }
+    .mono, code, pre, .label, .section-tag, .hero-tag {
+      font-family: 'JetBrains Mono', 'Courier New', monospace !important;
+    }
+  }
+
+  /* ═══════════════════════════════════════════════════════════════════════ */
+  /* DRIVE / VIEWER COMPATIBLE                                                 */
+  /* ═══════════════════════════════════════════════════════════════════════ */
+  @media screen and (max-width: 1px) {
+    /* No-op pero asegura que algunos viewers no rompan */
+  }
+
+  /* RESPONSIVE */
+  @media (max-width: 1024px) {
+    .variants-grid { grid-template-columns: 1fr; }
+    .ingredients-grid { grid-template-columns: 1fr; }
+    .product-meta { grid-template-columns: 1fr; }
+  }
+  @media (max-width: 768px) {
+    .container { padding: 0 20px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- HERO -->
+<header class="hero">
+  <div class="container">
+    <div class="hero-tag">One Belief Statement · 4 Variantes</div>
+    <div class="hero-class-number">ETAPA <span class="num">02</span> · PIPELINE CREA OFERTAS 1%</div>
+    <h1>4 versiones del<br/><span class="highlight">One Belief</span><br/>de tu oferta.</h1>
+    <p class="hero-lead">
+      La <strong>fórmula maestra de Evaldo Albuquerque</strong> aplicada con <strong>identidad y anti-identidad</strong> trabajando en pareja.
+      Generamos 4 variantes y recomendamos la ganadora según el nivel Schwartz + stage de sofisticación de tu mercado.
+    </p>
+    <div class="product-meta">
+      <div class="meta-block">
+        <div class="label">PRODUCTO</div>
+        <div class="value">{{NOMBRE_PRODUCTO}}</div>
+      </div>
+      <div class="meta-block">
+        <div class="label">AVATAR</div>
+        <div class="value">{{AVATAR_DESCRIPCION}}</div>
+      </div>
+      <div class="meta-block">
+        <div class="label">RESULTADO DESEADO</div>
+        <div class="value">{{RESULTADO_DESEADO}}</div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- LA FÓRMULA -->
+<section>
+  <div class="container">
+    <div class="section-tag">// LA FÓRMULA MAESTRA</div>
+    <h2 class="section-title">La fórmula <span class="highlight">Evaldo Albuquerque</span></h2>
+    <p class="section-lead">
+      Tres elementos. Ninguno sobra. Ninguno se cambia de posición. Es la frase que, una vez instalada en la mente del prospecto, hace la compra inevitable.
+    </p>
+    <div class="formula-box">
+      <div class="formula-label">// One Belief Statement</div>
+      <div class="formula">
+        "La <span class="var">[NUEVA OPORTUNIDAD]</span> es la llave para obtener<br/>
+        <span class="var">[RESULTADO DESEADO]</span>, y eso es solo posible<br/>
+        a través de <span class="var">[NUEVO MECANISMO]</span>."
+      </div>
+      <div class="formula-author">— Evaldo Albuquerque · The 16-Word Sales Letter</div>
+    </div>
+  </div>
+</section>
+
+<!-- LOS 3 INGREDIENTES -->
+<section class="ingredients-section">
+  <div class="container">
+    <div class="section-tag">// LOS 3 INGREDIENTES</div>
+    <h2 class="section-title">Tus 3 ingredientes <span class="highlight">resueltos</span></h2>
+    <p class="section-lead">
+      Antes de las 4 variantes, fijamos los componentes individuales que las nutren.
+    </p>
+
+    <div class="ingredients-grid">
+      <div class="ingredient-card">
+        <div class="ing-num">01</div>
+        <div class="ing-label">Ingrediente 1</div>
+        <div class="ing-name">Nueva Oportunidad</div>
+        <div class="ing-value">{{NUEVA_OPORTUNIDAD}}</div>
+        <p class="ing-desc">Identidad, fenómeno o característica única que SOLO existe a través de tu mecanismo. Suena novedoso, deseable, aspiracional.</p>
+      </div>
+
+      <div class="ingredient-card">
+        <div class="ing-num">02</div>
+        <div class="ing-label">Ingrediente 2</div>
+        <div class="ing-name">Resultado Deseado</div>
+        <div class="ing-value">{{RESULTADO_DESEADO_FRASE}}</div>
+        <p class="ing-desc">La meta más ambiciosa y valiosa que tu avatar persigue. Específico, cuantificable, tangible, emocionalmente potente.</p>
+      </div>
+
+      <div class="ingredient-card">
+        <div class="ing-num">03</div>
+        <div class="ing-label">Ingrediente 3</div>
+        <div class="ing-name">Nuevo Mecanismo</div>
+        <div class="ing-value">{{NOMBRE_MECANISMO}}</div>
+        <p class="ing-desc">Fórmula o método único con NOMBRE PROPIO (2-3 palabras, misterioso). Lo que hace posible el resultado a través de la oportunidad.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- LAS 4 VARIANTES -->
+<section>
+  <div class="container">
+    <div class="section-tag">// LAS 4 VARIANTES (regla innegociable)</div>
+    <h2 class="section-title">Las 4 versiones de tu <span class="highlight">One Belief</span></h2>
+    <p class="section-lead">
+      <strong>Identidad pura, Anti-identidad pura, Nueva oportunidad/fenómeno y Combo identidad+anti-identidad.</strong>
+      Cada una dispara una palanca psicológica diferente. La recomendada va al final, marcada con ★.
+    </p>
+
+    <div class="variants-grid">
+
+      <!-- V1 · IDENTIDAD PURA -->
+      <div class="variant-card v1">
+        <div class="variant-num">VARIANTE 01 · POSITIVO</div>
+        <h3 class="variant-type">Identidad pura</h3>
+        <div class="variant-belief">
+          {{V1_TEXTO}}
+          <!-- Ejemplo: "<span class="opportunity">Ser un hombre del 1%</span> es la llave para obtener <span class="result">un estilo de vida de película</span>, y eso solo es posible a través del <span class="mechanism">Código Apex</span>." -->
+        </div>
+        <div class="when-use">
+          <div class="when-use-label">// CUÁNDO USAR</div>
+          <div class="when-use-text">
+            <strong>Schwartz 4-5 (Product/Most Aware) + Stage 4-5.</strong> Prospectos motivados por ascenso, no por dolor. La identidad funciona como sueño puro.
+          </div>
+        </div>
+      </div>
+
+      <!-- V2 · ANTI-IDENTIDAD PURA -->
+      <div class="variant-card v2">
+        <div class="variant-num">VARIANTE 02 · NEGATIVO</div>
+        <h3 class="variant-type">Anti-identidad pura</h3>
+        <div class="variant-belief">
+          {{V2_TEXTO}}
+          <!-- Ejemplo: "<span class="opportunity">Dejar de ser el padre invisible</span> es la llave para que <span class="result">tus hijos vuelvan a mirarte con respeto</span>, y eso solo es posible a través del <span class="mechanism">Código Apex</span>." -->
+        </div>
+        <div class="when-use">
+          <div class="when-use-label">// CUÁNDO USAR</div>
+          <div class="when-use-text">
+            <strong>Schwartz 1-2 (Unaware/Problem-Aware).</strong> Dolor es la palanca principal. Despiertas la consciencia del problema antes de prometer salida.
+          </div>
+        </div>
+      </div>
+
+      <!-- V3 · NUEVA OPORTUNIDAD -->
+      <div class="variant-card v3">
+        <div class="variant-num">VARIANTE 03 · FENÓMENO</div>
+        <h3 class="variant-type">Nueva oportunidad / fenómeno</h3>
+        <div class="variant-belief">
+          {{V3_TEXTO}}
+          <!-- Ejemplo: "<span class="opportunity">Activar la red de hábitos del 1%</span> es la llave para tener <span class="result">el reconocimiento que mereces</span>, y eso solo es posible a través del <span class="mechanism">Código Apex</span>." -->
+        </div>
+        <div class="when-use">
+          <div class="when-use-label">// CUÁNDO USAR</div>
+          <div class="when-use-text">
+            <strong>Mercados aún no Stage 5.</strong> Cuando el prospecto no se identifica todavía con "ser X" pero sí con aprovechar algo nuevo. Funciona como puente.
+          </div>
+        </div>
+      </div>
+
+      <!-- V4 · COMBO -->
+      <div class="variant-card v4">
+        <div class="variant-num">VARIANTE 04 · COMBO · ★ GENERALMENTE GANADORA</div>
+        <h3 class="variant-type">Identidad + Anti-identidad</h3>
+        <div class="variant-belief">
+          {{V4_TEXTO}}
+          <!-- Ejemplo: "<span class="opportunity">Pasar de padre invisible a referente del 1%</span> es la llave para que <span class="result">tu familia vuelva a admirarte</span>, y eso solo es posible a través del <span class="mechanism">Código Apex</span>." -->
+        </div>
+        <div class="when-use">
+          <div class="when-use-label">// CUÁNDO USAR</div>
+          <div class="when-use-text">
+            <strong>Schwartz 2-4 + Stage 4-5.</strong> Cuando el prospecto siente el dolor Y la aspiración. Dolor + Salida. Generalmente ganadora en A/B test.
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- TABLA DE DECISIÓN -->
+<section class="ingredients-section">
+  <div class="container">
+    <div class="section-tag">// TABLA DE DECISIÓN</div>
+    <h2 class="section-title">Cuál variante <span class="highlight">elegir</span></h2>
+    <p class="section-lead">
+      Cruce de Schwartz nivel × Stage de sofisticación + variante recomendada.
+    </p>
+
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>Schwartz Nivel</th>
+            <th>Stage Sofisticación</th>
+            <th>Variante Recomendada</th>
+            <th>Por qué</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>1 · Unaware</strong></td>
+            <td>4-5</td>
+            <td><span class="recommended">V2 Anti-identidad</span></td>
+            <td>Despierta el dolor primero</td>
+          </tr>
+          <tr>
+            <td><strong>2 · Problem-Aware</strong></td>
+            <td>4-5</td>
+            <td><span class="recommended">V4 Combo</span></td>
+            <td>Le das dolor + salida</td>
+          </tr>
+          <tr>
+            <td><strong>3 · Solution-Aware</strong></td>
+            <td>4-5</td>
+            <td><span class="recommended">V4 Combo</span></td>
+            <td>Le confirmas la salida deseada</td>
+          </tr>
+          <tr>
+            <td><strong>4 · Product-Aware</strong></td>
+            <td>4-5</td>
+            <td><span class="recommended">V1 Identidad</span></td>
+            <td>Le refuerzas el sueño</td>
+          </tr>
+          <tr>
+            <td><strong>5 · Most Aware</strong></td>
+            <td>5</td>
+            <td><span class="recommended">V1 Identidad</span></td>
+            <td>Te quedas con el sueño puro</td>
+          </tr>
+          <tr>
+            <td><strong>Cualquier nivel</strong></td>
+            <td>1-3</td>
+            <td><span class="recommended">V3 Nueva oportunidad</span></td>
+            <td>Mercado aún virgen</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- RECOMENDACIÓN FINAL -->
+<section>
+  <div class="container">
+    <div class="recommendation">
+      <div class="rec-label">★ ★ ★ RECOMENDACIÓN FINAL ★ ★ ★</div>
+      <h3 class="rec-title">Para tu caso, la variante ganadora es: <strong>{{VARIANTE_RECOMENDADA}}</strong></h3>
+      <p class="rec-text">
+        <strong>Tu nivel Schwartz objetivo:</strong> {{SCHWARTZ_NIVEL}}<br/>
+        <strong>Stage de sofisticación del mercado:</strong> {{STAGE_SOFISTICACION}}<br/>
+        <strong>Justificación:</strong> {{JUSTIFICACION_VARIANTE}}
+      </p>
+      <p class="rec-text">
+        <strong>Texto exacto a usar:</strong><br/>
+        "{{TEXTO_VARIANTE_GANADORA}}"
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- DÓNDE USAR EL ONE BELIEF -->
+<section class="ingredients-section">
+  <div class="container">
+    <div class="section-tag">// DÓNDE APLICARLO</div>
+    <h2 class="section-title">El One Belief atraviesa <span class="highlight">todo el embudo</span></h2>
+    <p class="section-lead">
+      No es solo una frase del copy. Es <strong>el ancla mental</strong> de cada pieza del funnel.
+    </p>
+
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>Pieza del Embudo</th>
+            <th>Cómo se usa el One Belief</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td><strong>Anuncio (creative)</strong></td><td>Hook nombra UN componente (mecanismo o nueva oportunidad)</td></tr>
+          <tr><td><strong>Quiz · etapas 1-3</strong></td><td>Confirma el mecanismo con prueba social</td></tr>
+          <tr><td><strong>Quiz · etapas 4-5</strong></td><td>Anti-identidad activada (dolor)</td></tr>
+          <tr><td><strong>Quiz · final</strong></td><td>Identidad aspiracional encendida (deseo)</td></tr>
+          <tr><td><strong>Página oferta · headline</strong></td><td>El One Belief completo, en grande</td></tr>
+          <tr><td><strong>Bullets</strong></td><td>Cada bullet refuerza UN aspecto</td></tr>
+          <tr><td><strong>Bonus</strong></td><td>Cada bonus apunta al RESULTADO DESEADO</td></tr>
+          <tr><td><strong>Garantía</strong></td><td>Protege el RESULTADO DESEADO</td></tr>
+          <tr><td><strong>Email sequence</strong></td><td>Cada email refuerza UN ángulo</td></tr>
+          <tr><td><strong>Cierre del checkout</strong></td><td>Se repite COMPLETO antes del CTA</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- ZENITH FOOTER -->
+<footer class="zenith-footer" style="padding: 80px 0 50px; text-align: center; border-top: 1px solid var(--line); margin-top: 80px;">
+  <div class="container">
+    <div style="display: inline-flex; align-items: center; gap: 14px; margin-bottom: 24px;">
+      <div style="width: 40px; height: 40px; display: grid; place-items: center; background: var(--grad); border-radius: 10px; box-shadow: 0 0 24px rgba(0,229,207,.4);">
+        <svg viewBox="0 0 64 64" fill="none" style="width: 22px; height: 22px;">
+          <path d="M32 6 L8 56 L56 56 Z" fill="#ffffff" stroke="#ffffff" stroke-width="2" stroke-linejoin="round"/>
+          <path d="M32 6 L20 32 L26 32 L18 56 L8 56 Z" fill="#000" opacity="0.18"/>
+        </svg>
+      </div>
+      <div style="font-family: 'Fraunces', serif; font-style: italic; font-weight: 600; font-size: 28px; letter-spacing: -.01em; background: var(--grad); -webkit-background-clip: text; background-clip: text; color: transparent;">
+        Zenith<span style="font-size: 12px; vertical-align: super; opacity: .8; margin-left: 3px;">&trade;</span>
+      </div>
+    </div>
+    <div style="font-family: 'Fraunces', serif; font-style: italic; font-size: 18px; color: var(--text-2); margin-bottom: 16px;">&ldquo;De la cima se ve mejor el avatar.&rdquo;</div>
+    <div style="font-family: 'JetBrains Mono', monospace; font-size: 12px; letter-spacing: 2px; text-transform: uppercase; color: var(--text-3); margin-bottom: 8px;">Hecho con <span style="color: var(--cian);">M&eacute;todo Zenith&trade;</span> &middot; Crea Ofertas 1%</div>
+    <div style="font-family: 'JetBrains Mono', monospace; font-size: 12px; letter-spacing: 2px; text-transform: uppercase; color: var(--text-3); margin-bottom: 8px;">&copy; 2026 &middot; Todos los derechos reservados</div>
+    <div style="margin-top: 24px; padding-top: 24px; border-top: 1px dashed var(--line); font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 1.5px; color: var(--purple);">&#8984; + P &rarr; Guardar como PDF &middot; est&eacute;tica preservada</div>
+    <div style="margin-top: 8px; font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 1.2px; color: var(--text-3);">&#128193; Drive-friendly &middot; sube y comparte sin perder el dise&ntilde;o</div>
+  </div>
+</footer>
+
+</body>
+</html>
