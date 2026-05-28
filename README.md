@@ -53,6 +53,105 @@ Esto instala Python + ffmpeg + Whisper + jq + BeautifulSoup automáticamente.
 
 ---
 
+## 🚀 Cómo empezar · 4 modos de uso
+
+Tienes **4 formas distintas** de usar la skill según tu nivel de control:
+
+### Modo 1 · 🏔️ PIPELINE COMPLETO (recomendado primera vez)
+
+Lanza las 17 etapas en cascada · una sola orden y recibes todo el embudo.
+
+```bash
+/zenith-crea-ofertas:zenith-crea-oferta
+```
+
+→ Discovery (5 preguntas) → confirmación → **17 etapas automáticas** → carpeta `proyecto-{slug}/` con **22+ HTMLs** estéticos imprimibles a PDF.
+**⏱️ Tiempo:** 60-90 min · **💰 Coste:** ~$1.50-3.00 (100-180k tokens optimizado).
+
+---
+
+### Modo 2 · 🎯 SOLO DISCOVERY (control manual del flujo)
+
+Si quieres **decidir tú mismo** qué etapa lanzar después del brief:
+
+```bash
+/zenith-crea-ofertas:zenith-quick-discovery
+```
+
+→ Solo te hace las 5 preguntas y genera el brief. Luego TÚ decides qué lanzar:
+
+```bash
+# Después del discovery, lanzas las etapas que quieras, en el orden que quieras:
+/zenith-crea-ofertas:avatar-deep         ← etapa 01 · avatar completo
+/zenith-crea-ofertas:research-mercado    ← etapa 01 · Reddit + YouTube
+/zenith-crea-ofertas:competidor          ← etapa 02 · competencia
+/zenith-crea-ofertas:mecanismo           ← etapa 04 · mecanismo
+/zenith-crea-ofertas:angulos             ← etapa 05 · ángulos
+/zenith-crea-ofertas:promesa             ← etapa 06 · promesa ganadora
+/zenith-crea-ofertas:garantia            ← etapa 06 · garantía + risk reversal
+/zenith-crea-ofertas:one-belief          ← etapa 07 · 4 variantes
+/zenith-crea-ofertas:bonus               ← etapa 13 · bonus + irresistible
+/zenith-crea-ofertas:modulos             ← etapa 12 · módulos + clases
+/zenith-crea-ofertas:valor-percibido     ← etapa 11 · Bencivenga
+/zenith-crea-ofertas:schwartz-level      ← auditoría consciencia
+/zenith-crea-ofertas:great-leads         ← elige tipo de lead
+/zenith-crea-ofertas:audit-oferta        ← etapa 16 · auditor 200+
+```
+
+→ **Ventaja:** controlas tokens y haces solo lo que necesites.
+
+---
+
+### Modo 3 · 🤖 INVOCAR AGENTE CONCRETO (máximo control)
+
+Si ya tienes el brief y solo necesitas UN agente específico:
+
+```bash
+@agent-zenith-crea-ofertas:avatar-deep-psicologo
+@agent-zenith-crea-ofertas:one-belief-creator
+@agent-zenith-crea-ofertas:angulos-architect
+@agent-zenith-crea-ofertas:headline-master
+@agent-zenith-crea-ofertas:auditor-completo
+```
+
+→ **Ventaja:** mínimo gasto · útil para iteraciones rápidas o cuando ya tienes el avatar/mecanismo definido.
+
+---
+
+### Modo 4 · 🔍 AUDITAR OFERTA YA EXISTENTE
+
+Si ya tienes una oferta hecha y quieres saber qué falla:
+
+```bash
+/zenith-crea-ofertas:audit-oferta
+```
+
+→ Te pide la URL o pega del copy · audita 200+ ítems · score · roadmap de fixes rojo/ámbar/verde · veredicto luz-verde/amarilla/roja para tráfico.
+
+---
+
+### 📐 Comparativa de los 4 modos
+
+| Modo | Tiempo | Tokens aprox | Para qué |
+|---|---|---|---|
+| **1 · Pipeline completo** | 60-90 min | 100-180k | Primera oferta desde cero |
+| **2 · Discovery + manual** | 5 min + lo que decidas | 2-150k según etapas | Iterar con control |
+| **3 · Agente concreto** | 2-10 min | 2-10k | Tareas puntuales |
+| **4 · Auditar existente** | 10-15 min | 8-12k | Diagnóstico de oferta |
+
+---
+
+### 💡 Mi recomendación según tu caso
+
+| Tu situación | Modo recomendado |
+|---|---|
+| Primera vez con el plugin | Modo 1 (pipeline completo) |
+| Ya tienes producto + avatar definidos | Modo 2 (solo etapas que faltan) |
+| Solo necesitas afinar 1 pieza | Modo 3 (agente concreto) |
+| Tu oferta no convierte | Modo 4 (auditar) |
+
+---
+
 ## Arquitectura
 
 <div align="center">
