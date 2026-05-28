@@ -96,38 +96,50 @@ AVATAR     RESEARCH  COMPETENCIA     ONE BELIEF    MECANISMO   OFERTA
 
 ---
 
-## Pipeline completo (17 etapas)
+## Pipeline completo (17 etapas · 43 agentes)
 
 <div align="center">
 
 <img src="assets/pipeline-diagram.svg" alt="Pipeline 17 etapas Zenith Crea Ofertas" width="100%"/>
 
-*Cada etapa con sus agentes y output HTML correspondiente.*
+*Cada etapa con sus agentes y output HTML correspondiente · orden estricto de ejecución.*
 
 </div>
 
-| Etapa | Bloque | Agentes implicados | Output HTML |
+| # | Etapa | Agentes implicados | Output HTML |
 |---|---|---|---|
-| **00** | Quick Discovery | `zenith-quick-discovery` | `00-brief.html` |
-| **00b** | Avatar deep | `avatar-deep-psicologo` + `avatar-mapa-empatia` + `deal-makers-extractor` | `12-avatar-deep.html` |
-| **00c** | Research mercado | `research-reddit` + `research-youtube` (paralelo) | `13-research-mercado.html` |
-| **00d** | Competencia | `competidor-spy` | `15-competencia.html` |
-| **01** | Punto A → Punto B | `punto-a-b-architect` | `01-punto-a-b.html` |
-| **02** | One Belief (4 variantes) | `one-belief-creator` + `identidad-anti-identidad` + `nueva-oportunidad` | `02-one-belief.html` |
-| **03** | Mecanismo | `mecanismo-problema` + `mecanismo-solucion` + `nombre-chicle` + `super-estructura` | `03-mecanismo.html` |
-| **03b** | Ángulos | `angulos-architect` | `14-angulos.html` |
-| **04** | Features → Benefits → Desires | `caracteristicas-extractor` + `beneficios-extractor` + `deseos-extractor` + `intangibles-extractor` | `04-features-benefits-desires.html` |
-| **05** | Promesa | `promesa-ganadora` | `05-promesa.html` |
-| **06** | Garantía + Risk Reversal | `garantia-impresionante` + `objeciones-rotas` + `risk-reversal-master` | `06-garantia.html` |
-| **07** | Módulos + Clases | `modulos-namer` + `clases-namer` | `07-modulos-clases.html` |
-| **08** | Bonus | `bonus-architect` + `bonus-irresistible` | `08-bonus.html` |
-| **09** | Valor percibido | `valor-percibido` + `anclaje-precio` + `stack-slide-architect` | `09-valor-percibido.html` |
-| **09b** | Upsells | `upsell-downsell-architect` | (integra en oferta) |
-| **09c** | Autoridad | `autoridad-builder` | (integra en oferta) |
-| **10** | Consciencia + Lead | `schwartz-consciousness` + `great-leads-masterson` | (integra en oferta + auditoría) |
-| **10b** | Headline + Fascinations | `headline-master` + `fascinations-architect` | (integra en oferta) |
-| **11** | Oferta completa | `offer-master` | **`10-oferta-completa.html`** ← la página de ventas |
-| **12** | Auditoría 200+ | `auditor-completo` | `11-auditoria.html` |
+| **00** | Discovery (5 preguntas + confirmación) | `zenith-quick-discovery` | `00-brief.html` |
+| **01** | **Avatar Deep + Research** (5 agentes paralelos) | `avatar-deep-psicologo` · `research-reddit` · `research-youtube` · `avatar-mapa-empatia` · `deal-makers-extractor` | `12-avatar-deep.html` + `13-research-mercado.html` + `16-deal-makers.html` |
+| **02** | Competencia (Meta Ad Library + GAP) | `competidor-spy` | `15-competencia.html` |
+| **03a** | **Punto A→B PERSONA** (transformación emocional/racional) | `punto-a-b-architect` | `01-punto-a-b.html` |
+| **03b** | 🆕 **Punto A→B PRODUCTO** (pasos del servicio · base carta ventas invisible) | `42-punto-a-b-producto` | `17-punto-a-b-producto.html` |
+| **04** | Mecanismo completo | `mecanismo-problema` · `mecanismo-solucion` · `nombre-chicle` · `super-estructura` | `03-mecanismo.html` |
+| **05** | Ángulos (definición exacta Joseph Moreno) | `angulos-architect` | `14-angulos.html` |
+| **06** | Promesa + Garantía + Risk Reversal | `promesa-ganadora` · `garantia-impresionante` · `risk-reversal-master` · `objeciones-rotas` | `05-promesa.html` + `06-garantia.html` |
+| **07** | **One Belief** (3 agentes · 4 variantes) | `identidad-anti-identidad` · `nueva-oportunidad` · `one-belief-creator` | `02-one-belief.html` |
+| **08** | 🆕 **Naming Producto** (nombre comercial del programa) | `43-naming-producto` | (integra en `03-mecanismo.html` debajo del nombre chicle) |
+| **09** | Headline + Fascinations | `headline-master` · `fascinations-architect` | (integra en oferta completa) |
+| **10** | Features → Benefits → Desires + Intangibles | `caracteristicas-extractor` · `beneficios-extractor` · `deseos-extractor` · `intangibles-extractor` | `04-features-benefits-desires.html` |
+| **11** | Valor Percibido (Bencivenga) | `valor-percibido` · `anclaje-precio` · `stack-slide-architect` | `09-valor-percibido.html` |
+| **12** | Módulos + Clases (carta ventas invisible · usa 03b) | `modulos-namer` · `clases-namer` | `07-modulos-clases.html` |
+| **13** | Bonus + Upsells | `bonus-architect` · `bonus-irresistible` · `upsell-downsell-architect` | `08-bonus.html` |
+| **14** | Consciencia + Lead + Autoridad | `schwartz-consciousness` · `great-leads-masterson` · `autoridad-builder` | (integra en oferta + auditoría) |
+| **15** | **Oferta Completa** ensamblada | `offer-master` | **`10-oferta-completa.html`** ← la página de ventas |
+| **16** | Auditoría 200+ ítems | `auditor-completo` | `11-auditoria.html` |
+
+### 🔑 Aclaración sobre los 2 tipos de Punto A→B
+
+| Tipo | Para qué sirve | Agente | Output |
+|---|---|---|---|
+| **03a · PERSONA** | Transformación EMOCIONAL/RACIONAL del avatar · cómo siente/piensa/hace antes vs después (ej: "vergüenza al espejo" → "se mira y le gusta") | `punto-a-b-architect` | `01-punto-a-b.html` |
+| **03b · PRODUCTO** | PASOS OPERATIVOS del servicio · qué hace EL VENDEDOR con el cliente desde contratación hasta resultados (ej: "1.Onboarding · 2.Llamada · 3.Análisis IA · 4...") · base de la **carta de ventas invisible** | `42-punto-a-b-producto` | `17-punto-a-b-producto.html` |
+
+### 🔑 Aclaración sobre los 2 tipos de Naming
+
+| Tipo | Para qué sirve | Agente | Cuándo se ejecuta |
+|---|---|---|---|
+| **Nombre del MECANISMO** (chicle) | El "cómo" técnico · 2-3 palabras misteriosas (ej: "Yoga en silla", "Monjaro de pobre", "Código Apex") | `nombre-chicle` | Etapa 04 (dentro del mecanismo) |
+| **Nombre del PRODUCTO** (comercial) | El "qué" se vende · programa completo (ej: "Bumbum na Nuca Challenge", "Padre Definido 90", "Método Cima") | `43-naming-producto` | Etapa 08 (después del One Belief) |
 
 ---
 
