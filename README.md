@@ -55,6 +55,17 @@ Esto instala Python + ffmpeg + Whisper + jq + BeautifulSoup automáticamente.
 
 ## Arquitectura
 
+<div align="center">
+
+<img src="assets/architecture-diagram.svg" alt="Arquitectura del plugin Zenith Crea Ofertas" width="100%"/>
+
+*Un orquestador padre coordina los 41 sub-agentes especializados, agrupados por bloque funcional.*
+
+</div>
+
+<details>
+<summary>Ver diagrama ASCII (alternativa)</summary>
+
 ```
 ┌────────────────────────────────────────────────────────────────────┐
 │                  zenith-quick-discovery (PADRE)                    │
@@ -81,9 +92,19 @@ AVATAR     RESEARCH  COMPETENCIA     ONE BELIEF    MECANISMO   OFERTA
                                                               └────────┘
 ```
 
+</details>
+
 ---
 
 ## Pipeline completo (17 etapas)
+
+<div align="center">
+
+<img src="assets/pipeline-diagram.svg" alt="Pipeline 17 etapas Zenith Crea Ofertas" width="100%"/>
+
+*Cada etapa con sus agentes y output HTML correspondiente.*
+
+</div>
 
 | Etapa | Bloque | Agentes implicados | Output HTML |
 |---|---|---|---|
