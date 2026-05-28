@@ -1,58 +1,36 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 1400" role="img" aria-label="Zenith Crea Ofertas pipeline diagram - 17 etapas secuenciales - 43 agentes - de Discovery a Auditoria">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 900" role="img" aria-label="Pipeline Oficial Zenith - 17 etapas - 43 agentes - layout zigzag">
   <defs>
     <linearGradient id="pipe-bg" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" stop-color="#050510"/>
       <stop offset="100%" stop-color="#0B0B17"/>
     </linearGradient>
-    <linearGradient id="critical-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+    <linearGradient id="grad-cp" x1="0%" y1="0%" x2="100%" y2="0%">
       <stop offset="0%" stop-color="#00E5CF"/>
       <stop offset="100%" stop-color="#B845FF"/>
     </linearGradient>
-    <linearGradient id="opus-grad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#00E5CF"/>
-      <stop offset="100%" stop-color="#B845FF"/>
-    </linearGradient>
-    <linearGradient id="sonnet-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+    <linearGradient id="grad-pc" x1="0%" y1="0%" x2="100%" y2="0%">
       <stop offset="0%" stop-color="#B845FF"/>
-      <stop offset="100%" stop-color="#8B2DCC"/>
-    </linearGradient>
-    <linearGradient id="haiku-grad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#9EE7FF"/>
-      <stop offset="100%" stop-color="#6FBED9"/>
-    </linearGradient>
-    <linearGradient id="strategic-grad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#B845FF"/>
-      <stop offset="100%" stop-color="#8B2DCC"/>
-    </linearGradient>
-    <linearGradient id="operative-grad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#9EE7FF"/>
       <stop offset="100%" stop-color="#00E5CF"/>
     </linearGradient>
-    <linearGradient id="new-badge-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+    <linearGradient id="grad-circle" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00E5CF"/>
+      <stop offset="100%" stop-color="#B845FF"/>
+    </linearGradient>
+    <linearGradient id="grad-new" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" stop-color="#00E5CF"/>
       <stop offset="100%" stop-color="#00FFCF"/>
     </linearGradient>
-    <linearGradient id="number-circle" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#00E5CF"/>
-      <stop offset="100%" stop-color="#B845FF"/>
-    </linearGradient>
-    <linearGradient id="logo-mountain" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#00E5CF"/>
-      <stop offset="100%" stop-color="#B845FF"/>
-    </linearGradient>
-    <linearGradient id="final-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+    <linearGradient id="grad-final" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" stop-color="#B845FF"/>
       <stop offset="100%" stop-color="#00E5CF"/>
     </linearGradient>
+    <linearGradient id="grad-logo" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00E5CF"/>
+      <stop offset="100%" stop-color="#B845FF"/>
+    </linearGradient>
+
     <filter id="pipe-glow" x="-50%" y="-50%" width="200%" height="200%">
       <feGaussianBlur stdDeviation="3" result="blur"/>
-      <feMerge>
-        <feMergeNode in="blur"/>
-        <feMergeNode in="SourceGraphic"/>
-      </feMerge>
-    </filter>
-    <filter id="strong-glow" x="-50%" y="-50%" width="200%" height="200%">
-      <feGaussianBlur stdDeviation="5" result="blur"/>
       <feMerge>
         <feMergeNode in="blur"/>
         <feMergeNode in="SourceGraphic"/>
@@ -65,596 +43,369 @@
         <feMergeNode in="SourceGraphic"/>
       </feMerge>
     </filter>
-    <marker id="pipe-arrow" viewBox="0 0 10 10" refX="9" refY="5"
-            markerWidth="5" markerHeight="5" orient="auto">
-      <path d="M0,0 L10,5 L0,10 z" fill="#00E5CF" opacity="0.85"/>
+    <filter id="final-glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="6" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <marker id="ar-cyan" viewBox="0 0 10 10" refX="9" refY="5"
+            markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#00E5CF"/>
     </marker>
-    <marker id="pipe-arrow-small" viewBox="0 0 10 10" refX="9" refY="5"
-            markerWidth="4" markerHeight="4" orient="auto">
-      <path d="M0,0 L10,5 L0,10 z" fill="#B845FF" opacity="0.85"/>
+    <marker id="ar-purple" viewBox="0 0 10 10" refX="9" refY="5"
+            markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#B845FF"/>
     </marker>
   </defs>
 
   <!-- Fondo -->
-  <rect width="1280" height="1400" fill="url(#pipe-bg)"/>
+  <rect width="1400" height="900" fill="url(#pipe-bg)"/>
 
   <!-- Cuadricula sutil -->
   <g opacity="0.04" stroke="#00E5CF" stroke-width="1">
-    <line x1="0" y1="200" x2="1280" y2="200"/>
-    <line x1="0" y1="400" x2="1280" y2="400"/>
-    <line x1="0" y1="600" x2="1280" y2="600"/>
-    <line x1="0" y1="800" x2="1280" y2="800"/>
-    <line x1="0" y1="1000" x2="1280" y2="1000"/>
-    <line x1="0" y1="1200" x2="1280" y2="1200"/>
+    <line x1="0" y1="200" x2="1400" y2="200"/>
+    <line x1="0" y1="380" x2="1400" y2="380"/>
+    <line x1="0" y1="560" x2="1400" y2="560"/>
+    <line x1="0" y1="740" x2="1400" y2="740"/>
   </g>
 
-  <!-- Particulas decorativas izquierda -->
+  <!-- Particulas decorativas -->
   <g fill="#00E5CF" opacity="0.35">
     <circle cx="30" cy="180" r="1.5"/>
-    <circle cx="55" cy="320" r="1"/>
-    <circle cx="20" cy="470" r="1.2"/>
-    <circle cx="48" cy="620" r="1.5"/>
-    <circle cx="25" cy="770" r="1"/>
-    <circle cx="60" cy="900" r="1.3"/>
-    <circle cx="28" cy="1050" r="1.5"/>
-    <circle cx="48" cy="1200" r="1.2"/>
-    <circle cx="32" cy="1320" r="1.4"/>
+    <circle cx="50" cy="360" r="1"/>
+    <circle cx="20" cy="540" r="1.2"/>
+    <circle cx="45" cy="720" r="1.5"/>
+    <circle cx="25" cy="820" r="1"/>
   </g>
   <g fill="#B845FF" opacity="0.35">
-    <circle cx="1250" cy="200" r="1.5"/>
-    <circle cx="1230" cy="360" r="1"/>
-    <circle cx="1255" cy="510" r="1.3"/>
-    <circle cx="1220" cy="660" r="1.5"/>
-    <circle cx="1248" cy="810" r="1"/>
-    <circle cx="1230" cy="960" r="1.2"/>
-    <circle cx="1255" cy="1110" r="1.4"/>
-    <circle cx="1225" cy="1260" r="1.3"/>
-    <circle cx="1250" cy="1360" r="1.4"/>
+    <circle cx="1370" cy="200" r="1.5"/>
+    <circle cx="1350" cy="380" r="1"/>
+    <circle cx="1375" cy="560" r="1.3"/>
+    <circle cx="1345" cy="740" r="1.5"/>
+    <circle cx="1370" cy="820" r="1"/>
   </g>
 
   <!-- HEADER -->
-  <g transform="translate(640,45)">
-    <!-- Logo Montana -->
-    <g transform="translate(-340,-26)">
-      <path d="M0,40 L18,12 L28,22 L42,0 L60,40 Z" fill="url(#logo-mountain)" filter="url(#pipe-glow)"/>
-      <path d="M28,22 L42,0 L60,40 L40,40 Z" fill="#B845FF" opacity="0.6"/>
+  <g transform="translate(700,45)">
+    <g transform="translate(-340,-22)">
+      <path d="M0,30 L14,9 L21,17 L32,0 L45,30 Z" fill="url(#grad-logo)" filter="url(#pipe-glow)"/>
+      <path d="M21,17 L32,0 L45,30 L30,30 Z" fill="#B845FF" opacity="0.6"/>
     </g>
-    <text x="0" y="-8"
+    <text x="0" y="0"
           font-family="Georgia, serif"
           font-size="26"
           font-weight="700"
           fill="#ffffff"
           text-anchor="middle"
-          letter-spacing="1.5px">PIPELINE OFICIAL · 17 ETAPAS · 43 AGENTES</text>
-    <text x="0" y="14"
+          letter-spacing="1.5px">PIPELINE OFICIAL - 17 ETAPAS - 43 AGENTES</text>
+    <text x="0" y="26"
+          font-family="ui-monospace, SF Mono, Menlo, monospace"
+          font-size="12"
+          fill="#9EE7FF"
+          text-anchor="middle"
+          letter-spacing="0.5px"
+          opacity="0.85">100-180k tokens - 60-70% optimizacion vs sin optimizar</text>
+  </g>
+
+  <!-- ============================================ -->
+  <!-- FLECHAS                                       -->
+  <!-- Columnas X: 50, 320, 590, 860, 1130           -->
+  <!-- Filas Y: 120 (F1), 300 (F2), 480 (F3), 660 (F4) -->
+  <!-- ============================================ -->
+
+  <!-- F1 horizontales L->R (en y=185 dentro de bloque) -->
+  <g stroke="url(#grad-cp)" stroke-width="3" stroke-linecap="round" fill="none">
+    <line x1="270" y1="185" x2="320" y2="185" marker-end="url(#ar-purple)"/>
+    <line x1="540" y1="185" x2="590" y2="185" marker-end="url(#ar-purple)"/>
+    <line x1="810" y1="185" x2="860" y2="185" marker-end="url(#ar-purple)"/>
+    <line x1="1080" y1="185" x2="1130" y2="185" marker-end="url(#ar-purple)"/>
+  </g>
+  <!-- Giro F1 -> F2 derecha -->
+  <path d="M 1350 250 Q 1385 250 1385 300 Q 1385 365 1350 365"
+        stroke="url(#grad-cp)" stroke-width="3" stroke-linecap="round" fill="none"
+        marker-end="url(#ar-cyan)"/>
+
+  <!-- F2 horizontales R->L -->
+  <g stroke="url(#grad-pc)" stroke-width="3" stroke-linecap="round" fill="none">
+    <line x1="1130" y1="365" x2="1080" y2="365" marker-end="url(#ar-cyan)"/>
+    <line x1="860" y1="365" x2="810" y2="365" marker-end="url(#ar-cyan)"/>
+    <line x1="590" y1="365" x2="540" y2="365" marker-end="url(#ar-cyan)"/>
+    <line x1="320" y1="365" x2="270" y2="365" marker-end="url(#ar-cyan)"/>
+  </g>
+  <!-- Giro F2 -> F3 izquierda -->
+  <path d="M 50 430 Q 15 430 15 480 Q 15 545 50 545"
+        stroke="url(#grad-pc)" stroke-width="3" stroke-linecap="round" fill="none"
+        marker-end="url(#ar-purple)"/>
+
+  <!-- F3 horizontales L->R -->
+  <g stroke="url(#grad-cp)" stroke-width="3" stroke-linecap="round" fill="none">
+    <line x1="270" y1="545" x2="320" y2="545" marker-end="url(#ar-purple)"/>
+    <line x1="540" y1="545" x2="590" y2="545" marker-end="url(#ar-purple)"/>
+    <line x1="810" y1="545" x2="860" y2="545" marker-end="url(#ar-purple)"/>
+    <line x1="1080" y1="545" x2="1130" y2="545" marker-end="url(#ar-purple)"/>
+  </g>
+  <!-- Giro F3 -> F4 derecha -->
+  <path d="M 1350 610 Q 1385 610 1385 660 Q 1385 725 1350 725"
+        stroke="url(#grad-cp)" stroke-width="3" stroke-linecap="round" fill="none"
+        marker-end="url(#ar-cyan)"/>
+
+  <!-- F4 horizontales R->L (14 -> 15 -> 16) -->
+  <g stroke="url(#grad-pc)" stroke-width="3" stroke-linecap="round" fill="none">
+    <line x1="1130" y1="725" x2="1080" y2="725" marker-end="url(#ar-cyan)"/>
+    <line x1="860" y1="725" x2="810" y2="725" marker-end="url(#ar-cyan)"/>
+  </g>
+
+  <!-- ============================================ -->
+  <!-- BLOQUES (220 x 130)                           -->
+  <!-- ============================================ -->
+
+  <!-- ===== FILA 1 (Y=120) L->R: 00 01 02 03a 03b ===== -->
+
+  <!-- 00 Discovery -->
+  <g transform="translate(50,120)">
+    <rect width="220" height="130" rx="12" fill="#0B0B17" stroke="url(#grad-cp)" stroke-width="2"/>
+    <circle cx="32" cy="32" r="22" fill="url(#grad-circle)" filter="url(#pipe-glow)"/>
+    <text x="32" y="38" font-family="Georgia, serif" font-size="16" font-weight="700" fill="#050510" text-anchor="middle">00</text>
+    <text x="110" y="78" font-family="Georgia, serif" font-size="19" font-weight="700" fill="#ffffff" text-anchor="middle">Discovery</text>
+    <rect x="70" y="95" width="80" height="20" rx="10" fill="url(#grad-circle)" opacity="0.85"/>
+    <text x="110" y="109" font-family="ui-monospace, monospace" font-size="11" font-weight="700" fill="#050510" text-anchor="middle" letter-spacing="0.5px">OPUS</text>
+  </g>
+
+  <!-- 01 Avatar Deep -->
+  <g transform="translate(320,120)">
+    <rect width="220" height="130" rx="12" fill="#0B0B17" stroke="url(#grad-cp)" stroke-width="2"/>
+    <circle cx="32" cy="32" r="22" fill="url(#grad-circle)" filter="url(#pipe-glow)"/>
+    <text x="32" y="38" font-family="Georgia, serif" font-size="16" font-weight="700" fill="#050510" text-anchor="middle">01</text>
+    <text x="110" y="78" font-family="Georgia, serif" font-size="19" font-weight="700" fill="#ffffff" text-anchor="middle">Avatar Deep</text>
+    <rect x="70" y="95" width="80" height="20" rx="10" fill="url(#grad-circle)" opacity="0.85"/>
+    <text x="110" y="109" font-family="ui-monospace, monospace" font-size="11" font-weight="700" fill="#050510" text-anchor="middle" letter-spacing="0.5px">OPUS</text>
+  </g>
+
+  <!-- 02 Competencia -->
+  <g transform="translate(590,120)">
+    <rect width="220" height="130" rx="12" fill="#0B0B17" stroke="#B845FF" stroke-width="2"/>
+    <circle cx="32" cy="32" r="22" fill="url(#grad-circle)" filter="url(#pipe-glow)"/>
+    <text x="32" y="38" font-family="Georgia, serif" font-size="16" font-weight="700" fill="#050510" text-anchor="middle">02</text>
+    <text x="110" y="78" font-family="Georgia, serif" font-size="19" font-weight="700" fill="#ffffff" text-anchor="middle">Competencia</text>
+    <rect x="65" y="95" width="90" height="20" rx="10" fill="#B845FF" opacity="0.85"/>
+    <text x="110" y="109" font-family="ui-monospace, monospace" font-size="11" font-weight="700" fill="#ffffff" text-anchor="middle" letter-spacing="0.5px">SONNET</text>
+  </g>
+
+  <!-- 03a Punto A-B Persona -->
+  <g transform="translate(860,120)">
+    <rect width="220" height="130" rx="12" fill="#0B0B17" stroke="url(#grad-cp)" stroke-width="2"/>
+    <circle cx="32" cy="32" r="22" fill="url(#grad-circle)" filter="url(#pipe-glow)"/>
+    <text x="32" y="38" font-family="Georgia, serif" font-size="14" font-weight="700" fill="#050510" text-anchor="middle">03a</text>
+    <text x="110" y="70" font-family="Georgia, serif" font-size="17" font-weight="700" fill="#ffffff" text-anchor="middle">Punto A - B</text>
+    <text x="110" y="88" font-family="Georgia, serif" font-size="13" fill="#9EE7FF" text-anchor="middle" opacity="0.9">Persona</text>
+    <rect x="70" y="100" width="80" height="20" rx="10" fill="url(#grad-circle)" opacity="0.85"/>
+    <text x="110" y="114" font-family="ui-monospace, monospace" font-size="11" font-weight="700" fill="#050510" text-anchor="middle" letter-spacing="0.5px">OPUS</text>
+  </g>
+
+  <!-- 03b Punto A-B Producto - NEW -->
+  <g transform="translate(1130,120)">
+    <rect width="220" height="130" rx="12" fill="#0B0B17" stroke="url(#grad-cp)" stroke-width="2.5" filter="url(#pipe-glow)"/>
+    <circle cx="32" cy="32" r="22" fill="url(#grad-circle)" filter="url(#pipe-glow)"/>
+    <text x="32" y="38" font-family="Georgia, serif" font-size="14" font-weight="700" fill="#050510" text-anchor="middle">03b</text>
+    <rect x="160" y="10" width="50" height="20" rx="10" fill="url(#grad-new)" filter="url(#new-glow)"/>
+    <text x="185" y="24" font-family="ui-monospace, monospace" font-size="11" font-weight="700" fill="#050510" text-anchor="middle" letter-spacing="0.5px">NEW</text>
+    <text x="110" y="70" font-family="Georgia, serif" font-size="17" font-weight="700" fill="#ffffff" text-anchor="middle">Punto A - B</text>
+    <text x="110" y="88" font-family="Georgia, serif" font-size="13" fill="#9EE7FF" text-anchor="middle" opacity="0.9">Producto</text>
+    <rect x="70" y="100" width="80" height="20" rx="10" fill="url(#grad-circle)" opacity="0.85"/>
+    <text x="110" y="114" font-family="ui-monospace, monospace" font-size="11" font-weight="700" fill="#050510" text-anchor="middle" letter-spacing="0.5px">OPUS</text>
+  </g>
+
+  <!-- ===== FILA 2 (Y=300) R->L: 04 05 06 07 08 ===== -->
+
+  <!-- 04 Mecanismo (col 5) -->
+  <g transform="translate(1130,300)">
+    <rect width="220" height="130" rx="12" fill="#0B0B17" stroke="url(#grad-cp)" stroke-width="2"/>
+    <circle cx="32" cy="32" r="22" fill="url(#grad-circle)" filter="url(#pipe-glow)"/>
+    <text x="32" y="38" font-family="Georgia, serif" font-size="16" font-weight="700" fill="#050510" text-anchor="middle">04</text>
+    <text x="110" y="78" font-family="Georgia, serif" font-size="19" font-weight="700" fill="#ffffff" text-anchor="middle">Mecanismo</text>
+    <rect x="70" y="95" width="80" height="20" rx="10" fill="url(#grad-circle)" opacity="0.85"/>
+    <text x="110" y="109" font-family="ui-monospace, monospace" font-size="11" font-weight="700" fill="#050510" text-anchor="middle" letter-spacing="0.5px">OPUS</text>
+  </g>
+
+  <!-- 05 Angulos (col 4) -->
+  <g transform="translate(860,300)">
+    <rect width="220" height="130" rx="12" fill="#0B0B17" stroke="url(#grad-cp)" stroke-width="2"/>
+    <circle cx="32" cy="32" r="22" fill="url(#grad-circle)" filter="url(#pipe-glow)"/>
+    <text x="32" y="38" font-family="Georgia, serif" font-size="16" font-weight="700" fill="#050510" text-anchor="middle">05</text>
+    <text x="110" y="78" font-family="Georgia, serif" font-size="19" font-weight="700" fill="#ffffff" text-anchor="middle">Angulos</text>
+    <rect x="70" y="95" width="80" height="20" rx="10" fill="url(#grad-circle)" opacity="0.85"/>
+    <text x="110" y="109" font-family="ui-monospace, monospace" font-size="11" font-weight="700" fill="#050510" text-anchor="middle" letter-spacing="0.5px">OPUS</text>
+  </g>
+
+  <!-- 06 Promesa + Garantia (col 3) -->
+  <g transform="translate(590,300)">
+    <rect width="220" height="130" rx="12" fill="#0B0B17" stroke="url(#grad-cp)" stroke-width="2"/>
+    <circle cx="32" cy="32" r="22" fill="url(#grad-circle)" filter="url(#pipe-glow)"/>
+    <text x="32" y="38" font-family="Georgia, serif" font-size="16" font-weight="700" fill="#050510" text-anchor="middle">06</text>
+    <text x="110" y="70" font-family="Georgia, serif" font-size="17" font-weight="700" fill="#ffffff" text-anchor="middle">Promesa</text>
+    <text x="110" y="88" font-family="Georgia, serif" font-size="13" fill="#9EE7FF" text-anchor="middle" opacity="0.9">+ Garantia</text>
+    <rect x="70" y="100" width="80" height="20" rx="10" fill="url(#grad-circle)" opacity="0.85"/>
+    <text x="110" y="114" font-family="ui-monospace, monospace" font-size="11" font-weight="700" fill="#050510" text-anchor="middle" letter-spacing="0.5px">OPUS</text>
+  </g>
+
+  <!-- 07 One Belief (col 2) -->
+  <g transform="translate(320,300)">
+    <rect width="220" height="130" rx="12" fill="#0B0B17" stroke="url(#grad-cp)" stroke-width="2"/>
+    <circle cx="32" cy="32" r="22" fill="url(#grad-circle)" filter="url(#pipe-glow)"/>
+    <text x="32" y="38" font-family="Georgia, serif" font-size="16" font-weight="700" fill="#050510" text-anchor="middle">07</text>
+    <text x="110" y="78" font-family="Georgia, serif" font-size="19" font-weight="700" fill="#ffffff" text-anchor="middle">One Belief</text>
+    <rect x="70" y="95" width="80" height="20" rx="10" fill="url(#grad-circle)" opacity="0.85"/>
+    <text x="110" y="109" font-family="ui-monospace, monospace" font-size="11" font-weight="700" fill="#050510" text-anchor="middle" letter-spacing="0.5px">OPUS</text>
+  </g>
+
+  <!-- 08 Naming Producto - NEW (col 1) -->
+  <g transform="translate(50,300)">
+    <rect width="220" height="130" rx="12" fill="#0B0B17" stroke="url(#grad-cp)" stroke-width="2.5" filter="url(#pipe-glow)"/>
+    <circle cx="32" cy="32" r="22" fill="url(#grad-circle)" filter="url(#pipe-glow)"/>
+    <text x="32" y="38" font-family="Georgia, serif" font-size="16" font-weight="700" fill="#050510" text-anchor="middle">08</text>
+    <rect x="160" y="10" width="50" height="20" rx="10" fill="url(#grad-new)" filter="url(#new-glow)"/>
+    <text x="185" y="24" font-family="ui-monospace, monospace" font-size="11" font-weight="700" fill="#050510" text-anchor="middle" letter-spacing="0.5px">NEW</text>
+    <text x="110" y="70" font-family="Georgia, serif" font-size="17" font-weight="700" fill="#ffffff" text-anchor="middle">Naming</text>
+    <text x="110" y="88" font-family="Georgia, serif" font-size="13" fill="#9EE7FF" text-anchor="middle" opacity="0.9">Producto</text>
+    <rect x="70" y="100" width="80" height="20" rx="10" fill="url(#grad-circle)" opacity="0.85"/>
+    <text x="110" y="114" font-family="ui-monospace, monospace" font-size="11" font-weight="700" fill="#050510" text-anchor="middle" letter-spacing="0.5px">OPUS</text>
+  </g>
+
+  <!-- ===== FILA 3 (Y=480) L->R: 09 10 11 12 13 ===== -->
+
+  <!-- 09 Headline + Fascinations -->
+  <g transform="translate(50,480)">
+    <rect width="220" height="130" rx="12" fill="#0B0B17" stroke="url(#grad-cp)" stroke-width="2"/>
+    <circle cx="32" cy="32" r="22" fill="url(#grad-circle)" filter="url(#pipe-glow)"/>
+    <text x="32" y="38" font-family="Georgia, serif" font-size="16" font-weight="700" fill="#050510" text-anchor="middle">09</text>
+    <text x="110" y="70" font-family="Georgia, serif" font-size="16" font-weight="700" fill="#ffffff" text-anchor="middle">Headline +</text>
+    <text x="110" y="88" font-family="Georgia, serif" font-size="13" fill="#9EE7FF" text-anchor="middle" opacity="0.9">Fascinations</text>
+    <rect x="70" y="100" width="80" height="20" rx="10" fill="url(#grad-circle)" opacity="0.85"/>
+    <text x="110" y="114" font-family="ui-monospace, monospace" font-size="11" font-weight="700" fill="#050510" text-anchor="middle" letter-spacing="0.5px">OPUS</text>
+  </g>
+
+  <!-- 10 Features-Benefits-Desires -->
+  <g transform="translate(320,480)">
+    <rect width="220" height="130" rx="12" fill="#0B0B17" stroke="#9EE7FF" stroke-width="2"/>
+    <circle cx="32" cy="32" r="22" fill="url(#grad-circle)" filter="url(#pipe-glow)"/>
+    <text x="32" y="38" font-family="Georgia, serif" font-size="16" font-weight="700" fill="#050510" text-anchor="middle">10</text>
+    <text x="110" y="64" font-family="Georgia, serif" font-size="15" font-weight="700" fill="#ffffff" text-anchor="middle">Features</text>
+    <text x="110" y="82" font-family="Georgia, serif" font-size="12" fill="#9EE7FF" text-anchor="middle" opacity="0.9">Benefits Desires</text>
+    <rect x="50" y="95" width="120" height="20" rx="10" fill="#9EE7FF" opacity="0.85"/>
+    <text x="110" y="109" font-family="ui-monospace, monospace" font-size="10" font-weight="700" fill="#050510" text-anchor="middle" letter-spacing="0.3px">HAIKU / SONNET</text>
+  </g>
+
+  <!-- 11 Valor Percibido -->
+  <g transform="translate(590,480)">
+    <rect width="220" height="130" rx="12" fill="#0B0B17" stroke="url(#grad-cp)" stroke-width="2"/>
+    <circle cx="32" cy="32" r="22" fill="url(#grad-circle)" filter="url(#pipe-glow)"/>
+    <text x="32" y="38" font-family="Georgia, serif" font-size="16" font-weight="700" fill="#050510" text-anchor="middle">11</text>
+    <text x="110" y="70" font-family="Georgia, serif" font-size="17" font-weight="700" fill="#ffffff" text-anchor="middle">Valor</text>
+    <text x="110" y="88" font-family="Georgia, serif" font-size="13" fill="#9EE7FF" text-anchor="middle" opacity="0.9">Percibido</text>
+    <rect x="70" y="100" width="80" height="20" rx="10" fill="url(#grad-circle)" opacity="0.85"/>
+    <text x="110" y="114" font-family="ui-monospace, monospace" font-size="11" font-weight="700" fill="#050510" text-anchor="middle" letter-spacing="0.5px">OPUS</text>
+  </g>
+
+  <!-- 12 Modulos + Clases -->
+  <g transform="translate(860,480)">
+    <rect width="220" height="130" rx="12" fill="#0B0B17" stroke="#9EE7FF" stroke-width="2"/>
+    <circle cx="32" cy="32" r="22" fill="url(#grad-circle)" filter="url(#pipe-glow)"/>
+    <text x="32" y="38" font-family="Georgia, serif" font-size="16" font-weight="700" fill="#050510" text-anchor="middle">12</text>
+    <text x="110" y="70" font-family="Georgia, serif" font-size="17" font-weight="700" fill="#ffffff" text-anchor="middle">Modulos</text>
+    <text x="110" y="88" font-family="Georgia, serif" font-size="13" fill="#9EE7FF" text-anchor="middle" opacity="0.9">+ Clases</text>
+    <rect x="70" y="100" width="80" height="20" rx="10" fill="#9EE7FF" opacity="0.85"/>
+    <text x="110" y="114" font-family="ui-monospace, monospace" font-size="11" font-weight="700" fill="#050510" text-anchor="middle" letter-spacing="0.5px">HAIKU</text>
+  </g>
+
+  <!-- 13 Bonus + Upsells -->
+  <g transform="translate(1130,480)">
+    <rect width="220" height="130" rx="12" fill="#0B0B17" stroke="#B845FF" stroke-width="2"/>
+    <circle cx="32" cy="32" r="22" fill="url(#grad-circle)" filter="url(#pipe-glow)"/>
+    <text x="32" y="38" font-family="Georgia, serif" font-size="16" font-weight="700" fill="#050510" text-anchor="middle">13</text>
+    <text x="110" y="70" font-family="Georgia, serif" font-size="17" font-weight="700" fill="#ffffff" text-anchor="middle">Bonus</text>
+    <text x="110" y="88" font-family="Georgia, serif" font-size="13" fill="#9EE7FF" text-anchor="middle" opacity="0.9">+ Upsells</text>
+    <rect x="65" y="100" width="90" height="20" rx="10" fill="#B845FF" opacity="0.85"/>
+    <text x="110" y="114" font-family="ui-monospace, monospace" font-size="11" font-weight="700" fill="#ffffff" text-anchor="middle" letter-spacing="0.5px">SONNET</text>
+  </g>
+
+  <!-- ===== FILA 4 (Y=660) R->L parcial: 14 (col5) 15 (col4) 16 (col3 FINAL) ===== -->
+
+  <!-- 14 Consciencia + Lead (col 5) -->
+  <g transform="translate(1130,660)">
+    <rect width="220" height="130" rx="12" fill="#0B0B17" stroke="#B845FF" stroke-width="2"/>
+    <circle cx="32" cy="32" r="22" fill="url(#grad-circle)" filter="url(#pipe-glow)"/>
+    <text x="32" y="38" font-family="Georgia, serif" font-size="16" font-weight="700" fill="#050510" text-anchor="middle">14</text>
+    <text x="110" y="70" font-family="Georgia, serif" font-size="17" font-weight="700" fill="#ffffff" text-anchor="middle">Consciencia</text>
+    <text x="110" y="88" font-family="Georgia, serif" font-size="13" fill="#9EE7FF" text-anchor="middle" opacity="0.9">+ Lead</text>
+    <rect x="65" y="100" width="90" height="20" rx="10" fill="#B845FF" opacity="0.85"/>
+    <text x="110" y="114" font-family="ui-monospace, monospace" font-size="11" font-weight="700" fill="#ffffff" text-anchor="middle" letter-spacing="0.5px">SONNET</text>
+  </g>
+
+  <!-- 15 Oferta Completa (col 4) -->
+  <g transform="translate(860,660)">
+    <rect width="220" height="130" rx="12" fill="#0B0B17" stroke="url(#grad-cp)" stroke-width="2"/>
+    <circle cx="32" cy="32" r="22" fill="url(#grad-circle)" filter="url(#pipe-glow)"/>
+    <text x="32" y="38" font-family="Georgia, serif" font-size="16" font-weight="700" fill="#050510" text-anchor="middle">15</text>
+    <text x="110" y="70" font-family="Georgia, serif" font-size="17" font-weight="700" fill="#ffffff" text-anchor="middle">Oferta</text>
+    <text x="110" y="88" font-family="Georgia, serif" font-size="13" fill="#9EE7FF" text-anchor="middle" opacity="0.9">Completa</text>
+    <rect x="70" y="100" width="80" height="20" rx="10" fill="url(#grad-circle)" opacity="0.85"/>
+    <text x="110" y="114" font-family="ui-monospace, monospace" font-size="11" font-weight="700" fill="#050510" text-anchor="middle" letter-spacing="0.5px">OPUS</text>
+  </g>
+
+  <!-- 16 Auditoria 200+ FINAL destacado (col 3) -->
+  <g transform="translate(590,660)">
+    <rect width="220" height="130" rx="12" fill="#0B0B17" stroke="url(#grad-final)" stroke-width="3" filter="url(#final-glow)"/>
+    <circle cx="32" cy="32" r="22" fill="url(#grad-final)" filter="url(#pipe-glow)"/>
+    <text x="32" y="38" font-family="Georgia, serif" font-size="16" font-weight="700" fill="#050510" text-anchor="middle">16</text>
+    <rect x="148" y="10" width="62" height="20" rx="10" fill="url(#grad-final)" filter="url(#new-glow)"/>
+    <text x="179" y="24" font-family="ui-monospace, monospace" font-size="10" font-weight="700" fill="#050510" text-anchor="middle" letter-spacing="0.5px">FINAL</text>
+    <text x="110" y="70" font-family="Georgia, serif" font-size="17" font-weight="700" fill="#ffffff" text-anchor="middle">Auditoria</text>
+    <text x="110" y="88" font-family="Georgia, serif" font-size="13" fill="#9EE7FF" text-anchor="middle" opacity="0.9">200+ checks</text>
+    <rect x="70" y="100" width="80" height="20" rx="10" fill="url(#grad-final)" opacity="0.95"/>
+    <text x="110" y="114" font-family="ui-monospace, monospace" font-size="11" font-weight="700" fill="#050510" text-anchor="middle" letter-spacing="0.5px">OPUS</text>
+  </g>
+
+  <!-- ============================================ -->
+  <!-- LEYENDA modelos (esquina inferior izquierda) -->
+  <!-- ============================================ -->
+  <g transform="translate(60,820)">
+    <text x="0" y="0" font-family="ui-monospace, monospace" font-size="11" fill="#ffffff" opacity="0.75" letter-spacing="0.5px">MODELOS:</text>
+    <rect x="80" y="-11" width="50" height="16" rx="8" fill="url(#grad-circle)" opacity="0.85"/>
+    <text x="105" y="0" font-family="ui-monospace, monospace" font-size="10" font-weight="700" fill="#050510" text-anchor="middle">OPUS</text>
+    <rect x="140" y="-11" width="60" height="16" rx="8" fill="#B845FF" opacity="0.85"/>
+    <text x="170" y="0" font-family="ui-monospace, monospace" font-size="10" font-weight="700" fill="#ffffff" text-anchor="middle">SONNET</text>
+    <rect x="210" y="-11" width="50" height="16" rx="8" fill="#9EE7FF" opacity="0.85"/>
+    <text x="235" y="0" font-family="ui-monospace, monospace" font-size="10" font-weight="700" fill="#050510" text-anchor="middle">HAIKU</text>
+    <rect x="270" y="-11" width="40" height="16" rx="8" fill="url(#grad-new)"/>
+    <text x="290" y="0" font-family="ui-monospace, monospace" font-size="10" font-weight="700" fill="#050510" text-anchor="middle">NEW</text>
+  </g>
+
+  <!-- ============================================ -->
+  <!-- FOOTER                                        -->
+  <!-- ============================================ -->
+  <g transform="translate(700,840)">
+    <text x="0" y="0"
+          font-family="Georgia, serif"
+          font-size="13"
+          fill="#ffffff"
+          text-anchor="middle"
+          opacity="0.9"
+          letter-spacing="0.5px">Hecho con Metodo Zenith - v2.0.0</text>
+    <text x="0" y="20"
+          font-family="ui-monospace, SF Mono, Menlo, monospace"
+          font-size="11"
+          fill="#9EE7FF"
+          text-anchor="middle"
+          opacity="0.7">github.com/zenithmetodo/zenith-crea-ofertas</text>
+    <text x="0" y="40"
           font-family="Georgia, serif"
           font-style="italic"
-          font-size="13"
-          fill="#c5c5d4"
+          font-size="12"
+          fill="#B845FF"
           text-anchor="middle"
-          letter-spacing="2px">De Discovery a Auditoría · 100-180k tokens · 60-70% optimización</text>
+          opacity="0.9">"De la cima se ve mejor el avatar"</text>
   </g>
-
-  <!-- LEYENDA compacta -->
-  <g transform="translate(40,90)">
-    <rect width="380" height="34" rx="8" fill="#0B0B17" stroke="#00E5CF" stroke-width="1" opacity="0.85"/>
-    <text x="10" y="13" font-family="ui-monospace, monospace" font-size="8" fill="#00E5CF" font-weight="700">MODELO DOMINANTE</text>
-    <circle cx="14" cy="25" r="5" fill="url(#opus-grad)"/>
-    <text x="24" y="28" font-family="ui-monospace, monospace" font-size="9" fill="#ffffff">opus</text>
-    <circle cx="68" cy="25" r="5" fill="url(#sonnet-grad)"/>
-    <text x="78" y="28" font-family="ui-monospace, monospace" font-size="9" fill="#ffffff">sonnet</text>
-    <circle cx="132" cy="25" r="5" fill="url(#haiku-grad)"/>
-    <text x="142" y="28" font-family="ui-monospace, monospace" font-size="9" fill="#ffffff">haiku</text>
-    <rect x="195" y="19" width="34" height="12" rx="3" fill="url(#new-badge-grad)"/>
-    <text x="212" y="28" font-family="ui-monospace, monospace" font-size="8" font-weight="700" fill="#050510" text-anchor="middle">NEW</text>
-    <text x="237" y="28" font-family="ui-monospace, monospace" font-size="9" fill="#c5c5d4">= nuevo · v2.0</text>
-  </g>
-
-  <!-- LEYENDA derecha · tipo etapa -->
-  <g transform="translate(860,90)">
-    <rect width="380" height="34" rx="8" fill="#0B0B17" stroke="#B845FF" stroke-width="1" opacity="0.85"/>
-    <text x="10" y="13" font-family="ui-monospace, monospace" font-size="8" fill="#B845FF" font-weight="700">TIPO DE ETAPA</text>
-    <rect x="10" y="20" width="14" height="8" rx="2" fill="url(#critical-grad)"/>
-    <text x="28" y="28" font-family="ui-monospace, monospace" font-size="9" fill="#ffffff">crítica</text>
-    <rect x="80" y="20" width="14" height="8" rx="2" fill="url(#strategic-grad)"/>
-    <text x="98" y="28" font-family="ui-monospace, monospace" font-size="9" fill="#ffffff">estratégica</text>
-    <rect x="172" y="20" width="14" height="8" rx="2" fill="url(#operative-grad)"/>
-    <text x="190" y="28" font-family="ui-monospace, monospace" font-size="9" fill="#ffffff">operativa</text>
-  </g>
-
-  <!-- LINEA VERTICAL CONECTORA continua -->
-  <line x1="75" y1="155" x2="75" y2="1320" stroke="url(#critical-grad)" stroke-width="2" opacity="0.35" stroke-dasharray="4 4"/>
-
-  <!-- ============================================ -->
-  <!-- ETAPA 00 · DISCOVERY -->
-  <!-- ============================================ -->
-  <g transform="translate(40,140)">
-    <!-- Numero circulo -->
-    <circle cx="35" cy="30" r="22" fill="url(#critical-grad)" filter="url(#pipe-glow)"/>
-    <text x="35" y="35" font-family="Georgia, serif" font-size="14" font-weight="700" fill="#050510" text-anchor="middle">00</text>
-    <!-- Bloque etapa -->
-    <g transform="translate(75,5)">
-      <rect width="1080" height="50" rx="10" fill="#0B0B17" stroke="url(#critical-grad)" stroke-width="2" opacity="0.95"/>
-      <text x="14" y="20" font-family="Georgia, serif" font-style="italic" font-size="15" font-weight="700" fill="#ffffff">Discovery</text>
-      <text x="14" y="38" font-family="ui-monospace, monospace" font-size="9" fill="#c5c5d4">5 preguntas + confirmación</text>
-      <g transform="translate(380,16)">
-        <rect width="170" height="20" rx="10" fill="url(#opus-grad)"/>
-        <text x="85" y="14" font-family="ui-monospace, monospace" font-size="9" font-weight="700" fill="#050510" text-anchor="middle">zenith-quick-discovery</text>
-      </g>
-    </g>
-    <!-- Badge model -->
-    <g transform="translate(1170,17)">
-      <rect width="65" height="26" rx="6" fill="url(#opus-grad)"/>
-      <text x="32" y="17" font-family="ui-monospace, monospace" font-size="9" font-weight="700" fill="#050510" text-anchor="middle">OPUS</text>
-    </g>
-  </g>
-
-  <!-- ============================================ -->
-  <!-- ETAPA 01 · AVATAR DEEP + RESEARCH -->
-  <!-- ============================================ -->
-  <g transform="translate(40,205)">
-    <circle cx="35" cy="35" r="22" fill="url(#critical-grad)" filter="url(#pipe-glow)"/>
-    <text x="35" y="40" font-family="Georgia, serif" font-size="14" font-weight="700" fill="#050510" text-anchor="middle">01</text>
-    <g transform="translate(75,5)">
-      <rect width="1080" height="65" rx="10" fill="#0B0B17" stroke="url(#critical-grad)" stroke-width="2" opacity="0.95"/>
-      <text x="14" y="20" font-family="Georgia, serif" font-style="italic" font-size="15" font-weight="700" fill="#ffffff">Avatar Deep + Research</text>
-      <text x="14" y="34" font-family="ui-monospace, monospace" font-size="9" fill="#c5c5d4">5 agentes paralelos · psicología + voz del cliente</text>
-      <g transform="translate(14,42)">
-        <rect width="138" height="18" rx="9" fill="url(#opus-grad)"/>
-        <text x="69" y="13" font-family="ui-monospace, monospace" font-size="8" font-weight="700" fill="#050510" text-anchor="middle">avatar-deep-psicologo</text>
-      </g>
-      <g transform="translate(158,42)">
-        <rect width="100" height="18" rx="9" fill="url(#haiku-grad)"/>
-        <text x="50" y="13" font-family="ui-monospace, monospace" font-size="8" font-weight="700" fill="#050510" text-anchor="middle">research-reddit</text>
-      </g>
-      <g transform="translate(264,42)">
-        <rect width="108" height="18" rx="9" fill="url(#haiku-grad)"/>
-        <text x="54" y="13" font-family="ui-monospace, monospace" font-size="8" font-weight="700" fill="#050510" text-anchor="middle">research-youtube</text>
-      </g>
-      <g transform="translate(378,42)">
-        <rect width="125" height="18" rx="9" fill="url(#sonnet-grad)"/>
-        <text x="62" y="13" font-family="ui-monospace, monospace" font-size="8" font-weight="700" fill="#ffffff" text-anchor="middle">avatar-mapa-empatia</text>
-      </g>
-      <g transform="translate(509,42)">
-        <rect width="132" height="18" rx="9" fill="url(#sonnet-grad)"/>
-        <text x="66" y="13" font-family="ui-monospace, monospace" font-size="8" font-weight="700" fill="#ffffff" text-anchor="middle">deal-makers-extractor</text>
-      </g>
-    </g>
-    <g transform="translate(1170,22)">
-      <rect width="65" height="26" rx="6" fill="url(#opus-grad)"/>
-      <text x="32" y="17" font-family="ui-monospace, monospace" font-size="9" font-weight="700" fill="#050510" text-anchor="middle">OPUS</text>
-    </g>
-  </g>
-
-  <!-- ============================================ -->
-  <!-- ETAPA 02 · COMPETENCIA -->
-  <!-- ============================================ -->
-  <g transform="translate(40,285)">
-    <circle cx="35" cy="30" r="22" fill="url(#strategic-grad)" filter="url(#pipe-glow)"/>
-    <text x="35" y="35" font-family="Georgia, serif" font-size="14" font-weight="700" fill="#ffffff" text-anchor="middle">02</text>
-    <g transform="translate(75,5)">
-      <rect width="1080" height="50" rx="10" fill="#0B0B17" stroke="url(#strategic-grad)" stroke-width="2" opacity="0.95"/>
-      <text x="14" y="20" font-family="Georgia, serif" font-style="italic" font-size="15" font-weight="700" fill="#ffffff">Competencia</text>
-      <text x="14" y="38" font-family="ui-monospace, monospace" font-size="9" fill="#c5c5d4">espionaje competitivo · ángulos y precios</text>
-      <g transform="translate(420,16)">
-        <rect width="120" height="20" rx="10" fill="url(#sonnet-grad)"/>
-        <text x="60" y="14" font-family="ui-monospace, monospace" font-size="9" font-weight="700" fill="#ffffff" text-anchor="middle">competidor-spy</text>
-      </g>
-    </g>
-    <g transform="translate(1170,17)">
-      <rect width="65" height="26" rx="6" fill="url(#sonnet-grad)"/>
-      <text x="32" y="17" font-family="ui-monospace, monospace" font-size="9" font-weight="700" fill="#ffffff" text-anchor="middle">SONNET</text>
-    </g>
-  </g>
-
-  <!-- ============================================ -->
-  <!-- ETAPA 03a · PUNTO A→B PERSONA -->
-  <!-- ============================================ -->
-  <g transform="translate(40,350)">
-    <circle cx="35" cy="30" r="22" fill="url(#critical-grad)" filter="url(#pipe-glow)"/>
-    <text x="35" y="35" font-family="Georgia, serif" font-size="13" font-weight="700" fill="#050510" text-anchor="middle">03a</text>
-    <g transform="translate(75,5)">
-      <rect width="1080" height="50" rx="10" fill="#0B0B17" stroke="#B845FF" stroke-width="1.8" opacity="0.95"/>
-      <text x="14" y="20" font-family="Georgia, serif" font-style="italic" font-size="14" font-weight="700" fill="#ffffff">Punto A → B · Persona</text>
-      <text x="14" y="38" font-family="ui-monospace, monospace" font-size="9" fill="#c5c5d4">transformación emocional / racional del avatar</text>
-      <g transform="translate(395,16)">
-        <rect width="155" height="20" rx="10" fill="url(#sonnet-grad)"/>
-        <text x="77" y="14" font-family="ui-monospace, monospace" font-size="9" font-weight="700" fill="#ffffff" text-anchor="middle">punto-a-b-architect</text>
-      </g>
-    </g>
-    <g transform="translate(1170,17)">
-      <rect width="65" height="26" rx="6" fill="url(#sonnet-grad)"/>
-      <text x="32" y="17" font-family="ui-monospace, monospace" font-size="9" font-weight="700" fill="#ffffff" text-anchor="middle">SONNET</text>
-    </g>
-  </g>
-
-  <!-- Conector visual 03a → 03b -->
-  <line x1="170" y1="400" x2="170" y2="415" stroke="url(#new-badge-grad)" stroke-width="2" opacity="0.7" marker-end="url(#pipe-arrow)"/>
-
-  <!-- ============================================ -->
-  <!-- ETAPA 03b · PUNTO A→B PRODUCTO [NEW] -->
-  <!-- ============================================ -->
-  <g transform="translate(40,420)" filter="url(#new-glow)">
-    <circle cx="35" cy="30" r="22" fill="url(#critical-grad)"/>
-    <text x="35" y="35" font-family="Georgia, serif" font-size="13" font-weight="700" fill="#050510" text-anchor="middle">03b</text>
-    <g transform="translate(75,5)">
-      <rect width="1080" height="50" rx="10" fill="#0B0B17" stroke="url(#new-badge-grad)" stroke-width="2.2" opacity="0.98"/>
-      <text x="14" y="20" font-family="Georgia, serif" font-style="italic" font-size="14" font-weight="700" fill="#ffffff">Punto A → B · Producto</text>
-      <text x="14" y="38" font-family="ui-monospace, monospace" font-size="9" fill="#c5c5d4">pasos del servicio · base de la carta de ventas invisible</text>
-      <g transform="translate(370,16)">
-        <rect width="160" height="20" rx="10" fill="url(#opus-grad)"/>
-        <text x="80" y="14" font-family="ui-monospace, monospace" font-size="9" font-weight="700" fill="#050510" text-anchor="middle">42-punto-a-b-producto</text>
-      </g>
-      <!-- Badge NEW -->
-      <g transform="translate(540,14)">
-        <rect width="40" height="20" rx="4" fill="url(#new-badge-grad)"/>
-        <text x="20" y="14" font-family="ui-monospace, monospace" font-size="10" font-weight="700" fill="#050510" text-anchor="middle">NEW</text>
-      </g>
-    </g>
-    <g transform="translate(1170,17)">
-      <rect width="65" height="26" rx="6" fill="url(#opus-grad)"/>
-      <text x="32" y="17" font-family="ui-monospace, monospace" font-size="9" font-weight="700" fill="#050510" text-anchor="middle">OPUS</text>
-    </g>
-  </g>
-
-  <!-- ============================================ -->
-  <!-- ETAPA 04 · MECANISMO COMPLETO -->
-  <!-- ============================================ -->
-  <g transform="translate(40,485)">
-    <circle cx="35" cy="35" r="22" fill="url(#strategic-grad)" filter="url(#pipe-glow)"/>
-    <text x="35" y="40" font-family="Georgia, serif" font-size="14" font-weight="700" fill="#ffffff" text-anchor="middle">04</text>
-    <g transform="translate(75,5)">
-      <rect width="1080" height="65" rx="10" fill="#0B0B17" stroke="url(#strategic-grad)" stroke-width="2" opacity="0.95"/>
-      <text x="14" y="20" font-family="Georgia, serif" font-style="italic" font-size="15" font-weight="700" fill="#ffffff">Mecanismo Completo</text>
-      <text x="14" y="34" font-family="ui-monospace, monospace" font-size="9" fill="#c5c5d4">4 agentes · problema + solución + nombre chicle + estructura</text>
-      <g transform="translate(14,42)">
-        <rect width="138" height="18" rx="9" fill="url(#opus-grad)"/>
-        <text x="69" y="13" font-family="ui-monospace, monospace" font-size="8" font-weight="700" fill="#050510" text-anchor="middle">mecanismo-problema</text>
-      </g>
-      <g transform="translate(158,42)">
-        <rect width="138" height="18" rx="9" fill="url(#opus-grad)"/>
-        <text x="69" y="13" font-family="ui-monospace, monospace" font-size="8" font-weight="700" fill="#050510" text-anchor="middle">mecanismo-solucion</text>
-      </g>
-      <g transform="translate(302,42)">
-        <rect width="110" height="18" rx="9" fill="url(#sonnet-grad)"/>
-        <text x="55" y="13" font-family="ui-monospace, monospace" font-size="8" font-weight="700" fill="#ffffff" text-anchor="middle">nombre-chicle</text>
-      </g>
-      <g transform="translate(418,42)">
-        <rect width="120" height="18" rx="9" fill="url(#opus-grad)"/>
-        <text x="60" y="13" font-family="ui-monospace, monospace" font-size="8" font-weight="700" fill="#050510" text-anchor="middle">super-estructura</text>
-      </g>
-    </g>
-    <g transform="translate(1170,22)">
-      <rect width="65" height="26" rx="6" fill="url(#opus-grad)"/>
-      <text x="32" y="17" font-family="ui-monospace, monospace" font-size="9" font-weight="700" fill="#050510" text-anchor="middle">OPUS</text>
-    </g>
-  </g>
-
-  <!-- ============================================ -->
-  <!-- ETAPA 05 · ANGULOS -->
-  <!-- ============================================ -->
-  <g transform="translate(40,565)">
-    <circle cx="35" cy="30" r="22" fill="url(#operative-grad)" filter="url(#pipe-glow)"/>
-    <text x="35" y="35" font-family="Georgia, serif" font-size="14" font-weight="700" fill="#050510" text-anchor="middle">05</text>
-    <g transform="translate(75,5)">
-      <rect width="1080" height="50" rx="10" fill="#0B0B17" stroke="url(#operative-grad)" stroke-width="2" opacity="0.95"/>
-      <text x="14" y="20" font-family="Georgia, serif" font-style="italic" font-size="15" font-weight="700" fill="#ffffff">Ángulos</text>
-      <text x="14" y="38" font-family="ui-monospace, monospace" font-size="9" fill="#c5c5d4">arquitectura creativa multi-ángulo</text>
-      <g transform="translate(405,16)">
-        <rect width="140" height="20" rx="10" fill="url(#sonnet-grad)"/>
-        <text x="70" y="14" font-family="ui-monospace, monospace" font-size="9" font-weight="700" fill="#ffffff" text-anchor="middle">angulos-architect</text>
-      </g>
-    </g>
-    <g transform="translate(1170,17)">
-      <rect width="65" height="26" rx="6" fill="url(#sonnet-grad)"/>
-      <text x="32" y="17" font-family="ui-monospace, monospace" font-size="9" font-weight="700" fill="#ffffff" text-anchor="middle">SONNET</text>
-    </g>
-  </g>
-
-  <!-- ============================================ -->
-  <!-- ETAPA 06 · PROMESA + GARANTIA -->
-  <!-- ============================================ -->
-  <g transform="translate(40,630)">
-    <circle cx="35" cy="35" r="22" fill="url(#strategic-grad)" filter="url(#pipe-glow)"/>
-    <text x="35" y="40" font-family="Georgia, serif" font-size="14" font-weight="700" fill="#ffffff" text-anchor="middle">06</text>
-    <g transform="translate(75,5)">
-      <rect width="1080" height="65" rx="10" fill="#0B0B17" stroke="url(#strategic-grad)" stroke-width="2" opacity="0.95"/>
-      <text x="14" y="20" font-family="Georgia, serif" font-style="italic" font-size="15" font-weight="700" fill="#ffffff">Promesa + Garantía</text>
-      <text x="14" y="34" font-family="ui-monospace, monospace" font-size="9" fill="#c5c5d4">4 agentes · promesa + garantía + risk reversal + objeciones rotas</text>
-      <g transform="translate(14,42)">
-        <rect width="125" height="18" rx="9" fill="url(#opus-grad)"/>
-        <text x="62" y="13" font-family="ui-monospace, monospace" font-size="8" font-weight="700" fill="#050510" text-anchor="middle">promesa-ganadora</text>
-      </g>
-      <g transform="translate(145,42)">
-        <rect width="150" height="18" rx="9" fill="url(#opus-grad)"/>
-        <text x="75" y="13" font-family="ui-monospace, monospace" font-size="8" font-weight="700" fill="#050510" text-anchor="middle">garantia-impresionante</text>
-      </g>
-      <g transform="translate(301,42)">
-        <rect width="135" height="18" rx="9" fill="url(#sonnet-grad)"/>
-        <text x="67" y="13" font-family="ui-monospace, monospace" font-size="8" font-weight="700" fill="#ffffff" text-anchor="middle">risk-reversal-master</text>
-      </g>
-      <g transform="translate(442,42)">
-        <rect width="120" height="18" rx="9" fill="url(#sonnet-grad)"/>
-        <text x="60" y="13" font-family="ui-monospace, monospace" font-size="8" font-weight="700" fill="#ffffff" text-anchor="middle">objeciones-rotas</text>
-      </g>
-    </g>
-    <g transform="translate(1170,22)">
-      <rect width="65" height="26" rx="6" fill="url(#opus-grad)"/>
-      <text x="32" y="17" font-family="ui-monospace, monospace" font-size="9" font-weight="700" fill="#050510" text-anchor="middle">OPUS</text>
-    </g>
-  </g>
-
-  <!-- ============================================ -->
-  <!-- ETAPA 07 · ONE BELIEF (3 agentes) -->
-  <!-- ============================================ -->
-  <g transform="translate(40,710)">
-    <circle cx="35" cy="35" r="22" fill="url(#critical-grad)" filter="url(#pipe-glow)"/>
-    <text x="35" y="40" font-family="Georgia, serif" font-size="14" font-weight="700" fill="#050510" text-anchor="middle">07</text>
-    <g transform="translate(75,5)">
-      <rect width="1080" height="65" rx="10" fill="#0B0B17" stroke="url(#critical-grad)" stroke-width="2" opacity="0.95"/>
-      <text x="14" y="20" font-family="Georgia, serif" font-style="italic" font-size="15" font-weight="700" fill="#ffffff">One Belief</text>
-      <text x="14" y="34" font-family="ui-monospace, monospace" font-size="9" fill="#c5c5d4">3 agentes · construyen las 4 variantes (Evaldo + Joseph Moreno)</text>
-      <g transform="translate(14,42)">
-        <rect width="170" height="18" rx="9" fill="url(#sonnet-grad)"/>
-        <text x="85" y="13" font-family="ui-monospace, monospace" font-size="8" font-weight="700" fill="#ffffff" text-anchor="middle">identidad-anti-identidad</text>
-      </g>
-      <g transform="translate(190,42)">
-        <rect width="140" height="18" rx="9" fill="url(#opus-grad)"/>
-        <text x="70" y="13" font-family="ui-monospace, monospace" font-size="8" font-weight="700" fill="#050510" text-anchor="middle">nueva-oportunidad</text>
-      </g>
-      <g transform="translate(336,42)">
-        <rect width="145" height="18" rx="9" fill="url(#opus-grad)"/>
-        <text x="72" y="13" font-family="ui-monospace, monospace" font-size="8" font-weight="700" fill="#050510" text-anchor="middle">one-belief-creator</text>
-      </g>
-    </g>
-    <g transform="translate(1170,22)">
-      <rect width="65" height="26" rx="6" fill="url(#opus-grad)"/>
-      <text x="32" y="17" font-family="ui-monospace, monospace" font-size="9" font-weight="700" fill="#050510" text-anchor="middle">OPUS</text>
-    </g>
-  </g>
-
-  <!-- ============================================ -->
-  <!-- ETAPA 08 · NAMING PRODUCTO [NEW] -->
-  <!-- ============================================ -->
-  <g transform="translate(40,790)" filter="url(#new-glow)">
-    <circle cx="35" cy="30" r="22" fill="url(#critical-grad)"/>
-    <text x="35" y="35" font-family="Georgia, serif" font-size="14" font-weight="700" fill="#050510" text-anchor="middle">08</text>
-    <g transform="translate(75,5)">
-      <rect width="1080" height="50" rx="10" fill="#0B0B17" stroke="url(#new-badge-grad)" stroke-width="2.2" opacity="0.98"/>
-      <text x="14" y="20" font-family="Georgia, serif" font-style="italic" font-size="15" font-weight="700" fill="#ffffff">Naming Producto</text>
-      <text x="14" y="38" font-family="ui-monospace, monospace" font-size="9" fill="#c5c5d4">nombre comercial del producto · distinto del nombre chicle</text>
-      <g transform="translate(380,15)">
-        <rect width="155" height="20" rx="10" fill="url(#opus-grad)"/>
-        <text x="77" y="14" font-family="ui-monospace, monospace" font-size="9" font-weight="700" fill="#050510" text-anchor="middle">43-naming-producto</text>
-      </g>
-      <g transform="translate(545,15)">
-        <rect width="40" height="20" rx="4" fill="url(#new-badge-grad)"/>
-        <text x="20" y="14" font-family="ui-monospace, monospace" font-size="10" font-weight="700" fill="#050510" text-anchor="middle">NEW</text>
-      </g>
-    </g>
-    <g transform="translate(1170,17)">
-      <rect width="65" height="26" rx="6" fill="url(#opus-grad)"/>
-      <text x="32" y="17" font-family="ui-monospace, monospace" font-size="9" font-weight="700" fill="#050510" text-anchor="middle">OPUS</text>
-    </g>
-  </g>
-
-  <!-- ============================================ -->
-  <!-- ETAPA 09 · HEADLINE + FASCINATIONS -->
-  <!-- ============================================ -->
-  <g transform="translate(40,855)">
-    <circle cx="35" cy="30" r="22" fill="url(#operative-grad)" filter="url(#pipe-glow)"/>
-    <text x="35" y="35" font-family="Georgia, serif" font-size="14" font-weight="700" fill="#050510" text-anchor="middle">09</text>
-    <g transform="translate(75,5)">
-      <rect width="1080" height="55" rx="10" fill="#0B0B17" stroke="url(#operative-grad)" stroke-width="2" opacity="0.95"/>
-      <text x="14" y="18" font-family="Georgia, serif" font-style="italic" font-size="15" font-weight="700" fill="#ffffff">Headline + Fascinations</text>
-      <text x="14" y="32" font-family="ui-monospace, monospace" font-size="9" fill="#c5c5d4">2 agentes</text>
-      <g transform="translate(295,36)">
-        <rect width="135" height="16" rx="8" fill="url(#opus-grad)"/>
-        <text x="67" y="11" font-family="ui-monospace, monospace" font-size="8" font-weight="700" fill="#050510" text-anchor="middle">headline-master</text>
-      </g>
-      <g transform="translate(436,36)">
-        <rect width="160" height="16" rx="8" fill="url(#opus-grad)"/>
-        <text x="80" y="11" font-family="ui-monospace, monospace" font-size="8" font-weight="700" fill="#050510" text-anchor="middle">fascinations-architect</text>
-      </g>
-    </g>
-    <g transform="translate(1170,17)">
-      <rect width="65" height="26" rx="6" fill="url(#opus-grad)"/>
-      <text x="32" y="17" font-family="ui-monospace, monospace" font-size="9" font-weight="700" fill="#050510" text-anchor="middle">OPUS</text>
-    </g>
-  </g>
-
-  <!-- ============================================ -->
-  <!-- ETAPA 10 · FEATURES → BENEFITS → DESIRES + INTANGIBLES -->
-  <!-- ============================================ -->
-  <g transform="translate(40,925)">
-    <circle cx="35" cy="35" r="22" fill="url(#operative-grad)" filter="url(#pipe-glow)"/>
-    <text x="35" y="40" font-family="Georgia, serif" font-size="14" font-weight="700" fill="#050510" text-anchor="middle">10</text>
-    <g transform="translate(75,5)">
-      <rect width="1080" height="65" rx="10" fill="#0B0B17" stroke="url(#operative-grad)" stroke-width="2" opacity="0.95"/>
-      <text x="14" y="20" font-family="Georgia, serif" font-style="italic" font-size="15" font-weight="700" fill="#ffffff">Features → Benefits → Desires + Intangibles</text>
-      <text x="14" y="34" font-family="ui-monospace, monospace" font-size="9" fill="#c5c5d4">4 agentes · extracción CBDI</text>
-      <g transform="translate(14,42)">
-        <rect width="148" height="18" rx="9" fill="url(#sonnet-grad)"/>
-        <text x="74" y="13" font-family="ui-monospace, monospace" font-size="8" font-weight="700" fill="#ffffff" text-anchor="middle">caracteristicas-extractor</text>
-      </g>
-      <g transform="translate(168,42)">
-        <rect width="130" height="18" rx="9" fill="url(#sonnet-grad)"/>
-        <text x="65" y="13" font-family="ui-monospace, monospace" font-size="8" font-weight="700" fill="#ffffff" text-anchor="middle">beneficios-extractor</text>
-      </g>
-      <g transform="translate(304,42)">
-        <rect width="120" height="18" rx="9" fill="url(#sonnet-grad)"/>
-        <text x="60" y="13" font-family="ui-monospace, monospace" font-size="8" font-weight="700" fill="#ffffff" text-anchor="middle">deseos-extractor</text>
-      </g>
-      <g transform="translate(430,42)">
-        <rect width="135" height="18" rx="9" fill="url(#sonnet-grad)"/>
-        <text x="67" y="13" font-family="ui-monospace, monospace" font-size="8" font-weight="700" fill="#ffffff" text-anchor="middle">intangibles-extractor</text>
-      </g>
-    </g>
-    <g transform="translate(1170,22)">
-      <rect width="65" height="26" rx="6" fill="url(#sonnet-grad)"/>
-      <text x="32" y="17" font-family="ui-monospace, monospace" font-size="9" font-weight="700" fill="#ffffff" text-anchor="middle">SONNET</text>
-    </g>
-  </g>
-
-  <!-- ============================================ -->
-  <!-- ETAPA 11 · VALOR PERCIBIDO -->
-  <!-- ============================================ -->
-  <g transform="translate(40,1005)">
-    <circle cx="35" cy="35" r="22" fill="url(#strategic-grad)" filter="url(#pipe-glow)"/>
-    <text x="35" y="40" font-family="Georgia, serif" font-size="14" font-weight="700" fill="#ffffff" text-anchor="middle">11</text>
-    <g transform="translate(75,5)">
-      <rect width="1080" height="65" rx="10" fill="#0B0B17" stroke="url(#strategic-grad)" stroke-width="2" opacity="0.95"/>
-      <text x="14" y="20" font-family="Georgia, serif" font-style="italic" font-size="15" font-weight="700" fill="#ffffff">Valor Percibido</text>
-      <text x="14" y="34" font-family="ui-monospace, monospace" font-size="9" fill="#c5c5d4">3 agentes · Bencivenga + anclaje + stack slide</text>
-      <g transform="translate(14,42)">
-        <rect width="115" height="18" rx="9" fill="url(#opus-grad)"/>
-        <text x="57" y="13" font-family="ui-monospace, monospace" font-size="8" font-weight="700" fill="#050510" text-anchor="middle">valor-percibido</text>
-      </g>
-      <g transform="translate(135,42)">
-        <rect width="115" height="18" rx="9" fill="url(#sonnet-grad)"/>
-        <text x="57" y="13" font-family="ui-monospace, monospace" font-size="8" font-weight="700" fill="#ffffff" text-anchor="middle">anclaje-precio</text>
-      </g>
-      <g transform="translate(256,42)">
-        <rect width="140" height="18" rx="9" fill="url(#opus-grad)"/>
-        <text x="70" y="13" font-family="ui-monospace, monospace" font-size="8" font-weight="700" fill="#050510" text-anchor="middle">stack-slide-architect</text>
-      </g>
-    </g>
-    <g transform="translate(1170,22)">
-      <rect width="65" height="26" rx="6" fill="url(#opus-grad)"/>
-      <text x="32" y="17" font-family="ui-monospace, monospace" font-size="9" font-weight="700" fill="#050510" text-anchor="middle">OPUS</text>
-    </g>
-  </g>
-
-  <!-- ============================================ -->
-  <!-- ETAPA 12 · MODULOS + CLASES -->
-  <!-- ============================================ -->
-  <g transform="translate(40,1085)">
-    <circle cx="35" cy="30" r="22" fill="url(#operative-grad)" filter="url(#pipe-glow)"/>
-    <text x="35" y="35" font-family="Georgia, serif" font-size="14" font-weight="700" fill="#050510" text-anchor="middle">12</text>
-    <g transform="translate(75,5)">
-      <rect width="1080" height="55" rx="10" fill="#0B0B17" stroke="url(#operative-grad)" stroke-width="2" opacity="0.95"/>
-      <text x="14" y="18" font-family="Georgia, serif" font-style="italic" font-size="15" font-weight="700" fill="#ffffff">Módulos + Clases</text>
-      <text x="14" y="32" font-family="ui-monospace, monospace" font-size="9" fill="#c5c5d4">carta ventas invisible · usa 03b · jerarquía 1:1 (paso=módulo · acción=clase)</text>
-      <g transform="translate(420,35)">
-        <rect width="120" height="16" rx="8" fill="url(#sonnet-grad)"/>
-        <text x="60" y="11" font-family="ui-monospace, monospace" font-size="8" font-weight="700" fill="#ffffff" text-anchor="middle">modulos-namer</text>
-      </g>
-      <g transform="translate(546,35)">
-        <rect width="120" height="16" rx="8" fill="url(#sonnet-grad)"/>
-        <text x="60" y="11" font-family="ui-monospace, monospace" font-size="8" font-weight="700" fill="#ffffff" text-anchor="middle">clases-namer</text>
-      </g>
-    </g>
-    <g transform="translate(1170,17)">
-      <rect width="65" height="26" rx="6" fill="url(#sonnet-grad)"/>
-      <text x="32" y="17" font-family="ui-monospace, monospace" font-size="9" font-weight="700" fill="#ffffff" text-anchor="middle">SONNET</text>
-    </g>
-  </g>
-
-  <!-- ============================================ -->
-  <!-- ETAPA 13 · BONUS + UPSELLS -->
-  <!-- ============================================ -->
-  <g transform="translate(40,1155)">
-    <circle cx="35" cy="35" r="22" fill="url(#operative-grad)" filter="url(#pipe-glow)"/>
-    <text x="35" y="40" font-family="Georgia, serif" font-size="14" font-weight="700" fill="#050510" text-anchor="middle">13</text>
-    <g transform="translate(75,5)">
-      <rect width="1080" height="65" rx="10" fill="#0B0B17" stroke="url(#operative-grad)" stroke-width="2" opacity="0.95"/>
-      <text x="14" y="20" font-family="Georgia, serif" font-style="italic" font-size="15" font-weight="700" fill="#ffffff">Bonus + Upsells</text>
-      <text x="14" y="34" font-family="ui-monospace, monospace" font-size="9" fill="#c5c5d4">3 agentes · bonus stack irresistible + escalera</text>
-      <g transform="translate(14,42)">
-        <rect width="115" height="18" rx="9" fill="url(#opus-grad)"/>
-        <text x="57" y="13" font-family="ui-monospace, monospace" font-size="8" font-weight="700" fill="#050510" text-anchor="middle">bonus-architect</text>
-      </g>
-      <g transform="translate(135,42)">
-        <rect width="125" height="18" rx="9" fill="url(#opus-grad)"/>
-        <text x="62" y="13" font-family="ui-monospace, monospace" font-size="8" font-weight="700" fill="#050510" text-anchor="middle">bonus-irresistible</text>
-      </g>
-      <g transform="translate(266,42)">
-        <rect width="170" height="18" rx="9" fill="url(#sonnet-grad)"/>
-        <text x="85" y="13" font-family="ui-monospace, monospace" font-size="8" font-weight="700" fill="#ffffff" text-anchor="middle">upsell-downsell-architect</text>
-      </g>
-    </g>
-    <g transform="translate(1170,22)">
-      <rect width="65" height="26" rx="6" fill="url(#opus-grad)"/>
-      <text x="32" y="17" font-family="ui-monospace, monospace" font-size="9" font-weight="700" fill="#050510" text-anchor="middle">OPUS</text>
-    </g>
-  </g>
-
-  <!-- ============================================ -->
-  <!-- ETAPA 14 · CONSCIENCIA + LEAD + AUTORIDAD -->
-  <!-- ============================================ -->
-  <g transform="translate(40,1235)">
-    <circle cx="35" cy="35" r="22" fill="url(#strategic-grad)" filter="url(#pipe-glow)"/>
-    <text x="35" y="40" font-family="Georgia, serif" font-size="14" font-weight="700" fill="#ffffff" text-anchor="middle">14</text>
-    <g transform="translate(75,5)">
-      <rect width="1080" height="65" rx="10" fill="#0B0B17" stroke="url(#strategic-grad)" stroke-width="2" opacity="0.95"/>
-      <text x="14" y="20" font-family="Georgia, serif" font-style="italic" font-size="15" font-weight="700" fill="#ffffff">Consciencia + Lead + Autoridad</text>
-      <text x="14" y="34" font-family="ui-monospace, monospace" font-size="9" fill="#c5c5d4">3 agentes · Schwartz consciousness + Masterson great leads + autoridad</text>
-      <g transform="translate(14,42)">
-        <rect width="170" height="18" rx="9" fill="url(#opus-grad)"/>
-        <text x="85" y="13" font-family="ui-monospace, monospace" font-size="8" font-weight="700" fill="#050510" text-anchor="middle">schwartz-consciousness</text>
-      </g>
-      <g transform="translate(190,42)">
-        <rect width="155" height="18" rx="9" fill="url(#opus-grad)"/>
-        <text x="77" y="13" font-family="ui-monospace, monospace" font-size="8" font-weight="700" fill="#050510" text-anchor="middle">great-leads-masterson</text>
-      </g>
-      <g transform="translate(351,42)">
-        <rect width="125" height="18" rx="9" fill="url(#sonnet-grad)"/>
-        <text x="62" y="13" font-family="ui-monospace, monospace" font-size="8" font-weight="700" fill="#ffffff" text-anchor="middle">autoridad-builder</text>
-      </g>
-    </g>
-    <g transform="translate(1170,22)">
-      <rect width="65" height="26" rx="6" fill="url(#opus-grad)"/>
-      <text x="32" y="17" font-family="ui-monospace, monospace" font-size="9" font-weight="700" fill="#050510" text-anchor="middle">OPUS</text>
-    </g>
-  </g>
-
-  <!-- ============================================ -->
-  <!-- ETAPA 15 · OFERTA COMPLETA -->
-  <!-- ============================================ -->
-  <g transform="translate(40,1315)" filter="url(#strong-glow)">
-    <circle cx="35" cy="30" r="22" fill="url(#final-grad)"/>
-    <text x="35" y="35" font-family="Georgia, serif" font-size="14" font-weight="700" fill="#050510" text-anchor="middle">15</text>
-    <g transform="translate(75,5)">
-      <rect width="1080" height="50" rx="10" fill="#0B0B17" stroke="url(#final-grad)" stroke-width="2.5" opacity="0.98"/>
-      <text x="14" y="20" font-family="Georgia, serif" font-style="italic" font-size="15" font-weight="700" fill="#ffffff">Oferta Completa</text>
-      <text x="14" y="38" font-family="ui-monospace, monospace" font-size="9" fill="#00E5CF" font-weight="700">ENSAMBLA TODO</text>
-      <g transform="translate(430,15)">
-        <rect width="120" height="20" rx="10" fill="url(#final-grad)"/>
-        <text x="60" y="14" font-family="ui-monospace, monospace" font-size="9" font-weight="700" fill="#050510" text-anchor="middle">offer-master</text>
-      </g>
-    </g>
-    <g transform="translate(1170,17)">
-      <rect width="65" height="26" rx="6" fill="url(#final-grad)"/>
-      <text x="32" y="17" font-family="ui-monospace, monospace" font-size="9" font-weight="700" fill="#050510" text-anchor="middle">OPUS</text>
-    </g>
-  </g>
-
-  <!-- ============================================ -->
-  <!-- ETAPA 16 · AUDITORIA 200+ -->
-  <!-- ============================================ -->
-  <g transform="translate(40,1378)" filter="url(#strong-glow)">
-    <circle cx="35" cy="22" r="18" fill="url(#critical-grad)"/>
-    <text x="35" y="27" font-family="Georgia, serif" font-size="12" font-weight="700" fill="#050510" text-anchor="middle">16</text>
-    <g transform="translate(75,5)">
-      <rect width="1080" height="34" rx="10" fill="#0B0B17" stroke="url(#critical-grad)" stroke-width="2.2" opacity="0.98"/>
-      <text x="14" y="15" font-family="Georgia, serif" font-style="italic" font-size="13" font-weight="700" fill="#ffffff">Auditoría 200+</text>
-      <text x="14" y="28" font-family="ui-monospace, monospace" font-size="8" fill="#c5c5d4">QA final · checklist exhaustivo · score + firma</text>
-      <g transform="translate(440,8)">
-        <rect width="135" height="18" rx="9" fill="url(#opus-grad)"/>
-        <text x="67" y="13" font-family="ui-monospace, monospace" font-size="9" font-weight="700" fill="#050510" text-anchor="middle">auditor-completo</text>
-      </g>
-    </g>
-    <g transform="translate(1170,5)">
-      <rect width="65" height="22" rx="6" fill="url(#opus-grad)"/>
-      <text x="32" y="15" font-family="ui-monospace, monospace" font-size="9" font-weight="700" fill="#050510" text-anchor="middle">OPUS</text>
-    </g>
-  </g>
-
-  <!-- FOOTER -->
-  <text x="640" y="1394"
-        font-family="ui-monospace, monospace"
-        font-size="8"
-        fill="#777788"
-        text-anchor="middle"
-        letter-spacing="2px">HECHO CON MÉTODO ZENITH™ · v2.0.0 · 43 AGENTES · github.com/zenithmetodo/zenith-crea-ofertas · DE LA CIMA SE VE MEJOR EL AVATAR</text>
 </svg>
