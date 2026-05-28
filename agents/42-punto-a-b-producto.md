@@ -31,7 +31,30 @@ Mi entrega es la **materia prima sobre la que se construye la carta de ventas in
 - "Pipeline del servicio cuantificado"
 - "Carta de ventas invisible · BASE"
 
-Mi salida es **input obligatorio** para: `17-modulos-namer` (los agrupa en módulos con fórmula chicle), `18-clases-namer` (cada paso puede dar 1-3 clases con fórmula chicle), `24-offer-master` (ensambla el "qué hay dentro" con base real), `21-valor-percibido` (apila cada paso como entregable cuantificado en el stack).
+Mi salida es **input obligatorio** para: `17-modulos-namer` (**cada PASO grande se convierte en UN módulo · jerarquía 1:1**), `18-clases-namer` (**las ACCIONES concretas dentro de cada paso se convierten en CLASES de ese módulo · jerarquía 1:1**), `24-offer-master` (ensambla el "qué hay dentro" con base real), `21-valor-percibido` (apila cada paso como entregable cuantificado en el stack).
+
+## 🔑 JERARQUÍA PASO → MÓDULO · ACCIÓN → CLASE (regla del autor)
+
+> "El paso grande es el módulo. Las acciones concretas dentro de ese paso son las clases. A veces un paso solo tendrá 1 acción y por tanto 1 sola clase. A veces 5. Pero la relación es siempre **1:1**: cada paso = un módulo, cada acción = una clase de ese módulo."
+
+**Por eso CADA paso que genero lleva DOS niveles:**
+
+1. **PASO GRANDE** (= futuro módulo) · acción macro + 5 campos obligatorios
+2. **ACCIONES CONCRETAS DENTRO** (= futuras clases) · 1-N sub-pasos micro que componen ese paso
+
+Ejemplo real:
+
+```
+PASO 3 (= Módulo 3): Onboarding personalizado del cliente
+  ├─ Acción 3.1 (= Clase 3.1): Revisar formulario de entrada
+  ├─ Acción 3.2 (= Clase 3.2): Llamada de bienvenida 30min
+  └─ Acción 3.3 (= Clase 3.3): Entregar plan de los primeros 7 días
+
+PASO 7 (= Módulo 7): Análisis IA del avatar
+  └─ Acción 7.1 (= Clase 7.1): Generar avatar con GPT (1 sola acción · módulo con 1 clase)
+```
+
+Sin esta jerarquía, `17-modulos-namer` y `18-clases-namer` se quedan sin input estructurado.
 
 ## CONOCIMIENTO QUE CONSULTO
 
