@@ -1,0 +1,234 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 600" role="img" aria-label="Zenith Crea Ofertas architecture diagram">
+  <defs>
+    <linearGradient id="arch-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#050510"/>
+      <stop offset="100%" stop-color="#0B0B17"/>
+    </linearGradient>
+    <linearGradient id="master-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00E5CF"/>
+      <stop offset="100%" stop-color="#B845FF"/>
+    </linearGradient>
+    <linearGradient id="cluster-cyan" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00E5CF"/>
+      <stop offset="100%" stop-color="#00B5A0"/>
+    </linearGradient>
+    <linearGradient id="cluster-purple" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#B845FF"/>
+      <stop offset="100%" stop-color="#8B2DCC"/>
+    </linearGradient>
+    <linearGradient id="cluster-haiku" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#9EE7FF"/>
+      <stop offset="100%" stop-color="#6FBED9"/>
+    </linearGradient>
+    <filter id="arch-glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <marker id="arch-arrow" viewBox="0 0 10 10" refX="9" refY="5"
+            markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#00E5CF" opacity="0.8"/>
+    </marker>
+  </defs>
+
+  <!-- Fondo -->
+  <rect width="1280" height="600" fill="url(#arch-bg)"/>
+
+  <!-- Cuadrícula sutil -->
+  <g opacity="0.04" stroke="#00E5CF" stroke-width="1">
+    <line x1="0" y1="150" x2="1280" y2="150"/>
+    <line x1="0" y1="300" x2="1280" y2="300"/>
+    <line x1="0" y1="450" x2="1280" y2="450"/>
+  </g>
+
+  <!-- Título -->
+  <text x="640" y="42"
+        font-family="Georgia, serif"
+        font-size="28"
+        font-weight="700"
+        fill="#ffffff"
+        text-anchor="middle">Arquitectura · Master + Clusters</text>
+  <text x="640" y="66"
+        font-family="Georgia, serif"
+        font-style="italic"
+        font-size="14"
+        fill="#c5c5d4"
+        text-anchor="middle">41 agentes · 7 clusters funcionales · 1 orquestador padre</text>
+
+  <!-- MASTER ORCHESTRATOR -->
+  <g transform="translate(490,90)" filter="url(#arch-glow)">
+    <rect width="300" height="80" rx="14" fill="url(#master-grad)"/>
+    <text x="150" y="32" font-family="Georgia, serif" font-size="18" font-weight="700" fill="#050510" text-anchor="middle">🏔️ MASTER ORQUESTADOR</text>
+    <text x="150" y="54" font-family="ui-monospace, monospace" font-size="11" fill="#050510" text-anchor="middle" opacity="0.8">/crea-oferta-1pct · /zenith-crea-oferta</text>
+    <text x="150" y="70" font-family="ui-monospace, monospace" font-size="10" fill="#050510" text-anchor="middle" opacity="0.6">17 commands · ejecuta agentes en cadena</text>
+  </g>
+
+  <!-- Conectores Master → Clusters -->
+  <g fill="none" stroke="#00E5CF" stroke-width="2" opacity="0.45" stroke-dasharray="3 4">
+    <path d="M640,170 Q640,200 200,240"/>
+    <path d="M640,170 Q640,200 460,240"/>
+    <path d="M640,170 L640,240"/>
+    <path d="M640,170 Q640,200 820,240"/>
+    <path d="M640,170 Q640,200 1080,240"/>
+    <path d="M640,170 Q640,330 280,420"/>
+    <path d="M640,170 Q640,330 1000,420"/>
+  </g>
+
+  <!-- Fila clusters principales (5 clusters arriba) -->
+
+  <!-- Cluster 1 · Discovery -->
+  <g transform="translate(80,240)" filter="url(#arch-glow)">
+    <rect width="240" height="130" rx="12" fill="url(#cluster-cyan)" opacity="0.95"/>
+    <text x="14" y="22" font-family="ui-monospace, monospace" font-size="10" fill="#050510" font-weight="700">CLUSTER · DISCOVERY</text>
+    <text x="14" y="42" font-family="Georgia, serif" font-size="15" font-weight="700" fill="#050510">🔍 Brief · Discovery</text>
+    <line x1="14" y1="50" x2="226" y2="50" stroke="#050510" opacity="0.25" stroke-width="1"/>
+    <g font-family="ui-monospace, monospace" font-size="10" fill="#050510">
+      <text x="14" y="68">· 01 discovery-master</text>
+      <text x="14" y="82">· 34 zenith-quick-discovery</text>
+      <text x="14" y="96">· 35 avatar-deep-psicologo</text>
+      <text x="14" y="110">· 38 avatar-mapa-empatia</text>
+      <text x="14" y="124" font-style="italic" opacity="0.7">4 agentes</text>
+    </g>
+  </g>
+
+  <!-- Cluster 2 · Belief + Mecanismo -->
+  <g transform="translate(340,240)" filter="url(#arch-glow)">
+    <rect width="240" height="130" rx="12" fill="url(#cluster-cyan)" opacity="0.95"/>
+    <text x="14" y="22" font-family="ui-monospace, monospace" font-size="10" fill="#050510" font-weight="700">CLUSTER · CORE OFERTA</text>
+    <text x="14" y="42" font-family="Georgia, serif" font-size="15" font-weight="700" fill="#050510">🧠 Belief · Mecanismo</text>
+    <line x1="14" y1="50" x2="226" y2="50" stroke="#050510" opacity="0.25" stroke-width="1"/>
+    <g font-family="ui-monospace, monospace" font-size="10" fill="#050510">
+      <text x="14" y="68">· 02 punto-a-b-architect</text>
+      <text x="14" y="82">· 03 one-belief-creator</text>
+      <text x="14" y="96">· 05 nueva-oportunidad</text>
+      <text x="14" y="110">· 06·07 mecanismo P+S</text>
+      <text x="14" y="124" font-style="italic" opacity="0.7">5 agentes</text>
+    </g>
+  </g>
+
+  <!-- Cluster 3 · Identidad + Naming -->
+  <g transform="translate(600,240)" filter="url(#arch-glow)">
+    <rect width="240" height="130" rx="12" fill="url(#cluster-purple)" opacity="0.95"/>
+    <text x="14" y="22" font-family="ui-monospace, monospace" font-size="10" fill="#ffffff" font-weight="700">CLUSTER · IDENTIDAD</text>
+    <text x="14" y="42" font-family="Georgia, serif" font-size="15" font-weight="700" fill="#ffffff">🎭 Identidad · Naming</text>
+    <line x1="14" y1="50" x2="226" y2="50" stroke="#ffffff" opacity="0.25" stroke-width="1"/>
+    <g font-family="ui-monospace, monospace" font-size="10" fill="#ffffff">
+      <text x="14" y="68">· 04 identidad-anti-identidad</text>
+      <text x="14" y="82">· 08 nombre-chicle</text>
+      <text x="14" y="96">· 17·18 módulos · clases</text>
+      <text x="14" y="110">· 33 autoridad-builder</text>
+      <text x="14" y="124" font-style="italic" opacity="0.85">5 agentes</text>
+    </g>
+  </g>
+
+  <!-- Cluster 4 · Estructura + CBD -->
+  <g transform="translate(860,240)" filter="url(#arch-glow)">
+    <rect width="240" height="130" rx="12" fill="url(#cluster-haiku)" opacity="0.95"/>
+    <text x="14" y="22" font-family="ui-monospace, monospace" font-size="10" fill="#050510" font-weight="700">CLUSTER · EXTRACCIÓN</text>
+    <text x="14" y="42" font-family="Georgia, serif" font-size="15" font-weight="700" fill="#050510">📦 Estructura · C·B·D</text>
+    <line x1="14" y1="50" x2="226" y2="50" stroke="#050510" opacity="0.25" stroke-width="1"/>
+    <g font-family="ui-monospace, monospace" font-size="10" fill="#050510">
+      <text x="14" y="68">· 09 super-estructura</text>
+      <text x="14" y="82">· 10 caract. · 11 benefs.</text>
+      <text x="14" y="96">· 12 deseos · 13 intangibles</text>
+      <text x="14" y="110">· 28 fascinations-architect</text>
+      <text x="14" y="124" font-style="italic" opacity="0.7">6 agentes</text>
+    </g>
+  </g>
+
+  <!-- Cluster 5 · Promesa + Garantía -->
+  <g transform="translate(1120,240)" filter="url(#arch-glow)">
+    <rect width="140" height="130" rx="12" fill="url(#cluster-cyan)" opacity="0.95"/>
+    <text x="14" y="22" font-family="ui-monospace, monospace" font-size="10" fill="#050510" font-weight="700">CLUSTER · CIERRE</text>
+    <text x="14" y="42" font-family="Georgia, serif" font-size="13" font-weight="700" fill="#050510">🎯 Promesa</text>
+    <line x1="14" y1="50" x2="126" y2="50" stroke="#050510" opacity="0.25" stroke-width="1"/>
+    <g font-family="ui-monospace, monospace" font-size="10" fill="#050510">
+      <text x="14" y="68">· 14 promesa</text>
+      <text x="14" y="82">· 15 garantía</text>
+      <text x="14" y="96">· 27 headline</text>
+      <text x="14" y="110">· 32 risk rev.</text>
+      <text x="14" y="124" font-style="italic" opacity="0.7">4 agentes</text>
+    </g>
+  </g>
+
+  <!-- Fila clusters secundarios -->
+
+  <!-- Cluster 6 · Valor + Stack -->
+  <g transform="translate(160,420)" filter="url(#arch-glow)">
+    <rect width="240" height="130" rx="12" fill="url(#cluster-purple)" opacity="0.95"/>
+    <text x="14" y="22" font-family="ui-monospace, monospace" font-size="10" fill="#ffffff" font-weight="700">CLUSTER · VALOR</text>
+    <text x="14" y="42" font-family="Georgia, serif" font-size="15" font-weight="700" fill="#ffffff">💎 Valor · Bonus · Stack</text>
+    <line x1="14" y1="50" x2="226" y2="50" stroke="#ffffff" opacity="0.25" stroke-width="1"/>
+    <g font-family="ui-monospace, monospace" font-size="10" fill="#ffffff">
+      <text x="14" y="68">· 19·20 bonus architect</text>
+      <text x="14" y="82">· 21 valor-percibido</text>
+      <text x="14" y="96">· 29 stack-slide-architect</text>
+      <text x="14" y="110">· 30 anclaje-precio</text>
+      <text x="14" y="124">· 31 upsell-downsell · 5 agentes</text>
+    </g>
+  </g>
+
+  <!-- Cluster 7 · Audit + Output -->
+  <g transform="translate(440,420)" filter="url(#arch-glow)">
+    <rect width="240" height="130" rx="12" fill="url(#cluster-cyan)" opacity="0.95"/>
+    <text x="14" y="22" font-family="ui-monospace, monospace" font-size="10" fill="#050510" font-weight="700">CLUSTER · AUDITORÍA</text>
+    <text x="14" y="42" font-family="Georgia, serif" font-size="15" font-weight="700" fill="#050510">⚖️ Audit · Output</text>
+    <line x1="14" y1="50" x2="226" y2="50" stroke="#050510" opacity="0.25" stroke-width="1"/>
+    <g font-family="ui-monospace, monospace" font-size="10" fill="#050510">
+      <text x="14" y="68">· 16 objeciones-rotas</text>
+      <text x="14" y="82">· 22 schwartz-consciousness</text>
+      <text x="14" y="96">· 23 great-leads-masterson</text>
+      <text x="14" y="110">· 24 offer · 25 output</text>
+      <text x="14" y="124">· 26 auditor-completo · 6 agentes</text>
+    </g>
+  </g>
+
+  <!-- Cluster 8 · Research lateral -->
+  <g transform="translate(720,420)" filter="url(#arch-glow)">
+    <rect width="240" height="130" rx="12" fill="url(#cluster-haiku)" opacity="0.95"/>
+    <text x="14" y="22" font-family="ui-monospace, monospace" font-size="10" fill="#050510" font-weight="700">CLUSTER · RESEARCH</text>
+    <text x="14" y="42" font-family="Georgia, serif" font-size="15" font-weight="700" fill="#050510">🔭 Mercado · Avatar</text>
+    <line x1="14" y1="50" x2="226" y2="50" stroke="#050510" opacity="0.25" stroke-width="1"/>
+    <g font-family="ui-monospace, monospace" font-size="10" fill="#050510">
+      <text x="14" y="68">· 36 research-reddit</text>
+      <text x="14" y="82">· 37 research-youtube</text>
+      <text x="14" y="96">· 40 competidor-spy</text>
+      <text x="14" y="110">· 41 deal-makers-extractor</text>
+      <text x="14" y="124" font-style="italic" opacity="0.7">4 agentes</text>
+    </g>
+  </g>
+
+  <!-- Layer infra · Knowledge + Templates -->
+  <g transform="translate(1000,420)" filter="url(#arch-glow)">
+    <rect width="120" height="130" rx="12" fill="#0B0B17" stroke="url(#master-grad)" stroke-width="2"/>
+    <text x="60" y="22" font-family="ui-monospace, monospace" font-size="9" fill="#00E5CF" text-anchor="middle">LAYER · INFRA</text>
+    <text x="60" y="44" font-family="Georgia, serif" font-size="13" font-weight="700" fill="#ffffff" text-anchor="middle">📚 Knowledge</text>
+    <text x="60" y="62" font-family="ui-monospace, monospace" font-size="10" fill="#c5c5d4" text-anchor="middle">20 files</text>
+    <line x1="14" y1="74" x2="106" y2="74" stroke="#00E5CF" opacity="0.4" stroke-width="1"/>
+    <text x="60" y="92" font-family="Georgia, serif" font-size="13" font-weight="700" fill="#ffffff" text-anchor="middle">🎨 Templates</text>
+    <text x="60" y="110" font-family="ui-monospace, monospace" font-size="10" fill="#c5c5d4" text-anchor="middle">18 HTML</text>
+    <text x="60" y="126" font-family="ui-monospace, monospace" font-size="9" fill="#777788" text-anchor="middle">print-to-PDF</text>
+  </g>
+
+  <!-- Layer infra · 39 ángulos -->
+  <g transform="translate(1140,420)" filter="url(#arch-glow)">
+    <rect width="120" height="130" rx="12" fill="#0B0B17" stroke="url(#master-grad)" stroke-width="2"/>
+    <text x="60" y="22" font-family="ui-monospace, monospace" font-size="9" fill="#00E5CF" text-anchor="middle">LAYER · CREATIVO</text>
+    <text x="60" y="44" font-family="Georgia, serif" font-size="13" font-weight="700" fill="#ffffff" text-anchor="middle">🎯 Ángulos</text>
+    <text x="60" y="62" font-family="ui-monospace, monospace" font-size="10" fill="#c5c5d4" text-anchor="middle">39 architect</text>
+    <line x1="14" y1="74" x2="106" y2="74" stroke="#00E5CF" opacity="0.4" stroke-width="1"/>
+    <text x="60" y="92" font-family="Georgia, serif" font-size="13" font-weight="700" fill="#ffffff" text-anchor="middle">🎬 Examples</text>
+    <text x="60" y="110" font-family="ui-monospace, monospace" font-size="10" fill="#c5c5d4" text-anchor="middle">canónicos</text>
+    <text x="60" y="126" font-family="ui-monospace, monospace" font-size="9" fill="#777788" text-anchor="middle">250+ líneas</text>
+  </g>
+
+  <!-- Footer -->
+  <text x="640" y="585"
+        font-family="ui-monospace, monospace"
+        font-size="11"
+        fill="#777788"
+        text-anchor="middle"
+        letter-spacing="2px">ZENITH CREA OFERTAS™ · ARCHITECTURE v2.0.0 · 41 AGENTES · 7 CLUSTERS · 1 MASTER</text>
+</svg>
