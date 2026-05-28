@@ -1,0 +1,81 @@
+name: "✨ Feature request"
+description: Propón una mejora o nueva funcionalidad
+title: "[FEATURE] "
+labels: ["enhancement", "needs-triage"]
+assignees: []
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## Propón una feature para **Zenith Crea Ofertas™**
+
+        Las mejores features nacen de necesidades reales. Cuéntanos la tuya.
+
+        > Si lo que propones es un agente nuevo · usa la plantilla **🤖 Propuesta de nuevo agente**.
+
+  - type: textarea
+    id: what
+    attributes:
+      label: "🎁 ¿Qué quieres que añadamos?"
+      description: "Descripción clara y concisa de la feature."
+      placeholder: "Un comando que genere el ad para Meta a partir de la oferta ya creada."
+    validations:
+      required: true
+
+  - type: textarea
+    id: why
+    attributes:
+      label: "🤔 ¿Por qué?"
+      description: "¿Qué problema resuelve? ¿Qué dolor mata? ¿Qué deseo cumple?"
+      placeholder: "Ahora mismo tengo que pasar la oferta a otro flujo · pierdo coherencia y se me olvida el avatar."
+    validations:
+      required: true
+
+  - type: textarea
+    id: how
+    attributes:
+      label: "🎨 ¿Cómo lo imaginas?"
+      description: "Describe el comportamiento ideal. Si tienes un mockup o ejemplo · pégalo."
+      placeholder: |
+        - El comando se llama `/ad-meta`
+        - Lee `00-brief.json` + `10-oferta-completa.html`
+        - Genera 3 variantes de copy de 30s + headlines
+        - Output HTML imprimible
+    validations:
+      required: true
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: "🔀 Alternativas que has considerado"
+      description: "¿Has probado otra forma de resolverlo? ¿Por qué no funciona?"
+    validations:
+      required: false
+
+  - type: dropdown
+    id: priority
+    attributes:
+      label: "🚦 Prioridad subjetiva"
+      description: "Para ti · ¿cuán importante es?"
+      options:
+        - "🔥 Crítico (sin esto el plugin no me sirve)"
+        - "⚡ Alto (lo usaría a diario)"
+        - "📈 Medio (lo usaría a menudo)"
+        - "💡 Bajo (sería un nice-to-have)"
+    validations:
+      required: true
+
+  - type: textarea
+    id: extra
+    attributes:
+      label: "💡 Extra"
+      description: "Cualquier contexto adicional · links · referencias."
+    validations:
+      required: false
+
+  - type: markdown
+    attributes:
+      value: |
+        ---
+        *Hecho con Método Zenith™ · De la cima se ve mejor el avatar.*

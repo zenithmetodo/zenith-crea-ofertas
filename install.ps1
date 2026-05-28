@@ -146,7 +146,7 @@ Write-Host @"
    ║                                                                        ║
    ║      1. Reinicia PowerShell (importante para PATH)                     ║
    ║      2. Abre Claude Code                                               ║
-   ║      3. Escribe:  /crea-oferta-1pct                                    ║
+   ║      3. Escribe:  /zenith-crea-oferta                                    ║
    ║                                                                        ║
    ╚════════════════════════════════════════════════════════════════════════╝
 

@@ -219,12 +219,12 @@ cat <<'DONE'
    ║   Próximo paso:                                                        ║
    ║                                                                        ║
    ║      1. Abre Claude Code                                               ║
-   ║      2. Escribe:  /crea-oferta-1pct                                    ║
+   ║      2. Escribe:  /zenith-crea-oferta                                    ║
    ║      3. Te lanza el discovery-master (5 preguntas)                     ║
    ║      4. En ~60-90 min tienes la oferta completa en HTML print-to-PDF   ║
    ║                                                                        ║
    ║   Comandos disponibles:                                                ║
-   ║      /crea-oferta-1pct  ·  /one-belief  ·  /mecanismo  ·  /promesa     ║
+   ║      /zenith-crea-oferta  ·  /one-belief  ·  /mecanismo  ·  /promesa     ║
    ║      /garantia  ·  /bonus  ·  /modulos  ·  /valor-percibido            ║
    ║      /schwartz-level  ·  /great-leads  ·  /audit-oferta                ║
    ║                                                                        ║

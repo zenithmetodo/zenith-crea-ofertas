@@ -1,0 +1,121 @@
+name: "🐛 Bug report"
+description: Reporta un bug · algo no funciona como debería
+title: "[BUG] "
+labels: ["bug", "needs-triage"]
+assignees: []
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## Gracias por reportar un bug en **Zenith Crea Ofertas™**
+
+        Antes de continuar, comprueba que:
+        - [ ] Has buscado en issues existentes (puede que ya esté reportado).
+        - [ ] Estás usando la última versión del plugin.
+        - [ ] No es un fallo de configuración tuya (lee primero `INSTALL.md` y `EXTERNAL_SERVICES.md`).
+
+        Cuanta más información aportes · más rápido lo arreglamos.
+
+  - type: input
+    id: agent-or-command
+    attributes:
+      label: "🎯 ¿Qué agente o comando falla?"
+      description: "Nombre exacto del agente (ej. `08-nombre-chicle`) o slash command (ej. `/crea-oferta-1pct`)."
+      placeholder: "ej. /one-belief"
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: "📝 Descripción del bug"
+      description: "Explica brevemente qué ha pasado."
+      placeholder: "Al ejecutar X · esperaba Y · pero he visto Z."
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: "🔁 Cómo reproducirlo"
+      description: "Pasos para que podamos reproducir el bug en local."
+      placeholder: |
+        1. Abrir terminal en proyecto vacío
+        2. Ejecutar `/setup-crea-ofertas`
+        3. Lanzar `/crea-oferta-1pct`
+        4. Ver el error en la etapa 8
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: "✅ Comportamiento esperado"
+      description: "¿Qué debería haber pasado?"
+    validations:
+      required: true
+
+  - type: textarea
+    id: actual
+    attributes:
+      label: "❌ Comportamiento actual"
+      description: "¿Qué ha pasado realmente?"
+    validations:
+      required: true
+
+  - type: input
+    id: plugin-version
+    attributes:
+      label: "📦 Versión del plugin"
+      description: "Lee `plugin.json` o `.claude-plugin/plugin.json`."
+      placeholder: "v2.0.0"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: os
+    attributes:
+      label: "💻 Sistema operativo"
+      options:
+        - macOS
+        - Linux (Ubuntu/Debian)
+        - Linux (Otro)
+        - Windows 11
+        - Windows 10
+        - WSL2
+        - Otro
+    validations:
+      required: true
+
+  - type: input
+    id: claude-version
+    attributes:
+      label: "🤖 Versión de Claude Code"
+      description: "Resultado de `claude --version`."
+      placeholder: "ej. 1.0.45"
+    validations:
+      required: false
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: "📋 Logs (opcional pero útil)"
+      description: "Pega aquí cualquier traza · error o log relevante."
+      render: shell
+    validations:
+      required: false
+
+  - type: textarea
+    id: extra
+    attributes:
+      label: "💡 Información extra"
+      description: "Screenshots · archivos de ejemplo · cualquier cosa que ayude."
+    validations:
+      required: false
+
+  - type: markdown
+    attributes:
+      value: |
+        ---
+        *Hecho con Método Zenith™ · De la cima se ve mejor el avatar.*

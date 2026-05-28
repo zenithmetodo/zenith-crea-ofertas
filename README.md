@@ -1,5 +1,18 @@
 # Zenith Crea Ofertas™ · Plugin Claude Code
 
+<div align="center">
+
+<img src="assets/zenith-banner.svg" alt="Zenith Crea Ofertas™" width="100%"/>
+
+[![Version](https://img.shields.io/badge/version-2.0.0-B845FF?style=for-the-badge)](https://github.com/zenithmetodo/zenith-crea-ofertas/releases/tag/v2.0.0) [![Brand](https://img.shields.io/badge/Zenith%E2%84%A2-00E5CF?style=for-the-badge)]() [![License](https://img.shields.io/badge/license-MIT-yellow?style=for-the-badge)](LICENSE)
+
+[![Opus 4.7](https://img.shields.io/badge/Opus%204.7-1M%20ctx-blueviolet)]() [![Sonnet](https://img.shields.io/badge/Sonnet%204.6-medium-blue)]() [![Haiku](https://img.shields.io/badge/Haiku%204.5-fast-cyan)]() [![Tokens](https://img.shields.io/badge/tokens-optimized%2060--70%25-green)]() [![Spanish](https://img.shields.io/badge/lang-es--ES-red)]() [![Topics](https://img.shields.io/badge/topics-20-purple)]()
+
+**`/zenith-crea-ofertas:zenith-quick-discovery` · 41 agentes · 17 commands · 18 HTMLs print-to-PDF · 20 knowledge files**
+
+</div>
+
+
 Sistema completo de agentes Claude Code para construir **OFERTAS TOP 1%** de alto valor percibido en español de España. **Creado por Josep · Método Zenith™** a partir de los frameworks canónicos del Direct Response (Schwartz · Masterson · Bencivenga · Evaldo · Todd Brown · Hormozi · Brunson · Halbert · Sugarman · Cialdini) + transcripciones operativas del autor.
 
 Un orquestador padre coordina **41 sub-agentes especializados** (Opus/Sonnet/Haiku optimizado) + **20 knowledge files** + **18 templates HTML** print-to-PDF + Drive-friendly. Cada agente domina una pieza del puzzle: desde el avatar deep (psicólogo + Reddit + YouTube) hasta la auditoría de 200+ ítems de la oferta final.

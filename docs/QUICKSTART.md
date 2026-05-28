@@ -11,7 +11,7 @@ Crea tu primera oferta TOP 1% en menos de 90 minutos.
 En Claude Code, abre cualquier directorio y escribe:
 
 ```
-/crea-oferta-1pct
+/zenith-crea-oferta
 ```
 
 Si el plugin está activo, verás que el orquestador padre arranca.
@@ -19,7 +19,7 @@ Si el plugin está activo, verás que el orquestador padre arranca.
 ### 2. Lanza el pipeline completo
 
 ```
-/crea-oferta-1pct
+/zenith-crea-oferta
 ```
 
 El agente padre `zenith-crea-ofertas` te pedirá:
@@ -178,7 +178,7 @@ Y un JSON estructurado en `brief.json` que los demás agentes consumen.
 ❌ /mecanismo  ← sin haber hecho discovery
 ```
 
-**Solución:** lanza primero `/crea-oferta-1pct` o pasa al agente el contexto manualmente.
+**Solución:** lanza primero `/zenith-crea-oferta` o pasa al agente el contexto manualmente.
 
 ### Error 2 · Saltarse el One Belief
 
@@ -222,4 +222,4 @@ Y un JSON estructurado en `brief.json` que los demás agentes consumen.
 
 *"En 90 minutos tienes una oferta del 1%. En 9 minutos solo tienes ruido."*
 
-🚀 **Empieza ahora:** `/crea-oferta-1pct`
+🚀 **Empieza ahora:** `/zenith-crea-oferta`

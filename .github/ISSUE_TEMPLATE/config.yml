@@ -1,0 +1,11 @@
+blank_issues_enabled: false
+contact_links:
+  - name: 💬 Discusión general
+    url: https://github.com/zenithmetodo/zenith-crea-ofertas/discussions
+    about: Preguntas · ideas · discusión sobre el plugin
+  - name: 📧 Email
+    url: mailto:impactodigitalformacionbrasil@gmail.com
+    about: Contacto directo (sólo casos privados)
+  - name: 📚 Documentación
+    url: https://github.com/zenithmetodo/zenith-crea-ofertas#readme
+    about: README · INSTALL · CONTRIBUTING · SKILL.md

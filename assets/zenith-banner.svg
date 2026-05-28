@@ -1,0 +1,109 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 400" role="img" aria-label="Zenith Crea Ofertas banner">
+  <defs>
+    <linearGradient id="bg-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#050510"/>
+      <stop offset="100%" stop-color="#0B0B17"/>
+    </linearGradient>
+    <linearGradient id="zenith-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00E5CF"/>
+      <stop offset="100%" stop-color="#B845FF"/>
+    </linearGradient>
+    <linearGradient id="zenith-grad-h" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00E5CF"/>
+      <stop offset="100%" stop-color="#B845FF"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#00E5CF" stop-opacity="0.18"/>
+      <stop offset="100%" stop-color="#00E5CF" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <!-- Fondo -->
+  <rect width="1280" height="400" fill="url(#bg-grad)"/>
+
+  <!-- Glow detrás del logo -->
+  <circle cx="220" cy="200" r="220" fill="url(#glow)"/>
+
+  <!-- Líneas decorativas finas (cuadrícula sutil) -->
+  <g opacity="0.06" stroke="#00E5CF" stroke-width="1">
+    <line x1="0" y1="100" x2="1280" y2="100"/>
+    <line x1="0" y1="200" x2="1280" y2="200"/>
+    <line x1="0" y1="300" x2="1280" y2="300"/>
+  </g>
+
+  <!-- Mountain logo izquierda -->
+  <g transform="translate(120,100)">
+    <path d="M100 20 L25 175 L175 175 Z"
+          fill="url(#zenith-grad)"
+          stroke="#00E5CF"
+          stroke-width="3"
+          stroke-linejoin="round"/>
+    <path d="M100 20 L65 100 L80 100 L55 175 L25 175 Z"
+          fill="#ffffff"
+          opacity="0.15"/>
+    <path d="M100 20 L55 90 L75 90 L100 20 Z"
+          fill="#ffffff"
+          opacity="0.3"/>
+    <circle cx="100" cy="22" r="3" fill="#ffffff" opacity="0.9"/>
+  </g>
+
+  <!-- Texto centro -->
+  <text x="380" y="160"
+        font-family="Georgia, 'Times New Roman', serif"
+        font-size="64"
+        font-weight="700"
+        fill="#ffffff">Zenith</text>
+
+  <text x="600" y="160"
+        font-family="Georgia, 'Times New Roman', serif"
+        font-size="64"
+        font-weight="700"
+        fill="url(#zenith-grad-h)">Crea Ofertas™</text>
+
+  <text x="380" y="210"
+        font-family="Georgia, 'Times New Roman', serif"
+        font-style="italic"
+        font-size="28"
+        fill="#c5c5d4">"De la cima se ve mejor el avatar."</text>
+
+  <!-- Stats bar -->
+  <text x="380" y="270"
+        font-family="ui-monospace, 'SF Mono', monospace"
+        font-size="14"
+        fill="#00E5CF"
+        letter-spacing="2px">v2.0.0 · 41 AGENTS · 17 COMMANDS · 18 HTML TEMPLATES · 20 KNOWLEDGE</text>
+
+  <!-- Separador fino -->
+  <line x1="380" y1="295" x2="900" y2="295" stroke="url(#zenith-grad-h)" stroke-width="1" opacity="0.5"/>
+
+  <!-- Tagline secundaria -->
+  <text x="380" y="325"
+        font-family="ui-monospace, 'SF Mono', monospace"
+        font-size="12"
+        fill="#777788"
+        letter-spacing="1.5px">A CLAUDE CODE PLUGIN · BUILT WITH MÉTODO ZENITH™</text>
+
+  <!-- Partículas decorativas (estrellas/puntos) -->
+  <g>
+    <circle cx="950"  cy="120" r="4" fill="#00E5CF" opacity="0.6"/>
+    <circle cx="1050" cy="180" r="3" fill="#B845FF" opacity="0.5"/>
+    <circle cx="1150" cy="240" r="5" fill="#00E5CF" opacity="0.4"/>
+    <circle cx="1100" cy="300" r="3" fill="#B845FF" opacity="0.6"/>
+    <circle cx="980"  cy="290" r="2" fill="#00E5CF" opacity="0.7"/>
+    <circle cx="1200" cy="100" r="2" fill="#B845FF" opacity="0.7"/>
+    <circle cx="1180" cy="170" r="2" fill="#00E5CF" opacity="0.5"/>
+    <circle cx="920"  cy="220" r="2" fill="#B845FF" opacity="0.45"/>
+    <circle cx="1010" cy="330" r="2" fill="#00E5CF" opacity="0.6"/>
+  </g>
+
+  <!-- Pequeño badge esquina superior derecha -->
+  <g transform="translate(1140,30)">
+    <rect x="0" y="0" width="100" height="26" rx="13" fill="none" stroke="url(#zenith-grad-h)" stroke-width="1"/>
+    <text x="50" y="17"
+          font-family="ui-monospace, 'SF Mono', monospace"
+          font-size="11"
+          fill="#00E5CF"
+          text-anchor="middle"
+          letter-spacing="2px">v2.0.0</text>
+  </g>
+</svg>

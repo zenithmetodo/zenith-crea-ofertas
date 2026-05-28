@@ -1,0 +1,122 @@
+name: "🤖 Propuesta de nuevo agente"
+description: Propón un agente nuevo para el pipeline
+title: "[AGENT] "
+labels: ["new-agent", "needs-triage"]
+assignees: []
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## Propón un nuevo agente para **Zenith Crea Ofertas™**
+
+        ⚠️ **Regla innegociable #1** · cada agente cubre UNA función única.
+
+        Antes de proponer · revisa la lista de los **41 agentes existentes** en `/agents/`.
+        Si lo que propones se solapa con uno existente · entonces es un PR de mejora · no un agente nuevo.
+
+  - type: input
+    id: agent-name
+    attributes:
+      label: "🏷️ Nombre del agente propuesto"
+      description: "Formato kebab-case. Empieza con número de etapa si aplica."
+      placeholder: "ej. 42-loops-mentales-architect"
+    validations:
+      required: true
+
+  - type: textarea
+    id: unique-function
+    attributes:
+      label: "🎯 Función ÚNICA que cubre"
+      description: "Describe la función en una frase. Demuestra que NO existe agente que la cubra ya."
+      placeholder: "Inserta loops abiertos en cualquier copy + lo audita para garantizar que cierran en menos de 60s de lectura."
+    validations:
+      required: true
+
+  - type: textarea
+    id: no-overlap
+    attributes:
+      label: "🔍 Demostración de NO solapamiento"
+      description: "Lista los agentes existentes más cercanos y explica POR QUÉ no cubren esto."
+      placeholder: |
+        - `09-super-estructura.md` arma la estructura macro · pero no decide dónde van los loops.
+        - `28-fascinations-architect.md` crea fascinations puntuales · no loops cross-sección.
+        - `25-output-architect.md` solo ensambla output final · no edita copy.
+    validations:
+      required: true
+
+  - type: textarea
+    id: frameworks
+    attributes:
+      label: "📚 Frameworks que aplicaría"
+      description: "Lista los frameworks/autores en los que se basa. Si vas a añadir un knowledge file · indícalo."
+      placeholder: |
+        - Halbert (curiosity gaps)
+        - Brunson (cliffhangers)
+        - Eugene Schwartz (open loops by stage)
+        - NEW knowledge file: `knowledge/halbert-loops-mentales.md`
+    validations:
+      required: true
+
+  - type: textarea
+    id: output
+    attributes:
+      label: "📤 Output esperado"
+      description: "¿Qué genera? JSON · HTML · ambos? Pega un ejemplo simplificado."
+      render: json
+    validations:
+      required: true
+
+  - type: textarea
+    id: pipeline-fit
+    attributes:
+      label: "🔌 Cómo encaja en el pipeline"
+      description: "¿En qué etapa entra? ¿Antes/después de qué agente? ¿Qué inputs necesita y qué outputs entrega al siguiente?"
+      placeholder: |
+        - Entra DESPUÉS de `25-output-architect`
+        - ANTES de `26-auditor-completo`
+        - Input: `10-oferta-completa.html` · `09-super-estructura.json`
+        - Output: `10b-oferta-con-loops.html` · `loops-report.json`
+    validations:
+      required: true
+
+  - type: dropdown
+    id: model
+    attributes:
+      label: "🧠 Modelo recomendado"
+      description: "¿Qué modelo de Claude debería usar?"
+      options:
+        - "opus (razonamiento profundo · creación)"
+        - "sonnet (balance)"
+        - "haiku (extracción rápida · low-cost)"
+    validations:
+      required: true
+
+  - type: textarea
+    id: rules
+    attributes:
+      label: "🔒 Reglas innegociables del agente"
+      description: "Las 3-5 reglas que el agente NO puede romper jamás."
+      placeholder: |
+        1. Nunca dejar un loop sin cierre.
+        2. Mínimo 3 · máximo 7 loops por carta.
+        3. Loop principal siempre cierra en el stack slide.
+    validations:
+      required: true
+
+  - type: textarea
+    id: anti-patterns
+    attributes:
+      label: "❌ Anti-patrones"
+      description: "¿Qué NO debería hacer nunca este agente?"
+      placeholder: |
+        - Cliffhangers baratos tipo "y lo que pasó después te sorprenderá"
+        - Loops irrelevantes para el avatar
+    validations:
+      required: false
+
+  - type: markdown
+    attributes:
+      value: |
+        ---
+        *Hecho con Método Zenith™ · De la cima se ve mejor el avatar.*

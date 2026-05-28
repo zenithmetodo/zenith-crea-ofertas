@@ -101,7 +101,7 @@ Si TODOS muestran versiones, **está listo**.
 Abre **Claude Code** y escribe:
 
 ```
-/crea-oferta-1pct
+/zenith-crea-oferta
 ```
 
 El agente padre `zenith-crea-ofertas` arrancará el discovery (5 preguntas) y en ~60-90 min tendrás la oferta completa.
@@ -253,4 +253,4 @@ Y los cambios se reflejan inmediatamente sin reinstalar nada.
 
 ---
 
-*¿Funcionó? Pásate por el discovery: `/crea-oferta-1pct` 🚀*
+*¿Funcionó? Pásate por el discovery: `/zenith-crea-oferta` 🚀*

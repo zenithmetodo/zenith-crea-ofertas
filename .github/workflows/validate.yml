@@ -1,0 +1,161 @@
+name: 🏔️ Validate Zenith Crea Ofertas
+
+# Disparadores · cada push y cada PR a main / develop
+on:
+  push:
+    branches: [main, develop]
+  pull_request:
+    branches: [main, develop]
+  workflow_dispatch:
+
+# Cancela runs anteriores del mismo branch para ahorrar minutos
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  # ─────────────────────────────────────────────────────────────
+  # JOB 1 · Validar JSON (plugin.json + .claude-plugin/plugin.json)
+  # ─────────────────────────────────────────────────────────────
+  validate-json:
+    name: 📦 Validate JSON files
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Validate plugin_detailed.json
+        run: |
+          if [ -f plugin_detailed.json ]; then
+            python -c "import json,sys; json.load(open('plugin_detailed.json')); print('plugin_detailed.json OK')"
+          else
+            echo "::warning::plugin_detailed.json no encontrado · saltando."
+          fi
+
+      - name: Validate .claude-plugin/plugin.json
+        run: |
+          if [ -f .claude-plugin/plugin.json ]; then
+            python -c "import json,sys; json.load(open('.claude-plugin/plugin.json')); print('.claude-plugin/plugin.json OK')"
+          else
+            echo "::warning::.claude-plugin/plugin.json no encontrado · saltando."
+          fi
+
+      - name: Validate every .json in repo
+        run: |
+          find . -name "*.json" -not -path "./node_modules/*" -not -path "./.git/*" | while read f; do
+            python -c "import json,sys; json.load(open('$f'))" && echo "$f OK" || (echo "::error::$f INVALID JSON" && exit 1)
+          done
+
+  # ─────────────────────────────────────────────────────────────
+  # JOB 2 · Validar Markdown (lint)
+  # ─────────────────────────────────────────────────────────────
+  validate-markdown:
+    name: 📝 Validate Markdown
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Install markdownlint-cli
+        run: npm install -g markdownlint-cli
+
+      - name: Run markdownlint
+        run: |
+          markdownlint '**/*.md' \
+            --ignore node_modules \
+            --ignore .git \
+            --disable MD013 MD033 MD041 MD024 MD036 MD026 MD040 || true
+          echo "::notice::Markdown lint completado (warnings tolerados)."
+
+  # ─────────────────────────────────────────────────────────────
+  # JOB 3 · Validar HTMLs (syntax check)
+  # ─────────────────────────────────────────────────────────────
+  validate-html:
+    name: 🎨 Validate HTML templates
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Install html-tidy
+        run: sudo apt-get install -y tidy
+
+      - name: Validate every .html in templates/
+        run: |
+          fail=0
+          for f in templates/*.html; do
+            [ -e "$f" ] || continue
+            echo "→ Checking $f"
+            tidy -q -e --drop-empty-elements no --show-warnings no "$f" || fail=1
+          done
+          if [ $fail -eq 1 ]; then
+            echo "::error::Algún HTML tiene errores · revisa el log."
+            exit 1
+          fi
+
+  # ─────────────────────────────────────────────────────────────
+  # JOB 4 · Contar agentes / commands / templates / knowledge
+  # ─────────────────────────────────────────────────────────────
+  count-assets:
+    name: 🔢 Count agents/commands/templates/knowledge
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Count files
+        id: counts
+        run: |
+          AGENTS=$(find agents -type f -name "*.md" 2>/dev/null | wc -l | tr -d ' ')
+          COMMANDS=$(find commands -type f -name "*.md" 2>/dev/null | wc -l | tr -d ' ')
+          TEMPLATES=$(find templates -type f -name "*.html" 2>/dev/null | wc -l | tr -d ' ')
+          KNOWLEDGE=$(find knowledge -type f -name "*.md" 2>/dev/null | wc -l | tr -d ' ')
+
+          echo "agents=$AGENTS"     >> $GITHUB_OUTPUT
+          echo "commands=$COMMANDS" >> $GITHUB_OUTPUT
+          echo "templates=$TEMPLATES" >> $GITHUB_OUTPUT
+          echo "knowledge=$KNOWLEDGE" >> $GITHUB_OUTPUT
+
+          echo "─────────────────────────────────────"
+          echo "📊 Inventario actual del plugin"
+          echo "─────────────────────────────────────"
+          echo "Agents:    $AGENTS"
+          echo "Commands:  $COMMANDS"
+          echo "Templates: $TEMPLATES"
+          echo "Knowledge: $KNOWLEDGE"
+          echo "─────────────────────────────────────"
+
+      - name: Verify README mentions correct numbers
+        run: |
+          AGENTS="${{ steps.counts.outputs.agents }}"
+          COMMANDS="${{ steps.counts.outputs.commands }}"
+          TEMPLATES="${{ steps.counts.outputs.templates }}"
+          KNOWLEDGE="${{ steps.counts.outputs.knowledge }}"
+
+          if [ ! -f README.md ]; then
+            echo "::warning::README.md no encontrado · saltando verificación."
+            exit 0
+          fi
+
+          # Comprueba que el README menciona los números reales
+          missing=0
+          grep -q "$AGENTS" README.md   || (echo "::warning::README no menciona $AGENTS agents"   && missing=1)
+          grep -q "$COMMANDS" README.md || (echo "::warning::README no menciona $COMMANDS commands" && missing=1)
+          grep -q "$TEMPLATES" README.md || (echo "::warning::README no menciona $TEMPLATES templates" && missing=1)
+          grep -q "$KNOWLEDGE" README.md || (echo "::warning::README no menciona $KNOWLEDGE knowledge files" && missing=1)
+
+          if [ $missing -eq 1 ]; then
+            echo "::warning::Considera actualizar el README con los contadores reales."
+          else
+            echo "✅ README coherente con el inventario."
+          fi

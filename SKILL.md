@@ -197,8 +197,9 @@ Ver [`commands/`](commands/) para invocación rápida sin discovery completo.
 
 | Command | Lanza |
 |---------|-------|
-| `/crea-oferta-1pct` | El orquestador completo (discovery + 13 pasos) |
-| `/one-belief` | one-belief-creator (4 variantes) |
+| `/zenith-crea-oferta` | **Entry point v2.0 recomendado** · Quick Discovery + confirmación + pipeline 17 etapas |
+| `/crea-oferta-1pct` | Entry point v1.0 legacy · Discovery completo (5+5 preguntas) + 13 pasos |
+| `/one-belief` | one-belief-creator (4 variantes Evaldo + Joseph Moreno) |
 | `/mecanismo` | mecanismo-problema + solucion + nombre-chicle |
 | `/promesa` | promesa-ganadora |
 | `/garantia` | garantia-impresionante |

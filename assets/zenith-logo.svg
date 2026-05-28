@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 220" role="img" aria-label="Zenith logo">
+  <defs>
+    <linearGradient id="zenith-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00E5CF"/>
+      <stop offset="100%" stop-color="#B845FF"/>
+    </linearGradient>
+    <linearGradient id="zenith-grad-text" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00E5CF"/>
+      <stop offset="100%" stop-color="#B845FF"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Montaña principal -->
+  <path d="M100 20 L25 175 L175 175 Z"
+        fill="url(#zenith-grad)"
+        stroke="#00E5CF"
+        stroke-width="3"
+        stroke-linejoin="round"/>
+
+  <!-- Sombra lateral (relieve) -->
+  <path d="M100 20 L65 100 L80 100 L55 175 L25 175 Z"
+        fill="#ffffff"
+        opacity="0.15"/>
+
+  <!-- Cima nevada (highlight) -->
+  <path d="M100 20 L55 90 L75 90 L100 20 Z"
+        fill="#ffffff"
+        opacity="0.3"/>
+
+  <!-- Pequeño sol/punto al pico -->
+  <circle cx="100" cy="22" r="3" fill="#ffffff" opacity="0.9"/>
+
+  <!-- Tagline -->
+  <text x="100" y="200"
+        font-family="Georgia, 'Times New Roman', serif"
+        font-size="14"
+        font-style="italic"
+        fill="url(#zenith-grad-text)"
+        text-anchor="middle"
+        font-weight="600">Zenith™</text>
+</svg>

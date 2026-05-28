@@ -1,0 +1,301 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 800" role="img" aria-label="Zenith Crea Ofertas pipeline diagram">
+  <defs>
+    <linearGradient id="bg-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#050510"/>
+      <stop offset="100%" stop-color="#0B0B17"/>
+    </linearGradient>
+    <linearGradient id="opus-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00E5CF"/>
+      <stop offset="100%" stop-color="#00B5A0"/>
+    </linearGradient>
+    <linearGradient id="sonnet-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#B845FF"/>
+      <stop offset="100%" stop-color="#8B2DCC"/>
+    </linearGradient>
+    <linearGradient id="haiku-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#9EE7FF"/>
+      <stop offset="100%" stop-color="#6FBED9"/>
+    </linearGradient>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5"
+            markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#00E5CF" opacity="0.7"/>
+    </marker>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="2" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Fondo -->
+  <rect width="1280" height="800" fill="url(#bg-grad)"/>
+
+  <!-- Cuadrícula sutil -->
+  <g opacity="0.04" stroke="#00E5CF" stroke-width="1">
+    <line x1="0" y1="200" x2="1280" y2="200"/>
+    <line x1="0" y1="400" x2="1280" y2="400"/>
+    <line x1="0" y1="600" x2="1280" y2="600"/>
+  </g>
+
+  <!-- Título -->
+  <text x="640" y="50"
+        font-family="Georgia, serif"
+        font-size="32"
+        font-weight="700"
+        fill="#ffffff"
+        text-anchor="middle">Pipeline · 17 Etapas</text>
+  <text x="640" y="78"
+        font-family="Georgia, serif"
+        font-style="italic"
+        font-size="16"
+        fill="#c5c5d4"
+        text-anchor="middle">Del brief crudo a la oferta del 1% · 41 agentes orquestados</text>
+
+  <!-- Leyenda -->
+  <g transform="translate(40,110)">
+    <rect x="0" y="0" width="14" height="14" rx="3" fill="url(#opus-grad)"/>
+    <text x="22" y="12" font-family="ui-monospace, monospace" font-size="12" fill="#c5c5d4">opus</text>
+
+    <rect x="80" y="0" width="14" height="14" rx="3" fill="url(#sonnet-grad)"/>
+    <text x="102" y="12" font-family="ui-monospace, monospace" font-size="12" fill="#c5c5d4">sonnet</text>
+
+    <rect x="170" y="0" width="14" height="14" rx="3" fill="url(#haiku-grad)"/>
+    <text x="192" y="12" font-family="ui-monospace, monospace" font-size="12" fill="#c5c5d4">haiku</text>
+  </g>
+
+  <!-- Fila 1 · etapas 1-6 -->
+  <!-- Stage 1 · Discovery -->
+  <g transform="translate(40,160)">
+    <rect width="170" height="80" rx="12" fill="url(#opus-grad)" opacity="0.95" filter="url(#glow)"/>
+    <text x="14" y="22" font-family="ui-monospace, monospace" font-size="11" fill="#050510" font-weight="700">01</text>
+    <text x="14" y="44" font-family="Georgia, serif" font-size="15" fill="#050510" font-weight="700">Discovery</text>
+    <text x="14" y="62" font-family="ui-monospace, monospace" font-size="10" fill="#050510" opacity="0.8">brief.json</text>
+  </g>
+
+  <!-- Stage 2 · Punto A→B -->
+  <g transform="translate(240,160)">
+    <rect width="170" height="80" rx="12" fill="url(#opus-grad)" opacity="0.95" filter="url(#glow)"/>
+    <text x="14" y="22" font-family="ui-monospace, monospace" font-size="11" fill="#050510" font-weight="700">02</text>
+    <text x="14" y="44" font-family="Georgia, serif" font-size="15" fill="#050510" font-weight="700">Punto A → B</text>
+    <text x="14" y="62" font-family="ui-monospace, monospace" font-size="10" fill="#050510" opacity="0.8">transformación</text>
+  </g>
+
+  <!-- Stage 3 · One Belief -->
+  <g transform="translate(440,160)">
+    <rect width="170" height="80" rx="12" fill="url(#opus-grad)" opacity="0.95" filter="url(#glow)"/>
+    <text x="14" y="22" font-family="ui-monospace, monospace" font-size="11" fill="#050510" font-weight="700">03</text>
+    <text x="14" y="44" font-family="Georgia, serif" font-size="15" fill="#050510" font-weight="700">One Belief</text>
+    <text x="14" y="62" font-family="ui-monospace, monospace" font-size="10" fill="#050510" opacity="0.8">4 variantes</text>
+  </g>
+
+  <!-- Stage 4 · Identidad -->
+  <g transform="translate(640,160)">
+    <rect width="170" height="80" rx="12" fill="url(#sonnet-grad)" opacity="0.95" filter="url(#glow)"/>
+    <text x="14" y="22" font-family="ui-monospace, monospace" font-size="11" fill="#ffffff" font-weight="700">04</text>
+    <text x="14" y="44" font-family="Georgia, serif" font-size="15" fill="#ffffff" font-weight="700">Identidad</text>
+    <text x="14" y="62" font-family="ui-monospace, monospace" font-size="10" fill="#ffffff" opacity="0.85">vs Anti-id.</text>
+  </g>
+
+  <!-- Stage 5 · Nueva Oportunidad -->
+  <g transform="translate(840,160)">
+    <rect width="170" height="80" rx="12" fill="url(#opus-grad)" opacity="0.95" filter="url(#glow)"/>
+    <text x="14" y="22" font-family="ui-monospace, monospace" font-size="11" fill="#050510" font-weight="700">05</text>
+    <text x="14" y="44" font-family="Georgia, serif" font-size="15" fill="#050510" font-weight="700">Nueva Oportunidad</text>
+    <text x="14" y="62" font-family="ui-monospace, monospace" font-size="10" fill="#050510" opacity="0.8">framing único</text>
+  </g>
+
+  <!-- Stage 6 · Mecanismo -->
+  <g transform="translate(1040,160)">
+    <rect width="200" height="80" rx="12" fill="url(#opus-grad)" opacity="0.95" filter="url(#glow)"/>
+    <text x="14" y="22" font-family="ui-monospace, monospace" font-size="11" fill="#050510" font-weight="700">06 · 07</text>
+    <text x="14" y="44" font-family="Georgia, serif" font-size="15" fill="#050510" font-weight="700">Mecanismo</text>
+    <text x="14" y="62" font-family="ui-monospace, monospace" font-size="10" fill="#050510" opacity="0.8">problema + solución</text>
+  </g>
+
+  <!-- Flechas fila 1 -->
+  <g fill="none" stroke="#00E5CF" stroke-width="2" opacity="0.7" marker-end="url(#arrow)">
+    <line x1="210" y1="200" x2="240" y2="200"/>
+    <line x1="410" y1="200" x2="440" y2="200"/>
+    <line x1="610" y1="200" x2="640" y2="200"/>
+    <line x1="810" y1="200" x2="840" y2="200"/>
+    <line x1="1010" y1="200" x2="1040" y2="200"/>
+  </g>
+
+  <!-- Conector vertical fila 1 → fila 2 -->
+  <g fill="none" stroke="#00E5CF" stroke-width="2" opacity="0.5" stroke-dasharray="4 4">
+    <path d="M1140,240 Q1140,290 1100,290 L240,290 Q200,290 200,330"/>
+  </g>
+
+  <!-- Fila 2 · etapas 7-12 -->
+  <!-- Stage 7 · Nombre Chicle -->
+  <g transform="translate(40,330)">
+    <rect width="170" height="80" rx="12" fill="url(#sonnet-grad)" opacity="0.95" filter="url(#glow)"/>
+    <text x="14" y="22" font-family="ui-monospace, monospace" font-size="11" fill="#ffffff" font-weight="700">08</text>
+    <text x="14" y="44" font-family="Georgia, serif" font-size="15" fill="#ffffff" font-weight="700">Nombre Chicle</text>
+    <text x="14" y="62" font-family="ui-monospace, monospace" font-size="10" fill="#ffffff" opacity="0.85">naming TOP</text>
+  </g>
+
+  <!-- Stage 8 · Super Estructura -->
+  <g transform="translate(240,330)">
+    <rect width="170" height="80" rx="12" fill="url(#opus-grad)" opacity="0.95" filter="url(#glow)"/>
+    <text x="14" y="22" font-family="ui-monospace, monospace" font-size="11" fill="#050510" font-weight="700">09</text>
+    <text x="14" y="44" font-family="Georgia, serif" font-size="15" fill="#050510" font-weight="700">Super Estructura</text>
+    <text x="14" y="62" font-family="ui-monospace, monospace" font-size="10" fill="#050510" opacity="0.8">macro guion</text>
+  </g>
+
+  <!-- Stage 9 · CBD -->
+  <g transform="translate(440,330)">
+    <rect width="170" height="80" rx="12" fill="url(#haiku-grad)" opacity="0.95" filter="url(#glow)"/>
+    <text x="14" y="22" font-family="ui-monospace, monospace" font-size="11" fill="#050510" font-weight="700">10·11·12·13</text>
+    <text x="14" y="44" font-family="Georgia, serif" font-size="15" fill="#050510" font-weight="700">C·B·D + Intangibles</text>
+    <text x="14" y="62" font-family="ui-monospace, monospace" font-size="10" fill="#050510" opacity="0.8">extracción</text>
+  </g>
+
+  <!-- Stage 10 · Promesa -->
+  <g transform="translate(640,330)">
+    <rect width="170" height="80" rx="12" fill="url(#opus-grad)" opacity="0.95" filter="url(#glow)"/>
+    <text x="14" y="22" font-family="ui-monospace, monospace" font-size="11" fill="#050510" font-weight="700">14</text>
+    <text x="14" y="44" font-family="Georgia, serif" font-size="15" fill="#050510" font-weight="700">Promesa Ganadora</text>
+    <text x="14" y="62" font-family="ui-monospace, monospace" font-size="10" fill="#050510" opacity="0.8">headline core</text>
+  </g>
+
+  <!-- Stage 11 · Garantía -->
+  <g transform="translate(840,330)">
+    <rect width="170" height="80" rx="12" fill="url(#sonnet-grad)" opacity="0.95" filter="url(#glow)"/>
+    <text x="14" y="22" font-family="ui-monospace, monospace" font-size="11" fill="#ffffff" font-weight="700">15</text>
+    <text x="14" y="44" font-family="Georgia, serif" font-size="15" fill="#ffffff" font-weight="700">Garantía</text>
+    <text x="14" y="62" font-family="ui-monospace, monospace" font-size="10" fill="#ffffff" opacity="0.85">risk reversal</text>
+  </g>
+
+  <!-- Stage 12 · Objeciones -->
+  <g transform="translate(1040,330)">
+    <rect width="200" height="80" rx="12" fill="url(#sonnet-grad)" opacity="0.95" filter="url(#glow)"/>
+    <text x="14" y="22" font-family="ui-monospace, monospace" font-size="11" fill="#ffffff" font-weight="700">16</text>
+    <text x="14" y="44" font-family="Georgia, serif" font-size="15" fill="#ffffff" font-weight="700">Objeciones Rotas</text>
+    <text x="14" y="62" font-family="ui-monospace, monospace" font-size="10" fill="#ffffff" opacity="0.85">anti-fricción</text>
+  </g>
+
+  <!-- Flechas fila 2 -->
+  <g fill="none" stroke="#00E5CF" stroke-width="2" opacity="0.7" marker-end="url(#arrow)">
+    <line x1="210" y1="370" x2="240" y2="370"/>
+    <line x1="410" y1="370" x2="440" y2="370"/>
+    <line x1="610" y1="370" x2="640" y2="370"/>
+    <line x1="810" y1="370" x2="840" y2="370"/>
+    <line x1="1010" y1="370" x2="1040" y2="370"/>
+  </g>
+
+  <!-- Conector vertical fila 2 → fila 3 -->
+  <g fill="none" stroke="#00E5CF" stroke-width="2" opacity="0.5" stroke-dasharray="4 4">
+    <path d="M1140,410 Q1140,460 1100,460 L240,460 Q200,460 200,500"/>
+  </g>
+
+  <!-- Fila 3 · etapas 13-18 -->
+  <!-- Stage 13 · Módulos -->
+  <g transform="translate(40,500)">
+    <rect width="170" height="80" rx="12" fill="url(#sonnet-grad)" opacity="0.95" filter="url(#glow)"/>
+    <text x="14" y="22" font-family="ui-monospace, monospace" font-size="11" fill="#ffffff" font-weight="700">17·18</text>
+    <text x="14" y="44" font-family="Georgia, serif" font-size="15" fill="#ffffff" font-weight="700">Módulos · Clases</text>
+    <text x="14" y="62" font-family="ui-monospace, monospace" font-size="10" fill="#ffffff" opacity="0.85">naming</text>
+  </g>
+
+  <!-- Stage 14 · Bonus -->
+  <g transform="translate(240,500)">
+    <rect width="170" height="80" rx="12" fill="url(#opus-grad)" opacity="0.95" filter="url(#glow)"/>
+    <text x="14" y="22" font-family="ui-monospace, monospace" font-size="11" fill="#050510" font-weight="700">19·20</text>
+    <text x="14" y="44" font-family="Georgia, serif" font-size="15" fill="#050510" font-weight="700">Bonus Stack</text>
+    <text x="14" y="62" font-family="ui-monospace, monospace" font-size="10" fill="#050510" opacity="0.8">irresistible</text>
+  </g>
+
+  <!-- Stage 15 · Valor Percibido -->
+  <g transform="translate(440,500)">
+    <rect width="170" height="80" rx="12" fill="url(#opus-grad)" opacity="0.95" filter="url(#glow)"/>
+    <text x="14" y="22" font-family="ui-monospace, monospace" font-size="11" fill="#050510" font-weight="700">21·30</text>
+    <text x="14" y="44" font-family="Georgia, serif" font-size="15" fill="#050510" font-weight="700">Valor Percibido</text>
+    <text x="14" y="62" font-family="ui-monospace, monospace" font-size="10" fill="#050510" opacity="0.8">Bencivenga · anclaje</text>
+  </g>
+
+  <!-- Stage 16 · Schwartz audit -->
+  <g transform="translate(640,500)">
+    <rect width="170" height="80" rx="12" fill="url(#sonnet-grad)" opacity="0.95" filter="url(#glow)"/>
+    <text x="14" y="22" font-family="ui-monospace, monospace" font-size="11" fill="#ffffff" font-weight="700">22·23</text>
+    <text x="14" y="44" font-family="Georgia, serif" font-size="15" fill="#ffffff" font-weight="700">Schwartz · Masterson</text>
+    <text x="14" y="62" font-family="ui-monospace, monospace" font-size="10" fill="#ffffff" opacity="0.85">consciousness audit</text>
+  </g>
+
+  <!-- Stage 17 · Output -->
+  <g transform="translate(840,500)">
+    <rect width="170" height="80" rx="12" fill="url(#opus-grad)" opacity="0.95" filter="url(#glow)"/>
+    <text x="14" y="22" font-family="ui-monospace, monospace" font-size="11" fill="#050510" font-weight="700">24·25</text>
+    <text x="14" y="44" font-family="Georgia, serif" font-size="15" fill="#050510" font-weight="700">Offer + Output</text>
+    <text x="14" y="62" font-family="ui-monospace, monospace" font-size="10" fill="#050510" opacity="0.8">HTML imprimible</text>
+  </g>
+
+  <!-- Stage 18 · Auditor -->
+  <g transform="translate(1040,500)">
+    <rect width="200" height="80" rx="12" fill="url(#opus-grad)" opacity="0.95" filter="url(#glow)"/>
+    <text x="14" y="22" font-family="ui-monospace, monospace" font-size="11" fill="#050510" font-weight="700">26</text>
+    <text x="14" y="44" font-family="Georgia, serif" font-size="15" fill="#050510" font-weight="700">Auditor Completo</text>
+    <text x="14" y="62" font-family="ui-monospace, monospace" font-size="10" fill="#050510" opacity="0.8">score · firma</text>
+  </g>
+
+  <!-- Flechas fila 3 -->
+  <g fill="none" stroke="#00E5CF" stroke-width="2" opacity="0.7" marker-end="url(#arrow)">
+    <line x1="210" y1="540" x2="240" y2="540"/>
+    <line x1="410" y1="540" x2="440" y2="540"/>
+    <line x1="610" y1="540" x2="640" y2="540"/>
+    <line x1="810" y1="540" x2="840" y2="540"/>
+    <line x1="1010" y1="540" x2="1040" y2="540"/>
+  </g>
+
+  <!-- Track de research lateral -->
+  <g transform="translate(40,640)">
+    <rect width="1200" height="100" rx="12" fill="none" stroke="url(#sonnet-grad)" stroke-width="2" stroke-dasharray="6 4" opacity="0.6"/>
+    <text x="20" y="28" font-family="Georgia, serif" font-size="14" font-style="italic" fill="#c5c5d4">Track paralelo · Research &amp; Avatar (agentes 34-41)</text>
+
+    <g transform="translate(20,42)">
+      <rect width="170" height="44" rx="8" fill="url(#sonnet-grad)" opacity="0.9"/>
+      <text x="10" y="18" font-family="ui-monospace, monospace" font-size="10" fill="#ffffff">34·35</text>
+      <text x="10" y="34" font-family="Georgia, serif" font-size="12" fill="#ffffff" font-weight="700">Quick + Deep Discovery</text>
+    </g>
+
+    <g transform="translate(210,42)">
+      <rect width="170" height="44" rx="8" fill="url(#haiku-grad)" opacity="0.95"/>
+      <text x="10" y="18" font-family="ui-monospace, monospace" font-size="10" fill="#050510">36·37</text>
+      <text x="10" y="34" font-family="Georgia, serif" font-size="12" fill="#050510" font-weight="700">Reddit + YouTube</text>
+    </g>
+
+    <g transform="translate(400,42)">
+      <rect width="170" height="44" rx="8" fill="url(#sonnet-grad)" opacity="0.9"/>
+      <text x="10" y="18" font-family="ui-monospace, monospace" font-size="10" fill="#ffffff">38</text>
+      <text x="10" y="34" font-family="Georgia, serif" font-size="12" fill="#ffffff" font-weight="700">Mapa Empatía</text>
+    </g>
+
+    <g transform="translate(590,42)">
+      <rect width="170" height="44" rx="8" fill="url(#opus-grad)" opacity="0.95"/>
+      <text x="10" y="18" font-family="ui-monospace, monospace" font-size="10" fill="#050510">39</text>
+      <text x="10" y="34" font-family="Georgia, serif" font-size="12" fill="#050510" font-weight="700">Ángulos Architect</text>
+    </g>
+
+    <g transform="translate(780,42)">
+      <rect width="170" height="44" rx="8" fill="url(#sonnet-grad)" opacity="0.9"/>
+      <text x="10" y="18" font-family="ui-monospace, monospace" font-size="10" fill="#ffffff">40</text>
+      <text x="10" y="34" font-family="Georgia, serif" font-size="12" fill="#ffffff" font-weight="700">Competidor Spy</text>
+    </g>
+
+    <g transform="translate(970,42)">
+      <rect width="210" height="44" rx="8" fill="url(#haiku-grad)" opacity="0.95"/>
+      <text x="10" y="18" font-family="ui-monospace, monospace" font-size="10" fill="#050510">41</text>
+      <text x="10" y="34" font-family="Georgia, serif" font-size="12" fill="#050510" font-weight="700">Deal Makers Extractor</text>
+    </g>
+  </g>
+
+  <!-- Footer -->
+  <text x="640" y="775"
+        font-family="ui-monospace, monospace"
+        font-size="11"
+        fill="#777788"
+        text-anchor="middle"
+        letter-spacing="2px">ZENITH CREA OFERTAS™ · PIPELINE v2.0.0 · DE LA CIMA SE VE MEJOR EL AVATAR</text>
+</svg>
