@@ -104,5 +104,5 @@ SKILL:
 ✅ 12 auditor (Opus) · Score 92/100 · LUZ VERDE Zenith
 
 📁 proyecto-yoga-silla-50/ (con HTMLs branding Zenith)
-💰 Coste sesión: 4,20 € (vs 9,80 € en /crea-oferta-1pct estándar · -57%)"
+💰 Coste sesión: incluido en tu plan Claude (Pro/Max) · Ref API: 4,20 € (vs 9,80 € estándar · -57%)"
 ```

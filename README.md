@@ -66,7 +66,7 @@ Lanza las 17 etapas en cascada · una sola orden y recibes todo el embudo.
 ```
 
 → Discovery (5 preguntas) → confirmación → **17 etapas automáticas** → carpeta `proyecto-{slug}/` con **22+ HTMLs** estéticos imprimibles a PDF.
-**⏱️ Tiempo:** 60-90 min · **💰 Coste:** ~$1.50-3.00 (100-180k tokens optimizado).
+**⏱️ Tiempo:** 60-90 min · **💰 Coste:** **Incluido en tu plan Claude (Pro $20 · Max $100 · Max $200)** · _Ref API pay-per-use: ~$1.50-3.00 por pipeline completo (100-180k tokens)_
 
 ---
 
@@ -149,6 +149,27 @@ Si ya tienes una oferta hecha y quieres saber qué falla:
 | Ya tienes producto + avatar definidos | Modo 2 (solo etapas que faltan) |
 | Solo necesitas afinar 1 pieza | Modo 3 (agente concreto) |
 | Tu oferta no convierte | Modo 4 (auditar) |
+
+---
+
+### 💰 Coste del plugin
+
+**Si pagas plan Claude flat (Pro · Max):**
+
+| Plan Claude | Coste | Uso del plugin |
+|---|---|---|
+| **Pro** | $20/mes | Incluido · suficiente para 5-10 ofertas/mes |
+| **Max** | $100/mes | Incluido · uso intenso · agencia |
+| **Max** | $200/mes | Incluido · uso extremo · multi-proyecto |
+
+✅ **Sin coste adicional por uso del plugin** · todo dentro de tu plan flat
+✅ **Sin sorpresas a fin de mes** · sabes exactamente lo que pagas
+✅ **Servicios externos opcionales:** Apify Free $5/mes (suficiente uso normal)
+
+### Si pagas API pay-per-use (referencia)
+- Pipeline completo (Modo 1): ~$1.50-3.00 por oferta
+- Modo 2-4 (parcial): ~$0.30-1.50 según etapas
+- Servicios externos opcionales: ver [EXTERNAL_SERVICES.md](EXTERNAL_SERVICES.md)
 
 ---
 
