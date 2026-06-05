@@ -47,8 +47,12 @@ En este orden (cascada estricta — saltarse uno = oferta floja):
 10. `valor-percibido` + `bencivenga-formula` (Beneficio + Credibilidad − Costo maximizado)
 11. `schwartz-consciousness` + `great-leads-masterson` (nivel + tipo de lead)
 12. `offer-master` (ensambla la oferta final)
-13. `output-architect` (HTML estéticos imprimibles en CADA carpeta)
-14. `auditor-completo` (200+ checklist, score, veredicto luz verde/ámbar/rojo)
+13. `angulos-architect` ⭐ **OBLIGATORIO** (5-10 ángulos · tipo concreto + creencia específica + reconocimiento)
+14. `anuncios-architect` ⭐ **OBLIGATORIO** (5 anuncios POR CADA ángulo · NO freestyle · 5 ejecuciones distintas por ángulo)
+15. `output-architect` (HTML estéticos imprimibles + editables en CADA carpeta)
+16. `auditor-completo` (200+ checklist, score, veredicto · audita coherencia ángulo↔anuncios)
+
+> ⚠️ Las etapas 13 (ángulos) y 14 (5 anuncios por ángulo) son INNEGOCIABLES. El pipeline completo SIEMPRE genera los ángulos y, por cada ángulo, sus 5 anuncios. Nunca anuncios freestyle.
 
 ## EJEMPLO DE USO
 

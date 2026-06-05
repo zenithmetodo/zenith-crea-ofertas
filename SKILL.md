@@ -45,8 +45,20 @@ El embudo se construye SIEMPRE en este orden estricto. Saltarse uno = oferta flo
 09 · VALOR PERCIBIDO    → valor-percibido (fórmula Bencivenga)
 10 · CONSCIENCIA        → schwartz-consciousness + great-leads-masterson
 11 · OFERTA COMPLETA    → offer-master (ensambla todo)
-12 · AUDITORÍA          → auditor-completo
+12 · ÁNGULOS ⭐         → angulos-architect (5-10 ángulos · tipo concreto + creencia + reconocimiento) · OBLIGATORIO
+13 · ANUNCIOS ⭐        → anuncios-architect (5 anuncios POR CADA ángulo · NO freestyle) · OBLIGATORIO
+14 · AUDITORÍA          → auditor-completo (audita coherencia ángulo↔anuncios)
 ```
+
+## ⚠️ REGLA INNEGOCIABLE · ÁNGULOS + 5 ANUNCIOS POR ÁNGULO
+
+El pipeline completo SIEMPRE termina la oferta con DOS etapas obligatorias que muchos olvidan:
+
+1. **ÁNGULOS (`angulos-architect`)** · 5-10 ángulos, cada uno con sus 3 ingredientes innegociables: **tipo concreto de persona + creencia específica + reconocimiento + solución**. "Si falta uno, es eslogan, no ángulo. Un buen ángulo divide."
+
+2. **ANUNCIOS (`anuncios-architect`)** · por CADA ángulo, **EXACTAMENTE 5 anuncios** (no freestyle). Los 5 comparten el tipo de persona y la creencia del ángulo; cambia solo la ejecución (UGC/Story · Problem-Solution · Big Secret/mecanismo · Contrarian · Prueba social). Si hay 6 ángulos → 30 anuncios; si hay 8 → 40.
+
+> Una oferta SIN ángulos definidos y SIN sus 5 anuncios por ángulo está INCOMPLETA. Si el cliente solo quiere las piezas de la oferta sin creativos, debe pedirlo explícitamente.
 
 ## CÓMO TRABAJAR (PROTOCOLO MAESTRO)
 
@@ -188,8 +200,10 @@ Ver [`agents/`](agents/) para los archivos completos. Mapa rápido:
 | 22 | **great-leads-masterson** | Elige el tipo de lead correcto (6 opciones) |
 | 23 | **bencivenga-formula** | Aplica las 7 leyes Bencivenga al copy final |
 | 24 | **offer-master** | Ensambla todas las piezas en oferta final |
-| 25 | **output-architect** | Genera HTML estéticos print-to-PDF |
-| 26 | **auditor-completo** | Audita 200+ ítems · score global · roadmap fixes |
+| 25 | **angulos-architect** ⭐ | 5-10 ángulos (tipo concreto + creencia + reconocimiento) · OBLIGATORIO |
+| 26 | **anuncios-architect** ⭐ | 5 anuncios POR CADA ángulo · NO freestyle · OBLIGATORIO |
+| 27 | **output-architect** | Genera HTML estéticos print-to-PDF + editables |
+| 28 | **auditor-completo** | Audita 200+ ítems · score global · roadmap fixes |
 
 ## SLASH COMMANDS
 
@@ -208,6 +222,8 @@ Ver [`commands/`](commands/) para invocación rápida sin discovery completo.
 | `/valor-percibido` | valor-percibido (Bencivenga) |
 | `/schwartz-level` | schwartz-consciousness (audita el nivel) |
 | `/great-leads` | great-leads-masterson (elige tipo) |
+| `/angulos` ⭐ | angulos-architect (5-10 ángulos · 3 ingredientes) |
+| `/anuncios` ⭐ | anuncios-architect (5 anuncios POR CADA ángulo · NO freestyle) |
 | `/audit-oferta` | auditor-completo |
 
 ## KNOWLEDGE BASE
