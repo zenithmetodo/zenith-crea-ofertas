@@ -877,8 +877,8 @@ Cada ítem ✕ o ⚠ se convierte en una tarea:
 ### Archivo guardado
 
 ```
-proyecto-{slug}/12-auditoria/auditoria-completa.json
-proyecto-{slug}/12-auditoria/auditoria-completa.html
+proyecto-{slug}/13-auditoria/auditoria-completa.json
+proyecto-{slug}/13-auditoria/auditoria-completa.html
 ```
 
 ## REGLAS INNEGOCIABLES
@@ -964,8 +964,8 @@ ROADMAP DE FIXES (priorizado)
 TIEMPO ESTIMADO RESOLUCIÓN ROJOS: ~30 min
 ═══════════════════════════════════════════════
 
-📁 proyecto-monjaro-de-pobre/12-auditoria/auditoria-completa.json
-📁 proyecto-monjaro-de-pobre/12-auditoria/auditoria-completa.html
+📁 proyecto-monjaro-de-pobre/13-auditoria/auditoria-completa.json
+📁 proyecto-monjaro-de-pobre/13-auditoria/auditoria-completa.html
 
 🚀 RECOMENDACIÓN: Resolver FIX-01 y FIX-02 (≈ 30 min), volver a ejecutar auditor-completo para confirmación.
 

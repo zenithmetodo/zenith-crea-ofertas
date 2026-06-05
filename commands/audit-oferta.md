@@ -54,7 +54,7 @@ Si no pasas argumento, audita el último proyecto que ejecutaste.
 
 - `auditor-completo` (único agente · más severo · 200+ ítems)
 
-Output: carpeta `12-auditoria/` con `score-global.html` (dashboard) + `bloques-detalle.html` (cada bloque pieza por pieza) + `fixes-priorizados.html` (lista accionable) + `roadmap-optimizacion.html` (qué hacer la próxima semana).
+Output: carpeta `13-auditoria/` con `score-global.html` (dashboard) + `bloques-detalle.html` (cada bloque pieza por pieza) + `fixes-priorizados.html` (lista accionable) + `roadmap-optimizacion.html` (qué hacer la próxima semana).
 
 ## EJEMPLO DE USO
 
@@ -132,7 +132,7 @@ DÍA 4-7 · Tráfico
 ★ Great Leads (92/100) — Big Secret bien construido
 
 📁 Guardado en:
-proyecto-bumbum-na-nuca/12-auditoria/
+proyecto-bumbum-na-nuca/13-auditoria/
 ├── score-global.html (dashboard ejecutivo)
 ├── bloques-detalle.html (cada bloque · 200+ ítems)
 ├── fixes-priorizados.html (los 4 fixes accionables)

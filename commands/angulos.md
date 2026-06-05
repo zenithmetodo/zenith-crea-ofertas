@@ -52,7 +52,7 @@ Sin argumento, lee el brief del proyecto activo y arranca. Si no hay proyecto ac
 El agente **NO se inventa los ángulos**: primero te hace una tanda corta de preguntas para intuirlos (qué vendes y a quién · cómo lo hace hoy tu cliente = a qué apela · qué cree · cómo lo rompemos · qué resultado quiere · qué probó antes · 3-4 tipos de cliente). Con eso saca 3-4 ángulos sólidos.
 
 ### Carpeta SIEMPRE creada
-SIEMPRE crea `proyecto-{slug}/14-angulos/` con:
+SIEMPRE crea `proyecto-{slug}/12-angulos/` con:
 - `angulos.json` (datos · 3-4 ángulos por defecto)
 - `angulos.html` (plantilla **EDITABLE** a rellenar · 3-4 ángulos predeterminados + botón **"➕ Añadir ángulo"** para sumar más en el navegador · Guardar PDF / Descargar copia / Restablecer)
 
@@ -121,7 +121,7 @@ Lanzando 39-angulos-architect (Opus) · genero 7 ángulos.
 · Creencia ancla: 'si no entras este año · ya no podrás aprovecharlo igual'
 · Sub-ángulos: (a) cambio Hacienda · (b) saturación de mercado · (c) early adopter
 
-📁 Guardado en: proyecto-INDI-libertad-30/14-angulos/14-angulos.html
+📁 Guardado en: proyecto-INDI-libertad-30/12-angulos/angulos.html
 
 🎯 Matriz de priorización:
    · Empezar por: ángulos 2 (anti-identidad) + 5 (comparación Apex)

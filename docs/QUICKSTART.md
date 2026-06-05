@@ -41,7 +41,7 @@ proyecto-{slug-producto}/
 │   └── v4-combo.html
 ├── 03-mecanismo/...
 ├── ... (10 carpetas más)
-└── 12-auditoria/auditoria.html
+└── 13-auditoria/auditoria.html
 ```
 
 Cada HTML se imprime a PDF con `Cmd/Ctrl + P → Guardar como PDF`.

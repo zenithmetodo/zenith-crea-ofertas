@@ -192,7 +192,7 @@ proyecto-{slug-producto}/
 │   └── great-lead-recomendado.html
 ├── 11-oferta-completa/
 │   └── oferta-final.html         ← LA PÁGINA DE VENTAS
-└── 12-auditoria/
+└── 13-auditoria/
     ├── auditoria.html            ← Score + checklist
     └── roadmap-fixes.html        ← Plan de mejoras
 ```

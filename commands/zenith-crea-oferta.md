@@ -105,8 +105,16 @@ SKILL:
 ✅ 02 one-belief 4 variantes (Opus) · /02-one-belief/
 ✅ 03 mecanismo + nombre chicle (Opus + Haiku) · 'Yoga en Silla'
 ...
-✅ 12 auditor (Opus) · Score 92/100 · LUZ VERDE Zenith
+✅ 11 offer-master (oferta ensamblada)
+✅ 12 angulos-architect (3-4 ángulos · 12-angulos/angulos.html editable) ⭐
+✅ 13 auditor (Opus) · Score 92/100 · LUZ VERDE Zenith
+➡️ Handoff: invocando zenith-audience con los ángulos para crear el contenido
 
 📁 proyecto-yoga-silla-50/ (con HTMLs branding Zenith)
+   ├── 00-discovery/ … 11-oferta-completa/
+   ├── 12-angulos/          (⭐ SIEMPRE · angulos.html editable + botón Añadir ángulo)
+   └── 13-auditoria/
 💰 Coste sesión: incluido en tu plan Claude (Pro/Max) · Ref API: 4,20 € (vs 9,80 € estándar · -57%)"
 ```
+
+> ⚠️ La carpeta `12-angulos/` se crea SIEMPRE (con `angulos.html` editable). Si no aparece, el pipeline está mal.

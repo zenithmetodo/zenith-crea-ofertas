@@ -210,9 +210,22 @@ Ej: "Todas las apps fitness asumen 1h al día. Esta funciona en 15 min"
 
 > "Different angle, different prospect, different conversion." — Frank Kern
 
-## ⚠️ SI EMPIEZO DE 0 · PREGUNTAS PARA INTUIR LOS ÁNGULOS
+## ⚠️ SI EMPIEZO DE 0 · PREGUNTAS OBLIGATORIAS + CARPETA DE RESEARCH
 
-Si la secuencia/pipeline **arranca de cero** (no hay avatar-profundo ni research ni brief), **NO me invento los ángulos**: primero hago una tanda corta de preguntas para intuirlos. Pregunto (de golpe, numeradas, que responda lo que sepa):
+Si la secuencia/pipeline **arranca de cero** (no hay avatar-profundo ni research ni brief) o **no sé bien por dónde tirar**, aplico DOS reglas innegociables:
+
+### Regla A · PREGUNTAS OBLIGATORIAS (no opcional)
+Si no tengo información suficiente para hacer ángulos sólidos, **ES OBLIGATORIO preguntar ANTES de generar nada**. NUNCA me invento ángulos a ciegas. Hago la tanda de preguntas y espero respuesta. Si el usuario contesta "no sé", deduzco con lógica de mercado y lo marco como "supuesto a validar", pero SIEMPRE pregunto primero.
+
+### Regla B · CARPETA DE RESEARCH (si investigo, lo guardo)
+Si para intuir los ángulos tengo que **investigar** (WebSearch/WebFetch del nicho, deducir el avatar, mirar competencia) → **guardo TODO ese research en una carpeta** `proyecto-{slug}/12-angulos/research/` con:
+- `research.md` (lo que encontré: dolores, creencias, lenguaje del avatar, competidores, fuentes)
+- `research.html` (versión editable bonita, mismo patrón editable + PDF)
+
+Así el usuario ve de dónde salieron los ángulos y puede corregir. Si no hay slug/proyecto, creo `research-angulos/` en la raíz.
+
+### La tanda de preguntas
+Pregunto (de golpe, numeradas, que responda lo que sepa):
 
 1. **¿Qué vendes y a quién exactamente?** (producto + tipo de persona)
 2. **¿Cómo lo está haciendo HOY tu cliente?** (lo manual / lo lento / a quién contrata / qué pierde) → esto es el **A QUÉ APELA**
@@ -274,6 +287,7 @@ Identifico el ángulo más prometedor (mayor mercado + creencia más viva + meno
 proyecto-{slug}/12-angulos/
 ├── angulos.json          (datos · 3-4 ángulos por defecto · más si el usuario quiere)
 ├── angulos.html          (plantilla EDITABLE a rellenar · 3-4 ángulos + botón "Añadir ángulo")
+├── research/             (SOLO si tuve que investigar · research.md + research.html editable)
 └── README.md (opcional · resumen + cómo añadir más ángulos)
 ```
 
@@ -450,7 +464,7 @@ Estructura:
 4. **Reconocimiento + Solución.** "Esto va por mí" + "Y tiene solución".
 5. **3-4 ángulos por defecto** (los más sólidos) · hasta 10 si el usuario quiere más.
 6. **SIEMPRE creo la carpeta `12-angulos/`** con `angulos.json` + `angulos.html` (editable). Nunca dejo los ángulos solo en el chat.
-7. **Si empiezo de 0** (sin avatar/research) → hago la tanda de preguntas para intuir los ángulos (no me los invento).
+7. **Si empiezo de 0 o no sé por dónde tirar → PREGUNTAS OBLIGATORIAS** antes de generar (no invento a ciegas). Si investigo para intuirlos → guardo SIEMPRE el research en `12-angulos/research/` (research.md + research.html editable).
 8. **3-5 sub-ángulos por ángulo.** Variaciones del ángulo principal.
 7. **Hook por ángulo.** 1 frase que rompe scroll.
 8. **Marcar recomendados (top 3).** Con justificación.

@@ -259,7 +259,7 @@ Después de las respuestas, genero un archivo `brief.json` con esta estructura:
     "09-valor-percibido",
     "10-consciencia-sofisticacion",
     "11-oferta-completa",
-    "12-auditoria"
+    "13-auditoria"
   ]
 }
 ```

@@ -157,7 +157,7 @@ proyecto-{slug}/
 │   ├── oferta-completa.html
 │   ├── oferta-texto-puro.md
 │   └── oferta-ensamblada.json
-└── 12-auditoria/
+└── 13-auditoria/
     ├── auditoria-completa.html
     └── auditoria-completa.json
 ```
@@ -193,7 +193,7 @@ Conozco de memoria qué plantilla pertenece a qué agente:
 | `schwartz-consciousness` | (genero auditoría custom usando design system) | `10-consciencia-sofisticacion/` |
 | `great-leads-masterson` | (genero leads custom usando design system) | `10-consciencia-sofisticacion/` |
 | `offer-master` | `10-oferta-completa.html` | `11-oferta-completa/` |
-| `auditor-completo` | `11-auditoria.html` | `12-auditoria/` |
+| `auditor-completo` | `11-auditoria.html` | `13-auditoria/` |
 
 ### PROTOCOLO MUSTACHE · PLACEHOLDERS `{{NOMBRE_CAMPO}}`
 
@@ -369,7 +369,7 @@ Cada agente del pipeline tiene una plantilla específica:
 | `schwartz-consciousness` | `audit-schwartz-template.html` | `10-consciencia-sofisticacion/` |
 | `great-leads-masterson` | `great-leads-template.html` | `10-consciencia-sofisticacion/` |
 | `offer-master` | `oferta-completa-template.html` | `11-oferta-completa/` |
-| `auditor-completo` | `auditor-template.html` | `12-auditoria/` |
+| `auditor-completo` | `auditor-template.html` | `13-auditoria/` |
 
 ## EL PROCESO PASO A PASO
 
