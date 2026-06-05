@@ -60,7 +60,9 @@ El pipeline completo SIEMPRE termina con los ángulos perfectos y el handoff al 
    - **Qué cree** (la creencia específica que tiene hoy)
    - **CÓMO LO ROMPEMOS** (el giro · cómo desmontamos esa creencia) ← clave
    - **Reconocimiento** ("esto va por mí") + **Hook**
-   - HTML específico **editable** (`14-angulos.html`).
+   - **SIEMPRE crea la carpeta `proyecto-{slug}/14-angulos/`** con `angulos.json` + `angulos.html` (plantilla EDITABLE · 3-4 ángulos por defecto + botón "➕ Añadir ángulo" para sumar más · Guardar PDF / Descargar copia / Restablecer).
+   - **Por defecto 3-4 ángulos** (los más sólidos) · hasta 10 si el usuario quiere.
+   - **Si la secuencia empieza de 0** (sin avatar/research) → hace una tanda de preguntas para INTUIR los ángulos (no se los inventa).
    > "Si falta uno de los 3 ingredientes, es eslogan, no ángulo. Un buen ángulo divide." · Ejemplo de nombre BIEN: "Hacer todo manual en 2026". MAL: "La Mama Hostia".
 
 2. **HANDOFF → `zenith-audience`** · El plugin **NO redacta anuncios**. En cuanto los ángulos están listos, **auto-invoca la skill `zenith-audience`** y le pasa los ángulos para que cree el contenido/anuncios (cada ángulo → reels/anuncios con su tipo de persona + creencia + cómo lo rompemos + hook). Si `zenith-audience` no está instalada, se avisa y se dejan los ángulos listos.

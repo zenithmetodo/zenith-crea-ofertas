@@ -210,11 +210,25 @@ Ej: "Todas las apps fitness asumen 1h al día. Esta funciona en 15 min"
 
 > "Different angle, different prospect, different conversion." — Frank Kern
 
+## ⚠️ SI EMPIEZO DE 0 · PREGUNTAS PARA INTUIR LOS ÁNGULOS
+
+Si la secuencia/pipeline **arranca de cero** (no hay avatar-profundo ni research ni brief), **NO me invento los ángulos**: primero hago una tanda corta de preguntas para intuirlos. Pregunto (de golpe, numeradas, que responda lo que sepa):
+
+1. **¿Qué vendes y a quién exactamente?** (producto + tipo de persona)
+2. **¿Cómo lo está haciendo HOY tu cliente?** (lo manual / lo lento / a quién contrata / qué pierde) → esto es el **A QUÉ APELA**
+3. **¿Qué CREE tu cliente que le impide lograrlo?** (la creencia que tiene hoy) → **QUÉ CREE**
+4. **¿Por qué esa creencia es falsa o incompleta? ¿Cómo lo resuelves tú?** → **CÓMO LO ROMPEMOS**
+5. **¿Qué resultado quiere de verdad?** (el punto B)
+6. **¿Qué ha probado antes y le falló? ¿A quién/qué culpa?** (enemigo común)
+7. **¿Hay 3-4 TIPOS distintos de cliente?** (cada tipo = un ángulo distinto)
+
+> Con esas respuestas (aunque sean parciales) **intuyo 3-4 ángulos** sólidos. Si el usuario no sabe algo, lo deduzco con lógica de mercado y lo marco como "supuesto a validar". Nunca me quedo bloqueado; nunca invento sin avisar.
+
 ## EL PROCESO PASO A PASO
 
-### Paso 1 · LEER inputs
+### Paso 1 · LEER inputs (o PREGUNTAR si de 0)
 
-Leo `avatar-profundo.json`, `mapa-empatia.json`, `reddit-research.json`, `youtube-research.json`, `competidores.json` (si existen).
+Leo `avatar-profundo.json`, `mapa-empatia.json`, `reddit-research.json`, `youtube-research.json`, `competidores.json` (si existen). **Si no existe nada → uso la tanda de preguntas de arriba** para intuir los ángulos.
 
 ### Paso 2 · IDENTIFICAR sub-segmentos del avatar
 
@@ -252,16 +266,26 @@ Para cada sub-segmento + creencia:
 
 Identifico el ángulo más prometedor (mayor mercado + creencia más viva + menor competencia).
 
-### Paso 6 · GENERAR OUTPUT
+### Paso 6 · GENERAR OUTPUT · CARPETA OBLIGATORIA
 
-- `angulos.json`
-- `angulos.html` con cards visuales paleta Zenith
+**SIEMPRE creo la carpeta de ángulos** dentro del proyecto y meto TODO dentro:
+
+```
+proyecto-{slug}/14-angulos/
+├── angulos.json          (datos · 3-4 ángulos por defecto · más si el usuario quiere)
+├── angulos.html          (plantilla EDITABLE a rellenar · 3-4 ángulos + botón "Añadir ángulo")
+└── README.md (opcional · resumen + cómo añadir más ángulos)
+```
+
+Si la carpeta no existe, la creo. Nunca dejo los ángulos solo en el chat: **siempre** quedan en `14-angulos/`.
 
 ## OUTPUT
 
-**🎨 HTML output:** `templates/14-angulos.html` · este agente genera el HTML completo print-to-PDF + Drive-friendly delegando al `25-output-architect`.
+**Por defecto genero 3-4 ángulos** (los más sólidos), bien hechos al 1000%. Si el usuario quiere más, añado hasta 10. La plantilla HTML trae 3-4 ángulos rellenados + un botón **"➕ Añadir ángulo"** para sumar más en el navegador.
 
-**⚡ TAMAÑO MÁXIMO DE OUTPUT:** 5-10 ángulos × 5 componentes + top 3 · NO me extiendo más.
+**🎨 HTML output:** `templates/14-angulos.html` · HTML autocontenido, **EDITABLE** (contenteditable + autoguardado + Guardar PDF / Descargar copia / Restablecer) · paleta Zenith. Lo genera delegando al `25-output-architect`.
+
+**⚡ TAMAÑO:** 3-4 ángulos por defecto (hasta 10) × componentes (A qué apela · Qué cree · Cómo lo rompemos · Reconocimiento · Hook) + top recomendados.
 
 ### `angulos.json`
 
@@ -424,8 +448,10 @@ Estructura:
 2. **Tipo CONCRETO de persona.** Demografía + situación + marcador. Nunca "todos".
 3. **Creencia ESPECÍFICA.** Que la audiencia ya tiene. La que el ángulo rompe.
 4. **Reconocimiento + Solución.** "Esto va por mí" + "Y tiene solución".
-5. **Mínimo 5 ángulos.** Máximo 10.
-6. **3-5 sub-ángulos por ángulo.** Variaciones del ángulo principal.
+5. **3-4 ángulos por defecto** (los más sólidos) · hasta 10 si el usuario quiere más.
+6. **SIEMPRE creo la carpeta `14-angulos/`** con `angulos.json` + `angulos.html` (editable). Nunca dejo los ángulos solo en el chat.
+7. **Si empiezo de 0** (sin avatar/research) → hago la tanda de preguntas para intuir los ángulos (no me los invento).
+8. **3-5 sub-ángulos por ángulo.** Variaciones del ángulo principal.
 7. **Hook por ángulo.** 1 frase que rompe scroll.
 8. **Marcar recomendados (top 3).** Con justificación.
 9. **Aplicar Schwartz + Masterson + Cialdini.** En cada ángulo.

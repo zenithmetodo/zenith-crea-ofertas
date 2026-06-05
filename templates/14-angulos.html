@@ -378,6 +378,7 @@ td .rec{ color: var(--cian); font-weight: 700; }
 <div id="barra">
   <span id="estado">Listo para editar</span>
   <button class="primary" onclick="window.print()">📄 Guardar PDF</button>
+  <button onclick="addAngulo()">➕ Añadir ángulo</button>
   <button onclick="descargar()">⬇️ Descargar copia</button>
   <button onclick="restablecer()">↺ Restablecer</button>
 </div>
@@ -798,6 +799,19 @@ td .rec{ color: var(--cian); font-weight: 700; }
   });
   window.restablecer = function(){ if(!confirm('¿Volver al original?')) return; try{ localStorage.removeItem(KEY); }catch(e){} cont.innerHTML = ORIGINAL; estado.textContent='Restablecido'; };
   window.descargar = function(){ var h = '<!DOCTYPE html>\n' + document.documentElement.outerHTML; var b = new Blob([h], {type:'text/html'}); var a = document.createElement('a'); a.href = URL.createObjectURL(b); a.download = (document.title || 'angulos-zenith') + '.html'; a.click(); };
+  // ➕ Clona la última card de ángulo en blanco (3-4 predeterminados · añade más aquí)
+  window.addAngulo = function(){
+    var cards = cont.querySelectorAll('.ang-card');
+    if(!cards.length) return;
+    var nuevo = cards[cards.length-1].cloneNode(true);
+    nuevo.querySelectorAll('.val, .quote').forEach(function(el){ el.innerHTML = ''; });
+    nuevo.querySelectorAll('.ang-subs li').forEach(function(el){ el.innerHTML = ''; });
+    var name = nuevo.querySelector('.ang-name'); if(name) name.innerHTML = '"<em>Nuevo ángulo (descríbelo)</em>"';
+    var num = nuevo.querySelector('.ang-num'); if(num) num.textContent = 'Ángulo ' + ('0'+(cards.length+1)).slice(-2);
+    cards[cards.length-1].parentNode.appendChild(nuevo);
+    nuevo.scrollIntoView({behavior:'smooth', block:'center'});
+    try{ localStorage.setItem(KEY, cont.innerHTML); }catch(e){}
+  };
 })();
 </script>
 </body>

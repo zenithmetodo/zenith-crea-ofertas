@@ -46,12 +46,17 @@ Sin argumento, lee el brief del proyecto activo y arranca. Si no hay proyecto ac
 
 ## QUÉ AGENTES LANZA
 
-- `39-angulos-architect` (siempre · genera los 5-10 ángulos + sub-ángulos)
+- `39-angulos-architect` (siempre · genera 3-4 ángulos por defecto · hasta 10 si quieres más)
 
-Output: HTML `14-angulos.html` en `proyecto-{slug}/14-angulos/` con:
-- Tabla resumen (ángulo · razón · tipo · creencia · sub-ángulos)
-- Fichas individuales por ángulo (página completa cada uno · imprimible)
-- Matriz de priorización (qué ángulos atacar primero · cuáles son moonshots)
+### Si empiezas de 0 (sin avatar/research)
+El agente **NO se inventa los ángulos**: primero te hace una tanda corta de preguntas para intuirlos (qué vendes y a quién · cómo lo hace hoy tu cliente = a qué apela · qué cree · cómo lo rompemos · qué resultado quiere · qué probó antes · 3-4 tipos de cliente). Con eso saca 3-4 ángulos sólidos.
+
+### Carpeta SIEMPRE creada
+SIEMPRE crea `proyecto-{slug}/14-angulos/` con:
+- `angulos.json` (datos · 3-4 ángulos por defecto)
+- `angulos.html` (plantilla **EDITABLE** a rellenar · 3-4 ángulos predeterminados + botón **"➕ Añadir ángulo"** para sumar más en el navegador · Guardar PDF / Descargar copia / Restablecer)
+
+Cada ángulo trae: **Nombre descriptivo (no raro) · A qué apela · Qué cree · CÓMO LO ROMPEMOS · Reconocimiento · Hook**.
 
 ## OPTIMIZACIÓN DE COSTES
 
