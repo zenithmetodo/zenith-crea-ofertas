@@ -47,12 +47,12 @@ En este orden (cascada estricta — saltarse uno = oferta floja):
 10. `valor-percibido` + `bencivenga-formula` (Beneficio + Credibilidad − Costo maximizado)
 11. `schwartz-consciousness` + `great-leads-masterson` (nivel + tipo de lead)
 12. `offer-master` (ensambla la oferta final)
-13. `angulos-architect` ⭐ **OBLIGATORIO** (5-10 ángulos · tipo concreto + creencia específica + reconocimiento)
-14. `anuncios-architect` ⭐ **OBLIGATORIO** (5 anuncios POR CADA ángulo · NO freestyle · 5 ejecuciones distintas por ángulo)
+13. `angulos-architect` ⭐ **OBLIGATORIO** (5-10 ángulos al 1000% · nombres DESCRIPTIVOS, no raros · por cada uno: A qué apela + Qué cree + CÓMO LO ROMPEMOS + reconocimiento + hook · HTML específico editable)
+14. **HANDOFF → `zenith-audience`** ⭐ (auto-invocación · crea el contenido/anuncios a partir de los ángulos)
 15. `output-architect` (HTML estéticos imprimibles + editables en CADA carpeta)
-16. `auditor-completo` (200+ checklist, score, veredicto · audita coherencia ángulo↔anuncios)
+16. `auditor-completo` (200+ checklist, score, veredicto)
 
-> ⚠️ Las etapas 13 (ángulos) y 14 (5 anuncios por ángulo) son INNEGOCIABLES. El pipeline completo SIEMPRE genera los ángulos y, por cada ángulo, sus 5 anuncios. Nunca anuncios freestyle.
+> ⚠️ La etapa 13 (ángulos) es INNEGOCIABLE y se entrega al 1000% (nombres descriptivos + A qué apela / Qué cree / Cómo lo rompemos). El plugin NO redacta anuncios: al terminar los ángulos **auto-invoca `zenith-audience`** para crear el contenido a partir de ellos.
 
 ## EJEMPLO DE USO
 

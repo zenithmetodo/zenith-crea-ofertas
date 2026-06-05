@@ -52,12 +52,12 @@ Si pasas argumento, el `34-zenith-quick-discovery` lo usa como semilla y te hace
 10. `valor-percibido` + `bencivenga-formula`
 11. `schwartz-consciousness` + `great-leads-masterson`
 12. `offer-master` (ensambla)
-13. `angulos-architect` ⭐ **OBLIGATORIO** (5-10 ángulos · 3 ingredientes: tipo concreto + creencia + reconocimiento)
-14. `anuncios-architect` ⭐ **OBLIGATORIO** (5 anuncios POR CADA ángulo · NO freestyle · 5 ejecuciones por ángulo)
+13. `angulos-architect` ⭐ **OBLIGATORIO** (5-10 ángulos al 1000% · nombres DESCRIPTIVOS, no raros · por cada uno: A qué apela + Qué cree + CÓMO LO ROMPEMOS + reconocimiento + hook · HTML específico editable)
+14. **HANDOFF → `zenith-audience`** ⭐ (auto-invocación · crea el contenido/anuncios a partir de los ángulos)
 15. `output-architect` (HTMLs con **branding Zenith** · editables + PDF)
-16. `auditor-completo` (score + roadmap · audita coherencia ángulo↔anuncios)
+16. `auditor-completo` (score + roadmap)
 
-> ⚠️ Las etapas 13 y 14 son INNEGOCIABLES en el pipeline completo. Una oferta sin ángulos definidos y sin sus 5 anuncios por ángulo NO está terminada. Si el cliente solo quiere la oferta sin creativos, debe decirlo explícitamente.
+> ⚠️ La etapa 13 (ángulos) es INNEGOCIABLE y se entrega al 1000%. El plugin NO redacta anuncios: al terminar los ángulos **auto-invoca `zenith-audience`** para crear el contenido a partir de ellos.
 
 ## OPTIMIZACIÓN DE COSTES
 

@@ -91,24 +91,36 @@ Reglas:
 
 > *"Un ángulo no convence al que dudaba. Hace que se reconozca el que ya tenía la creencia."* — del reel del usuario.
 
+### ⚠️ REGLA DE NAMING · NOMBRES DESCRIPTIVOS (NADA de nombres raros)
+
+El nombre del ángulo **DESCRIBE de qué va el ángulo en lenguaje claro**, como un titular de lo que el avatar HACE o CREE. NO son nombres "creativos", de marca, ni graciosos.
+
+- ✅ BIEN (descriptivo): "Hacer todo manual en 2026" · "Contratar a otros para montar la estrategia" · "Creer que ya es tarde a los 40" · "Perder tiempo esperando días por cada cambio"
+- ❌ MAL (raro/creativo): "La Mama Hostia" · "El Anti-Cardio" · "Diastasis Aware" · cualquier nombre-marca o juego de palabras
+
+> Si el nombre no se entiende solo (sin leer el resto), está MAL. El nombre = la situación/creencia del avatar en pocas palabras.
+
 ### Estructura completa por ángulo (Zenith)
 
-Para cada ángulo genero:
+Para cada ángulo genero · en ESTE orden y con estos nombres de campo:
 
 ```
 ÁNGULO #N
-├── NOMBRE_DEL_ÁNGULO (sticky, memorable, máx 5 palabras)
-├── A_QUÉ_APELA (miedo / aspiración / identidad / pertenencia / status / urgencia)
+├── NOMBRE (DESCRIPTIVO · dice DE QUÉ va · NADA de nombres raros · ej: "Hacer todo manual en 2026")
+├── A_QUÉ_APELA (la situación/dolor concreto · ej: "Siguen haciendo todo manual o contratando a otros, perdiendo tiempo y esperando días")
 ├── QUIÉN_ES (tipo concreto de persona en 1 frase)
-├── QUÉ_CREE (creencia específica en 1 frase)
-├── RECONOCIMIENTO (frase de 1 línea que lo activa)
-├── HOOK_DEL_ÁNGULO (1 frase que rompe scroll)
+├── QUÉ_CREE (la creencia específica que tiene HOY · 1 frase)
+├── CÓMO_LA_ROMPEMOS (el giro · cómo desmontamos esa creencia · 1-2 frases)  ← CLAVE
+├── RECONOCIMIENTO (frase de 1 línea: "esto va por mí")
+├── HOOK_DEL_ÁNGULO (1 frase que rompe scroll · coherente con cómo lo rompemos)
 ├── SUB_ÁNGULOS (3-5 variaciones del ángulo principal)
 ├── SCHWARTZ_NIVEL (1-5 al que va dirigido)
 ├── MASTERSON_LEAD (Story / Problem-Solution / Big Secret / Promise / Proclamation / Offer)
 ├── CIALDINI_PRINCIPIO (cuál activa)
 └── RECOMENDADO (sí/no + por qué)
 ```
+
+> El campo **CÓMO_LA_ROMPEMOS** es obligatorio: por cada ángulo hay que responder "qué cree" Y "cómo lo rompemos". Sin el giro, el ángulo está a medias.
 
 ### Tipos de ángulos canónicos (catálogo)
 
@@ -397,9 +409,9 @@ Estructura:
 - Hero con la definición exacta del reel destacada en Fraunces italic
 - Card visual de los 3 ingredientes obligatorios (tipo concreto · creencia · reconocimiento)
 - 5-10 cards de ángulos (1 por card) con:
-  - Nombre del ángulo en grande (Fraunces italic)
+  - Nombre del ángulo en grande (Fraunces italic) · **DESCRIPTIVO, no raro**
   - Badge "RECOMENDADO" con gradiente Zenith (cian #00E5CF → purple #B845FF) si aplica
-  - Quién es / Qué cree / Reconocimiento / Hook
+  - **A qué apela / Quién es / Qué cree / CÓMO LO ROMPEMOS / Reconocimiento / Hook**
   - Lista de sub-ángulos
   - Tags de Schwartz / Masterson / Cialdini en JetBrains Mono
 - Sección "Top 3 recomendados" con justificación
@@ -422,6 +434,8 @@ Estructura:
 
 ## ANTI-PATRONES
 
+- ❌ **Nombres raros / creativos / de marca** (ej: "La Mama Hostia"). El nombre debe ser DESCRIPTIVO.
+- ❌ **Olvidar el campo CÓMO_LA_ROMPEMOS** (cada ángulo: qué cree + cómo lo rompemos).
 - ❌ Ángulo sin tipo concreto ("para todos los que quieren X")
 - ❌ Ángulo sin creencia específica (genérico)
 - ❌ Ángulo donde TODOS se reconocen (no divide)
@@ -450,39 +464,56 @@ Gap detectado: 15 min/día + post-parto + mujeres reales + diastasis ignorada
 que cree UNA COSA ESPECÍFICA se reconoce en el anuncio y entiende
 que lo suyo tiene solución'.
 
-Sub-segmentando el avatar en 5 tipos:
-1. Madre +35 post-embarazo con vergüenza al cuerpo → 'La Mama Hostia'
-2. Mujer +40 que volvió a citas → 'La Cazadora a los 40'
-3. Mujer 30-50 que ha hecho cardio sin resultado → 'El Anti-Cardio'
-4. Mujer 30-45 sin tiempo (hijos + trabajo) → '15 Minutos Reales'
-5. Mujer post-parto con diastasis → 'Diastasis Aware'
+Sub-segmentando el avatar en 5 tipos (nombres DESCRIPTIVOS · nada raros):
+1. Madre +35 post-parto con vergüenza al cuerpo → 'Creer que el cuerpo no vuelve tras los partos'
+2. Mujer +40 que volvió a citas → 'Creer que ya es tarde para gustar a los 40'
+3. Mujer 30-50 que hace cardio sin resultado → 'Hacer cardio para el glúteo'
+4. Mujer 30-45 sin tiempo (hijos + trabajo) → 'Creer que hacen falta horas al día'
+5. Mujer post-parto con diastasis → 'Hacer abdominales normales tras el parto'
+
+Por cada ángulo: A qué apela · Qué cree · CÓMO LO ROMPEMOS · Reconocimiento · Hook.
 
 ✅ 5 ÁNGULOS COMPLETOS GENERADOS
 
-🎯 TOP 3 RECOMENDADOS:
-1. 'La Mama Hostia' · mayor mercado · voice validado
-2. '15 Minutos Reales' · gap competitivo claro
-3. 'Diastasis Aware' · audiencia fresca + gap masivo
+🎯 TOP 3 RECOMENDADOS (por mercado + creencia más viva + gap):
+1. 'Creer que el cuerpo no vuelve tras los partos'
+2. 'Creer que hacen falta horas al día'
+3. 'Hacer abdominales normales tras el parto'
 
 🧪 Test anti-eslogan: superado (cada ángulo divide audiencia)
 
 📁 angulos.json
-📁 angulos.html (Zenith · cita del reel destacada)
+📁 angulos.html (Zenith · A qué apela / Creencia / Cómo la rompemos)
 
-🚀 Próximo paso: 03-one-belief-creator (toma 1 ángulo + lo convierte
-   en oferta completa) o 27-headline-master (extrae headlines de cada ángulo)"
+➡️ Invocando zenith-audience para crear el contenido a partir de estos ángulos…"
 ```
+
+## ⭐ HANDOFF AUTOMÁTICO → ZENITH AUDIENCE (crear el contenido/anuncios)
+
+> Mi trabajo TERMINA en los ángulos perfectos. **NO hago anuncios ni briefs.** En cuanto entrego los ángulos (JSON + HTML), **invoco automáticamente la skill `zenith-audience`** y le paso los ángulos para que genere el contenido/anuncios a partir de ellos.
+
+Flujo de handoff:
+1. Genero `angulos.json` + `angulos.html` (perfectos · nombres descriptivos · con A qué apela / Creencia / Cómo la rompemos).
+2. **Auto-invoco `zenith-audience`** (su motor de contenido — p.ej. `reel-architect` / `formato-master` / `ideas-ganadoras-adapter`) pasándole los ángulos como input.
+3. zenith-audience crea los reels/anuncios usando cada ángulo (su tipo de persona + creencia + cómo lo rompemos + hook).
+
+Mensaje de handoff que muestro al usuario:
+```
+✅ Ángulos listos (N) · angulos.html generado.
+➡️ Invocando zenith-audience para crear el contenido a partir de estos ángulos…
+   (cada ángulo → reels/anuncios · tipo de persona + creencia + cómo lo rompemos)
+```
+
+> Si `zenith-audience` no está instalada, aviso al usuario y le dejo los ángulos listos para que la invoque él.
 
 ## INTEGRACIÓN CON OTROS AGENTES
 
 - **Input:** `avatar-profundo.json` + `mapa-empatia.json` + research (Reddit + YouTube) + competidores (si existen).
-- **Mi output `angulos.json`** lo consumen:
-  - `03-one-belief-creator` (1 ángulo recomendado → 1 one belief)
-  - `27-headline-master` (cada hook = headline base)
-  - `28-fascinations-architect` (sub-ángulos = fascinations)
-  - `23-great-leads-masterson` (Masterson lead por ángulo)
-  - `neurocopy-ads-master` (hooks por nivel Schwartz)
+- **Mi output `angulos.json` + `angulos.html`** lo consume:
+  - ⭐ **`zenith-audience`** (auto-invocación · crea el contenido/anuncios a partir de los ángulos)
+  - `03-one-belief-creator` (1 ángulo recomendado → 1 one belief · opcional)
 - **Complementario a `40-competidor-spy`** (sus ángulos llenan el gap).
+- **NO genero anuncios ni briefs de anuncios** · eso es de `zenith-audience`.
 
 ## CITAS DE AUTORIDAD
 

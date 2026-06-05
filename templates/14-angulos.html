@@ -362,9 +362,27 @@ td .rec{ color: var(--cian); font-weight: 700; }
   .def-box{ padding: 36px 28px; }
   .ang-card{ padding: 28px 24px; }
 }
+
+  /* ── Editor Zenith · barra no imprimible + edición al clic ── */
+  #barra{ position:fixed; top:14px; right:14px; z-index:99999; display:flex; gap:8px; align-items:center; background:rgba(5,5,16,.92); border:1px solid rgba(0,229,207,.35); backdrop-filter:blur(10px); -webkit-backdrop-filter:blur(10px); padding:9px 12px; border-radius:14px; box-shadow:0 8px 30px rgba(0,0,0,.5); }
+  #barra #estado{ font-size:12px; color:#00E5CF; margin-right:4px; min-width:92px; font-family:'JetBrains Mono',monospace; }
+  #barra button{ font-family:'Inter',sans-serif; font-size:13px; font-weight:600; color:#e6e8ee; background:rgba(255,255,255,.06); border:1px solid rgba(255,255,255,.14); border-radius:9px; padding:8px 12px; cursor:pointer; }
+  #barra button:hover{ background:rgba(0,229,207,.15); border-color:#00E5CF; }
+  #barra button.primary{ background:linear-gradient(135deg,#00E5CF,#B845FF); color:#050510; border:none; }
+  #contenido[contenteditable="true"]:focus{ outline:none; }
+  @media print{ #barra{ display:none !important; } }
 </style>
 </head>
 <body>
+
+<div id="barra">
+  <span id="estado">Listo para editar</span>
+  <button class="primary" onclick="window.print()">📄 Guardar PDF</button>
+  <button onclick="descargar()">⬇️ Descargar copia</button>
+  <button onclick="restablecer()">↺ Restablecer</button>
+</div>
+
+<div id="contenido" contenteditable="true" spellcheck="false">
 
 <!-- HUD -->
 <header class="zenith-hud">
@@ -453,16 +471,16 @@ td .rec{ color: var(--cian); font-weight: 700; }
         </div>
         <div class="ang-three-cols">
           <div class="ang-mini">
-            <div class="lbl">Tipo de persona</div>
-            <div class="val">{{ANG_1_PERSONA}}</div>
+            <div class="lbl">A qué apela</div>
+            <div class="val">{{ANG_1_APELA_A}}</div>
           </div>
           <div class="ang-mini">
-            <div class="lbl">Creencia específica</div>
+            <div class="lbl">Qué cree</div>
             <div class="val">"{{ANG_1_CREENCIA}}"</div>
           </div>
           <div class="ang-mini">
-            <div class="lbl">Reconocimiento</div>
-            <div class="val">{{ANG_1_RECONOCIMIENTO}}</div>
+            <div class="lbl">Cómo la rompemos</div>
+            <div class="val">{{ANG_1_COMO_ROMPE}}</div>
           </div>
         </div>
         <div class="ang-hook">
@@ -493,16 +511,16 @@ td .rec{ color: var(--cian); font-weight: 700; }
         </div>
         <div class="ang-three-cols">
           <div class="ang-mini">
-            <div class="lbl">Tipo de persona</div>
-            <div class="val">{{ANG_2_PERSONA}}</div>
+            <div class="lbl">A qué apela</div>
+            <div class="val">{{ANG_2_APELA_A}}</div>
           </div>
           <div class="ang-mini">
-            <div class="lbl">Creencia específica</div>
+            <div class="lbl">Qué cree</div>
             <div class="val">"{{ANG_2_CREENCIA}}"</div>
           </div>
           <div class="ang-mini">
-            <div class="lbl">Reconocimiento</div>
-            <div class="val">{{ANG_2_RECONOCIMIENTO}}</div>
+            <div class="lbl">Cómo la rompemos</div>
+            <div class="val">{{ANG_2_COMO_ROMPE}}</div>
           </div>
         </div>
         <div class="ang-hook">
@@ -533,16 +551,16 @@ td .rec{ color: var(--cian); font-weight: 700; }
         </div>
         <div class="ang-three-cols">
           <div class="ang-mini">
-            <div class="lbl">Tipo de persona</div>
-            <div class="val">{{ANG_3_PERSONA}}</div>
+            <div class="lbl">A qué apela</div>
+            <div class="val">{{ANG_3_APELA_A}}</div>
           </div>
           <div class="ang-mini">
-            <div class="lbl">Creencia específica</div>
+            <div class="lbl">Qué cree</div>
             <div class="val">"{{ANG_3_CREENCIA}}"</div>
           </div>
           <div class="ang-mini">
-            <div class="lbl">Reconocimiento</div>
-            <div class="val">{{ANG_3_RECONOCIMIENTO}}</div>
+            <div class="lbl">Cómo la rompemos</div>
+            <div class="val">{{ANG_3_COMO_ROMPE}}</div>
           </div>
         </div>
         <div class="ang-hook">
@@ -573,16 +591,16 @@ td .rec{ color: var(--cian); font-weight: 700; }
         </div>
         <div class="ang-three-cols">
           <div class="ang-mini">
-            <div class="lbl">Tipo de persona</div>
-            <div class="val">{{ANG_4_PERSONA}}</div>
+            <div class="lbl">A qué apela</div>
+            <div class="val">{{ANG_4_APELA_A}}</div>
           </div>
           <div class="ang-mini">
-            <div class="lbl">Creencia específica</div>
+            <div class="lbl">Qué cree</div>
             <div class="val">"{{ANG_4_CREENCIA}}"</div>
           </div>
           <div class="ang-mini">
-            <div class="lbl">Reconocimiento</div>
-            <div class="val">{{ANG_4_RECONOCIMIENTO}}</div>
+            <div class="lbl">Cómo la rompemos</div>
+            <div class="val">{{ANG_4_COMO_ROMPE}}</div>
           </div>
         </div>
         <div class="ang-hook">
@@ -613,16 +631,16 @@ td .rec{ color: var(--cian); font-weight: 700; }
         </div>
         <div class="ang-three-cols">
           <div class="ang-mini">
-            <div class="lbl">Tipo de persona</div>
-            <div class="val">{{ANG_5_PERSONA}}</div>
+            <div class="lbl">A qué apela</div>
+            <div class="val">{{ANG_5_APELA_A}}</div>
           </div>
           <div class="ang-mini">
-            <div class="lbl">Creencia específica</div>
+            <div class="lbl">Qué cree</div>
             <div class="val">"{{ANG_5_CREENCIA}}"</div>
           </div>
           <div class="ang-mini">
-            <div class="lbl">Reconocimiento</div>
-            <div class="val">{{ANG_5_RECONOCIMIENTO}}</div>
+            <div class="lbl">Cómo la rompemos</div>
+            <div class="val">{{ANG_5_COMO_ROMPE}}</div>
           </div>
         </div>
         <div class="ang-hook">
@@ -690,16 +708,16 @@ td .rec{ color: var(--cian); font-weight: 700; }
         </div>
         <div class="ang-three-cols">
           <div class="ang-mini">
-            <div class="lbl">Tipo de persona</div>
-            <div class="val">{{ANG_REC_PERSONA}}</div>
+            <div class="lbl">A qué apela</div>
+            <div class="val">{{ANG_REC_APELA_A}}</div>
           </div>
           <div class="ang-mini">
-            <div class="lbl">Creencia específica</div>
+            <div class="lbl">Qué cree</div>
             <div class="val">"{{ANG_REC_CREENCIA}}"</div>
           </div>
           <div class="ang-mini">
-            <div class="lbl">Reconocimiento</div>
-            <div class="val">{{ANG_REC_RECONOCIMIENTO}}</div>
+            <div class="lbl">Cómo la rompemos</div>
+            <div class="val">{{ANG_REC_COMO_ROMPE}}</div>
           </div>
         </div>
         <div class="ang-hook">
@@ -764,5 +782,23 @@ td .rec{ color: var(--cian); font-weight: 700; }
   </div>
 </footer>
 
+
+</div><!-- /#contenido -->
+<script>
+(function(){
+  var cont = document.getElementById('contenido');
+  var estado = document.getElementById('estado');
+  var KEY = 'zenith_angulos_' + location.pathname;
+  var ORIGINAL = cont.innerHTML;
+  try { if (localStorage.getItem(KEY)) { cont.innerHTML = localStorage.getItem(KEY); estado.textContent = 'Cambios guardados ✓'; } } catch(e){}
+  var t;
+  cont.addEventListener('input', function(){
+    estado.textContent = 'Guardando…'; clearTimeout(t);
+    t = setTimeout(function(){ try { localStorage.setItem(KEY, cont.innerHTML); estado.textContent = 'Guardado ✓'; } catch(e){ estado.textContent = 'Ábrelo en el navegador para guardar'; } }, 500);
+  });
+  window.restablecer = function(){ if(!confirm('¿Volver al original?')) return; try{ localStorage.removeItem(KEY); }catch(e){} cont.innerHTML = ORIGINAL; estado.textContent='Restablecido'; };
+  window.descargar = function(){ var h = '<!DOCTYPE html>\n' + document.documentElement.outerHTML; var b = new Blob([h], {type:'text/html'}); var a = document.createElement('a'); a.href = URL.createObjectURL(b); a.download = (document.title || 'angulos-zenith') + '.html'; a.click(); };
+})();
+</script>
 </body>
 </html>

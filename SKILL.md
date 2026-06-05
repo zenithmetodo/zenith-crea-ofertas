@@ -45,20 +45,27 @@ El embudo se construye SIEMPRE en este orden estricto. Saltarse uno = oferta flo
 09 · VALOR PERCIBIDO    → valor-percibido (fórmula Bencivenga)
 10 · CONSCIENCIA        → schwartz-consciousness + great-leads-masterson
 11 · OFERTA COMPLETA    → offer-master (ensambla todo)
-12 · ÁNGULOS ⭐         → angulos-architect (5-10 ángulos · tipo concreto + creencia + reconocimiento) · OBLIGATORIO
-13 · ANUNCIOS ⭐        → anuncios-architect (5 anuncios POR CADA ángulo · NO freestyle) · OBLIGATORIO
-14 · AUDITORÍA          → auditor-completo (audita coherencia ángulo↔anuncios)
+12 · ÁNGULOS ⭐         → angulos-architect (5-10 ángulos AL 1000% · nombres DESCRIPTIVOS · A qué apela / Qué cree / CÓMO LO ROMPEMOS / reconocimiento / hook · HTML editable) · OBLIGATORIO
+13 · HANDOFF ⭐         → auto-invocación a zenith-audience (crea el contenido/anuncios a partir de los ángulos)
+14 · AUDITORÍA          → auditor-completo
 ```
 
-## ⚠️ REGLA INNEGOCIABLE · ÁNGULOS + 5 ANUNCIOS POR ÁNGULO
+## ⚠️ REGLA INNEGOCIABLE · ÁNGULOS AL 1000% + HANDOFF A ZENITH-AUDIENCE
 
-El pipeline completo SIEMPRE termina la oferta con DOS etapas obligatorias que muchos olvidan:
+El pipeline completo SIEMPRE termina con los ángulos perfectos y el handoff al motor de contenido:
 
-1. **ÁNGULOS (`angulos-architect`)** · 5-10 ángulos, cada uno con sus 3 ingredientes innegociables: **tipo concreto de persona + creencia específica + reconocimiento + solución**. "Si falta uno, es eslogan, no ángulo. Un buen ángulo divide."
+1. **ÁNGULOS (`angulos-architect`)** · 5-10 ángulos AL 1000%, cada uno con **nombre DESCRIPTIVO (NADA de nombres raros/creativos)** y, por cada ángulo, se responde:
+   - **A qué apela** (la situación/dolor concreto)
+   - **Quién es** (tipo concreto de persona)
+   - **Qué cree** (la creencia específica que tiene hoy)
+   - **CÓMO LO ROMPEMOS** (el giro · cómo desmontamos esa creencia) ← clave
+   - **Reconocimiento** ("esto va por mí") + **Hook**
+   - HTML específico **editable** (`14-angulos.html`).
+   > "Si falta uno de los 3 ingredientes, es eslogan, no ángulo. Un buen ángulo divide." · Ejemplo de nombre BIEN: "Hacer todo manual en 2026". MAL: "La Mama Hostia".
 
-2. **ANUNCIOS (`anuncios-architect`)** · por CADA ángulo, **EXACTAMENTE 5 anuncios** (no freestyle). Los 5 comparten el tipo de persona y la creencia del ángulo; cambia solo la ejecución (UGC/Story · Problem-Solution · Big Secret/mecanismo · Contrarian · Prueba social). Si hay 6 ángulos → 30 anuncios; si hay 8 → 40.
+2. **HANDOFF → `zenith-audience`** · El plugin **NO redacta anuncios**. En cuanto los ángulos están listos, **auto-invoca la skill `zenith-audience`** y le pasa los ángulos para que cree el contenido/anuncios (cada ángulo → reels/anuncios con su tipo de persona + creencia + cómo lo rompemos + hook). Si `zenith-audience` no está instalada, se avisa y se dejan los ángulos listos.
 
-> Una oferta SIN ángulos definidos y SIN sus 5 anuncios por ángulo está INCOMPLETA. Si el cliente solo quiere las piezas de la oferta sin creativos, debe pedirlo explícitamente.
+> Una oferta SIN ángulos al 1000% está INCOMPLETA. Los anuncios NO son trabajo de este plugin: se delegan a `zenith-audience`.
 
 ## CÓMO TRABAJAR (PROTOCOLO MAESTRO)
 
@@ -200,10 +207,9 @@ Ver [`agents/`](agents/) para los archivos completos. Mapa rápido:
 | 22 | **great-leads-masterson** | Elige el tipo de lead correcto (6 opciones) |
 | 23 | **bencivenga-formula** | Aplica las 7 leyes Bencivenga al copy final |
 | 24 | **offer-master** | Ensambla todas las piezas en oferta final |
-| 25 | **angulos-architect** ⭐ | 5-10 ángulos (tipo concreto + creencia + reconocimiento) · OBLIGATORIO |
-| 26 | **anuncios-architect** ⭐ | 5 anuncios POR CADA ángulo · NO freestyle · OBLIGATORIO |
-| 27 | **output-architect** | Genera HTML estéticos print-to-PDF + editables |
-| 28 | **auditor-completo** | Audita 200+ ítems · score global · roadmap fixes |
+| 25 | **angulos-architect** ⭐ | 5-10 ángulos AL 1000% · nombres descriptivos · A qué apela / Qué cree / CÓMO LO ROMPEMOS · HTML editable · auto-handoff a zenith-audience · OBLIGATORIO |
+| 26 | **output-architect** | Genera HTML estéticos print-to-PDF + editables |
+| 27 | **auditor-completo** | Audita 200+ ítems · score global · roadmap fixes |
 
 ## SLASH COMMANDS
 
@@ -222,8 +228,7 @@ Ver [`commands/`](commands/) para invocación rápida sin discovery completo.
 | `/valor-percibido` | valor-percibido (Bencivenga) |
 | `/schwartz-level` | schwartz-consciousness (audita el nivel) |
 | `/great-leads` | great-leads-masterson (elige tipo) |
-| `/angulos` ⭐ | angulos-architect (5-10 ángulos · 3 ingredientes) |
-| `/anuncios` ⭐ | anuncios-architect (5 anuncios POR CADA ángulo · NO freestyle) |
+| `/angulos` ⭐ | angulos-architect (5-10 ángulos al 1000% · nombres descriptivos · A qué apela / Qué cree / Cómo lo rompemos · auto-handoff a zenith-audience) |
 | `/audit-oferta` | auditor-completo |
 
 ## KNOWLEDGE BASE
