@@ -9,7 +9,7 @@ description: Zenith Crea Ofertas™ · Mega-skill TOP 1% para crear OFERTAS COMP
 
 ## QUÉ ES ESTA SKILL
 
-Es la skill PADRE de un sistema de **26 sub-agentes especializados** (cada uno experto en UNA sola pieza de la oferta — nunca dos haciendo lo mismo) y **11 slash commands** para invocación rápida.
+Es la skill PADRE de un sistema de **43 sub-agentes especializados** (cada uno experto en UNA sola pieza de la oferta — nunca dos haciendo lo mismo) y **18 slash commands** para invocación rápida.
 
 Construye la oferta completa siguiendo la metodología **"Incubando tu Producto Perfecto"** + los frameworks canónicos del direct response del siglo XX y XXI.
 
@@ -60,7 +60,7 @@ El pipeline completo SIEMPRE termina con los ángulos perfectos y el handoff al 
    - **Qué cree** (la creencia específica que tiene hoy)
    - **CÓMO LO ROMPEMOS** (el giro · cómo desmontamos esa creencia) ← clave
    - **Reconocimiento** ("esto va por mí") + **Hook**
-   - **SIEMPRE crea la carpeta `proyecto-{slug}/14-angulos/`** con `angulos.json` + `angulos.html` (plantilla EDITABLE · 3-4 ángulos por defecto + botón "➕ Añadir ángulo" para sumar más · Guardar PDF / Descargar copia / Restablecer).
+   - **SIEMPRE crea la carpeta `proyecto-{slug}/12-angulos/`** con `angulos.json` + `angulos.html` (plantilla EDITABLE · 3-4 ángulos por defecto + botón "➕ Añadir ángulo" para sumar más · Guardar PDF / Descargar copia / Restablecer).
    - **Por defecto 3-4 ángulos** (los más sólidos) · hasta 10 si el usuario quiere.
    - **Si la secuencia empieza de 0** (sin avatar/research) → hace una tanda de preguntas para INTUIR los ángulos (no se los inventa).
    > "Si falta uno de los 3 ingredientes, es eslogan, no ángulo. Un buen ángulo divide." · Ejemplo de nombre BIEN: "Hacer todo manual en 2026". MAL: "La Mama Hostia".
@@ -85,7 +85,9 @@ Sin esto, todos los sub-agentes inventan datos.
 
 ### Paso 2 · Crear estructura de carpetas del proyecto
 
-Creo `proyecto-{slug-producto}/` con 13 subcarpetas (00 a 12), una por etapa del pipeline. Cada carpeta recibirá un `.html` print-to-PDF generado por el `output-architect`.
+Creo `proyecto-{slug-producto}/` con TODAS las subcarpetas (00 a 13), una por etapa del pipeline. Cada carpeta recibirá un `.html` print-to-PDF generado por el `output-architect`.
+
+> ⚠️ **LA CARPETA `12-angulos/` SE CREA SIEMPRE, SIN EXCEPCIÓN.** Aunque el usuario no pida ángulos explícitamente, el pipeline completo SIEMPRE la crea y la rellena. Si al terminar el proyecto NO existe `12-angulos/` con su `angulos.html`, el pipeline está MAL.
 
 ```
 proyecto-{slug}/
@@ -101,7 +103,8 @@ proyecto-{slug}/
 ├── 09-valor-percibido/
 ├── 10-consciencia-sofisticacion/
 ├── 11-oferta-completa/
-└── 12-auditoria/
+├── 12-angulos/            (⭐ SIEMPRE · angulos.json + angulos.html EDITABLE · 3-4 ángulos + botón "Añadir ángulo")
+└── 13-auditoria/
 ```
 
 ### Paso 3 · Lanzar sub-agentes en orden

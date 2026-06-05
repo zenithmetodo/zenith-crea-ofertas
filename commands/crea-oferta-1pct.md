@@ -104,7 +104,8 @@ proyecto-yoga-silla-50/
 ├── 09-valor-percibido/
 ├── 10-consciencia-sofisticacion/
 ├── 11-oferta-completa/
-└── 12-auditoria/
+├── 12-angulos/            (⭐ SIEMPRE · angulos.html editable + botón Añadir ángulo)
+└── 13-auditoria/
 
 🎯 Próximos pasos sugeridos:
 1. Imprime el HTML de /11-oferta-completa/ → revísalo con tu equipo

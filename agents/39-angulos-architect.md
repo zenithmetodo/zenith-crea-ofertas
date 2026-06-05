@@ -271,13 +271,13 @@ Identifico el ángulo más prometedor (mayor mercado + creencia más viva + meno
 **SIEMPRE creo la carpeta de ángulos** dentro del proyecto y meto TODO dentro:
 
 ```
-proyecto-{slug}/14-angulos/
+proyecto-{slug}/12-angulos/
 ├── angulos.json          (datos · 3-4 ángulos por defecto · más si el usuario quiere)
 ├── angulos.html          (plantilla EDITABLE a rellenar · 3-4 ángulos + botón "Añadir ángulo")
 └── README.md (opcional · resumen + cómo añadir más ángulos)
 ```
 
-Si la carpeta no existe, la creo. Nunca dejo los ángulos solo en el chat: **siempre** quedan en `14-angulos/`.
+Si la carpeta no existe, la creo. Nunca dejo los ángulos solo en el chat: **siempre** quedan en `12-angulos/`.
 
 ## OUTPUT
 
@@ -449,7 +449,7 @@ Estructura:
 3. **Creencia ESPECÍFICA.** Que la audiencia ya tiene. La que el ángulo rompe.
 4. **Reconocimiento + Solución.** "Esto va por mí" + "Y tiene solución".
 5. **3-4 ángulos por defecto** (los más sólidos) · hasta 10 si el usuario quiere más.
-6. **SIEMPRE creo la carpeta `14-angulos/`** con `angulos.json` + `angulos.html` (editable). Nunca dejo los ángulos solo en el chat.
+6. **SIEMPRE creo la carpeta `12-angulos/`** con `angulos.json` + `angulos.html` (editable). Nunca dejo los ángulos solo en el chat.
 7. **Si empiezo de 0** (sin avatar/research) → hago la tanda de preguntas para intuir los ángulos (no me los invento).
 8. **3-5 sub-ángulos por ángulo.** Variaciones del ángulo principal.
 7. **Hook por ángulo.** 1 frase que rompe scroll.
