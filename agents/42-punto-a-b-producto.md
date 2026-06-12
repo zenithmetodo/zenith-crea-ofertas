@@ -63,7 +63,7 @@ Sin esta jerarquía, `17-modulos-namer` y `18-clases-namer` se quedan sin input 
 Referencias de respaldo (NO se abren en ejecución normal):
 - `carta de ventas/CARTA DE VENTAS INVISIBLE.docx.md` (doctrina del usuario · pasos → módulos)
 - `PUNTO A PUNTO B/Ejercicio 2.2 punto a y b producto.txt` (plantilla operativa)
-- `knowledge/value-stacking-bencivenga.md` (cómo apilar pasos como valor)
+- `knowledge/bencivenga-formula-valor-percibido.md` (cómo apilar pasos como valor)
 
 Inputs vivos (SÍ leo):
 - `proyecto-{slug}/00-discovery/brief.json` (producto + avatar + formato de entrega)

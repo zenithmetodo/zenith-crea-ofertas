@@ -6,7 +6,7 @@
   "tagline": "De la cima se ve mejor el avatar.",
   "repository": "https://github.com/zenithmetodo/zenith-crea-ofertas",
   "install_command": "curl -fsSL https://raw.githubusercontent.com/zenithmetodo/zenith-crea-ofertas/main/plugin/install.sh | bash",
-  "description": "Mega-skill TOP 1% para crear ofertas de alto valor percibido bajo el Método Zenith™. Arranca con una PRE-FASE guiada por especificación (spec-architect enmarca el proyecto → spec-reviewer lo audita y clasifica hallazgos por severidad critico/alto/moderado/bajo → VALIDACIÓN HUMANA obligatoria → plan-architect genera el plan.md de todo + research). Orquesta 49 sub-agentes especializados (cada uno crack de UNA cosa · CONOCIMIENTO INTERNALIZADO desde el origen · MODEL OPTIMIZADO por complejidad), 19 slash commands, 18 templates HTML print-to-PDF + drive-friendly con branding Zenith (cian + purple + Fraunces), 21 knowledge files (incluida la BIBLIA DEL MECANISMO · 131 formaciones destiladas), auto-instalador multiplataforma. El bloque 03 (mecanismo) lo lidera mecanismo-maestro: pregunta 9 bloques primero y construye 6 piezas (causa raíz + problema + solución + nombre chicle + objeto brillante + mito de origen). Aplica Schwartz, Masterson+Forde, Bencivenga, Evaldo Albuquerque, Todd Brown, Halbert, Sugarman, Cialdini, Maslow+Robbins+Bauer, Brunson, Hormozi, Caples, Ogilvy, Stefan Georgi y Ariely. Investigación profunda en Reddit + YouTube + Biblioteca Anuncios Meta para avatar y competencia.",
+  "description": "Mega-skill TOP 1% para crear ofertas de alto valor percibido bajo el Método Zenith™. Arranca con una PRE-FASE guiada por especificación (spec-architect enmarca el proyecto → spec-reviewer lo audita y clasifica hallazgos por severidad critico/alto/moderado/bajo → VALIDACIÓN HUMANA obligatoria → plan-architect genera el plan.md de todo + research). Orquesta 49 sub-agentes especializados (cada uno crack de UNA cosa · CONOCIMIENTO INTERNALIZADO desde el origen · MODEL OPTIMIZADO por complejidad), 19 slash commands, 19 templates HTML print-to-PDF + drive-friendly con branding Zenith (cian + purple + Fraunces), 27 knowledge files (incluida la BIBLIA DEL MECANISMO · 131 formaciones destiladas), auto-instalador multiplataforma. El bloque 03 (mecanismo) lo lidera mecanismo-maestro: pregunta 9 bloques primero y construye 6 piezas (causa raíz + problema + solución + nombre chicle + objeto brillante + mito de origen). Aplica Schwartz, Masterson+Forde, Bencivenga, Evaldo Albuquerque, Todd Brown, Halbert, Sugarman, Cialdini, Maslow+Robbins+Bauer, Brunson, Hormozi, Caples, Ogilvy, Stefan Georgi y Ariely. Investigación profunda en Reddit + YouTube + Biblioteca Anuncios Meta para avatar y competencia.",
   "author": {
     "name": "Josep (INDI) · Método Zenith™",
     "email": "impactodigitalformacionbrasil@gmail.com"
@@ -63,7 +63,7 @@
     "skills": 1,
     "agents": 49,
     "commands": 19,
-    "knowledge": 21,
+    "knowledge": 27,
     "templates": 19,
     "examples": 5
   },
@@ -71,7 +71,7 @@
     "explanation": "Cada agente declara su model según la complejidad de su tarea para OPTIMIZAR COSTES sin perder calidad TOP 1%.",
     "opus": {
       "use_when": "Decisiones estratégicas que afectan todo el pipeline · razonamiento creativo profundo · auditoría maestra",
-      "agents": ["spec-architect", "spec-reviewer", "plan-architect", "discovery-master", "zenith-quick-discovery", "one-belief-creator", "mecanismo-maestro", "mecanismo-problema", "mecanismo-solucion", "promesa-ganadora", "valor-percibido", "offer-master", "auditor-completo", "headline-master", "avatar-deep-psicologo", "angulos-architect"]
+      "agents": ["spec-architect", "spec-reviewer", "plan-architect", "discovery-master", "zenith-quick-discovery", "one-belief-creator", "mecanismo-maestro", "mecanismo-problema", "mecanismo-solucion", "promesa-ganadora", "valor-percibido", "offer-master", "auditor-completo", "headline-master", "avatar-deep-psicologo", "angulos-architect", "punto-a-b-producto", "naming-producto"]
     },
     "sonnet": {
       "use_when": "Generativo con reglas claras · investigación con razonamiento · transformación inteligente",
@@ -122,9 +122,11 @@
     { "step": "00b", "name": "avatar-deep", "agents": ["avatar-deep-psicologo", "research-reddit", "research-youtube", "avatar-mapa-empatia", "deal-makers-extractor"], "model_dominante": "sonnet", "tokens_est": "15-25k" },
     { "step": "00c", "name": "competencia", "agent": "competidor-spy", "model": "sonnet", "tokens_est": "8-12k" },
     { "step": "01", "name": "punto-a-b", "agent": "punto-a-b-architect", "model": "sonnet", "tokens_est": "3-5k" },
+    { "step": "01b", "name": "punto-a-b-producto", "agent": "punto-a-b-producto", "model": "opus", "tokens_est": "3-5k", "descripcion": "Pasos operativos del servicio (el otro Punto A-B) · base de la carta de ventas invisible · alimenta modulos-namer y clases-namer" },
     { "step": "02", "name": "one-belief", "agents": ["one-belief-creator", "identidad-anti-identidad", "nueva-oportunidad"], "model_dominante": "opus", "tokens_est": "6-10k" },
     { "step": "03", "name": "mecanismo", "lider": "mecanismo-maestro", "descripcion": "mecanismo-maestro pregunta los 9 bloques PRIMERO, carga la Biblia del Mecanismo, y construye las 6 piezas (causa raíz + problema + solución + nombre chicle + objeto brillante + mito de origen) · entrega MD + HTML GIGANTE", "agents": ["mecanismo-maestro", "mecanismo-problema", "mecanismo-solucion", "nombre-chicle", "objeto-brillante", "mito-origen", "super-estructura"], "model_dominante": "opus", "tokens_est": "12-18k" },
     { "step": "03b", "name": "angulos", "agent": "angulos-architect", "model": "opus", "tokens_est": "5-8k" },
+    { "step": "03c", "name": "naming-producto", "agent": "naming-producto", "model": "opus", "tokens_est": "3-5k", "descripcion": "Nombre comercial del PROGRAMA (el QUÉ se vende) · distinto del nombre chicle del mecanismo (el CÓMO) · check dominio + RRSS + trademark" },
     { "step": "04", "name": "features-benefits-desires", "agents": ["caracteristicas-extractor", "beneficios-extractor", "deseos-extractor", "intangibles-extractor"], "model_dominante": "haiku", "tokens_est": "4-6k" },
     { "step": "05", "name": "promesa", "agent": "promesa-ganadora", "model": "opus", "tokens_est": "3-5k" },
     { "step": "06", "name": "garantia", "agents": ["garantia-impresionante", "objeciones-rotas", "risk-reversal-master"], "model_dominante": "sonnet", "tokens_est": "6-8k" },

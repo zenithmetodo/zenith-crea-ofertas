@@ -41,9 +41,8 @@ Antes de operar, leo:
 - `AVATAR/Ejercicio 3. Punto de partida y meta.docx.md`
 - `AVATAR/Ejercicio 4. Profundizando avatar.docx.md`
 - `AVATAR/NICHO + AVATAR.md` (los 17 pasos del GPT INDI NICHOS PERFECTOS)
-- `knowledge/jung-arquetipos.md` (si existe)
-- `knowledge/maslow-piramide.md`
-- `knowledge/robbins-6-human-needs.md`
+- `knowledge/jung-arquetipos.md` (los 12 arquetipos de Carl Jung aplicados a avatar y voz de marca)
+- `knowledge/maslow-robbins-bauer-deseos.md` (pirámide de Maslow + 6 necesidades de Robbins + 8 miedos de Bauer)
 
 ## 🧠 CONOCIMIENTO INTERNALIZADO
 

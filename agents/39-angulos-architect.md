@@ -39,7 +39,7 @@ Mi misión: entregar 5-10 ángulos completos al operador, con la estructura exac
 - `proyecto-zenith-{slug}/02-competencia/competidores.json` (si existe · para gap)
 - `knowledge/schwartz-5-niveles-consciencia.md`
 - `knowledge/masterson-forde-great-leads.md`
-- `knowledge/halbert-headlines.md`
+- `knowledge/halbert-power-words.md`
 
 ## 🧠 CONOCIMIENTO INTERNALIZADO
 

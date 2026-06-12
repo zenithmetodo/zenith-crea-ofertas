@@ -38,7 +38,8 @@ PRE-B · REVIEW ⭐       → spec-reviewer (audita el spec · clasifica por sev
 PRE-C · VALIDACIÓN ⭐   → ⏸️ GATE HUMANO · la persona aprueba / itera / para (NADA avanza sin su OK)
 PRE-D · PLAN ⭐         → plan-architect (plan.md de TODO + plan de research · solo tras aprobación)
 00 · DISCOVERY          → discovery-master
-01 · PUNTO A → PUNTO B  → punto-a-b-architect
+01 · PUNTO A → PUNTO B  → punto-a-b-architect (PERSONA · viaje emocional)
+01b · PUNTO A → B PRODUCTO → punto-a-b-producto (pasos operativos del servicio · base de la carta de ventas invisible)
 02 · ONE BELIEF (×4)    → one-belief-creator + identidad-anti-identidad + nueva-oportunidad
 03 · MECANISMO ⭐       → mecanismo-maestro (PREGUNTA TODO primero · 9 bloques) → causa-raiz + mecanismo-problema + mecanismo-solucion + nombre-chicle + objeto-brillante + mito-origen · carga la BIBLIA DEL MECANISMO · entrega MD + HTML GIGANTE
 04 · CARACTERÍSTICAS    → caracteristicas-extractor + beneficios-extractor + deseos-extractor + intangibles-extractor
@@ -49,6 +50,7 @@ PRE-D · PLAN ⭐         → plan-architect (plan.md de TODO + plan de research
 09 · VALOR PERCIBIDO    → valor-percibido (fórmula Bencivenga)
 10 · CONSCIENCIA        → schwartz-consciousness + great-leads-masterson
 11 · OFERTA COMPLETA    → offer-master (ensambla todo)
+03c · NAMING PRODUCTO   → naming-producto (nombre comercial del PROGRAMA · el QUÉ se vende · distinto del nombre chicle del mecanismo · check dominio/RRSS/trademark)
 12 · ÁNGULOS ⭐         → angulos-architect (5-10 ángulos AL 1000% · nombres DESCRIPTIVOS · A qué apela / Qué cree / CÓMO LO ROMPEMOS / reconocimiento / hook · HTML editable) · OBLIGATORIO
 13 · HANDOFF ⭐         → auto-invocación a zenith-audience (crea el contenido/anuncios a partir de los ángulos)
 14 · AUDITORÍA          → auditor-completo
@@ -220,7 +222,9 @@ Ver [`agents/`](agents/) para los archivos completos. Mapa rápido:
 | ⭐ | **spec-reviewer** | El "code reviewer" del proyecto · audita el spec y clasifica por severidad 🔴🟠🟡🟢 · gate de validación humana |
 | ⭐ | **plan-architect** | Convierte el spec aprobado en plan.md de TODO + plan de research (solo tras validación humana) |
 | 01 | **discovery-master** | Hace las 5 preguntas críticas antes de empezar |
-| 02 | **punto-a-b-architect** | Punto A real + Punto B realista + tiempo |
+| 02 | **punto-a-b-architect** | Punto A real + Punto B realista + tiempo (PERSONA · viaje emocional) |
+| ⭐ | **punto-a-b-producto** | Los pasos operativos del servicio (el otro Punto A-B) · base de la carta de ventas invisible |
+| ⭐ | **naming-producto** | Nombre comercial del PROGRAMA (el QUÉ) · distinto del nombre chicle del mecanismo (el CÓMO) |
 | 03 | **one-belief-creator** | 4 variantes del One Belief (Evaldo) |
 | 04 | **identidad-anti-identidad** | Hace funcionar identidad VS anti-identidad |
 | 05 | **nueva-oportunidad** | Identifica la "nueva oportunidad" única del mecanismo |
@@ -287,8 +291,11 @@ Ver [`knowledge/`](knowledge/). Cada agente consulta el suyo. Esencial:
 - `sugarman-30-triggers.md` — Joseph Sugarman · *Adweek Copywriting Handbook*
 - `brunson-hook-story-offer.md` — Russell Brunson · *Expert Secrets*
 - `cialdini-7-principios.md` — Cialdini · *Influence*
-- `transcripcion-clase-01-mecanismos.md` — Joseph Moreno · Clase 01
-- `transcripcion-clase-05-funnel-practica.md` — Joseph Moreno · Clase 05
+- `transcripcion-video-mecanismo.md` — Joseph Moreno · vídeo mecanismo
+- `jung-arquetipos.md` · `maslow-robbins-bauer-deseos.md` — psicología del avatar (Jung + Maslow + Robbins + Bauer)
+- `meta-ad-library-guide.md` · `reddit-subreddit-map.md` — research de competencia y avatar
+- `naming-comercial-frameworks.md` · `trademark-domain-availability-checklist.md` — naming de producto + disponibilidad
+- `zenith-branding-guidelines.md` — guidelines de marca Zenith para los HTML
 - `transcripcion-video-one-belief.md` — Vídeo del usuario
 - `transcripcion-video-promesa.md` — Vídeo del usuario
 - `transcripcion-video-bonus.md` — Vídeo del usuario

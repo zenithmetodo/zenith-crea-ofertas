@@ -8,6 +8,17 @@ Formato basado en [Keep a Changelog](https://keepachangelog.com/es-ES/1.1.0/) ·
 
 ## [2.2.0] · 2026-06-12 · 🚦 PRE-FASE GUIADA POR ESPECIFICACIÓN (spec → review → validación → plan)
 
+### 🩹 Saneamiento derivado del code review (mismo release)
+
+- **6 knowledge files nuevos** (referenciados por agentes pero que no existían): `jung-arquetipos.md` (los 12 arquetipos de Carl Jung aplicados a avatar y voz de marca), `meta-ad-library-guide.md`, `reddit-subreddit-map.md`, `naming-comercial-frameworks.md`, `trademark-domain-availability-checklist.md`, `zenith-branding-guidelines.md`. Total knowledge: 21 → **27**.
+- **Referencias rotas repunteadas:** los agentes de mecanismo (06/07/08) ahora apuntan a `knowledge/biblia-del-mecanismo.md`; `maslow-piramide`/`robbins-6-human-needs` → `maslow-robbins-bauer-deseos.md`; `halbert-headlines` → `halbert-power-words.md`; `value-stacking-bencivenga` → `bencivenga-formula-valor-percibido.md`. Cero referencias rotas a knowledge en `agents/`.
+- **2 agentes huérfanos cableados** al pipeline: `punto-a-b-producto` (step 01b · pasos operativos del servicio · base de la carta de ventas invisible) y `naming-producto` (step 03c · nombre comercial del programa). Añadidos a `model_strategy` y `pipeline_zenith_v2`.
+- **Referencias rotas a templates** en output-architect corregidas (`_design-system`→`_zenith-brand`, `brief-template`→`00-brief`).
+- **Conteos alineados a la realidad:** 49 agentes · 19 commands · 19 templates · 27 knowledge.
+- **Numeración del mecanismo unificada a "03"** en README (antes mezclaba 03/04).
+
+
+
 ### ⭐ Nuevo arranque del pipeline · gate de calidad humano-en-el-bucle
 
 Antes de gastar un solo token en el pipeline, todo proyecto pasa ahora por 4 pasos:

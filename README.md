@@ -8,14 +8,14 @@
 
 [![Opus 4.7](https://img.shields.io/badge/Opus%204.7-1M%20ctx-blueviolet)]() [![Sonnet](https://img.shields.io/badge/Sonnet%204.6-medium-blue)]() [![Haiku](https://img.shields.io/badge/Haiku%204.5-fast-cyan)]() [![Tokens](https://img.shields.io/badge/tokens-optimized%2060--70%25-green)]() [![Spanish](https://img.shields.io/badge/lang-es--ES-red)]() [![Topics](https://img.shields.io/badge/topics-20-purple)]()
 
-**`/zenith-crea-ofertas:zenith-quick-discovery` · 49 agentes · 19 commands · 19 HTMLs print-to-PDF · 21 knowledge files**
+**`/zenith-crea-ofertas:zenith-quick-discovery` · 49 agentes · 19 commands · 19 HTMLs print-to-PDF · 27 knowledge files**
 
 </div>
 
 
 Sistema completo de agentes Claude Code para construir **OFERTAS TOP 1%** de alto valor percibido en español de España. **Creado por Josep · Método Zenith™** a partir de los frameworks canónicos del Direct Response (Schwartz · Masterson · Bencivenga · Evaldo · Todd Brown · Hormozi · Brunson · Halbert · Sugarman · Cialdini) + transcripciones operativas del autor.
 
-Un orquestador padre coordina **49 sub-agentes especializados** (Opus/Sonnet/Haiku optimizado) + **21 knowledge files** + **19 templates HTML** print-to-PDF + Drive-friendly. El proyecto arranca con una **pre-fase guiada por especificación** (`spec-architect` enmarca → `spec-reviewer` audita por severidad 🔴🟠🟡🟢 → **validación humana** → `plan-architect` hace el plan.md de todo + research). Después, cada agente domina una pieza del puzzle: desde el avatar deep (psicólogo + Reddit + YouTube) hasta la auditoría de 200+ ítems de la oferta final. El bloque 03 (mecanismo) lo lidera **`mecanismo-maestro`**, que pregunta 9 bloques primero y construye 6 piezas cargando la **Biblia del Mecanismo** (131 formaciones destiladas).
+Un orquestador padre coordina **49 sub-agentes especializados** (Opus/Sonnet/Haiku optimizado) + **27 knowledge files** + **19 templates HTML** print-to-PDF + Drive-friendly. El proyecto arranca con una **pre-fase guiada por especificación** (`spec-architect` enmarca → `spec-reviewer` audita por severidad 🔴🟠🟡🟢 → **validación humana** → `plan-architect` hace el plan.md de todo + research). Después, cada agente domina una pieza del puzzle: desde el avatar deep (psicólogo + Reddit + YouTube) hasta la auditoría de 200+ ítems de la oferta final. El bloque 03 (mecanismo) lo lidera **`mecanismo-maestro`**, que pregunta 9 bloques primero y construye 6 piezas cargando la **Biblia del Mecanismo** (131 formaciones destiladas).
 
 > *"De la cima se ve mejor el avatar."*
 
@@ -85,7 +85,7 @@ Si quieres **decidir tú mismo** qué etapa lanzar después del brief:
 /zenith-crea-ofertas:avatar-deep         ← etapa 01 · avatar completo
 /zenith-crea-ofertas:research-mercado    ← etapa 01 · Reddit + YouTube
 /zenith-crea-ofertas:competidor          ← etapa 02 · competencia
-/zenith-crea-ofertas:mecanismo           ← etapa 04 · mecanismo
+/zenith-crea-ofertas:mecanismo           ← bloque 03 · mecanismo (carpeta 03-mecanismo)
 /zenith-crea-ofertas:angulos             ← etapa 05 · ángulos
 /zenith-crea-ofertas:promesa             ← etapa 06 · promesa ganadora
 /zenith-crea-ofertas:garantia            ← etapa 06 · garantía + risk reversal
@@ -234,7 +234,7 @@ AVATAR     RESEARCH  COMPETENCIA     ONE BELIEF    MECANISMO   OFERTA
 | **02** | Competencia (Meta Ad Library + GAP) | `competidor-spy` | `15-competencia.html` |
 | **03a** | **Punto A→B PERSONA** (transformación emocional/racional) | `punto-a-b-architect` | `01-punto-a-b.html` |
 | **03b** | 🆕 **Punto A→B PRODUCTO** (pasos del servicio · base carta ventas invisible) | `42-punto-a-b-producto` | `17-punto-a-b-producto.html` |
-| **04** | ⭐ **Mecanismo MAESTRO** (pregunta 9 bloques primero · carga la Biblia del Mecanismo · construye 6 piezas) | `mecanismo-maestro` (líder) · `mecanismo-problema` · `mecanismo-solucion` · `nombre-chicle` · `objeto-brillante` · `mito-origen` · `super-estructura` | `03-mecanismo/` (MD + HTML gigante por pieza) |
+| **03** | ⭐ **Mecanismo MAESTRO** (pregunta 9 bloques primero · carga la Biblia del Mecanismo · construye 6 piezas) | `mecanismo-maestro` (líder) · `mecanismo-problema` · `mecanismo-solucion` · `nombre-chicle` · `objeto-brillante` · `mito-origen` · `super-estructura` | `03-mecanismo/` (MD + HTML gigante por pieza) |
 | **05** | Ángulos (definición exacta Joseph Moreno) | `angulos-architect` | `14-angulos.html` |
 | **06** | Promesa + Garantía + Risk Reversal | `promesa-ganadora` · `garantia-impresionante` · `risk-reversal-master` · `objeciones-rotas` | `05-promesa.html` + `06-garantia.html` |
 | **07** | **One Belief** (3 agentes · 4 variantes) | `identidad-anti-identidad` · `nueva-oportunidad` · `one-belief-creator` | `02-one-belief.html` |
@@ -259,7 +259,7 @@ AVATAR     RESEARCH  COMPETENCIA     ONE BELIEF    MECANISMO   OFERTA
 
 | Tipo | Para qué sirve | Agente | Cuándo se ejecuta |
 |---|---|---|---|
-| **Nombre del MECANISMO** (chicle) | El "cómo" técnico · 2-3 palabras misteriosas (ej: "Yoga en silla", "Monjaro de pobre", "Código Apex") | `nombre-chicle` | Etapa 04 (dentro del mecanismo) |
+| **Nombre del MECANISMO** (chicle) | El "cómo" técnico · 2-3 palabras misteriosas (ej: "Yoga en silla", "Monjaro de pobre", "Código Apex") | `nombre-chicle` | Bloque 03 (dentro del mecanismo) |
 | **Nombre del PRODUCTO** (comercial) | El "qué" se vende · programa completo (ej: "Bumbum na Nuca Challenge", "Padre Definido 90", "Método Cima") | `43-naming-producto` | Etapa 08 (después del One Belief) |
 
 ---

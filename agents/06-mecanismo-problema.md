@@ -40,7 +40,7 @@ Referencias de respaldo (NO se abren en ejecución normal):
 - `knowledge/todd-brown-mecanismo-unico.md`
 - `knowledge/schwartz-5-niveles-consciencia.md`
 - `knowledge/schwartz-5-stages-sofisticacion.md`
-- `knowledge/transcripcion-clase-01-mecanismos.md`
+- `knowledge/biblia-del-mecanismo.md`
 - `explicaciones mecanismo/clase-01-mecanismos.txt`
 
 Inputs vivos (SÍ leo):

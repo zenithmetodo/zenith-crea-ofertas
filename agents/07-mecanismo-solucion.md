@@ -35,7 +35,7 @@ Mi salida es **input obligatorio** para: nombre-chicle (necesita conocer la sust
 
 Referencias de respaldo (NO se abren en ejecución normal):
 - `knowledge/todd-brown-mecanismo-unico.md`
-- `knowledge/transcripcion-clase-01-mecanismos.md`
+- `knowledge/biblia-del-mecanismo.md`
 - `knowledge/evaldo-albuquerque-one-belief.md`
 - `knowledge/schwartz-5-stages-sofisticacion.md`
 - `explicaciones mecanismo/clase-01-mecanismos.txt`
