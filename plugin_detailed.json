@@ -1,12 +1,12 @@
 {
   "name": "zenith-crea-ofertas",
   "display_name": "Zenith Crea Ofertas™",
-  "version": "2.1.0",
+  "version": "2.2.0",
   "brand": "Zenith™ · Método Zenith",
   "tagline": "De la cima se ve mejor el avatar.",
   "repository": "https://github.com/zenithmetodo/zenith-crea-ofertas",
   "install_command": "curl -fsSL https://raw.githubusercontent.com/zenithmetodo/zenith-crea-ofertas/main/plugin/install.sh | bash",
-  "description": "Mega-skill TOP 1% para crear ofertas de alto valor percibido bajo el Método Zenith™. Orquesta 44 sub-agentes especializados (cada uno crack de UNA cosa · CONOCIMIENTO INTERNALIZADO desde el origen · MODEL OPTIMIZADO por complejidad), 16 slash commands, 18 templates HTML print-to-PDF + drive-friendly con branding Zenith (cian + purple + Fraunces), 21 knowledge files (incluida la BIBLIA DEL MECANISMO · 131 formaciones destiladas), auto-instalador multiplataforma. El bloque 03 (mecanismo) lo lidera mecanismo-maestro: pregunta 9 bloques primero y construye 6 piezas (causa raíz + problema + solución + nombre chicle + objeto brillante + mito de origen). Aplica Schwartz, Masterson+Forde, Bencivenga, Evaldo Albuquerque, Todd Brown, Halbert, Sugarman, Cialdini, Maslow+Robbins+Bauer, Brunson, Hormozi, Caples, Ogilvy, Stefan Georgi y Ariely. Investigación profunda en Reddit + YouTube + Biblioteca Anuncios Meta para avatar y competencia.",
+  "description": "Mega-skill TOP 1% para crear ofertas de alto valor percibido bajo el Método Zenith™. Arranca con una PRE-FASE guiada por especificación (spec-architect enmarca el proyecto → spec-reviewer lo audita y clasifica hallazgos por severidad critico/alto/moderado/bajo → VALIDACIÓN HUMANA obligatoria → plan-architect genera el plan.md de todo + research). Orquesta 47 sub-agentes especializados (cada uno crack de UNA cosa · CONOCIMIENTO INTERNALIZADO desde el origen · MODEL OPTIMIZADO por complejidad), 17 slash commands, 18 templates HTML print-to-PDF + drive-friendly con branding Zenith (cian + purple + Fraunces), 21 knowledge files (incluida la BIBLIA DEL MECANISMO · 131 formaciones destiladas), auto-instalador multiplataforma. El bloque 03 (mecanismo) lo lidera mecanismo-maestro: pregunta 9 bloques primero y construye 6 piezas (causa raíz + problema + solución + nombre chicle + objeto brillante + mito de origen). Aplica Schwartz, Masterson+Forde, Bencivenga, Evaldo Albuquerque, Todd Brown, Halbert, Sugarman, Cialdini, Maslow+Robbins+Bauer, Brunson, Hormozi, Caples, Ogilvy, Stefan Georgi y Ariely. Investigación profunda en Reddit + YouTube + Biblioteca Anuncios Meta para avatar y competencia.",
   "author": {
     "name": "Josep (INDI) · Método Zenith™",
     "email": "impactodigitalformacionbrasil@gmail.com"
@@ -61,8 +61,8 @@
   "language": "es-ES",
   "components": {
     "skills": 1,
-    "agents": 44,
-    "commands": 16,
+    "agents": 47,
+    "commands": 17,
     "knowledge": 21,
     "templates": 18,
     "examples": 5
@@ -71,7 +71,7 @@
     "explanation": "Cada agente declara su model según la complejidad de su tarea para OPTIMIZAR COSTES sin perder calidad TOP 1%.",
     "opus": {
       "use_when": "Decisiones estratégicas que afectan todo el pipeline · razonamiento creativo profundo · auditoría maestra",
-      "agents": ["discovery-master", "zenith-quick-discovery", "one-belief-creator", "mecanismo-maestro", "mecanismo-problema", "mecanismo-solucion", "promesa-ganadora", "valor-percibido", "offer-master", "auditor-completo", "headline-master", "avatar-deep-psicologo", "angulos-architect"]
+      "agents": ["spec-architect", "spec-reviewer", "plan-architect", "discovery-master", "zenith-quick-discovery", "one-belief-creator", "mecanismo-maestro", "mecanismo-problema", "mecanismo-solucion", "promesa-ganadora", "valor-percibido", "offer-master", "auditor-completo", "headline-master", "avatar-deep-psicologo", "angulos-architect"]
     },
     "sonnet": {
       "use_when": "Generativo con reglas claras · investigación con razonamiento · transformación inteligente",
@@ -114,6 +114,10 @@
     "install_target": "~/.claude/skills/zenith-crea-ofertas (symlink)"
   },
   "pipeline_zenith_v2": [
+    { "step": "pre-a", "name": "spec", "agent": "spec-architect", "model": "opus", "tokens_est": "2-4k", "descripcion": "Enmarca el proyecto en un SPEC antes de gastar tokens" },
+    { "step": "pre-b", "name": "spec-review", "agent": "spec-reviewer", "model": "opus", "tokens_est": "2-4k", "descripcion": "Audita el spec y clasifica hallazgos por severidad (critico/alto/moderado/bajo)" },
+    { "step": "pre-c", "name": "validacion-humana", "gate": true, "descripcion": "GATE OBLIGATORIO · la persona aprueba/itera/para · nada avanza sin su OK" },
+    { "step": "pre-d", "name": "plan", "agent": "plan-architect", "model": "opus", "tokens_est": "3-5k", "descripcion": "Convierte el spec aprobado en plan.md de TODO + plan de research", "confirmacion_obligatoria": true },
     { "step": "00", "name": "quick-discovery", "agent": "zenith-quick-discovery", "model": "opus", "tokens_est": "2-4k", "confirmacion_obligatoria": true },
     { "step": "00b", "name": "avatar-deep", "agents": ["avatar-deep-psicologo", "research-reddit", "research-youtube", "avatar-mapa-empatia", "deal-makers-extractor"], "model_dominante": "sonnet", "tokens_est": "15-25k" },
     { "step": "00c", "name": "competencia", "agent": "competidor-spy", "model": "sonnet", "tokens_est": "8-12k" },
@@ -167,6 +171,7 @@
     "MD + HTML SIEMPRE en cada carpeta: el .md para que la IA lo lea y los siguientes agentes hereden el contexto; el .html print-to-PDF para el humano.",
     "Bencivenga manda al final: Beneficio + Credibilidad − Costo.",
     "Schwartz audita: nivel + stage deben cuadrar pieza por pieza.",
+    "Pre-fase guiada por especificación: spec -> review por severidad -> VALIDACIÓN HUMANA -> plan.md. El pipeline no se ejecuta sin spec validado por la persona.",
     "Sin discovery + confirmación, no se ejecuta nada.",
     "Avatar PROFUNDO (psicólogo + Reddit + YouTube + día en la vida + deal-makers).",
     "Ángulos según definición exacta del autor (razón distinta + tipo concreto + creencia específica + reconocimiento).",

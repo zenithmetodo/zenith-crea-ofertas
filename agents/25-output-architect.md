@@ -107,6 +107,11 @@ Conozco exactamente dónde va cada output. Esta es la estructura canónica del p
 
 ```
 proyecto-{slug}/
+├── 00-spec/                            (⭐ PRE-FASE · gate humano antes del pipeline)
+│   ├── spec.md / spec.html             (spec-architect · el marco del proyecto)
+│   ├── spec-review.md / spec-review.html (spec-reviewer · hallazgos por severidad 🔴🟠🟡🟢)
+│   ├── plan.md / plan.html             (plan-architect · el plan de TODO)
+│   └── research-plan.md                (qué investigar primero)
 ├── 00-discovery/
 │   ├── brief.json
 │   └── brief.html
@@ -184,6 +189,9 @@ Conozco de memoria qué plantilla pertenece a qué agente:
 
 | Agente que invoca | Plantilla aplicada | Carpeta destino |
 |-------------------|--------------------|-----------------|
+| `spec-architect` ⭐ | (genero spec custom usando design system) | `00-spec/` |
+| `spec-reviewer` ⭐ | (genero review custom · tabla de severidad) | `00-spec/` |
+| `plan-architect` ⭐ | (genero plan custom usando design system) | `00-spec/` |
 | `discovery-master` | `00-brief.html` | `00-discovery/` |
 | `punto-a-b-architect` | `01-punto-a-b.html` | `01-punto-a-b/` |
 | `one-belief-creator` | `02-one-belief.html` (4 cards) | `02-one-belief/` |

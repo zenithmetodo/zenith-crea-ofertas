@@ -6,6 +6,33 @@ Formato basado en [Keep a Changelog](https://keepachangelog.com/es-ES/1.1.0/) ·
 
 ---
 
+## [2.2.0] · 2026-06-12 · 🚦 PRE-FASE GUIADA POR ESPECIFICACIÓN (spec → review → validación → plan)
+
+### ⭐ Nuevo arranque del pipeline · gate de calidad humano-en-el-bucle
+
+Antes de gastar un solo token en el pipeline, todo proyecto pasa ahora por 4 pasos:
+
+- **`agents/00a-spec-architect.md`** (opus) · EL PRIMER AGENTE DE TODO. Convierte la idea cruda en un **SPEC** (objetivo · alcance qué SÍ/qué NO · entregables · criterios de éxito medibles · supuestos · restricciones · riesgos · preguntas abiertas). Output `00-spec/spec.md` + `.html`.
+- **`agents/00b-spec-reviewer.md`** (opus) · el **"code reviewer"** del proyecto. Audita el spec en 12 ejes y clasifica cada hallazgo por **severidad**: 🔴 Crítico · 🟠 Alto · 🟡 Moderado · 🟢 Bajo. Veredicto ✅ aprobar / 🔁 iterar / ⛔ parar. Output `00-spec/spec-review.md` + `.html`.
+- **⏸️ VALIDACIÓN HUMANA (gate obligatorio)** · la persona aprueba, itera o para. **Nada del pipeline avanza sin su OK.**
+- **`agents/00c-plan-architect.md`** (opus) · tras la aprobación, genera el **`plan.md` de TODO** (mitigaciones de los hallazgos · plan de research · secuencia de ejecución · checkpoints humanos · criterios de cierre) + `research-plan.md`. Output `00-spec/`.
+
+### 🆕 Command nuevo
+
+- **`/spec`** · lanza la pre-fase completa (spec → review por severidad → validación humana → plan).
+
+### 🗂️ Carpeta nueva del proyecto
+
+- `proyecto-{slug}/00-spec/` con `spec.md` · `spec-review.md` · `plan.md` · `research-plan.md` (+ sus HTML).
+
+### 🔧 Registro
+
+- `plugin_detailed.json`: agents 44→47, commands 16→17, `model_strategy` (opus +3), `pipeline_zenith_v2` (4 pasos pre-fase + gate), filosofía, **v2.2.0**.
+- `.claude-plugin/plugin.json`: descripción + **v2.2.0**.
+- `SKILL.md`, `README.md`, `agents/25-output-architect.md`: pre-fase documentada, carpeta `00-spec/`, tabla de agentes y conteos.
+
+---
+
 ## [2.1.0] · 2026-06-12 · 🧠 BLOQUE MECANISMO MAESTRO + BIBLIA DEL MECANISMO
 
 ### ⭐ Nuevo orquestador del bloque 03 · `mecanismo-maestro`

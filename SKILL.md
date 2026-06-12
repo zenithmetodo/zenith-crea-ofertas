@@ -9,7 +9,7 @@ description: Zenith Crea Ofertas™ · Mega-skill TOP 1% para crear OFERTAS COMP
 
 ## QUÉ ES ESTA SKILL
 
-Es la skill PADRE de un sistema de **46 sub-agentes especializados** (cada uno experto en UNA sola pieza de la oferta — nunca dos haciendo lo mismo) y **18 slash commands** para invocación rápida.
+Es la skill PADRE de un sistema de **49 sub-agentes especializados** (cada uno experto en UNA sola pieza de la oferta — nunca dos haciendo lo mismo) y **19 slash commands** para invocación rápida. Arranca con una **pre-fase guiada por especificación** (spec → review por severidad → validación humana → plan) antes de ejecutar nada.
 
 Construye la oferta completa siguiendo la metodología **"Incubando tu Producto Perfecto"** + los frameworks canónicos del direct response del siglo XX y XXI.
 
@@ -33,6 +33,10 @@ Cuando el usuario diga cualquiera de estas frases (o equivalente):
 El embudo se construye SIEMPRE en este orden estricto. Saltarse uno = oferta floja.
 
 ```
+PRE-A · SPEC ⭐         → spec-architect (enmarca el proyecto: objetivo, alcance, criterios, supuestos, riesgos)
+PRE-B · REVIEW ⭐       → spec-reviewer (audita el spec · clasifica por severidad 🔴🟠🟡🟢)
+PRE-C · VALIDACIÓN ⭐   → ⏸️ GATE HUMANO · la persona aprueba / itera / para (NADA avanza sin su OK)
+PRE-D · PLAN ⭐         → plan-architect (plan.md de TODO + plan de research · solo tras aprobación)
 00 · DISCOVERY          → discovery-master
 01 · PUNTO A → PUNTO B  → punto-a-b-architect
 02 · ONE BELIEF (×4)    → one-belief-creator + identidad-anti-identidad + nueva-oportunidad
@@ -72,6 +76,17 @@ El pipeline completo SIEMPRE termina con los ángulos perfectos y el handoff al 
 
 ## CÓMO TRABAJAR (PROTOCOLO MAESTRO)
 
+### Paso 0 · PRE-FASE · Spec → Review → Validación humana → Plan ⭐
+
+ANTES de gastar un solo token en el pipeline, el proyecto pasa por un **gate de calidad guiado por especificación**:
+
+1. **`spec-architect`** convierte la idea cruda en un **SPEC** (objetivo · alcance qué SÍ/qué NO · entregables · criterios de éxito medibles · supuestos · restricciones · riesgos · preguntas abiertas). Output: `00-spec/spec.md` + `spec.html`.
+2. **`spec-reviewer`** (el "code reviewer" del proyecto) audita el spec en 12 ejes y **clasifica cada hallazgo por severidad**: 🔴 Crítico · 🟠 Alto · 🟡 Moderado · 🟢 Bajo. Output: `00-spec/spec-review.md` + `spec-review.html` con veredicto (✅ aprobar / 🔁 iterar / ⛔ parar).
+3. **⏸️ VALIDACIÓN HUMANA (gate obligatorio):** la persona ve el review y decide. **Nada del pipeline avanza sin su aprobación explícita.** Si pide iterar, el `spec-architect` corrige y el `spec-reviewer` vuelve a revisar.
+4. **`plan-architect`** (solo tras la aprobación) convierte el spec validado en el **`plan.md` de TODO**: mitigaciones de los hallazgos, plan de research (qué investigar primero), secuencia de ejecución del pipeline, checkpoints humanos y criterios de cierre. Output: `00-spec/plan.md` + `plan.html` + `research-plan.md`.
+
+> Sin spec validado, no se ejecuta el pipeline. Este gate evita construir una oferta entera sobre un marco roto.
+
 ### Paso 1 · Discovery breve (3-5 preguntas máximo)
 
 Antes de lanzar agentes, lanzo el `discovery-master` para recoger:
@@ -92,6 +107,7 @@ Creo `proyecto-{slug-producto}/` con TODAS las subcarpetas (00 a 13), una por et
 
 ```
 proyecto-{slug}/
+├── 00-spec/                 (⭐ PRE-FASE · spec.md + spec-review.md + plan.md + research-plan.md · gate humano)
 ├── 00-discovery/
 ├── 01-punto-a-b/
 ├── 02-one-belief/         (4 variantes en HTML)
@@ -200,6 +216,9 @@ Ver [`agents/`](agents/) para los archivos completos. Mapa rápido:
 
 | # | Agente | Crack en… |
 |---|--------|-----------|
+| ⭐ | **spec-architect** | PRIMERO DE TODO · enmarca el proyecto en un SPEC (objetivo, alcance, criterios, supuestos, riesgos) antes de gastar tokens |
+| ⭐ | **spec-reviewer** | El "code reviewer" del proyecto · audita el spec y clasifica por severidad 🔴🟠🟡🟢 · gate de validación humana |
+| ⭐ | **plan-architect** | Convierte el spec aprobado en plan.md de TODO + plan de research (solo tras validación humana) |
 | 01 | **discovery-master** | Hace las 5 preguntas críticas antes de empezar |
 | 02 | **punto-a-b-architect** | Punto A real + Punto B realista + tiempo |
 | 03 | **one-belief-creator** | 4 variantes del One Belief (Evaldo) |
@@ -237,6 +256,7 @@ Ver [`commands/`](commands/) para invocación rápida sin discovery completo.
 
 | Command | Lanza |
 |---------|-------|
+| `/spec` ⭐ | **PRE-FASE** · spec-architect → spec-reviewer (severidad 🔴🟠🟡🟢) → validación humana → plan-architect (plan.md + research) |
 | `/zenith-crea-oferta` | **Entry point v2.0 recomendado** · Quick Discovery + confirmación + pipeline 17 etapas |
 | `/crea-oferta-1pct` | Entry point v1.0 legacy · Discovery completo (5+5 preguntas) + 13 pasos |
 | `/one-belief` | one-belief-creator (4 variantes Evaldo + Joseph Moreno) |
@@ -290,6 +310,7 @@ Ver [`examples/`](examples/). Casos reales desmenuzados:
 
 ## REGLAS INNEGOCIABLES (no me las saltes)
 
+0. **Pre-fase con gate humano SIEMPRE**. Spec → review por severidad → la persona valida → plan.md. El pipeline NO se ejecuta sin spec validado.
 1. **Cada agente UNA función**. Nunca dos haciendo lo mismo.
 2. **One Belief siempre 4 variantes**. Identidad + Anti-identidad + Nueva oportunidad + Combo.
 3. **Mecanismo siempre completo (6 piezas)**. Lo lidera `mecanismo-maestro`: pregunta primero (9 bloques) y construye Causa raíz + Problema + Solución + Nombre chicle + Objeto brillante + Mito de origen. Jamás solo uno. Carga la Biblia del Mecanismo.
