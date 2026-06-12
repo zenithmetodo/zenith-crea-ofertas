@@ -35,7 +35,7 @@ Referencias de respaldo (NO se abren en ejecución normal):
 - `knowledge/evaldo-albuquerque-one-belief.md`
 - `knowledge/identidad-vs-anti-identidad.md`
 - `knowledge/schwartz-5-niveles-consciencia.md`
-- `PUNTO A PUNTO B/Ejercicio 2.2 punto a y b producto.txt` (plantilla fuente)
+- `knowledge/transcripcion-video-punto-a-b.md` (plantilla fuente)
 
 Input vivo (SÍ leo):
 - `proyecto-{slug}/00-discovery/brief.json` (extraigo producto, avatar, resultado deseado, precio)

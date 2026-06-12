@@ -34,7 +34,7 @@ No diseño los módulos (eso es de `modulos-namer`).
 > ⚡ **OPTIMIZACIÓN:** mi sección `🧠 CONOCIMIENTO INTERNALIZADO` ya tiene TODO lo que necesito. NO releo los archivos externos en ejecución normal. Los referencio solo como respaldo conceptual o si el cliente pide profundizar.
 
 Referencias de respaldo (NO se abren en ejecución normal):
-- `promesa/Ejercicio 7 Promesa.docx.md`
+- `knowledge/transcripcion-video-promesa.md`
 - `knowledge/bencivenga-formula-valor-percibido.md`
 - `knowledge/halbert-power-words.md`
 - `knowledge/evaldo-albuquerque-one-belief.md`

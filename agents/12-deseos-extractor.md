@@ -34,7 +34,7 @@ No saco intangibles emocionales (eso lo hace `intangibles-extractor` — yo trab
 Referencias de respaldo (NO se abren en ejecución normal):
 - `knowledge/maslow-robbins-bauer-deseos.md`
 - `knowledge/cialdini-7-principios.md`
-- `caracteristicas beneficios deseo/Ejercicio. Características....docx.md`
+- `knowledge/transcripcion-video-caracteristicas-beneficios.md`
 
 Inputs vivos (SÍ leo):
 - `proyecto-{slug}/04-caracteristicas-beneficios-deseos/beneficios.json` (INPUT obligatorio)

@@ -34,7 +34,7 @@ No saco intangibles (eso lo hace `intangibles-extractor`).
 
 Referencias de respaldo (NO se abren en ejecución normal):
 - `knowledge/bencivenga-formula-valor-percibido.md`
-- `caracteristicas beneficios deseo/Ejercicio. Características....docx.md`
+- `knowledge/transcripcion-video-caracteristicas-beneficios.md`
 
 Inputs vivos (SÍ leo):
 - `proyecto-{slug}/00-discovery/brief.json` (producto + formato + estado)

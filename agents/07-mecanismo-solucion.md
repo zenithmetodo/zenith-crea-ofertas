@@ -38,7 +38,7 @@ Referencias de respaldo (NO se abren en ejecución normal):
 - `knowledge/biblia-del-mecanismo.md`
 - `knowledge/evaldo-albuquerque-one-belief.md`
 - `knowledge/schwartz-5-stages-sofisticacion.md`
-- `explicaciones mecanismo/clase-01-mecanismos.txt`
+- `knowledge/transcripcion-video-mecanismo.md`
 
 Inputs vivos (SÍ leo):
 - `proyecto-{slug}/00-discovery/brief.json` (producto, autoridad del experto)

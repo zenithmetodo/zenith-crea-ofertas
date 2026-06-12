@@ -36,7 +36,7 @@ Los intangibles son la capa que el copy usará para que el lector visualice fís
 
 Referencias de respaldo (NO se abren en ejecución normal):
 - `knowledge/maslow-robbins-bauer-deseos.md`
-- `caracteristicas beneficios deseo/Ejercicio. Características....docx.md`
+- `knowledge/transcripcion-video-caracteristicas-beneficios.md`
 
 Inputs vivos (SÍ leo):
 - `proyecto-{slug}/04-caracteristicas-beneficios-deseos/deseos.json` (INPUT obligatorio)

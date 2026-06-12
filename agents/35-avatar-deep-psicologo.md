@@ -36,11 +36,9 @@ Me invocan justo DESPUÉS de `34-zenith-quick-discovery` o `01-discovery-master`
 
 Antes de operar, leo:
 - `proyecto-zenith-{slug}/00-quick-discovery/brief.json` (input obligatorio)
-- `AVATAR/Ejercicio 2. Universo vacío.md`
-- `AVATAR/EJERCICIO 2.1. AVATAR A COMPETIR.md`
-- `AVATAR/Ejercicio 3. Punto de partida y meta.docx.md`
-- `AVATAR/Ejercicio 4. Profundizando avatar.docx.md`
-- `AVATAR/NICHO + AVATAR.md` (los 17 pasos del GPT INDI NICHOS PERFECTOS)
+- `knowledge/jung-arquetipos.md` (los 12 arquetipos para el avatar y la voz)
+- `knowledge/maslow-robbins-bauer-deseos.md` (pirámide Maslow + 6 necesidades Robbins + 8 miedos Bauer)
+- `knowledge/cialdini-7-principios.md` (palancas de influencia para el avatar)
 - `knowledge/jung-arquetipos.md` (los 12 arquetipos de Carl Jung aplicados a avatar y voz de marca)
 - `knowledge/maslow-robbins-bauer-deseos.md` (pirámide de Maslow + 6 necesidades de Robbins + 8 miedos de Bauer)
 

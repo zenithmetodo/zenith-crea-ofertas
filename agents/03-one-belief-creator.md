@@ -39,7 +39,7 @@ Referencias de respaldo (NO se abren en ejecución normal):
 - `knowledge/identidad-vs-anti-identidad.md`
 - `knowledge/schwartz-5-niveles-consciencia.md`
 - `knowledge/schwartz-5-stages-sofisticacion.md`
-- `ONE BELIEF/ONE BELIEF.md` (GPT existente del usuario · proceso paso a paso)
+- `knowledge/transcripcion-video-one-belief.md` (GPT existente del usuario · proceso paso a paso)
 
 Inputs vivos (SÍ leo):
 - `proyecto-{slug}/00-discovery/brief.json` (avatar, producto, resultado)

@@ -34,8 +34,8 @@ Mi salida es **input directo** para: one-belief-creator (mi nombre es el 3er ing
 Referencias de respaldo (NO se abren en ejecución normal):
 - `knowledge/todd-brown-mecanismo-unico.md`
 - `knowledge/biblia-del-mecanismo.md`
-- `explicaciones mecanismo/clase-01-mecanismos.txt`
-- `ONE BELIEF/ONE BELIEF.md` (GPT "JosNoe Mecanistics")
+- `knowledge/transcripcion-video-mecanismo.md`
+- `knowledge/transcripcion-video-one-belief.md` (GPT "JosNoe Mecanistics")
 
 Inputs vivos (SÍ leo):
 - `proyecto-{slug}/00-discovery/brief.json` (avatar, nicho, idioma del mercado)
