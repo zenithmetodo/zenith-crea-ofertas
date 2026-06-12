@@ -285,6 +285,8 @@ Ver [`knowledge/`](knowledge/). Cada agente consulta el suyo. Esencial:
 - `bencivenga-formula-valor-percibido.md` — Gary Bencivenga · *Bullets, Marketing Bullets*
 - `evaldo-albuquerque-one-belief.md` — Evaldo Albuquerque · *The 16-Word Sales Letter*
 - `biblia-del-mecanismo.md` — ⭐ **LA BIBLIA DEL MECANISMO** · 131 formaciones destiladas (20 partes): las 4 capas, mecanismo del problema/solución, causa raíz, objeto brillante, nombre chicle, mito de origen, los 7 pasos de 7 dígitos (La Mer), 50+ ejemplos. La carga `mecanismo-maestro`.
+- `biblia-del-copy.md` — ⭐ **LA BIBLIA DEL COPY** · compendio canónico de copywriting/neurocopy (21 partes): deseo, niveles de consciencia, Great Leads, PAS/AIDA/BAB, headlines, prueba, oferta irresistible (Hormozi), storytelling, dimensionalización, pesquisa. La consultan los agentes de copy (promesa, headline, fascinations, offer, valor-percibido, great-leads, ángulos, objeciones, mecanismo-maestro).
+- `copy-en-las-ofertas.md` — mapa puente: conecta cada pieza de la Biblia del Copy con la zona de la oferta donde aplica (promesa · mecanismo · oferta/stack · copy de superficie).
 - `todd-brown-mecanismo-unico.md` — Todd Brown · *E5 Method*
 - `identidad-vs-anti-identidad.md` — Combinación operativa
 - `halbert-power-words.md` — Gary Halbert · *Boron Letters*

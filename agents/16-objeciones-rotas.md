@@ -37,6 +37,8 @@ Referencias de respaldo (NO se abren en ejecución normal):
 - `knowledge/maslow-robbins-bauer-deseos.md`
 - `knowledge/halbert-power-words.md`
 - `knowledge/cialdini-7-principios.md`
+- `knowledge/biblia-del-copy.md` ← **LA BIBLIA DEL COPY** (cómo se redacta la ruptura de objeciones)
+- `knowledge/copy-en-las-ofertas.md` (mapa: qué pieza de copy aplica en cada zona de la oferta)
 
 Inputs vivos (SÍ leo):
 - `proyecto-{slug}/00-discovery/brief.json` (objeciones_comunes + avatar + dolor)

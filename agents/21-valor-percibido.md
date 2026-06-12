@@ -40,6 +40,8 @@ Trigger del orquestador: después de `bonus-irresistible` y antes de `schwartz-c
 Referencias de respaldo (NO se abren en ejecución normal):
 - `knowledge/bencivenga-formula-valor-percibido.md`
 - `knowledge/sugarman-30-triggers.md`
+- `knowledge/biblia-del-copy.md` ← **LA BIBLIA DEL COPY** (cómo se escribe el stack y la prueba)
+- `knowledge/copy-en-las-ofertas.md` (mapa: qué pieza de copy aplica en cada zona de la oferta)
 
 Inputs vivos (SÍ leo · solo los JSON ya consolidados):
 1. `proyecto-{slug}/00-discovery/brief.json` (precio objetivo, avatar)

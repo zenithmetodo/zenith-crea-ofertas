@@ -56,6 +56,8 @@ Referencias de respaldo:
 - `knowledge/schwartz-5-niveles-consciencia.md`
 - `knowledge/schwartz-5-stages-sofisticacion.md`
 - `knowledge/evaldo-albuquerque-one-belief.md`
+- `knowledge/biblia-del-copy.md` ← **LA BIBLIA DEL COPY** (cómo se nombra y se narra el mecanismo)
+- `knowledge/copy-en-las-ofertas.md` (mapa: qué pieza de copy aplica en cada zona de la oferta)
 
 Inputs vivos (SÍ leo):
 - `proyecto-{slug}/00-discovery/brief.json` (avatar, dolor, competencia, Schwartz, Stage)

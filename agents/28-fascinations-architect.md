@@ -39,6 +39,8 @@ Soy el motor. Si los bullets fallan, la página se cae a la mitad.
 Referencias de respaldo (NO se abren en ejecución normal):
 - `knowledge/halbert-power-words.md`
 - `knowledge/sugarman-30-triggers.md`
+- `knowledge/biblia-del-copy.md` ← **LA BIBLIA DEL COPY** (bullets/fascinations + dimensionalización)
+- `knowledge/copy-en-las-ofertas.md` (mapa: qué pieza de copy aplica en cada zona de la oferta)
 
 Inputs vivos (SÍ leo):
 - `proyecto-{slug}/00-discovery/brief.json` (avatar, tono, jerga)

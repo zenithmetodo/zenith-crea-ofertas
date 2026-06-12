@@ -38,6 +38,8 @@ Referencias de respaldo (NO se abren en ejecución normal):
 - `knowledge/bencivenga-formula-valor-percibido.md`
 - `knowledge/halbert-power-words.md`
 - `knowledge/evaldo-albuquerque-one-belief.md`
+- `knowledge/biblia-del-copy.md` ← **LA BIBLIA DEL COPY** (cómo se escribe la promesa)
+- `knowledge/copy-en-las-ofertas.md` (mapa: qué pieza de copy aplica en cada zona de la oferta)
 
 Inputs vivos (SÍ leo):
 - `proyecto-{slug}/00-discovery/brief.json` (avatar + resultado + tiempo + tasa)

@@ -6,7 +6,7 @@
   "tagline": "De la cima se ve mejor el avatar.",
   "repository": "https://github.com/zenithmetodo/zenith-crea-ofertas",
   "install_command": "curl -fsSL https://raw.githubusercontent.com/zenithmetodo/zenith-crea-ofertas/main/plugin/install.sh | bash",
-  "description": "Mega-skill TOP 1% para crear ofertas de alto valor percibido bajo el Método Zenith™. Arranca con una PRE-FASE guiada por especificación (spec-architect enmarca el proyecto → spec-reviewer lo audita y clasifica hallazgos por severidad critico/alto/moderado/bajo → VALIDACIÓN HUMANA obligatoria → plan-architect genera el plan.md de todo + research). Orquesta 49 sub-agentes especializados (cada uno crack de UNA cosa · CONOCIMIENTO INTERNALIZADO desde el origen · MODEL OPTIMIZADO por complejidad), 19 slash commands, 19 templates HTML print-to-PDF + drive-friendly con branding Zenith (cian + purple + Fraunces), 27 knowledge files (incluida la BIBLIA DEL MECANISMO · 131 formaciones destiladas), auto-instalador multiplataforma. El bloque 03 (mecanismo) lo lidera mecanismo-maestro: pregunta 9 bloques primero y construye 6 piezas (causa raíz + problema + solución + nombre chicle + objeto brillante + mito de origen). Aplica Schwartz, Masterson+Forde, Bencivenga, Evaldo Albuquerque, Todd Brown, Halbert, Sugarman, Cialdini, Maslow+Robbins+Bauer, Brunson, Hormozi, Caples, Ogilvy, Stefan Georgi y Ariely. Investigación profunda en Reddit + YouTube + Biblioteca Anuncios Meta para avatar y competencia.",
+  "description": "Mega-skill TOP 1% para crear ofertas de alto valor percibido bajo el Método Zenith™. Arranca con una PRE-FASE guiada por especificación (spec-architect enmarca el proyecto → spec-reviewer lo audita y clasifica hallazgos por severidad critico/alto/moderado/bajo → VALIDACIÓN HUMANA obligatoria → plan-architect genera el plan.md de todo + research). Orquesta 49 sub-agentes especializados (cada uno crack de UNA cosa · CONOCIMIENTO INTERNALIZADO desde el origen · MODEL OPTIMIZADO por complejidad), 19 slash commands, 19 templates HTML print-to-PDF + drive-friendly con branding Zenith (cian + purple + Fraunces), 29 knowledge files (incluidas la BIBLIA DEL MECANISMO · 131 formaciones destiladas · y la BIBLIA DEL COPY · 21 partes), auto-instalador multiplataforma. El bloque 03 (mecanismo) lo lidera mecanismo-maestro: pregunta 9 bloques primero y construye 6 piezas (causa raíz + problema + solución + nombre chicle + objeto brillante + mito de origen). Aplica Schwartz, Masterson+Forde, Bencivenga, Evaldo Albuquerque, Todd Brown, Halbert, Sugarman, Cialdini, Maslow+Robbins+Bauer, Brunson, Hormozi, Caples, Ogilvy, Stefan Georgi y Ariely. Investigación profunda en Reddit + YouTube + Biblioteca Anuncios Meta para avatar y competencia.",
   "author": {
     "name": "Josep (INDI) · Método Zenith™",
     "email": "impactodigitalformacionbrasil@gmail.com"
@@ -63,7 +63,7 @@
     "skills": 1,
     "agents": 49,
     "commands": 19,
-    "knowledge": 27,
+    "knowledge": 29,
     "templates": 19,
     "examples": 5
   },

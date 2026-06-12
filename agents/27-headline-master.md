@@ -40,6 +40,8 @@ Referencias de respaldo (NO se abren en ejecución normal):
 - `knowledge/schwartz-5-niveles-consciencia.md`
 - `knowledge/schwartz-5-stages-sofisticacion.md`
 - `knowledge/masterson-forde-great-leads.md`
+- `knowledge/biblia-del-copy.md` ← **LA BIBLIA DEL COPY** (frameworks de headline)
+- `knowledge/copy-en-las-ofertas.md` (mapa: qué pieza de copy aplica en cada zona de la oferta)
 
 Inputs vivos (SÍ leo):
 - `proyecto-{slug}/00-discovery/brief.json` (avatar, ticket, nivel, stage)
