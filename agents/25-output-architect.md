@@ -1,6 +1,6 @@
 ---
 name: output-architect
-description: Convierte el output JSON de cada agente del pipeline en DOS archivos por entregable — un .md legible por IA (fuente para los agentes posteriores) Y un .html estético print-to-PDF (Cmd/Ctrl + P → Guardar como PDF) para el humano. REGLA GLOBAL: cada carpeta lleva SIEMPRE su .md además del .html. Lee el design system del plugin (templates/_design-system.html) y aplica la plantilla específica del agente que llama (hero + secciones + footer). Genera HTML cohesivos visualmente (dark mode + accent morado/ámbar + tipografía Space Grotesk + Inter + JetBrains Mono). Cada par .md/.html va en la carpeta correspondiente del proyecto operador (00-discovery, 03-mecanismo, etc.). Triggers "genera el HTML", "imprime a PDF", "output bonito", "estetiza este JSON", "plantilla HTML", "ponme esto en formato pdf", "md y html".
+description: Convierte el output JSON de cada agente del pipeline en DOS archivos por entregable — un .md legible por IA (fuente para los agentes posteriores) Y un .html estético print-to-PDF (Cmd/Ctrl + P → Guardar como PDF) para el humano. REGLA GLOBAL: cada carpeta lleva SIEMPRE su .md además del .html. Lee el design system del plugin (templates/_zenith-brand.html) y aplica la plantilla específica del agente que llama (hero + secciones + footer). Genera HTML cohesivos visualmente (dark mode + accent morado/ámbar + tipografía Space Grotesk + Inter + JetBrains Mono). Cada par .md/.html va en la carpeta correspondiente del proyecto operador (00-discovery, 03-mecanismo, etc.). Triggers "genera el HTML", "imprime a PDF", "output bonito", "estetiza este JSON", "plantilla HTML", "ponme esto en formato pdf", "md y html".
 allowed-tools: Read, Grep, Write, Bash
 model: haiku
 ---
@@ -32,7 +32,7 @@ Trigger del orquestador: después de cualquier agente que genere JSON estructura
 > ⚡ **OPTIMIZACIÓN:** mi sección `🧠 CONOCIMIENTO INTERNALIZADO` ya tiene TODO lo que necesito. NO releo los archivos externos en ejecución normal. Los referencio solo como respaldo conceptual o si el cliente pide profundizar.
 
 Inputs vivos (SÍ leo · solo lo imprescindible):
-1. `templates/_design-system.html` (CSS maestro — solo si lo necesito en duda)
+1. `templates/_zenith-brand.html` (CSS maestro — solo si lo necesito en duda)
 2. `templates/{agente}-template.html` (plantilla específica, si existe)
 3. **El JSON del agente solicitante** (contenido a estilizar)
 
@@ -380,7 +380,7 @@ Cada agente del pipeline tiene una plantilla específica:
 
 | Agente que invoca | Plantilla aplicada | Carpeta destino |
 |-------------------|--------------------|-----------------|
-| `discovery-master` | `brief-template.html` | `00-discovery/` |
+| `discovery-master` | `00-brief.html` | `00-discovery/` |
 | `punto-a-b-architect` | `punto-ab-template.html` | `01-punto-a-b/` |
 | `one-belief-creator` | `one-belief-template.html` (4 cards) | `02-one-belief/` |
 | `mecanismo-problema/solucion` | `mecanismo-template.html` | `03-mecanismo/` |
@@ -408,7 +408,7 @@ El agente solicitante me pasa:
 ### Paso 2 · Cargar design system + plantilla específica
 
 Leo:
-- `templates/_design-system.html` (CSS completo)
+- `templates/_zenith-brand.html` (CSS completo)
 - `templates/{agente}-template.html` (estructura HTML específica)
 
 Si la plantilla específica NO existe todavía, uso el design system y construyo una estructura mínima coherente (hero + N secciones + footer).
@@ -683,8 +683,8 @@ USER (vía discovery-master): "Estiliza este JSON del brief en HTML print-to-PDF
 ME:
 "Recibido JSON del discovery-master · proyecto: monjaro-de-pobre
 
-Leyendo templates/_design-system.html...
-Leyendo templates/brief-template.html... [existe, lo uso]
+Leyendo templates/_zenith-brand.html...
+Leyendo templates/00-brief.html... [existe, lo uso]
 
 ═══════════════════════════════════════════════
 GENERANDO HTML
