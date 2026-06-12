@@ -38,11 +38,18 @@ El mecanismo **siempre se desdobla en dos** (regla innegociable de esta skill): 
 
 ## QUÉ AGENTES LANZA
 
-- `mecanismo-problema` (identifica el villano concreto · da las 3-5 opciones más fuertes)
-- `mecanismo-solucion` (responde las 12 preguntas Todd Brown · construye el "cómo deseable")
-- `nombre-chicle` (genera 10 candidatos por categoría: identitario · sensorial · geografía · personaje · animal · tecnológico · críptico)
+Lo lidera **`mecanismo-maestro`** (el PRIMERO del bloque · carga la **Biblia del Mecanismo** · 131 formaciones). Funciona en dos fases:
 
-Output: carpeta `03-mecanismo/` con `problema.html` + `solucion.html` + `nombre-chicle.html` + `auditoria-3-reglas.html`.
+1. **Pregunta TODO primero** — la batería de **9 bloques** (villano · causa raíz · soluciones fallidas · solución · objeto brillante · nombre chicle · mito de origen · oferta única · validación), una a una. No re-pregunta lo que ya está en el brief.
+2. **Construye las 6 piezas** (él mismo o delegando a los especialistas):
+   - `mecanismo-problema` (el villano concreto · 3-5 opciones)
+   - `mecanismo-solucion` (el "cómo deseable" · 12 preguntas Todd Brown)
+   - `nombre-chicle` (naming bilateral · 10 candidatos por categoría)
+   - `objeto-brillante` (las piezas que rechean la oferta · "¿qué es eso?")
+   - `mito-origen` (el rostro y la historia del descubrimiento)
+   - (+ la causa raíz, integrada en el maestro)
+
+Output: carpeta `03-mecanismo/` con **un `.md` y un `.html` por cada pieza** + `mecanismo-completo.md` y un **`mecanismo-completo.html` GIGANTE** que reúne TODA la explicación (las 4 capas + las 6 piezas), para que las skills posteriores hereden el contexto al 100%. Incluye `auditoria-3-reglas` (Joseph Moreno).
 
 ## EJEMPLO DE USO
 

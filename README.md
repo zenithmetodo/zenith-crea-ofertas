@@ -8,14 +8,14 @@
 
 [![Opus 4.7](https://img.shields.io/badge/Opus%204.7-1M%20ctx-blueviolet)]() [![Sonnet](https://img.shields.io/badge/Sonnet%204.6-medium-blue)]() [![Haiku](https://img.shields.io/badge/Haiku%204.5-fast-cyan)]() [![Tokens](https://img.shields.io/badge/tokens-optimized%2060--70%25-green)]() [![Spanish](https://img.shields.io/badge/lang-es--ES-red)]() [![Topics](https://img.shields.io/badge/topics-20-purple)]()
 
-**`/zenith-crea-ofertas:zenith-quick-discovery` · 41 agentes · 17 commands · 18 HTMLs print-to-PDF · 20 knowledge files**
+**`/zenith-crea-ofertas:zenith-quick-discovery` · 44 agentes · 17 commands · 18 HTMLs print-to-PDF · 21 knowledge files**
 
 </div>
 
 
 Sistema completo de agentes Claude Code para construir **OFERTAS TOP 1%** de alto valor percibido en español de España. **Creado por Josep · Método Zenith™** a partir de los frameworks canónicos del Direct Response (Schwartz · Masterson · Bencivenga · Evaldo · Todd Brown · Hormozi · Brunson · Halbert · Sugarman · Cialdini) + transcripciones operativas del autor.
 
-Un orquestador padre coordina **41 sub-agentes especializados** (Opus/Sonnet/Haiku optimizado) + **20 knowledge files** + **18 templates HTML** print-to-PDF + Drive-friendly. Cada agente domina una pieza del puzzle: desde el avatar deep (psicólogo + Reddit + YouTube) hasta la auditoría de 200+ ítems de la oferta final.
+Un orquestador padre coordina **44 sub-agentes especializados** (Opus/Sonnet/Haiku optimizado) + **21 knowledge files** + **18 templates HTML** print-to-PDF + Drive-friendly. Cada agente domina una pieza del puzzle: desde el avatar deep (psicólogo + Reddit + YouTube) hasta la auditoría de 200+ ítems de la oferta final. El bloque 03 (mecanismo) lo lidera **`mecanismo-maestro`**, que pregunta 9 bloques primero y construye 6 piezas cargando la **Biblia del Mecanismo** (131 formaciones destiladas).
 
 > *"De la cima se ve mejor el avatar."*
 
@@ -179,7 +179,7 @@ Si ya tienes una oferta hecha y quieres saber qué falla:
 
 <img src="assets/architecture-diagram.svg" alt="Arquitectura del plugin Zenith Crea Ofertas" width="100%"/>
 
-*Un orquestador padre coordina los 41 sub-agentes especializados, agrupados por bloque funcional.*
+*Un orquestador padre coordina los 44 sub-agentes especializados, agrupados por bloque funcional.*
 
 </div>
 
@@ -233,7 +233,7 @@ AVATAR     RESEARCH  COMPETENCIA     ONE BELIEF    MECANISMO   OFERTA
 | **02** | Competencia (Meta Ad Library + GAP) | `competidor-spy` | `15-competencia.html` |
 | **03a** | **Punto A→B PERSONA** (transformación emocional/racional) | `punto-a-b-architect` | `01-punto-a-b.html` |
 | **03b** | 🆕 **Punto A→B PRODUCTO** (pasos del servicio · base carta ventas invisible) | `42-punto-a-b-producto` | `17-punto-a-b-producto.html` |
-| **04** | Mecanismo completo | `mecanismo-problema` · `mecanismo-solucion` · `nombre-chicle` · `super-estructura` | `03-mecanismo.html` |
+| **04** | ⭐ **Mecanismo MAESTRO** (pregunta 9 bloques primero · carga la Biblia del Mecanismo · construye 6 piezas) | `mecanismo-maestro` (líder) · `mecanismo-problema` · `mecanismo-solucion` · `nombre-chicle` · `objeto-brillante` · `mito-origen` · `super-estructura` | `03-mecanismo/` (MD + HTML gigante por pieza) |
 | **05** | Ángulos (definición exacta Joseph Moreno) | `angulos-architect` | `14-angulos.html` |
 | **06** | Promesa + Garantía + Risk Reversal | `promesa-ganadora` · `garantia-impresionante` · `risk-reversal-master` · `objeciones-rotas` | `05-promesa.html` + `06-garantia.html` |
 | **07** | **One Belief** (3 agentes · 4 variantes) | `identidad-anti-identidad` · `nueva-oportunidad` · `one-belief-creator` | `02-one-belief.html` |
@@ -292,8 +292,11 @@ AVATAR     RESEARCH  COMPETENCIA     ONE BELIEF    MECANISMO   OFERTA
 ### Mecanismo + Ángulos
 | Agente | Model | Qué hace |
 |---|---|---|
+| `mecanismo-maestro` ⭐ | opus | ORQUESTA el bloque 03. Pregunta los 9 bloques PRIMERO (villano · causa raíz · soluciones fallidas · solución · objeto brillante · nombre chicle · mito origen · oferta única · validación) y luego construye las 6 piezas. Carga la **Biblia del Mecanismo** (131 formaciones · 4 capas · 7 pasos La Mer). Entrega MD + HTML gigante. |
 | `mecanismo-problema` | opus | Villano concreto del problema (Unique Problem Mechanism · Todd Brown). Aplica 4 preguntas de competencia. |
 | `mecanismo-solucion` | opus | Cómo deseable de la solución (Unique Solution Mechanism). Aplica 12 preguntas + 3 reglas innegociables (Joseph Moreno). |
+| `objeto-brillante` ⭐ | sonnet | Convierte la oferta SIN brillo en oferta CON brillo ("¿qué es eso?"). Mapea método>pilares>peças, aplica el filtro del puntero, monta cada objeto con nombre (4 caminos) + descripción (baja/alta intensidad). |
+| `mito-origen` ⭐ | sonnet | El rostro y la historia de cómo se descubrió el mecanismo (paso 6 de los 7 dígitos). 3 arquetipos (persona común / fuente oculta / ritual ancestral) + framework de 5 pasos. |
 | `nombre-chicle` | sonnet | Naming del mecanismo · 10 nombres en 7 categorías · 2-3 palabras misteriosas que se pegan a la memoria. |
 | `super-estructura` | sonnet | Stage 5 sofisticación · super-estructura cultural (celebridad/etnicidad/ocupación/marca) que amplifica el mecanismo. |
 | `angulos-architect` | opus | Genera 5-10 **ángulos** con la **definición exacta del autor**: *"razón distinta de por qué me comprarían"* + 3 ingredientes (tipo concreto + creencia específica + reconocimiento) + sub-ángulos. |
@@ -402,7 +405,7 @@ La carpeta `templates/` contiene **18 plantillas HTML estéticas** con branding 
 | `00-brief.html` | Discovery | `discovery-master` / `zenith-quick-discovery` |
 | `01-punto-a-b.html` | Transformación A→B | `punto-a-b-architect` |
 | `02-one-belief.html` | One Belief 4 variantes | `one-belief-creator` |
-| `03-mecanismo.html` | Mecanismo P+S + nombre chicle | `mecanismo-solucion` |
+| `03-mecanismo/` (MD + HTML gigante) | Mecanismo completo · 6 piezas (causa raíz + problema + solución + nombre chicle + objeto brillante + mito origen) | `mecanismo-maestro` |
 | `04-features-benefits-desires.html` | Cadena F→B→D | `caracteristicas-extractor` (líder) |
 | `05-promesa.html` | Promesa ganadora | `promesa-ganadora` |
 | `06-garantia.html` | Garantía + objeciones + risk reversal | `garantia-impresionante` |
@@ -491,7 +494,8 @@ Ver [EXTERNAL_SERVICES.md](EXTERNAL_SERVICES.md) para detalles completos.
 - **Cada agente UNA función** · nunca dos haciendo lo mismo.
 - **Cada agente TIENE el conocimiento INTERNALIZADO** · no solo lo referencia.
 - **One Belief SIEMPRE 4 variantes** (Fórmula Evaldo Albuquerque adaptada por Joseph Moreno).
-- **Mecanismo SIEMPRE desdoblado** (problema + solución + nombre chicle).
+- **Mecanismo SIEMPRE completo (6 piezas)** · lo lidera `mecanismo-maestro`: pregunta 9 bloques primero y construye causa raíz + problema + solución + nombre chicle + objeto brillante + mito de origen, cargando la Biblia del Mecanismo.
+- **MD + HTML SIEMPRE en cada carpeta** (el `.md` para que la IA lo lea y los siguientes agentes hereden el contexto · el `.html` print-to-PDF para el humano).
 - **Bencivenga manda al final**: Beneficio + Credibilidad − Costo.
 - **Schwartz audita** nivel + stage pieza por pieza.
 - **Sin discovery + CONFIRMACIÓN explícita**, no se ejecuta nada.

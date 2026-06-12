@@ -6,6 +6,36 @@ Formato basado en [Keep a Changelog](https://keepachangelog.com/es-ES/1.1.0/) ·
 
 ---
 
+## [2.1.0] · 2026-06-12 · 🧠 BLOQUE MECANISMO MAESTRO + BIBLIA DEL MECANISMO
+
+### ⭐ Nuevo orquestador del bloque 03 · `mecanismo-maestro`
+
+- **`agents/44-mecanismo-maestro.md`** (opus) · es el PRIMERO del bloque mecanismo y el que más sabe. Trabaja en dos fases:
+  1. **Pregunta TODO primero** — la batería de **9 bloques** (villano · causa raíz · soluciones fallidas · solución · objeto brillante · nombre chicle · mito de origen · oferta única · validación), una a una, como el discovery-master pero del mecanismo. No re-pregunta lo que ya está en el brief.
+  2. **Construye las 6 piezas** del mecanismo completo y deja la carpeta `03-mecanismo/` con **MD + HTML gigante** para que todas las skills posteriores hereden el contexto al 100%.
+
+### ⭐ Dos especialistas nuevos del mecanismo
+
+- **`agents/45-objeto-brillante.md`** (sonnet) · convierte la oferta SIN brillo en oferta CON brillo ("¿qué es eso?"). Mapea método>pilares>peças, aplica el filtro del puntero, monta nombre (4 caminos) + descripción (baja/alta intensidad). Efecto "tesoro escondido".
+- **`agents/46-mito-origen.md`** (sonnet) · el rostro y la historia de cómo se descubrió el mecanismo (paso 6 de los 7 dígitos). 3 arquetipos (persona común / fuente oculta / ritual ancestral) + framework de 5 pasos.
+
+### 📚 Knowledge nuevo · la Biblia del Mecanismo
+
+- **`knowledge/biblia-del-mecanismo.md`** · destilación de **131 formaciones** (copywriting, direct response, low ticket, VSL, webinar, lanzamientos, contenido viral) en 20 partes: las 4 capas (nombre chicle → mecanismo único → mecanismo del problema → causa raíz), mecanismo del problema/solución, causa raíz (mecánica + emocional), objeto brillante, oferta sin brillo, nombre chicle bilateral, mito de origen, los 7 pasos del mecanismo único de 7 dígitos (caso La Mer), 50+ ejemplos reales, batería de preguntas y checklist. La carga `mecanismo-maestro`.
+
+### 🔁 Regla global nueva · MD + HTML en CADA carpeta
+
+- Cada entregable genera SIEMPRE un `.md` (para que la IA lo lea y los agentes posteriores hereden el contexto) **y** un `.html` print-to-PDF (para el humano). Nunca solo HTML. Implementado en `output-architect` y declarado en SKILL.md.
+
+### 🔧 Actualizaciones de registro
+
+- `plugin_detailed.json`: agents 41→44, knowledge 20→21, `model_strategy` y `pipeline_zenith_v2` step 03 actualizados, versión 2.1.0.
+- `.claude-plugin/plugin.json`: descripción + versión 2.1.0.
+- `SKILL.md`, `README.md`, `commands/mecanismo.md`, `commands/zenith-crea-oferta.md`, `commands/crea-oferta-1pct.md`, `agents/25-output-architect.md`: bloque 03 ampliado a 6 piezas + regla MD+HTML.
+- Verificado: **ningún acoplamiento por número de fichero** — todos los agentes se referencian por `name`, así que la inserción es aditiva y no rompe nada.
+
+---
+
 ## [2.0.0] · 2026-05-28 · ✨ MÉTODO ZENITH™ + AVATAR DEEP
 
 ### 🎨 Branding · Método Zenith™ aplicado

@@ -1,6 +1,6 @@
 ---
 name: output-architect
-description: Convierte el output JSON de cada agente del pipeline en un HTML estético print-to-PDF (Cmd/Ctrl + P → Guardar como PDF). Lee el design system del plugin (templates/_design-system.html) y aplica la plantilla específica del agente que llama (hero + secciones + footer). Genera archivos .html cohesivos visualmente (dark mode + accent morado/ámbar + tipografía Space Grotesk + Inter + JetBrains Mono). Cada HTML va en la carpeta correspondiente del proyecto operador (00-discovery, 02-one-belief, etc.). Triggers "genera el HTML", "imprime a PDF", "output bonito", "estetiza este JSON", "plantilla HTML", "ponme esto en formato pdf".
+description: Convierte el output JSON de cada agente del pipeline en DOS archivos por entregable — un .md legible por IA (fuente para los agentes posteriores) Y un .html estético print-to-PDF (Cmd/Ctrl + P → Guardar como PDF) para el humano. REGLA GLOBAL: cada carpeta lleva SIEMPRE su .md además del .html. Lee el design system del plugin (templates/_design-system.html) y aplica la plantilla específica del agente que llama (hero + secciones + footer). Genera HTML cohesivos visualmente (dark mode + accent morado/ámbar + tipografía Space Grotesk + Inter + JetBrains Mono). Cada par .md/.html va en la carpeta correspondiente del proyecto operador (00-discovery, 03-mecanismo, etc.). Triggers "genera el HTML", "imprime a PDF", "output bonito", "estetiza este JSON", "plantilla HTML", "ponme esto en formato pdf", "md y html".
 allowed-tools: Read, Grep, Write, Bash
 model: haiku
 ---
@@ -119,11 +119,17 @@ proyecto-{slug}/
 │   ├── one-belief-V3-nueva-oportunidad.html
 │   ├── one-belief-V4-combo.html
 │   └── one-belief-completo.json
-├── 03-mecanismo/
-│   ├── mecanismo-problema.html
-│   ├── mecanismo-solucion.html
-│   ├── nombre-chicle.html
-│   └── mecanismo-completo.json
+├── 03-mecanismo/                       (⭐ bloque ampliado · liderado por mecanismo-maestro)
+│   ├── mecanismo-completo.md           (⭐ MD legible por IA · TODAS las piezas · lo leen los downstream)
+│   ├── mecanismo-completo.html         (⭐ HTML GIGANTE único con TODA la explicación del mecanismo)
+│   ├── mecanismo-brief.json            (las respuestas a los 9 bloques de preguntas)
+│   ├── mecanismo-completo.json         (ensamblaje estructurado de las 6 piezas)
+│   ├── causa-raiz.md / causa-raiz.html
+│   ├── mecanismo-problema.md / mecanismo-problema.html
+│   ├── mecanismo-solucion.md / mecanismo-solucion.html
+│   ├── nombre-chicle.md / nombre-chicle.html
+│   ├── objeto-brillante.md / objeto-brillante.html
+│   └── mito-origen.md / mito-origen.html
 ├── 04-caracteristicas-beneficios-deseos/
 │   ├── caracteristicas.html
 │   ├── beneficios.html
@@ -164,6 +170,14 @@ proyecto-{slug}/
 
 NUNCA invento carpetas nuevas. Si un agente futuro necesita output, va en la carpeta numerada que le corresponda.
 
+### ⭐ REGLA GLOBAL · SIEMPRE MD + HTML EN CADA CARPETA (innegociable)
+
+> **Por CADA entregable genero SIEMPRE dos archivos: un `.md` (para que la IA lo lea perfectamente) Y un `.html` (estético, print-to-PDF, para el humano).** Nunca dejo una carpeta solo con HTML. El `.md` es la fuente que los agentes posteriores del pipeline leen para heredar el contexto; el `.html` es para que el operador lo vea y lo guarde como PDF.
+
+- Si un agente me da un JSON y un HTML, yo además derivo el `.md` legible (mismo contenido, formato Markdown limpio).
+- El `.md` lleva el contenido COMPLETO y estructurado (títulos, listas, tablas), sin estilos: pensado para ser leído por otra IA en el siguiente paso.
+- En el bloque 03 (mecanismo), además del MD/HTML por pieza, el `mecanismo-maestro` produce un **HTML GIGANTE único** (`mecanismo-completo.html`) + su `mecanismo-completo.md`, que reúnen TODA la explicación del mecanismo (las 4 capas + las 6 piezas + ejemplos), para que cualquier skill posterior abra ese archivo y tenga el contexto al 100%.
+
 ### TABLA · QUÉ TEMPLATE APLICAR PARA CADA AGENTE
 
 Conozco de memoria qué plantilla pertenece a qué agente:
@@ -175,9 +189,12 @@ Conozco de memoria qué plantilla pertenece a qué agente:
 | `one-belief-creator` | `02-one-belief.html` (4 cards) | `02-one-belief/` |
 | `identidad-anti-identidad` | `02-one-belief.html` (subsección) | `02-one-belief/` |
 | `nueva-oportunidad` | `02-one-belief.html` (V3 card) | `02-one-belief/` |
+| `mecanismo-maestro` ⭐ | `03-mecanismo.html` (HTML GIGANTE de síntesis + MD) | `03-mecanismo/` |
 | `mecanismo-problema` | `03-mecanismo.html` (sección problema) | `03-mecanismo/` |
 | `mecanismo-solucion` | `03-mecanismo.html` (sección solución) | `03-mecanismo/` |
 | `nombre-chicle` | `03-mecanismo.html` (sección naming) | `03-mecanismo/` |
+| `objeto-brillante` ⭐ | `03-mecanismo.html` (sección objeto brillante) | `03-mecanismo/` |
+| `mito-origen` ⭐ | `03-mecanismo.html` (sección mito de origen) | `03-mecanismo/` |
 | `caracteristicas-extractor` | `04-features-benefits-desires.html` | `04-caracteristicas-beneficios-deseos/` |
 | `beneficios-extractor` | `04-features-benefits-desires.html` | `04-caracteristicas-beneficios-deseos/` |
 | `deseos-extractor` | `04-features-benefits-desires.html` | `04-caracteristicas-beneficios-deseos/` |

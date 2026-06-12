@@ -38,7 +38,7 @@ En este orden (cascada estricta — saltarse uno = oferta floja):
 1. `discovery-master` (brief estratégico + viabilidad score)
 2. `punto-a-b-architect` (Punto A real → Punto B realista)
 3. `one-belief-creator` + `identidad-anti-identidad` + `nueva-oportunidad` (4 variantes One Belief)
-4. `mecanismo-problema` + `mecanismo-solucion` + `nombre-chicle` (mecanismo desdoblado + nombre)
+4. `mecanismo-maestro` (pregunta 9 bloques + Biblia del Mecanismo) → `mecanismo-problema` + `mecanismo-solucion` + `nombre-chicle` + `objeto-brillante` + `mito-origen` (6 piezas · MD + HTML gigante)
 5. `caracteristicas-extractor` + `beneficios-extractor` + `deseos-extractor` + `intangibles-extractor` (cadena Features → Benefits → Desires)
 6. `promesa-ganadora` (frase de promesa con fórmula Avatar+Resultado+Tiempo+SinDolor+AunqueObjeción)
 7. `garantia-impresionante` + `objeciones-rotas` (garantía nombrada + ruptura objeciones)
@@ -76,10 +76,13 @@ Lanzando pipeline en cascada...
 
 ✅ 01 punto-a-b-architect → proyecto-yoga-silla-50/01-punto-a-b/punto-a-b.html
 ✅ 02 one-belief-creator (4 variantes) → /02-one-belief/v1-identidad.html · v2-anti-identidad.html · v3-nueva-oportunidad.html · v4-combo.html
-✅ 03 mecanismo-problema + solucion + nombre-chicle → /03-mecanismo/
+✅ 03 mecanismo-maestro (9 preguntas + Biblia) → 6 piezas → /03-mecanismo/ (MD + HTML gigante)
+   · Causa raíz: 'pérdida de músculo profundo por sedentarismo + menopausia'
    · Mecanismo problema: 'menopausia + sedentarismo bloquean músculos profundos'
    · Mecanismo solución: 'yoga adaptado a silla activa músculos profundos sin impacto'
    · Nombre chicle: 'Yoga en Silla'
+   · Objeto brillante: 'la silla como gimnasio invisible'
+   · Mito de origen: 'fisio que rehabilitó a su madre +60 sin que se levantara'
 ✅ 04 caracteristicas → beneficios → deseos → intangibles → /04-caracteristicas/
 ✅ 05 promesa-ganadora → /05-promesa/promesa.html
 ✅ 06 garantia-impresionante (90 días incondicional) → /06-garantia/

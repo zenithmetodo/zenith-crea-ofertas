@@ -1,12 +1,12 @@
 {
   "name": "zenith-crea-ofertas",
   "display_name": "Zenith Crea Ofertas™",
-  "version": "2.0.0",
+  "version": "2.1.0",
   "brand": "Zenith™ · Método Zenith",
   "tagline": "De la cima se ve mejor el avatar.",
   "repository": "https://github.com/zenithmetodo/zenith-crea-ofertas",
   "install_command": "curl -fsSL https://raw.githubusercontent.com/zenithmetodo/zenith-crea-ofertas/main/plugin/install.sh | bash",
-  "description": "Mega-skill TOP 1% para crear ofertas de alto valor percibido bajo el Método Zenith™. Orquesta 41 sub-agentes especializados (cada uno crack de UNA cosa · CONOCIMIENTO INTERNALIZADO desde el origen · MODEL OPTIMIZADO por complejidad), 16 slash commands, 18 templates HTML print-to-PDF + drive-friendly con branding Zenith (cian + purple + Fraunces), 20 knowledge files (12 frameworks canónicos + 8 transcripciones del autor), auto-instalador multiplataforma. Aplica Schwartz, Masterson+Forde, Bencivenga, Evaldo Albuquerque, Todd Brown, Halbert, Sugarman, Cialdini, Maslow+Robbins+Bauer, Brunson, Hormozi, Caples, Ogilvy, Stefan Georgi y Ariely. Investigación profunda en Reddit + YouTube + Biblioteca Anuncios Meta para avatar y competencia.",
+  "description": "Mega-skill TOP 1% para crear ofertas de alto valor percibido bajo el Método Zenith™. Orquesta 44 sub-agentes especializados (cada uno crack de UNA cosa · CONOCIMIENTO INTERNALIZADO desde el origen · MODEL OPTIMIZADO por complejidad), 16 slash commands, 18 templates HTML print-to-PDF + drive-friendly con branding Zenith (cian + purple + Fraunces), 21 knowledge files (incluida la BIBLIA DEL MECANISMO · 131 formaciones destiladas), auto-instalador multiplataforma. El bloque 03 (mecanismo) lo lidera mecanismo-maestro: pregunta 9 bloques primero y construye 6 piezas (causa raíz + problema + solución + nombre chicle + objeto brillante + mito de origen). Aplica Schwartz, Masterson+Forde, Bencivenga, Evaldo Albuquerque, Todd Brown, Halbert, Sugarman, Cialdini, Maslow+Robbins+Bauer, Brunson, Hormozi, Caples, Ogilvy, Stefan Georgi y Ariely. Investigación profunda en Reddit + YouTube + Biblioteca Anuncios Meta para avatar y competencia.",
   "author": {
     "name": "Josep (INDI) · Método Zenith™",
     "email": "impactodigitalformacionbrasil@gmail.com"
@@ -61,9 +61,9 @@
   "language": "es-ES",
   "components": {
     "skills": 1,
-    "agents": 41,
+    "agents": 44,
     "commands": 16,
-    "knowledge": 20,
+    "knowledge": 21,
     "templates": 18,
     "examples": 5
   },
@@ -71,11 +71,11 @@
     "explanation": "Cada agente declara su model según la complejidad de su tarea para OPTIMIZAR COSTES sin perder calidad TOP 1%.",
     "opus": {
       "use_when": "Decisiones estratégicas que afectan todo el pipeline · razonamiento creativo profundo · auditoría maestra",
-      "agents": ["discovery-master", "zenith-quick-discovery", "one-belief-creator", "mecanismo-problema", "mecanismo-solucion", "promesa-ganadora", "valor-percibido", "offer-master", "auditor-completo", "headline-master", "avatar-deep-psicologo", "angulos-architect"]
+      "agents": ["discovery-master", "zenith-quick-discovery", "one-belief-creator", "mecanismo-maestro", "mecanismo-problema", "mecanismo-solucion", "promesa-ganadora", "valor-percibido", "offer-master", "auditor-completo", "headline-master", "avatar-deep-psicologo", "angulos-architect"]
     },
     "sonnet": {
       "use_when": "Generativo con reglas claras · investigación con razonamiento · transformación inteligente",
-      "agents": ["punto-a-b-architect", "identidad-anti-identidad", "nueva-oportunidad", "nombre-chicle", "super-estructura", "deseos-extractor", "garantia-impresionante", "objeciones-rotas", "bonus-architect", "bonus-irresistible", "schwartz-consciousness", "great-leads-masterson", "fascinations-architect", "stack-slide-architect", "anclaje-precio", "upsell-downsell-architect", "risk-reversal-master", "autoridad-builder", "research-reddit", "research-youtube", "avatar-mapa-empatia", "competidor-spy", "deal-makers-extractor"]
+      "agents": ["punto-a-b-architect", "identidad-anti-identidad", "nueva-oportunidad", "nombre-chicle", "objeto-brillante", "mito-origen", "super-estructura", "deseos-extractor", "garantia-impresionante", "objeciones-rotas", "bonus-architect", "bonus-irresistible", "schwartz-consciousness", "great-leads-masterson", "fascinations-architect", "stack-slide-architect", "anclaje-precio", "upsell-downsell-architect", "risk-reversal-master", "autoridad-builder", "research-reddit", "research-youtube", "avatar-mapa-empatia", "competidor-spy", "deal-makers-extractor"]
     },
     "haiku": {
       "use_when": "Extracción simple · procesamiento rutinario · conversión formato",
@@ -119,7 +119,7 @@
     { "step": "00c", "name": "competencia", "agent": "competidor-spy", "model": "sonnet", "tokens_est": "8-12k" },
     { "step": "01", "name": "punto-a-b", "agent": "punto-a-b-architect", "model": "sonnet", "tokens_est": "3-5k" },
     { "step": "02", "name": "one-belief", "agents": ["one-belief-creator", "identidad-anti-identidad", "nueva-oportunidad"], "model_dominante": "opus", "tokens_est": "6-10k" },
-    { "step": "03", "name": "mecanismo", "agents": ["mecanismo-problema", "mecanismo-solucion", "nombre-chicle", "super-estructura"], "model_dominante": "opus", "tokens_est": "8-12k" },
+    { "step": "03", "name": "mecanismo", "lider": "mecanismo-maestro", "descripcion": "mecanismo-maestro pregunta los 9 bloques PRIMERO, carga la Biblia del Mecanismo, y construye las 6 piezas (causa raíz + problema + solución + nombre chicle + objeto brillante + mito de origen) · entrega MD + HTML GIGANTE", "agents": ["mecanismo-maestro", "mecanismo-problema", "mecanismo-solucion", "nombre-chicle", "objeto-brillante", "mito-origen", "super-estructura"], "model_dominante": "opus", "tokens_est": "12-18k" },
     { "step": "03b", "name": "angulos", "agent": "angulos-architect", "model": "opus", "tokens_est": "5-8k" },
     { "step": "04", "name": "features-benefits-desires", "agents": ["caracteristicas-extractor", "beneficios-extractor", "deseos-extractor", "intangibles-extractor"], "model_dominante": "haiku", "tokens_est": "4-6k" },
     { "step": "05", "name": "promesa", "agent": "promesa-ganadora", "model": "opus", "tokens_est": "3-5k" },
@@ -163,7 +163,8 @@
     "Cada agente TIENE el conocimiento INTERNALIZADO · no solo lo referencia.",
     "Cada agente declara su MODEL según complejidad · optimización de costes para el cliente.",
     "One Belief SIEMPRE 4 variantes (identidad + anti-identidad + nueva oportunidad + combo).",
-    "Mecanismo SIEMPRE desdoblado (problema + solución + nombre chicle).",
+    "Mecanismo SIEMPRE completo (6 piezas) · lo lidera mecanismo-maestro: pregunta 9 bloques primero y construye causa raíz + problema + solución + nombre chicle + objeto brillante + mito de origen · carga la Biblia del Mecanismo (131 formaciones).",
+    "MD + HTML SIEMPRE en cada carpeta: el .md para que la IA lo lea y los siguientes agentes hereden el contexto; el .html print-to-PDF para el humano.",
     "Bencivenga manda al final: Beneficio + Credibilidad − Costo.",
     "Schwartz audita: nivel + stage deben cuadrar pieza por pieza.",
     "Sin discovery + confirmación, no se ejecuta nada.",

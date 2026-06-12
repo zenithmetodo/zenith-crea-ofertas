@@ -43,7 +43,7 @@ Si pasas argumento, el `34-zenith-quick-discovery` lo usa como semilla y te hace
 1. `discovery-master` (cierra brief detallado)
 2. `punto-a-b-architect`
 3. `one-belief-creator` + `identidad-anti-identidad` + `nueva-oportunidad` (4 variantes)
-4. `mecanismo-problema` + `mecanismo-solucion` + `nombre-chicle`
+4. `mecanismo-maestro` (pregunta 9 bloques + carga la Biblia del Mecanismo) → `mecanismo-problema` + `mecanismo-solucion` + `nombre-chicle` + `objeto-brillante` + `mito-origen` (6 piezas · MD + HTML gigante)
 5. `caracteristicas-extractor` + `beneficios-extractor` + `deseos-extractor` + `intangibles-extractor`
 6. `promesa-ganadora`
 7. `garantia-impresionante` + `objeciones-rotas`
@@ -103,7 +103,7 @@ SKILL:
 ✅ 00 discovery (Sonnet) · brief.html (Zenith)
 ✅ 01 punto-a-b (Sonnet) · punto-a-b.html
 ✅ 02 one-belief 4 variantes (Opus) · /02-one-belief/
-✅ 03 mecanismo + nombre chicle (Opus + Haiku) · 'Yoga en Silla'
+✅ 03 mecanismo MAESTRO · 6 piezas (causa raíz + problema + solución + nombre chicle + objeto brillante + mito origen) · MD + HTML gigante · 'Yoga en Silla'
 ...
 ✅ 11 offer-master (oferta ensamblada)
 ✅ 12 angulos-architect (3-4 ángulos · 12-angulos/angulos.html editable) ⭐

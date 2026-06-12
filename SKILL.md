@@ -9,7 +9,7 @@ description: Zenith Crea Ofertas™ · Mega-skill TOP 1% para crear OFERTAS COMP
 
 ## QUÉ ES ESTA SKILL
 
-Es la skill PADRE de un sistema de **43 sub-agentes especializados** (cada uno experto en UNA sola pieza de la oferta — nunca dos haciendo lo mismo) y **18 slash commands** para invocación rápida.
+Es la skill PADRE de un sistema de **46 sub-agentes especializados** (cada uno experto en UNA sola pieza de la oferta — nunca dos haciendo lo mismo) y **18 slash commands** para invocación rápida.
 
 Construye la oferta completa siguiendo la metodología **"Incubando tu Producto Perfecto"** + los frameworks canónicos del direct response del siglo XX y XXI.
 
@@ -36,7 +36,7 @@ El embudo se construye SIEMPRE en este orden estricto. Saltarse uno = oferta flo
 00 · DISCOVERY          → discovery-master
 01 · PUNTO A → PUNTO B  → punto-a-b-architect
 02 · ONE BELIEF (×4)    → one-belief-creator + identidad-anti-identidad + nueva-oportunidad
-03 · MECANISMO          → mecanismo-problema + mecanismo-solucion + nombre-chicle
+03 · MECANISMO ⭐       → mecanismo-maestro (PREGUNTA TODO primero · 9 bloques) → causa-raiz + mecanismo-problema + mecanismo-solucion + nombre-chicle + objeto-brillante + mito-origen · carga la BIBLIA DEL MECANISMO · entrega MD + HTML GIGANTE
 04 · CARACTERÍSTICAS    → caracteristicas-extractor + beneficios-extractor + deseos-extractor + intangibles-extractor
 05 · PROMESA            → promesa-ganadora
 06 · GARANTÍA           → garantia-impresionante + objeciones-rotas
@@ -131,18 +131,29 @@ Cada variante usa la fórmula Evaldo Albuquerque:
 
 > *"La [NUEVA OPORTUNIDAD] es la llave para obtener [RESULTADO DESEADO], y eso es solo posible a través de [NUEVO MECANISMO]."*
 
-### Paso 5 · MECANISMO — siempre desdoblado en problema + solución
+### Paso 5 · MECANISMO — bloque maestro de 6 piezas (lo lidera `mecanismo-maestro`)
 
-Nunca uno solo. El mecanismo se entrega DOS veces:
+El stage 03 es el **corazón de la oferta** y tiene su propio orquestador: **`mecanismo-maestro`**. Es el PRIMERO del bloque, carga la **BIBLIA DEL MECANISMO** (`knowledge/biblia-del-mecanismo.md` · 131 formaciones destiladas · 20 partes) y trabaja en DOS fases:
 
-- **Mecanismo del problema**: villano concreto (sedentarismo, cortisol, grasas saturadas…). Por qué la persona tiene el problema. Nunca culpas — rediriges.
-- **Mecanismo de la solución**: por qué TU método lo resuelve (Yoga en silla, Monjaro de pobre, 5 ingredientes naturales). El "cómo" deseable.
+1. **FASE PREGUNTAS (primero, siempre):** hace TODAS las preguntas necesarias — la **batería de 9 bloques** — una a una (como el discovery-master pero del mecanismo). No re-pregunta lo que ya está en el brief/One Belief. No construye nada hasta tener los bloques críticos (1·villano, 2·causa raíz, 4·solución, 6·nombre chicle).
+2. **FASE CONSTRUCCIÓN (después):** lee la Biblia y construye las **6 PIEZAS**:
 
-Ambos pasan por las **3 reglas innegociables**:
+- **Causa raíz** — la cadena causal completa (mecánica + emocional).
+- **Mecanismo del problema** — el villano concreto. Nunca culpas — rediriges (externalizas la culpa).
+- **Mecanismo de la solución** — el "cómo deseable" (Yoga en silla, Monjaro de pobre, 5 ingredientes).
+- **Nombre chicle** — el naming pegadizo, **bilateral** (del villano Y del método).
+- **Objeto brillante** — las piezas/rebanadas nombradas que rechean la oferta ("¿qué es eso?").
+- **Mito de origen** — el rostro y la historia de cómo se descubrió el mecanismo.
 
+Todo se ensambla aplicando **las 4 capas** (Nombre Chicle → Mecanismo Único → Mecanismo del Problema → Causa Raíz) y **los 7 pasos del mecanismo único de 7 dígitos** (caso La Mer).
+
+Pasa por las **3 reglas innegociables** (Joseph Moreno):
 1. Cabe en una frase (máximo 5-7 palabras)
 2. Está en alta en orgánico (TikTok, Reels, YouTube)
 3. Tiene un nombre chicle (curiosidad o identificación)
+> Fórmula: **MECANISMO + NOMBRE CHICLE = OFERTA NUEVA.**
+
+**Salida del bloque:** la carpeta `03-mecanismo/` con un `.md` y un `.html` por cada pieza + un **`mecanismo-completo.md` y un `mecanismo-completo.html` GIGANTE** que reúnen TODA la explicación, para que TODAS las skills posteriores (promesa, ángulos, great-leads, valor percibido…) hereden el contexto del mecanismo al 100%.
 
 ### Paso 6 · VALOR PERCIBIDO — fórmula Bencivenga
 
@@ -194,9 +205,12 @@ Ver [`agents/`](agents/) para los archivos completos. Mapa rápido:
 | 03 | **one-belief-creator** | 4 variantes del One Belief (Evaldo) |
 | 04 | **identidad-anti-identidad** | Hace funcionar identidad VS anti-identidad |
 | 05 | **nueva-oportunidad** | Identifica la "nueva oportunidad" única del mecanismo |
+| ⭐ | **mecanismo-maestro** | ORQUESTA el bloque 03: pregunta los 9 bloques + construye las 6 piezas · carga la Biblia del Mecanismo · MD + HTML gigante |
 | 06 | **mecanismo-problema** | El villano concreto que justifica el dolor |
 | 07 | **mecanismo-solucion** | El cómo deseable que diferencia |
 | 08 | **nombre-chicle** | Naming 2-3 palabras misterioso y pegadizo |
+| ⭐ | **objeto-brillante** | Convierte lo genérico en "¿qué es eso?" · rechea la oferta de piezas brillantes |
+| ⭐ | **mito-origen** | El rostro y la historia de cómo se descubrió el mecanismo |
 | 09 | **caracteristicas-extractor** | Lista exhaustiva de características del producto |
 | 10 | **beneficios-extractor** | Convierte cada característica en beneficio |
 | 11 | **deseos-extractor** | Convierte cada beneficio en deseo profundo |
@@ -226,7 +240,7 @@ Ver [`commands/`](commands/) para invocación rápida sin discovery completo.
 | `/zenith-crea-oferta` | **Entry point v2.0 recomendado** · Quick Discovery + confirmación + pipeline 17 etapas |
 | `/crea-oferta-1pct` | Entry point v1.0 legacy · Discovery completo (5+5 preguntas) + 13 pasos |
 | `/one-belief` | one-belief-creator (4 variantes Evaldo + Joseph Moreno) |
-| `/mecanismo` | mecanismo-problema + solucion + nombre-chicle |
+| `/mecanismo` | mecanismo-maestro (pregunta 9 bloques + construye las 6 piezas: causa raíz + problema + solución + nombre chicle + objeto brillante + mito de origen) |
 | `/promesa` | promesa-ganadora |
 | `/garantia` | garantia-impresionante |
 | `/bonus` | bonus-architect + bonus-irresistible |
@@ -246,6 +260,7 @@ Ver [`knowledge/`](knowledge/). Cada agente consulta el suyo. Esencial:
 - `masterson-forde-great-leads.md` — Masterson & Forde · *Great Leads*
 - `bencivenga-formula-valor-percibido.md` — Gary Bencivenga · *Bullets, Marketing Bullets*
 - `evaldo-albuquerque-one-belief.md` — Evaldo Albuquerque · *The 16-Word Sales Letter*
+- `biblia-del-mecanismo.md` — ⭐ **LA BIBLIA DEL MECANISMO** · 131 formaciones destiladas (20 partes): las 4 capas, mecanismo del problema/solución, causa raíz, objeto brillante, nombre chicle, mito de origen, los 7 pasos de 7 dígitos (La Mer), 50+ ejemplos. La carga `mecanismo-maestro`.
 - `todd-brown-mecanismo-unico.md` — Todd Brown · *E5 Method*
 - `identidad-vs-anti-identidad.md` — Combinación operativa
 - `halbert-power-words.md` — Gary Halbert · *Boron Letters*
@@ -277,12 +292,12 @@ Ver [`examples/`](examples/). Casos reales desmenuzados:
 
 1. **Cada agente UNA función**. Nunca dos haciendo lo mismo.
 2. **One Belief siempre 4 variantes**. Identidad + Anti-identidad + Nueva oportunidad + Combo.
-3. **Mecanismo siempre desdoblado**. Problema + Solución (jamás uno solo).
-4. **HTML siempre print-to-PDF**. Diseño cohesivo entre todas las piezas.
+3. **Mecanismo siempre completo (6 piezas)**. Lo lidera `mecanismo-maestro`: pregunta primero (9 bloques) y construye Causa raíz + Problema + Solución + Nombre chicle + Objeto brillante + Mito de origen. Jamás solo uno. Carga la Biblia del Mecanismo.
+4. **MD + HTML SIEMPRE en cada carpeta**. Cada entregable lleva su `.md` (para que la IA lo lea y los siguientes agentes hereden el contexto) Y su `.html` print-to-PDF (para el humano). Nunca solo HTML.
 5. **Sin discovery, no se ejecuta nada**. Todos los agentes leen el brief antes de actuar.
 6. **Bencivenga manda al final**. Beneficio + Credibilidad − Costo es la fórmula maestra del valor percibido.
 7. **Schwartz audita**. Antes de cerrar, el nivel de consciencia y sofisticación tiene que cuadrar.
-8. **Carpetas estéticas**. Cada entregable en su carpeta numerada (00 → 12), con HTML elegante dentro.
+8. **Carpetas estéticas**. Cada entregable en su carpeta numerada (00 → 13), con MD + HTML elegante dentro.
 
 ## CIERRE
 
