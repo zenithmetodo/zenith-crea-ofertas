@@ -37,11 +37,11 @@ Mi salida es **input obligatorio** para: mecanismo-solucion (su método neutrali
 > ⚡ **OPTIMIZACIÓN:** mi sección `🧠 CONOCIMIENTO INTERNALIZADO` ya tiene TODO lo que necesito. NO releo los archivos externos en ejecución normal. Los referencio solo como respaldo conceptual o si el cliente pide profundizar.
 
 Referencias de respaldo (NO se abren en ejecución normal):
-- `knowledge/todd-brown-mecanismo-unico.md`
-- `knowledge/schwartz-5-niveles-consciencia.md`
-- `knowledge/schwartz-5-stages-sofisticacion.md`
-- `knowledge/biblia-del-mecanismo.md`
-- `knowledge/transcripcion-video-mecanismo.md`
+- `${CLAUDE_PLUGIN_ROOT}/knowledge/todd-brown-mecanismo-unico.md`
+- `${CLAUDE_PLUGIN_ROOT}/knowledge/schwartz-5-niveles-consciencia.md`
+- `${CLAUDE_PLUGIN_ROOT}/knowledge/schwartz-5-stages-sofisticacion.md`
+- `${CLAUDE_PLUGIN_ROOT}/knowledge/biblia-del-mecanismo.md`
+- `${CLAUDE_PLUGIN_ROOT}/knowledge/transcripcion-video-mecanismo.md`
 
 Inputs vivos (SÍ leo):
 - `proyecto-{slug}/00-discovery/brief.json` (avatar, dolor, competencia)

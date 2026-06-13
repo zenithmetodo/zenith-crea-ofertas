@@ -25,7 +25,7 @@ Trabajo dentro del bloque 03 (MECANISMO), normalmente lanzado por `mecanismo-mae
 
 ## CONOCIMIENTO QUE CONSULTO
 
-> Fuente de verdad: **`knowledge/biblia-del-mecanismo.md` · PARTE 7 (El Objeto Brillante)**. La leo para los ejemplos, los 4 caminos del nombre y la descripción baja/alta.
+> Fuente de verdad: **`${CLAUDE_PLUGIN_ROOT}/knowledge/biblia-del-mecanismo.md` · PARTE 7 (El Objeto Brillante)**. La leo para los ejemplos, los 4 caminos del nombre y la descripción baja/alta.
 
 Inputs vivos: `proyecto-{slug}/00-discovery/brief.json`, `03-mecanismo/mecanismo-brief.json`, `03-mecanismo/mecanismo-completo.json`.
 

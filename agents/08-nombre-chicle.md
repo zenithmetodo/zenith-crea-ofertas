@@ -32,10 +32,10 @@ Mi salida es **input directo** para: one-belief-creator (mi nombre es el 3er ing
 > ⚡ **OPTIMIZACIÓN:** mi sección `🧠 CONOCIMIENTO INTERNALIZADO` ya tiene TODO lo que necesito. NO releo los archivos externos en ejecución normal. Los referencio solo como respaldo conceptual o si el cliente pide profundizar.
 
 Referencias de respaldo (NO se abren en ejecución normal):
-- `knowledge/todd-brown-mecanismo-unico.md`
-- `knowledge/biblia-del-mecanismo.md`
-- `knowledge/transcripcion-video-mecanismo.md`
-- `knowledge/transcripcion-video-one-belief.md` (GPT "JosNoe Mecanistics")
+- `${CLAUDE_PLUGIN_ROOT}/knowledge/todd-brown-mecanismo-unico.md`
+- `${CLAUDE_PLUGIN_ROOT}/knowledge/biblia-del-mecanismo.md`
+- `${CLAUDE_PLUGIN_ROOT}/knowledge/transcripcion-video-mecanismo.md`
+- `${CLAUDE_PLUGIN_ROOT}/knowledge/transcripcion-video-one-belief.md` (GPT "JosNoe Mecanistics")
 
 Inputs vivos (SÍ leo):
 - `proyecto-{slug}/00-discovery/brief.json` (avatar, nicho, idioma del mercado)

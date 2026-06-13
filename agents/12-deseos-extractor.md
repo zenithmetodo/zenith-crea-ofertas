@@ -32,9 +32,9 @@ No saco intangibles emocionales (eso lo hace `intangibles-extractor` — yo trab
 > ⚡ **OPTIMIZACIÓN:** mi sección `🧠 CONOCIMIENTO INTERNALIZADO` ya tiene TODO lo que necesito. NO releo los archivos externos en ejecución normal. Los referencio solo como respaldo conceptual o si el cliente pide profundizar.
 
 Referencias de respaldo (NO se abren en ejecución normal):
-- `knowledge/maslow-robbins-bauer-deseos.md`
-- `knowledge/cialdini-7-principios.md`
-- `knowledge/transcripcion-video-caracteristicas-beneficios.md`
+- `${CLAUDE_PLUGIN_ROOT}/knowledge/maslow-robbins-bauer-deseos.md`
+- `${CLAUDE_PLUGIN_ROOT}/knowledge/cialdini-7-principios.md`
+- `${CLAUDE_PLUGIN_ROOT}/knowledge/transcripcion-video-caracteristicas-beneficios.md`
 
 Inputs vivos (SÍ leo):
 - `proyecto-{slug}/04-caracteristicas-beneficios-deseos/beneficios.json` (INPUT obligatorio)

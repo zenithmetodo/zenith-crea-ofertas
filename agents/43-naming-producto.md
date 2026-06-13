@@ -41,8 +41,8 @@ Mi salida es **input directo** para: `14-promesa-ganadora` (la promesa usa el no
 > ⚡ **OPTIMIZACIÓN:** mi sección `🧠 CONOCIMIENTO INTERNALIZADO` ya tiene TODO lo que necesito. NO releo los archivos externos en ejecución normal. Los referencio solo como respaldo conceptual o si el cliente pide profundizar.
 
 Referencias de respaldo (NO se abren en ejecución normal):
-- `knowledge/naming-comercial-frameworks.md`
-- `knowledge/trademark-domain-availability-checklist.md`
+- `${CLAUDE_PLUGIN_ROOT}/knowledge/naming-comercial-frameworks.md`
+- `${CLAUDE_PLUGIN_ROOT}/knowledge/trademark-domain-availability-checklist.md`
 - `branding/CASES_DE_NAMING_PROGRAMA.md`
 
 Inputs vivos (SÍ leo):

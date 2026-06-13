@@ -32,10 +32,10 @@ Mi salida es **input obligatorio** para: one-belief-creator (necesita el Resulta
 > ⚡ **OPTIMIZACIÓN:** mi sección `🧠 CONOCIMIENTO INTERNALIZADO` ya tiene TODO lo que necesito. NO releo los archivos externos en ejecución normal. Los referencio solo como respaldo conceptual o si el cliente pide profundizar.
 
 Referencias de respaldo (NO se abren en ejecución normal):
-- `knowledge/evaldo-albuquerque-one-belief.md`
-- `knowledge/identidad-vs-anti-identidad.md`
-- `knowledge/schwartz-5-niveles-consciencia.md`
-- `knowledge/transcripcion-video-punto-a-b.md` (plantilla fuente)
+- `${CLAUDE_PLUGIN_ROOT}/knowledge/evaldo-albuquerque-one-belief.md`
+- `${CLAUDE_PLUGIN_ROOT}/knowledge/identidad-vs-anti-identidad.md`
+- `${CLAUDE_PLUGIN_ROOT}/knowledge/schwartz-5-niveles-consciencia.md`
+- `${CLAUDE_PLUGIN_ROOT}/knowledge/transcripcion-video-punto-a-b.md` (plantilla fuente)
 
 Input vivo (SÍ leo):
 - `proyecto-{slug}/00-discovery/brief.json` (extraigo producto, avatar, resultado deseado, precio)

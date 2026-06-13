@@ -151,7 +151,7 @@ Cada variante usa la fórmula Evaldo Albuquerque:
 
 ### Paso 5 · MECANISMO — bloque maestro de 6 piezas (lo lidera `mecanismo-maestro`)
 
-El stage 03 es el **corazón de la oferta** y tiene su propio orquestador: **`mecanismo-maestro`**. Es el PRIMERO del bloque, carga la **BIBLIA DEL MECANISMO** (`knowledge/biblia-del-mecanismo.md` · 131 formaciones destiladas · 20 partes) y trabaja en DOS fases:
+El stage 03 es el **corazón de la oferta** y tiene su propio orquestador: **`mecanismo-maestro`**. Es el PRIMERO del bloque, carga la **BIBLIA DEL MECANISMO** (`${CLAUDE_PLUGIN_ROOT}/knowledge/biblia-del-mecanismo.md` · 131 formaciones destiladas · 20 partes) y trabaja en DOS fases:
 
 1. **FASE PREGUNTAS (primero, siempre):** hace TODAS las preguntas necesarias — la **batería de 9 bloques** — una a una (como el discovery-master pero del mecanismo). No re-pregunta lo que ya está en el brief/One Belief. No construye nada hasta tener los bloques críticos (1·villano, 2·causa raíz, 4·solución, 6·nombre chicle).
 2. **FASE CONSTRUCCIÓN (después):** lee la Biblia y construye las **6 PIEZAS**:

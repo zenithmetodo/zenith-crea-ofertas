@@ -25,7 +25,7 @@ NO construyo el mecanismo en sí (eso es de los agentes de mecanismo). Yo constr
 
 ## CONOCIMIENTO QUE CONSULTO
 
-> Fuente de verdad: **`knowledge/biblia-del-mecanismo.md` · PARTE 6 (Mecanismo único de 7 dígitos · paso 6) y PARTE 5 (storytelling: la virada)**.
+> Fuente de verdad: **`${CLAUDE_PLUGIN_ROOT}/knowledge/biblia-del-mecanismo.md` · PARTE 6 (Mecanismo único de 7 dígitos · paso 6) y PARTE 5 (storytelling: la virada)**.
 
 Inputs vivos: `proyecto-{slug}/00-discovery/brief.json` (experto, autoridad), `03-mecanismo/mecanismo-brief.json`, `03-mecanismo/mecanismo-completo.json`.
 

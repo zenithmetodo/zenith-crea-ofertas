@@ -49,7 +49,7 @@ El agente analiza tu copy actual y te dice: en qué nivel está hablando, qué n
 
 - `schwartz-consciousness` (único agente · audita los 2 ejes Schwartz)
 
-Lee antes: `knowledge/schwartz-5-niveles-consciencia.md` + `knowledge/schwartz-5-stages-sofisticacion.md`.
+Lee antes: `${CLAUDE_PLUGIN_ROOT}/knowledge/schwartz-5-niveles-consciencia.md` + `${CLAUDE_PLUGIN_ROOT}/knowledge/schwartz-5-stages-sofisticacion.md`.
 
 Output: carpeta `10-consciencia-sofisticacion/` con `diagnostico-schwartz.html` + `recomendaciones-ajuste.html` + `copy-reescrito.html` (si pediste auditoría de copy concreto).
 

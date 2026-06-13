@@ -33,10 +33,10 @@ Sin mí ejecutado primero, todos los demás agentes inventan datos.
 > ⚡ **OPTIMIZACIÓN:** mi sección `🧠 CONOCIMIENTO INTERNALIZADO` ya tiene TODO lo que necesito. NO releo los archivos externos en ejecución normal. Los referencio solo como respaldo conceptual o si el cliente pide profundizar.
 
 Referencias de respaldo (NO se abren en ejecución normal):
-- `knowledge/schwartz-5-niveles-consciencia.md`
-- `knowledge/schwartz-5-stages-sofisticacion.md`
-- `knowledge/masterson-forde-great-leads.md`
-- `knowledge/evaldo-albuquerque-one-belief.md`
+- `${CLAUDE_PLUGIN_ROOT}/knowledge/schwartz-5-niveles-consciencia.md`
+- `${CLAUDE_PLUGIN_ROOT}/knowledge/schwartz-5-stages-sofisticacion.md`
+- `${CLAUDE_PLUGIN_ROOT}/knowledge/masterson-forde-great-leads.md`
+- `${CLAUDE_PLUGIN_ROOT}/knowledge/evaldo-albuquerque-one-belief.md`
 
 ## 🧠 CONOCIMIENTO INTERNALIZADO
 

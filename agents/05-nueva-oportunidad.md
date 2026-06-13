@@ -32,10 +32,10 @@ Mi salida es **input directo** para: one-belief-creator (V3 sale de mí · V1/V4
 > ⚡ **OPTIMIZACIÓN:** mi sección `🧠 CONOCIMIENTO INTERNALIZADO` ya tiene TODO lo que necesito. NO releo los archivos externos en ejecución normal. Los referencio solo como respaldo conceptual o si el cliente pide profundizar.
 
 Referencias de respaldo (NO se abren en ejecución normal):
-- `knowledge/evaldo-albuquerque-one-belief.md`
-- `knowledge/schwartz-5-stages-sofisticacion.md`
-- `knowledge/todd-brown-mecanismo-unico.md`
-- `knowledge/identidad-vs-anti-identidad.md`
+- `${CLAUDE_PLUGIN_ROOT}/knowledge/evaldo-albuquerque-one-belief.md`
+- `${CLAUDE_PLUGIN_ROOT}/knowledge/schwartz-5-stages-sofisticacion.md`
+- `${CLAUDE_PLUGIN_ROOT}/knowledge/todd-brown-mecanismo-unico.md`
+- `${CLAUDE_PLUGIN_ROOT}/knowledge/identidad-vs-anti-identidad.md`
 
 Inputs vivos (SÍ leo):
 - `proyecto-{slug}/00-discovery/brief.json` (avatar, mercado, competencia)

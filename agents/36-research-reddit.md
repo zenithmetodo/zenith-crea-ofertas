@@ -35,7 +35,7 @@ Si tienes el avatar y necesitas saber CÓMO habla de verdad (no cómo te lo imag
 Antes de buscar, leo:
 - `proyecto-zenith-{slug}/01-avatar/avatar-profundo.json` (input clave)
 - `proyecto-zenith-{slug}/00-quick-discovery/brief.json`
-- `knowledge/reddit-subreddit-map.md` (si existe · mapa de subreddits por nicho)
+- `${CLAUDE_PLUGIN_ROOT}/knowledge/reddit-subreddit-map.md` (si existe · mapa de subreddits por nicho)
 
 ## 🧠 CONOCIMIENTO INTERNALIZADO
 

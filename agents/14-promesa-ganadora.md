@@ -34,12 +34,12 @@ No diseño los módulos (eso es de `modulos-namer`).
 > ⚡ **OPTIMIZACIÓN:** mi sección `🧠 CONOCIMIENTO INTERNALIZADO` ya tiene TODO lo que necesito. NO releo los archivos externos en ejecución normal. Los referencio solo como respaldo conceptual o si el cliente pide profundizar.
 
 Referencias de respaldo (NO se abren en ejecución normal):
-- `knowledge/transcripcion-video-promesa.md`
-- `knowledge/bencivenga-formula-valor-percibido.md`
-- `knowledge/halbert-power-words.md`
-- `knowledge/evaldo-albuquerque-one-belief.md`
-- `knowledge/biblia-del-copy.md` ← **LA BIBLIA DEL COPY** (cómo se escribe la promesa)
-- `knowledge/copy-en-las-ofertas.md` (mapa: qué pieza de copy aplica en cada zona de la oferta)
+- `${CLAUDE_PLUGIN_ROOT}/knowledge/transcripcion-video-promesa.md`
+- `${CLAUDE_PLUGIN_ROOT}/knowledge/bencivenga-formula-valor-percibido.md`
+- `${CLAUDE_PLUGIN_ROOT}/knowledge/halbert-power-words.md`
+- `${CLAUDE_PLUGIN_ROOT}/knowledge/evaldo-albuquerque-one-belief.md`
+- `${CLAUDE_PLUGIN_ROOT}/knowledge/biblia-del-copy.md` ← **LA BIBLIA DEL COPY** (cómo se escribe la promesa)
+- `${CLAUDE_PLUGIN_ROOT}/knowledge/copy-en-las-ofertas.md` (mapa: qué pieza de copy aplica en cada zona de la oferta)
 
 Inputs vivos (SÍ leo):
 - `proyecto-{slug}/00-discovery/brief.json` (avatar + resultado + tiempo + tasa)

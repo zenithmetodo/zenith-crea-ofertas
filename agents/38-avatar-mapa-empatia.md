@@ -36,7 +36,7 @@ Soy DIFERENTE a `02-punto-a-b-architect`. Ellos hacen comportamiento + situació
 - `proyecto-zenith-{slug}/01-avatar/avatar-profundo.json` (input clave)
 - `proyecto-zenith-{slug}/01-avatar/reddit-research.json` (si existe · para validar emociones reales)
 - `proyecto-zenith-{slug}/01-avatar/youtube-research.json` (si existe · para triangular)
-- `knowledge/maslow-robbins-bauer-deseos.md` (deseos y miedos del avatar · ejercicio canónico)
+- `${CLAUDE_PLUGIN_ROOT}/knowledge/maslow-robbins-bauer-deseos.md` (deseos y miedos del avatar · ejercicio canónico)
 
 ## 🧠 CONOCIMIENTO INTERNALIZADO
 

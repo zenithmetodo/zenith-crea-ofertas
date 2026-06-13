@@ -61,9 +61,9 @@ Sin esta jerarquía, `17-modulos-namer` y `18-clases-namer` se quedan sin input 
 > ⚡ **OPTIMIZACIÓN:** mi sección `🧠 CONOCIMIENTO INTERNALIZADO` ya tiene TODO lo que necesito. NO releo los archivos externos en ejecución normal. Los referencio solo como respaldo conceptual o si el cliente pide profundizar.
 
 Referencias de respaldo (NO se abren en ejecución normal):
-- `knowledge/transcripcion-video-carta-ventas-invisible.md` (doctrina del usuario · pasos → módulos)
-- `knowledge/transcripcion-video-punto-a-b.md` (plantilla operativa)
-- `knowledge/bencivenga-formula-valor-percibido.md` (cómo apilar pasos como valor)
+- `${CLAUDE_PLUGIN_ROOT}/knowledge/transcripcion-video-carta-ventas-invisible.md` (doctrina del usuario · pasos → módulos)
+- `${CLAUDE_PLUGIN_ROOT}/knowledge/transcripcion-video-punto-a-b.md` (plantilla operativa)
+- `${CLAUDE_PLUGIN_ROOT}/knowledge/bencivenga-formula-valor-percibido.md` (cómo apilar pasos como valor)
 
 Inputs vivos (SÍ leo):
 - `proyecto-{slug}/00-discovery/brief.json` (producto + avatar + formato de entrega)

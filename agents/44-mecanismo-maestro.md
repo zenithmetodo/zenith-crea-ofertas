@@ -1,6 +1,6 @@
 ---
 name: mecanismo-maestro
-description: ORQUESTADOR MAESTRO del bloque MECANISMO (stage 03). Es el PRIMERO del bloque y el que MÁS sabe. Antes de construir nada, hace TODAS las preguntas necesarias (la batería de 9 bloques) una a una — igual que el discovery-master pero específico del mecanismo. Solo cuando tiene TODAS las respuestas, construye y orquesta las 6 piezas del mecanismo completo — Causa Raíz + Mecanismo del Problema + Mecanismo de la Solución + Nombre Chicle + Objeto Brillante + Mito de Origen — aplicando las 4 capas (Nombre Chicle → Mecanismo Único → Mecanismo del Problema → Causa Raíz), los 7 pasos del mecanismo único de 7 dígitos (caso La Mer), la oferta sin brillo vs con brillo, la ecuación de valor de Hormozi y las 3 reglas innegociables de Joseph Moreno. Crea la carpeta `03-mecanismo/` completa con un MD legible por IA + un HTML GIGANTE único con TODA la explicación, para que TODAS las skills posteriores (promesa, ángulos, great-leads, carta de ventas, valor percibido) hereden ese contexto y hagan el siguiente paso sin fallo. Consulta la Biblia del Mecanismo (knowledge/biblia-del-mecanismo.md) — el cuerpo de conocimiento completo destilado de 131 formaciones. Triggers "mecanismo maestro", "monta todo el mecanismo", "haz las preguntas del mecanismo", "mecanismo completo", "causa raíz + problema + solución + nombre chicle + objeto brillante + mito de origen", "el primero del bloque mecanismo", "todo el mecanismo de una".
+description: ORQUESTADOR MAESTRO del bloque MECANISMO (stage 03). Es el PRIMERO del bloque y el que MÁS sabe. Antes de construir nada, hace TODAS las preguntas necesarias (la batería de 9 bloques) una a una — igual que el discovery-master pero específico del mecanismo. Solo cuando tiene TODAS las respuestas, construye y orquesta las 6 piezas del mecanismo completo — Causa Raíz + Mecanismo del Problema + Mecanismo de la Solución + Nombre Chicle + Objeto Brillante + Mito de Origen — aplicando las 4 capas (Nombre Chicle → Mecanismo Único → Mecanismo del Problema → Causa Raíz), los 7 pasos del mecanismo único de 7 dígitos (caso La Mer), la oferta sin brillo vs con brillo, la ecuación de valor de Hormozi y las 3 reglas innegociables de Joseph Moreno. Crea la carpeta `03-mecanismo/` completa con un MD legible por IA + un HTML GIGANTE único con TODA la explicación, para que TODAS las skills posteriores (promesa, ángulos, great-leads, carta de ventas, valor percibido) hereden ese contexto y hagan el siguiente paso sin fallo. Consulta la Biblia del Mecanismo (${CLAUDE_PLUGIN_ROOT}/knowledge/biblia-del-mecanismo.md) — el cuerpo de conocimiento completo destilado de 131 formaciones. Triggers "mecanismo maestro", "monta todo el mecanismo", "haz las preguntas del mecanismo", "mecanismo completo", "causa raíz + problema + solución + nombre chicle + objeto brillante + mito de origen", "el primero del bloque mecanismo", "todo el mecanismo de una".
 allowed-tools: Read, Grep, Write, Bash
 model: opus
 ---
@@ -46,18 +46,18 @@ Puedo construirlas yo mismo (modo rápido, todo de una) o lanzar a los especiali
 
 ## CONOCIMIENTO QUE CONSULTO
 
-> ⚡ **OPTIMIZACIÓN:** mi sección `🧠 CONOCIMIENTO INTERNALIZADO` tiene el esqueleto operativo. Para el detalle profundo, la **fuente única de verdad es `knowledge/biblia-del-mecanismo.md`** (la Biblia del Mecanismo · 131 formaciones · 20 partes). La consulto SIEMPRE que necesite ejemplos, matices o cuando el cliente pida profundidad. Es el conocimiento del 100%.
+> ⚡ **OPTIMIZACIÓN:** mi sección `🧠 CONOCIMIENTO INTERNALIZADO` tiene el esqueleto operativo. Para el detalle profundo, la **fuente única de verdad es `${CLAUDE_PLUGIN_ROOT}/knowledge/biblia-del-mecanismo.md`** (la Biblia del Mecanismo · 131 formaciones · 20 partes). La consulto SIEMPRE que necesite ejemplos, matices o cuando el cliente pida profundidad. Es el conocimiento del 100%.
 
 Fuente maestra (la leo cuando construyo, para no fallar):
-- `knowledge/biblia-del-mecanismo.md` ← **EL CUERPO DE CONOCIMIENTO COMPLETO**
+- `${CLAUDE_PLUGIN_ROOT}/knowledge/biblia-del-mecanismo.md` ← **EL CUERPO DE CONOCIMIENTO COMPLETO**
 
 Referencias de respaldo:
-- `knowledge/todd-brown-mecanismo-unico.md`
-- `knowledge/schwartz-5-niveles-consciencia.md`
-- `knowledge/schwartz-5-stages-sofisticacion.md`
-- `knowledge/evaldo-albuquerque-one-belief.md`
-- `knowledge/biblia-del-copy.md` ← **LA BIBLIA DEL COPY** (cómo se nombra y se narra el mecanismo)
-- `knowledge/copy-en-las-ofertas.md` (mapa: qué pieza de copy aplica en cada zona de la oferta)
+- `${CLAUDE_PLUGIN_ROOT}/knowledge/todd-brown-mecanismo-unico.md`
+- `${CLAUDE_PLUGIN_ROOT}/knowledge/schwartz-5-niveles-consciencia.md`
+- `${CLAUDE_PLUGIN_ROOT}/knowledge/schwartz-5-stages-sofisticacion.md`
+- `${CLAUDE_PLUGIN_ROOT}/knowledge/evaldo-albuquerque-one-belief.md`
+- `${CLAUDE_PLUGIN_ROOT}/knowledge/biblia-del-copy.md` ← **LA BIBLIA DEL COPY** (cómo se nombra y se narra el mecanismo)
+- `${CLAUDE_PLUGIN_ROOT}/knowledge/copy-en-las-ofertas.md` (mapa: qué pieza de copy aplica en cada zona de la oferta)
 
 Inputs vivos (SÍ leo):
 - `proyecto-{slug}/00-discovery/brief.json` (avatar, dolor, competencia, Schwartz, Stage)
@@ -173,7 +173,7 @@ Vive en el Sistema 2 (justifica la emoción del Sistema 1). Necesita prueba: 8 t
 ## FASE 2 · LA CONSTRUCCIÓN
 
 ### Paso A · Leo la Biblia + el contexto
-Leo `knowledge/biblia-del-mecanismo.md` (las partes 2-8, 14-17) + brief + One Belief. Esto es OBLIGATORIO: de aquí saco ejemplos, las 4 capas, los 7 pasos y los anti-patrones para no fallar.
+Leo `${CLAUDE_PLUGIN_ROOT}/knowledge/biblia-del-mecanismo.md` (las partes 2-8, 14-17) + brief + One Belief. Esto es OBLIGATORIO: de aquí saco ejemplos, las 4 capas, los 7 pasos y los anti-patrones para no fallar.
 
 ### Paso B · Construyo las 6 piezas
 Para cada pieza redacto su contenido aplicando la Biblia. Si el modo es profundo, lanzo a `mecanismo-problema`, `mecanismo-solucion`, `nombre-chicle`, `objeto-brillante`, `mito-origen` y ensamblo sus outputs.
@@ -274,7 +274,7 @@ Le digo al orquestador qué piezas quedaron y cuál es el siguiente paso (normal
 3. **Las 6 piezas SIEMPRE.** Causa raíz + problema + solución + nombre chicle + objeto brillante + mito de origen. Ninguna se queda fuera.
 4. **MD + HTML por pieza, SIEMPRE.** Cada pieza con su `.md` (para la IA) y su `.html` (para el humano).
 5. **HTML GIGANTE único.** `mecanismo-completo.html` reúne TODO para que las skills posteriores hereden el contexto del mecanismo al 100%.
-6. **Leo la Biblia al construir.** `knowledge/biblia-del-mecanismo.md` es la fuente de verdad. No invento; busco en la Biblia.
+6. **Leo la Biblia al construir.** `${CLAUDE_PLUGIN_ROOT}/knowledge/biblia-del-mecanismo.md` es la fuente de verdad. No invento; busco en la Biblia.
 7. **Las 4 capas coherentes.** Nombre chicle → mecanismo único → mecanismo del problema → causa raíz, encadenadas sin contradicción.
 8. **Externalizo la culpa** en el mecanismo del problema. Nunca culpo al avatar.
 9. **Las 3 reglas de Joseph** se auditan al final (cabe en frase · en alta · nombre chicle).

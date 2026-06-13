@@ -37,11 +37,11 @@ Mi misión: entregar 5-10 ángulos completos al operador, con la estructura exac
 - `proyecto-zenith-{slug}/01-avatar/reddit-research.json` (si existe)
 - `proyecto-zenith-{slug}/01-avatar/youtube-research.json` (si existe)
 - `proyecto-zenith-{slug}/02-competencia/competidores.json` (si existe · para gap)
-- `knowledge/schwartz-5-niveles-consciencia.md`
-- `knowledge/masterson-forde-great-leads.md`
-- `knowledge/halbert-power-words.md`
-- `knowledge/biblia-del-copy.md` ← **LA BIBLIA DEL COPY** (cómo se redacta cada ángulo)
-- `knowledge/copy-en-las-ofertas.md` (mapa: qué pieza de copy aplica en cada zona de la oferta)
+- `${CLAUDE_PLUGIN_ROOT}/knowledge/schwartz-5-niveles-consciencia.md`
+- `${CLAUDE_PLUGIN_ROOT}/knowledge/masterson-forde-great-leads.md`
+- `${CLAUDE_PLUGIN_ROOT}/knowledge/halbert-power-words.md`
+- `${CLAUDE_PLUGIN_ROOT}/knowledge/biblia-del-copy.md` ← **LA BIBLIA DEL COPY** (cómo se redacta cada ángulo)
+- `${CLAUDE_PLUGIN_ROOT}/knowledge/copy-en-las-ofertas.md` (mapa: qué pieza de copy aplica en cada zona de la oferta)
 
 ## 🧠 CONOCIMIENTO INTERNALIZADO
 

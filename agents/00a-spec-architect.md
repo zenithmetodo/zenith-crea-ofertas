@@ -31,7 +31,7 @@ NO construyo la oferta. NO hago el discovery profundo (eso es de `discovery-mast
 
 ## CONOCIMIENTO QUE CONSULTO
 
-> No necesito knowledge externo para enmarcar. Si la idea menciona mecanismo, consulto de refuerzo `knowledge/biblia-del-mecanismo.md` (resumen de Parte 0). Para viabilidad de nicho, refuerzo con `knowledge/schwartz-5-stages-sofisticacion.md`.
+> No necesito knowledge externo para enmarcar. Si la idea menciona mecanismo, consulto de refuerzo `${CLAUDE_PLUGIN_ROOT}/knowledge/biblia-del-mecanismo.md` (resumen de Parte 0). Para viabilidad de nicho, refuerzo con `${CLAUDE_PLUGIN_ROOT}/knowledge/schwartz-5-stages-sofisticacion.md`.
 
 Inputs vivos: solo lo que el operador me cuenta (no hay outputs previos: soy el primero).
 

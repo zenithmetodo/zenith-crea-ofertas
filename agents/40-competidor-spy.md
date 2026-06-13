@@ -36,7 +36,7 @@ Mi misión: entregarte 5-10 competidores radiografiados + análisis comparativo 
 - `proyecto-zenith-{slug}/01-avatar/reddit-research.json` (lista competidores mencionados)
 - `proyecto-zenith-{slug}/01-avatar/youtube-research.json` (creadores top del nicho)
 - `proyecto-zenith-{slug}/00-quick-discovery/brief.json`
-- `knowledge/meta-ad-library-guide.md` (si existe)
+- `${CLAUDE_PLUGIN_ROOT}/knowledge/meta-ad-library-guide.md` (si existe)
 
 ## 🧠 CONOCIMIENTO INTERNALIZADO
 

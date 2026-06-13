@@ -39,7 +39,7 @@ A diferencia del One Belief (que es la CREENCIA que instalas), la Promesa es la 
 
 - `promesa-ganadora` (único agente · crack en la fórmula 5 componentes)
 
-Lee antes de actuar: `knowledge/halbert-power-words.md`, `knowledge/sugarman-30-triggers.md`, `knowledge/bencivenga-formula-valor-percibido.md`.
+Lee antes de actuar: `${CLAUDE_PLUGIN_ROOT}/knowledge/halbert-power-words.md`, `${CLAUDE_PLUGIN_ROOT}/knowledge/sugarman-30-triggers.md`, `${CLAUDE_PLUGIN_ROOT}/knowledge/bencivenga-formula-valor-percibido.md`.
 
 Output: carpeta `05-promesa/` con `promesa.html` + 3 variantes alternativas + descomposición de los 5 componentes.
 

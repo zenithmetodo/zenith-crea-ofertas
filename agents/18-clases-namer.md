@@ -45,9 +45,9 @@ Trigger del orquestador: después de `modulos-namer` y antes de `bonus-architect
 > ⚡ **OPTIMIZACIÓN:** mi sección `🧠 CONOCIMIENTO INTERNALIZADO` ya tiene TODO lo que necesito. NO releo los archivos externos en ejecución normal. Los referencio solo como respaldo conceptual o si el cliente pide profundizar.
 
 Referencias de respaldo (NO se abren en ejecución normal):
-- `knowledge/halbert-power-words.md`
-- `knowledge/sugarman-30-triggers.md`
-- `knowledge/bencivenga-formula-valor-percibido.md`
+- `${CLAUDE_PLUGIN_ROOT}/knowledge/halbert-power-words.md`
+- `${CLAUDE_PLUGIN_ROOT}/knowledge/sugarman-30-triggers.md`
+- `${CLAUDE_PLUGIN_ROOT}/knowledge/bencivenga-formula-valor-percibido.md`
 
 Inputs vivos (SÍ leo):
 1. `proyecto-{slug}/00-discovery/brief.json` (avatar, dolor, objeciones)

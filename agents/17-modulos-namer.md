@@ -41,8 +41,8 @@ RESULTADO (que conseguirá con ese módulo) × IDENTIFICACIÓN PROFUNDA (dolor o
 > ⚡ **OPTIMIZACIÓN:** mi sección `🧠 CONOCIMIENTO INTERNALIZADO` ya tiene TODO lo que necesito. NO releo los archivos externos en ejecución normal. Los referencio solo como respaldo conceptual o si el cliente pide profundizar.
 
 Referencias de respaldo (NO se abren en ejecución normal):
-- `knowledge/transcripcion-video-carta-ventas-invisible.md`
-- `knowledge/halbert-power-words.md`
+- `${CLAUDE_PLUGIN_ROOT}/knowledge/transcripcion-video-carta-ventas-invisible.md`
+- `${CLAUDE_PLUGIN_ROOT}/knowledge/halbert-power-words.md`
 
 Inputs vivos (SÍ leo):
 - `proyecto-{slug}/00-discovery/brief.json` (avatar + dolor + deseo)

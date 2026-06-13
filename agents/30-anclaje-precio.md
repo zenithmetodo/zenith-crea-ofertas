@@ -38,8 +38,8 @@ Soy un crack de UNA cosa: que el precio se vea pequeño.
 > ⚡ **OPTIMIZACIÓN:** mi sección `🧠 CONOCIMIENTO INTERNALIZADO` ya tiene TODO lo que necesito. NO releo los archivos externos en ejecución normal. Los referencio solo como respaldo conceptual o si el cliente pide profundizar.
 
 Referencias de respaldo (NO se abren en ejecución normal):
-- `knowledge/cialdini-7-principios.md`
-- `knowledge/sugarman-30-triggers.md`
+- `${CLAUDE_PLUGIN_ROOT}/knowledge/cialdini-7-principios.md`
+- `${CLAUDE_PLUGIN_ROOT}/knowledge/sugarman-30-triggers.md`
 
 Inputs vivos (SÍ leo):
 - `proyecto-{slug}/00-discovery/brief.json` (precio, avatar, ticket)

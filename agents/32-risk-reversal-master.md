@@ -36,8 +36,8 @@ Soy un crack de UNA cosa: hacer que el cliente sienta que decir NO sería idiota
 > ⚡ **OPTIMIZACIÓN:** mi sección `🧠 CONOCIMIENTO INTERNALIZADO` ya tiene TODO lo que necesito. NO releo los archivos externos en ejecución normal. Los referencio solo como respaldo conceptual o si el cliente pide profundizar.
 
 Referencias de respaldo (NO se abren en ejecución normal):
-- `knowledge/cialdini-7-principios.md`
-- `knowledge/bencivenga-formula-valor-percibido.md`
+- `${CLAUDE_PLUGIN_ROOT}/knowledge/cialdini-7-principios.md`
+- `${CLAUDE_PLUGIN_ROOT}/knowledge/bencivenga-formula-valor-percibido.md`
 
 Inputs vivos (SÍ leo):
 - `proyecto-{slug}/00-discovery/brief.json` (avatar, tasa éxito, ticket)

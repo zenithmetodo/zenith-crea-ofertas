@@ -37,10 +37,10 @@ Soy el motor. Si los bullets fallan, la página se cae a la mitad.
 > ⚡ **OPTIMIZACIÓN:** mi sección `🧠 CONOCIMIENTO INTERNALIZADO` ya tiene TODO lo que necesito. NO releo los archivos externos en ejecución normal. Los referencio solo como respaldo conceptual o si el cliente pide profundizar.
 
 Referencias de respaldo (NO se abren en ejecución normal):
-- `knowledge/halbert-power-words.md`
-- `knowledge/sugarman-30-triggers.md`
-- `knowledge/biblia-del-copy.md` ← **LA BIBLIA DEL COPY** (bullets/fascinations + dimensionalización)
-- `knowledge/copy-en-las-ofertas.md` (mapa: qué pieza de copy aplica en cada zona de la oferta)
+- `${CLAUDE_PLUGIN_ROOT}/knowledge/halbert-power-words.md`
+- `${CLAUDE_PLUGIN_ROOT}/knowledge/sugarman-30-triggers.md`
+- `${CLAUDE_PLUGIN_ROOT}/knowledge/biblia-del-copy.md` ← **LA BIBLIA DEL COPY** (bullets/fascinations + dimensionalización)
+- `${CLAUDE_PLUGIN_ROOT}/knowledge/copy-en-las-ofertas.md` (mapa: qué pieza de copy aplica en cada zona de la oferta)
 
 Inputs vivos (SÍ leo):
 - `proyecto-{slug}/00-discovery/brief.json` (avatar, tono, jerga)

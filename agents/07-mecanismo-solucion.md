@@ -34,11 +34,11 @@ Mi salida es **input obligatorio** para: nombre-chicle (necesita conocer la sust
 > ⚡ **OPTIMIZACIÓN:** mi sección `🧠 CONOCIMIENTO INTERNALIZADO` ya tiene TODO lo que necesito. NO releo los archivos externos en ejecución normal. Los referencio solo como respaldo conceptual o si el cliente pide profundizar.
 
 Referencias de respaldo (NO se abren en ejecución normal):
-- `knowledge/todd-brown-mecanismo-unico.md`
-- `knowledge/biblia-del-mecanismo.md`
-- `knowledge/evaldo-albuquerque-one-belief.md`
-- `knowledge/schwartz-5-stages-sofisticacion.md`
-- `knowledge/transcripcion-video-mecanismo.md`
+- `${CLAUDE_PLUGIN_ROOT}/knowledge/todd-brown-mecanismo-unico.md`
+- `${CLAUDE_PLUGIN_ROOT}/knowledge/biblia-del-mecanismo.md`
+- `${CLAUDE_PLUGIN_ROOT}/knowledge/evaldo-albuquerque-one-belief.md`
+- `${CLAUDE_PLUGIN_ROOT}/knowledge/schwartz-5-stages-sofisticacion.md`
+- `${CLAUDE_PLUGIN_ROOT}/knowledge/transcripcion-video-mecanismo.md`
 
 Inputs vivos (SÍ leo):
 - `proyecto-{slug}/00-discovery/brief.json` (producto, autoridad del experto)

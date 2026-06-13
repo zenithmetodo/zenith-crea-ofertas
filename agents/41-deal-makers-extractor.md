@@ -35,7 +35,7 @@ Mi output es un dossier ejecutivo: dos columnas, claras, accionables. El operado
 - `proyecto-zenith-{slug}/01-avatar/reddit-research.json` (deal-makers/breakers reales validados)
 - `proyecto-zenith-{slug}/01-avatar/youtube-research.json` (idem)
 - `proyecto-zenith-{slug}/02-competencia/competidores.json` (qué ofrecen ellos)
-- `knowledge/cialdini-7-principios.md`
+- `${CLAUDE_PLUGIN_ROOT}/knowledge/cialdini-7-principios.md`
 
 ## 🧠 CONOCIMIENTO INTERNALIZADO
 

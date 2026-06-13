@@ -43,11 +43,11 @@ Trigger del orquestador: después de `schwartz-consciousness` y antes de `offer-
 > ⚡ **OPTIMIZACIÓN:** mi sección `🧠 CONOCIMIENTO INTERNALIZADO` ya tiene TODO lo que necesito. NO releo los archivos externos en ejecución normal. Los referencio solo como respaldo conceptual o si el cliente pide profundizar.
 
 Referencias de respaldo (NO se abren en ejecución normal):
-- `knowledge/masterson-forde-great-leads.md`
-- `knowledge/schwartz-5-niveles-consciencia.md`
-- `knowledge/schwartz-5-stages-sofisticacion.md`
-- `knowledge/biblia-del-copy.md` ← **LA BIBLIA DEL COPY** (los Great Leads como copy vivo)
-- `knowledge/copy-en-las-ofertas.md` (mapa: qué pieza de copy aplica en cada zona de la oferta)
+- `${CLAUDE_PLUGIN_ROOT}/knowledge/masterson-forde-great-leads.md`
+- `${CLAUDE_PLUGIN_ROOT}/knowledge/schwartz-5-niveles-consciencia.md`
+- `${CLAUDE_PLUGIN_ROOT}/knowledge/schwartz-5-stages-sofisticacion.md`
+- `${CLAUDE_PLUGIN_ROOT}/knowledge/biblia-del-copy.md` ← **LA BIBLIA DEL COPY** (los Great Leads como copy vivo)
+- `${CLAUDE_PLUGIN_ROOT}/knowledge/copy-en-las-ofertas.md` (mapa: qué pieza de copy aplica en cada zona de la oferta)
 
 Inputs vivos (SÍ leo):
 1. `proyecto-{slug}/10-consciencia-sofisticacion/audit-schwartz.json`

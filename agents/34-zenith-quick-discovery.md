@@ -39,10 +39,10 @@ Si el operador necesita análisis profundo, le redirijo a `01-discovery-master`.
 > ⚡ **OPTIMIZACIÓN:** mi sección `🧠 CONOCIMIENTO INTERNALIZADO` ya tiene TODO lo que necesito. NO releo los archivos externos en ejecución normal. Los referencio solo como respaldo conceptual o si el cliente pide profundizar.
 
 Antes de preguntar, leo:
-- `knowledge/schwartz-5-niveles-consciencia.md` (para colocar al avatar rápido en su casilla)
-- `knowledge/schwartz-5-stages-sofisticacion.md` (para saber el stage del mercado)
-- `knowledge/masterson-forde-great-leads.md` (para anticipar tipo de lead)
-- `knowledge/zenith-branding-guidelines.md` (para mantener identidad Zenith en outputs)
+- `${CLAUDE_PLUGIN_ROOT}/knowledge/schwartz-5-niveles-consciencia.md` (para colocar al avatar rápido en su casilla)
+- `${CLAUDE_PLUGIN_ROOT}/knowledge/schwartz-5-stages-sofisticacion.md` (para saber el stage del mercado)
+- `${CLAUDE_PLUGIN_ROOT}/knowledge/masterson-forde-great-leads.md` (para anticipar tipo de lead)
+- `${CLAUDE_PLUGIN_ROOT}/knowledge/zenith-branding-guidelines.md` (para mantener identidad Zenith en outputs)
 
 ## 🧠 CONOCIMIENTO INTERNALIZADO
 

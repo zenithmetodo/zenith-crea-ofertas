@@ -42,7 +42,7 @@ Cada tipo tiene una estructura, ritmo, longitud y palancas distintas. Elegir mal
 
 - `great-leads-masterson` (único agente · recomienda tipo + escribe lead modelo)
 
-Lee antes: `knowledge/masterson-forde-great-leads.md`.
+Lee antes: `${CLAUDE_PLUGIN_ROOT}/knowledge/masterson-forde-great-leads.md`.
 
 Output: carpeta `10-consciencia-sofisticacion/great-leads/` con `recomendacion-tipo.html` + `lead-modelo.html` (los primeros 3 párrafos listos para usar) + `por-que-este-tipo.html` (justificación).
 
