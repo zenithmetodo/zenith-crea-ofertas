@@ -1,11 +1,33 @@
 ---
-name: zenith-crea-ofertas
+name: crea-ofertas-master
+user-invocable: true
+disable-model-invocation: false
 description: Zenith Crea Ofertas™ · Mega-skill TOP 1% para crear OFERTAS COMPLETAS de alto valor percibido bajo el Método Zenith. Arranca con una pre-fase guiada por especificación (spec → review por severidad → validación humana → plan) y orquesta 49 sub-agentes especializados (Opus/Sonnet/Haiku optimizado) que construyen, palabra por palabra, todo el embudo de la oferta — desde el avatar deep (psicólogo + Reddit + YouTube), pasando por ángulos (definición exacta Joseph Moreno), competencia (Biblioteca Anuncios Meta + GAP), 4 variantes de One Belief (Fórmula Evaldo Albuquerque adaptada por Joseph Moreno), mecanismo del problema, mecanismo de la solución, nombre chicle, características → beneficios → deseos, promesa ganadora, garantía impresionante, módulos y clases con la fórmula carta-de-ventas-invisible, bonus irresistibles, hasta la maximización del valor percibido con la fórmula Bencivenga (Beneficio + Credibilidad − Costo). Aplica 20 frameworks canónicos del direct response (Schwartz · Masterson+Forde · Bencivenga · Evaldo · Todd Brown · Halbert · Sugarman · Cialdini · Brunson · Hormozi · Caples · Ogilvy · Stefan Georgi · Ariely · Maslow/Robbins/Bauer · Jung · Joseph Moreno). Entrega cada pieza en una carpeta con HTML estético imprimible a PDF + Drive-friendly con branding Zenith (cian #00E5CF + purple #B845FF + Fraunces). Triggers: "crea mi oferta", "zenith crea oferta", "avatar deep", "research mercado", "ángulos", "competidor spy", "one belief", "mecanismo", "promesa ganadora", "bonus irresistibles", "valor percibido", "carta de ventas invisible", "auditor de oferta", "incuba mi producto perfecto", "método zenith".
 ---
 
 # ZENITH CREA OFERTAS™ · Orquestador Maestro
 
 > "Una oferta del 1% no se inventa — se construye por capas, con un agente crack en cada capa, hasta que cada palabra justifica el precio." — Principio operativo del plugin
+
+> ⚠️ Esto es una **SKILL** (no un agente) porque solo el hilo principal puede (a) **hacerte preguntas** (spec/discovery) y (b) **lanzar subagentes** con la tool `Agent`. Un subagente no puede ninguna de las dos. **NUNCA hagas tú el trabajo de un subagente: SIEMPRE delega** lanzando `zenith-crea-ofertas:<nombre>` con la tool `Agent`, en el orden del pipeline.
+
+## 🔴 0 · LO PRIMERO DE TODO (OBLIGATORIO · antes de tocar nada)
+
+### A) Lee la base de conocimiento OBLIGATORIA (conocimiento real del plugin)
+Lee con la tool `Read`, sí o sí, ANTES de generar nada y al lanzar cada subagente que escribe copy:
+- **`${CLAUDE_PLUGIN_ROOT}/knowledge/biblia-del-copy.md`** — la Biblia del Copy (neurocopywriting de respuesta directa). **OBLIGATORIA.**
+- **`${CLAUDE_PLUGIN_ROOT}/knowledge/copy-en-las-ofertas.md`** — cómo se usa el copy en cada capa de la oferta.
+- **`${CLAUDE_PLUGIN_ROOT}/knowledge/biblia-del-mecanismo.md`** — el mecanismo (villano, causa raíz, nombre chicle, objeto brillante, mito de origen).
+
+> **REGLA INNEGOCIABLE:** TÚ las lees y, al lanzar cada subagente que redacta (promesa, one-belief, mecanismo, módulos, bonus, valor-percibido, garantía, headline, fascinations, great-leads, objeciones, ángulos…), le **ORDENAS en el prompt que lea y aplique la Biblia del Copy** antes de escribir. Ninguna pieza de la oferta se redacta sin pasar por la Biblia del Copy. Cero traición de mensaje en todo el embudo.
+
+### B) Comprueba la MEMORIA / TONO / VOZ del usuario y ÚSALA
+Antes de redactar, comprueba si el usuario ya subió su contexto de marca y úsalo para TODA la redacción:
+- ¿Hay un **CLAUDE.md** (del proyecto o `~/.claude/CLAUDE.md`) con su tono, marca, avatar, público?
+- ¿Hay un doc de **tono / voz de marca / núcleo del creador / memoria** en el proyecto? (busca con Grep/Glob: `tono*.md`, `voz*.md`, `marca*.md`, `nucleo*.md`, `memoria*.md`, `brand*.md`).
+- ¿La memoria/preferencias de Claude definen cómo escribe?
+
+> **REGLA:** Si EXISTE → cárgala y escribe TODO con ESA voz (no la genérica), y pásala a CADA subagente en su prompt. Si NO existe → pregúntale UNA vez ("¿tienes un doc de tono/voz de marca o memoria que quieras que use?") y, si no, usa el branding/voz Zenith por defecto en español de España.
 
 ## QUÉ ES ESTA SKILL
 

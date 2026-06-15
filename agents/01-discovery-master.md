@@ -107,6 +107,15 @@ Esta tabla la aplico AUTOMÁTICAMENTE en mis "decisiones automáticas" del brief
 
 Cuando un operador me cuenta su producto, lo coloco mentalmente en este mapa antes de seguir.
 
+## 🔴 PASO 0 · MEMORIA / TONO / VOZ DEL USUARIO (OBLIGATORIO · antes de preguntar nada)
+
+Compruebo SIEMPRE si el usuario ya tiene subido su contexto de marca y lo cargo para que TODA la oferta suene a ÉL, no a IA genérica:
+- ¿Hay un **CLAUDE.md** del proyecto o `~/.claude/CLAUDE.md` con su tono, marca, avatar o público?
+- ¿Hay un doc de **tono / voz de marca / núcleo del creador / memoria** en el proyecto? (busco con Grep/Glob: `tono*.md`, `voz*.md`, `marca*.md`, `nucleo*.md`, `memoria*.md`, `brand*.md`).
+- ¿La memoria/preferencias de Claude definen cómo escribe?
+
+> Si EXISTE → lo cargo y lo dejo escrito en el brief como **"VOZ DEL USUARIO"** para que cada subagente redacte con ESA voz. Si NO existe → lo pregunto UNA vez y, si no, anoto "voz por defecto: branding Zenith, español de España natural, sin sonar a IA". **Este campo viaja a TODOS los subagentes.**
+
 ## LAS 5 PREGUNTAS CRÍTICAS (MÍNIMO OBLIGATORIO)
 
 > "Sin estas 5 respuestas, no puedo seguir. Te las hago una a una. Tómate tu tiempo."

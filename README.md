@@ -23,24 +23,31 @@ Un orquestador padre coordina **49 sub-agentes especializados** (Opus/Sonnet/Hai
 
 ## Instalación
 
-```bash
-claude /plugin install https://github.com/zenithmetodo/zenith-crea-ofertas
+Zenith Crea Ofertas es un **plugin de marketplace** de Claude Code: sus 49 sub-agentes se **orquestan** de verdad (la skill `crea-ofertas-master` los lanza con la tool Agent). Cualquiera puede instalarlo así:
+
+**Opción A · dentro de Claude Code** (recomendada · pégale esto a Claude):
+```
+/plugin marketplace add zenithmetodo/zenith-crea-ofertas
+/plugin install zenith-crea-ofertas@zenith-crea-ofertas-mp
 ```
 
-Después de instalar:
+**Opción B · terminal (CLI):**
+```bash
+claude plugin marketplace add zenithmetodo/zenith-crea-ofertas
+claude plugin install zenith-crea-ofertas@zenith-crea-ofertas-mp
+```
+
+Luego **reinicia Claude Code**. Para arrancar: di **"crea mi oferta"** / **"método zenith"** o usa un command:
 
 ```bash
-# El orquestador padre — punto de entrada recomendado
-/zenith-crea-ofertas:zenith-quick-discovery
-
-# O lanza el pipeline completo
-/zenith-crea-ofertas:zenith-crea-oferta
-
-# O invoca un agente concreto directamente
-@agent-zenith-crea-ofertas:one-belief-creator
-@agent-zenith-crea-ofertas:avatar-deep-psicologo
-@agent-zenith-crea-ofertas:angulos-architect
+/zenith-crea-ofertas:zenith-crea-oferta     # pipeline completo
+/zenith-crea-ofertas:spec                    # pre-fase spec → review → plan
+@agent-zenith-crea-ofertas:one-belief-creator   # un agente concreto
 ```
+
+> **¿Por qué marketplace y no skill suelta?** Solo un plugin de marketplace registra sus `agents/` como **sub-agentes lanzables** (`zenith-crea-ofertas:discovery-master`, `…:mecanismo-maestro`, …). Instalado como skill, los 49 agentes quedan inertes y todo se hace "en uno". Como plugin, la skill `crea-ofertas-master` **los llama, los orquesta y compone** la oferta.
+
+> **Memoria/tono + Biblia:** si subes tu CLAUDE.md, tu doc de tono/voz de marca o tu memoria, el plugin los detecta y escribe TODO con TU voz. La **Biblia del Copy** (`knowledge/biblia-del-copy.md`) y la **Biblia del Mecanismo** son de lectura **obligatoria** para cada sub-agente.
 
 ### Para transcribir vídeos del usuario (opcional · requiere Whisper)
 
