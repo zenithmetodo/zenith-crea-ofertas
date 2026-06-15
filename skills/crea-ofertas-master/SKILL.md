@@ -71,7 +71,8 @@ PRE-D · PLAN ⭐         → plan-architect (plan.md de TODO + plan de research
 08 · BONUS              → bonus-architect + bonus-irresistible
 09 · VALOR PERCIBIDO    → valor-percibido (fórmula Bencivenga)
 10 · CONSCIENCIA        → schwartz-consciousness + great-leads-masterson
-11 · OFERTA COMPLETA    → offer-master (ensambla todo)
+10b · COPY + STACK ⭐   → headline-master + fascinations-architect + autoridad-builder + stack-slide-architect + anclaje-precio + risk-reversal-master + upsell-downsell-architect (las piezas de copy y de oferta que offer-master ensambla)
+11 · OFERTA COMPLETA    → offer-master (ensambla TODO: headline + fascinations + stack + anclaje + garantía + autoridad + upsell)
 03c · NAMING PRODUCTO   → naming-producto (nombre comercial del PROGRAMA · el QUÉ se vende · distinto del nombre chicle del mecanismo · check dominio/RRSS/trademark)
 12 · ÁNGULOS ⭐         → angulos-architect (5-10 ángulos AL 1000% · nombres DESCRIPTIVOS · A qué apela / Qué cree / CÓMO LO ROMPEMOS / reconocimiento / hook · HTML editable) · OBLIGATORIO
 13 · HANDOFF ⭐         → auto-invocación a zenith-audience (crea el contenido/anuncios a partir de los ángulos)
@@ -271,7 +272,14 @@ Ver [`agents/`](agents/) para los archivos completos. Mapa rápido:
 | 21 | **schwartz-consciousness** | Audita niveles de consciencia y sofisticación |
 | 22 | **great-leads-masterson** | Elige el tipo de lead correcto (6 opciones) |
 | 23 | **bencivenga-formula** | Aplica las 7 leyes Bencivenga al copy final |
-| 24 | **offer-master** | Ensambla todas las piezas en oferta final |
+| ⭐ | **headline-master** | El titular/headline maestro de la oferta (trinidad beneficio + credibilidad + curiosidad) |
+| ⭐ | **fascinations-architect** | Los bullets/fascinations que abren bucles de curiosidad |
+| ⭐ | **autoridad-builder** | Construye la autoridad/credibilidad (las capas de prueba) |
+| ⭐ | **stack-slide-architect** | El stack de valor visual (apila las piezas → precio ridículo) |
+| ⭐ | **anclaje-precio** | El anclaje de precio (valor total → precio real → razón) |
+| ⭐ | **risk-reversal-master** | Inversión de riesgo / garantía audaz que blinda la promesa |
+| ⭐ | **upsell-downsell-architect** | Upsell / downsell / order bumps para maximizar el ticket |
+| 24 | **offer-master** | Ensambla todas las piezas anteriores (headline, fascinations, stack, anclaje, garantía, autoridad, upsell) en la oferta final |
 | 25 | **angulos-architect** ⭐ | 5-10 ángulos AL 1000% · nombres descriptivos · A qué apela / Qué cree / CÓMO LO ROMPEMOS · HTML editable · auto-handoff a zenith-audience · OBLIGATORIO |
 | 26 | **output-architect** | Genera HTML estéticos print-to-PDF + editables |
 | 27 | **auditor-completo** | Audita 200+ ítems · score global · roadmap fixes |
