@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 900" role="img" aria-label="Pipeline Oficial Zenith - 17 etapas - 43 agentes - layout zigzag">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 900" role="img" aria-label="Pipeline Oficial Zenith - 17 etapas - 49 agentes - layout zigzag">
   <defs>
     <linearGradient id="pipe-bg" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" stop-color="#050510"/>
@@ -100,7 +100,7 @@
           font-weight="700"
           fill="#ffffff"
           text-anchor="middle"
-          letter-spacing="1.5px">PIPELINE OFICIAL - 17 ETAPAS - 43 AGENTES</text>
+          letter-spacing="1.5px">PIPELINE OFICIAL - 17 ETAPAS - 49 AGENTES</text>
     <text x="0" y="26"
           font-family="ui-monospace, SF Mono, Menlo, monospace"
           font-size="12"

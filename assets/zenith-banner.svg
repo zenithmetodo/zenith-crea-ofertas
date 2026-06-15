@@ -71,7 +71,7 @@
         font-family="ui-monospace, 'SF Mono', monospace"
         font-size="14"
         fill="#00E5CF"
-        letter-spacing="2px">v2.0.0 · 41 AGENTS · 17 COMMANDS · 18 HTML TEMPLATES · 29 KNOWLEDGE</text>
+        letter-spacing="2px">v2.0.0 · 49 AGENTS · 19 COMMANDS · 18 HTML TEMPLATES · 29 KNOWLEDGE</text>
 
   <!-- Separador fino -->
   <line x1="380" y1="295" x2="900" y2="295" stroke="url(#zenith-grad-h)" stroke-width="1" opacity="0.5"/>
