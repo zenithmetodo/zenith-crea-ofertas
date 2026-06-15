@@ -1,7 +1,7 @@
 ---
 name: stack-slide-architect
 description: Construye el STACK SLIDE canónico de Russell Brunson — la pieza visual MÁS IMPORTANTE del cierre en VSL/landing/oferta. NO es la fórmula Bencivenga global del valor (eso lo hace valor-percibido) — es UNA pieza visual concreta lista para inyectar. Genera la tabla desglosada con 7-12 ítems, precio individual, valor total, precio HOY, ahorro y porcentaje de descuento, aplica anchoring psicológico (mayor valor visible arriba), respeta la regla "valor total ≥ 10× precio", entrega HTML + tabla Markdown + plain text. Triggers "hazme el stack slide", "tabla de valor", "el desglose del precio", "what you get", "diapositiva del cierre", "stack del VSL", "tabla del checkout".
-allowed-tools: Read, Grep, Write, Bash
+tools: Read, Grep, Write, Bash
 model: sonnet
 ---
 
@@ -343,7 +343,7 @@ Brunson manda: el stack se repite. Entrego ambos listos.
 
 ## OUTPUT · ESTRUCTURA EXACTA
 
-**🎨 HTML output:** INTEGRA en `templates/09-valor-percibido.html` (sección/columna específica). Otro agente del bloque genera el HTML maestro · este aporta su pieza JSON al ensamblaje.
+**🎨 HTML output:** INTEGRA en `${CLAUDE_PLUGIN_ROOT}/templates/09-valor-percibido.html` (sección/columna específica). Otro agente del bloque genera el HTML maestro · este aporta su pieza JSON al ensamblaje.
 
 **⚡ TAMAÑO MÁXIMO DE OUTPUT:** stack slide 7-12 ítems con precio individual + valor total + precio HOY + % descuento · HTML + Markdown + plain text · NO me extiendo más.
 
@@ -625,7 +625,7 @@ STACK FINAL
 | `output-architect` | Genera el HTML final estético con CSS del design system |
 | `anclaje-precio` | Mi tabla es el anchor por excelencia (valor 1.646 € hace que 17 € parezca regalo) |
 | `auditor-completo` | Verifica ratio 10× + 7-12 ítems + anchoring + 2 versiones |
-| `bencivenga-formula` | Confirma que la tabla activa el componente BENEFICIO de la fórmula |
+| `bencivenga-formula-valor-percibido.md` | Confirma que la tabla activa el componente BENEFICIO de la fórmula |
 
 ## CITAS DE AUTORIDAD
 

@@ -1,7 +1,7 @@
 ---
 name: bonus-architect
 description: Arquitecto del SISTEMA DE BONUS — diseña el STACK COMPLETO en 5 categorías estandarizadas (a) 1-2 BONUS INFALIBLES que enamoran, (b) 3 bonus que necesita ANTES de comprar, (c) 3 bonus que necesita DESPUÉS de comprar, (d) 3 bonus que ACORTAN el proceso de transformación, (e) 3 bonus que ROMPEN objeciones, (f) 2 bonus de ÚLTIMAS HORAS para empujón final. Aplica los 8 criterios del bonus infalible (complementa, no se vende suelto, no expira, presiona éticamente, diferenciación, útil, novedoso, rompe objeciones). NO escribe los bonus en sexy todavía (eso lo hace bonus-irresistible) — solo arquitectura. Triggers "bonus", "diseña los bonus", "stack de bonus", "categorías de bonus", "qué bonus pongo", "bonus infalible", "bonus de últimas horas".
-allowed-tools: Read, Grep, Write, Bash
+tools: Read, Grep, Write, Bash
 model: sonnet
 ---
 
@@ -328,7 +328,7 @@ Antes de entregar:
 
 ## OUTPUT
 
-**🎨 HTML output:** INTEGRA en `templates/08-bonus.html` (sección/columna específica). Otro agente del bloque genera el HTML maestro · este aporta su pieza JSON al ensamblaje.
+**🎨 HTML output:** INTEGRA en `${CLAUDE_PLUGIN_ROOT}/templates/08-bonus.html` (sección/columna específica). Otro agente del bloque genera el HTML maestro · este aporta su pieza JSON al ensamblaje.
 
 **⚡ TAMAÑO MÁXIMO DE OUTPUT:** 14 bonus distribuidos en 6 categorías (1-2 infalibles + 3 PRE + 3 POST + 3 aceleradores + 3 rompe-objeciones + 2 últimas horas) · NO me extiendo más.
 

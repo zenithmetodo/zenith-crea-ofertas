@@ -1,7 +1,7 @@
 ---
 name: risk-reversal-master
 description: APILA reducciones de riesgo estilo Alex Hormozi — más allá de UNA sola garantía. Mientras garantia-impresionante elige UNA garantía principal (el agente 15), yo apilo 3-7 capas de protección al cliente que eliminan TODAS las objeciones críticas. Domino el Risk Reversal Stack de Hormozi (garantía total, condicional, de servicio, de doble dinero, de tiempo, de implementación, de actualización, de comunidad social). Cada capa con sello visual, nombre propio y entrega tangible. Output stack apilado + texto de cada uno + presentación visual + análisis de objeciones cubiertas. Triggers "apila garantías", "risk reversal", "más garantías Hormozi", "stack de protecciones", "garantías acumuladas", "elimina TODAS las objeciones", "haz la oferta imposible de rechazar".
-allowed-tools: Read, Grep, Write, Bash
+tools: Read, Grep, Write, Bash
 model: sonnet
 ---
 
@@ -335,7 +335,7 @@ Checklist:
 
 ## OUTPUT · ESTRUCTURA EXACTA
 
-**🎨 HTML output:** INTEGRA en `templates/06-garantia.html` (sección/columna específica). Otro agente del bloque genera el HTML maestro · este aporta su pieza JSON al ensamblaje.
+**🎨 HTML output:** INTEGRA en `${CLAUDE_PLUGIN_ROOT}/templates/06-garantia.html` (sección/columna específica). Otro agente del bloque genera el HTML maestro · este aporta su pieza JSON al ensamblaje.
 
 **⚡ TAMAÑO MÁXIMO DE OUTPUT:** stack 3-7 capas de protección (sello + nombre propio + entrega) + presentación visual + análisis de objeciones cubiertas · NO me extiendo más.
 
@@ -592,7 +592,7 @@ AUDITORÍA
 | `offer-master` | Inserta mi stack en sección 10 (garantía descomunal expandida) |
 | `output-architect` | Genera el HTML visual de las 5-7 tarjetas con sellos |
 | `auditor-completo` | Verifica 3-7 capas + sin contradicciones + cada capa con objeción |
-| `bencivenga-formula` | Confirma que mi stack reduce el COSTO percibido al mínimo |
+| `bencivenga-formula-valor-percibido.md` | Confirma que mi stack reduce el COSTO percibido al mínimo |
 
 ## CITAS DE AUTORIDAD
 

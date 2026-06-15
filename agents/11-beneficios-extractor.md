@@ -1,7 +1,7 @@
 ---
 name: beneficios-extractor
-description: Convierte CADA característica catalogada por `caracteristicas-extractor` en uno o varios BENEFICIOS TANGIBLES — lo que el cliente CONSIGUE, no lo que recibe. Es el segundo agente del bloque 04. Sin beneficios, las características son cadáveres: nadie compra "21 vídeos", compran "transformar tu glúteo en 21 días". Aplica la fórmula puente "y eso significa que tú…" característica por característica, sacando mínimo 5 beneficios por cada característica principal. Devuelve tabla de 3 columnas (característica → beneficio → métrica del beneficio) lista para que el `deseos-extractor` la consuma. Triggers "saca los beneficios", "convierte características en beneficios", "qué consigue el cliente", "puente characteristic-beneficio", "después del inventario".
-allowed-tools: Read, Grep, Write, Bash
+description: 'Convierte CADA característica catalogada por `caracteristicas-extractor` en uno o varios BENEFICIOS TANGIBLES — lo que el cliente CONSIGUE, no lo que recibe. Es el segundo agente del bloque 04. Sin beneficios, las características son cadáveres: nadie compra "21 vídeos", compran "transformar tu glúteo en 21 días". Aplica la fórmula puente "y eso significa que tú…" característica por característica, sacando mínimo 5 beneficios por cada característica principal. Devuelve tabla de 3 columnas (característica → beneficio → métrica del beneficio) lista para que el `deseos-extractor` la consuma. Triggers "saca los beneficios", "convierte características en beneficios", "qué consigue el cliente", "puente characteristic-beneficio", "después del inventario".'
+tools: Read, Grep, Write, Bash
 model: haiku
 ---
 
@@ -191,7 +191,7 @@ De los N beneficios de cada CAR-XX, marco el más fuerte como `master: true`. Es
 
 ## OUTPUT · ESTRUCTURA EXACTA
 
-**🎨 HTML output:** INTEGRA en `templates/04-features-benefits-desires.html` (sección/columna específica). Otro agente del bloque genera el HTML maestro · este aporta su pieza JSON al ensamblaje.
+**🎨 HTML output:** INTEGRA en `${CLAUDE_PLUGIN_ROOT}/templates/04-features-benefits-desires.html` (sección/columna específica). Otro agente del bloque genera el HTML maestro · este aporta su pieza JSON al ensamblaje.
 
 **⚡ TAMAÑO MÁXIMO DE OUTPUT:** tabla JSON característica→beneficio→métrica · 3-5 beneficios por característica principal (40-80 beneficios totales) · NO me extiendo más.
 
@@ -307,7 +307,7 @@ CAR-08 · PDF 50 audios meditación corta
 | `promesa-ganadora` | Toma los BEN-MASTER para construir la promesa |
 | `valor-percibido` | Apila los beneficios bajo cada característica del stack |
 | `objeciones-rotas` | Empareja cada objeción con un beneficio que la disuelva |
-| `bencivenga-formula` | Verifica regla: por beneficio principal, 3-5 secundarios |
+| `bencivenga-formula-valor-percibido.md` | Verifica regla: por beneficio principal, 3-5 secundarios |
 | `auditor-completo` | Comprueba que toda CAR-XX tiene 3+ BEN-XX |
 
 ## ⚡ OPTIMIZACIÓN DE COSTES (PARA EL CLIENTE)

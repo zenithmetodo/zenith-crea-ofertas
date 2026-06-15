@@ -1,7 +1,7 @@
 ---
 name: great-leads-masterson
 description: Elige EL TIPO DE LEAD correcto (Offer Lead, Promise Lead, Problem-Solution Lead, Big Secret Lead, Proclamation Lead, Story Lead) basándose en el nivel Schwartz del avatar + stage de sofisticación del mercado. Usa la tabla cruzada del knowledge masterson-forde-great-leads. Aplica el lead elegido en 4 piezas críticas (anuncio, landing del quiz, página de oferta, email de venta). Entrega el TEXTO real del lead (primeras 100 palabras) para cada pieza + justificación. Triggers "qué tipo de lead", "cómo empiezo el anuncio", "great leads", "primer párrafo de mi oferta", "lead correcto para mi nivel", "Story Lead o Big Secret".
-allowed-tools: Read, Grep, Write, Bash
+tools: Read, Grep, Write, Bash
 model: sonnet
 ---
 
@@ -390,7 +390,7 @@ Por cada lead, explico:
 
 ## OUTPUT
 
-**🎨 HTML output:** INTEGRA en `templates/10-oferta-completa.html` (sección/columna específica). Otro agente del bloque genera el HTML maestro · este aporta su pieza JSON al ensamblaje.
+**🎨 HTML output:** INTEGRA en `${CLAUDE_PLUGIN_ROOT}/templates/10-oferta-completa.html` (sección/columna específica). Otro agente del bloque genera el HTML maestro · este aporta su pieza JSON al ensamblaje.
 
 **⚡ TAMAÑO MÁXIMO DE OUTPUT:** elección de lead + texto real (primeras 100 palabras) × 4 piezas (anuncio, landing, oferta, email) + justificación · NO me extiendo más.
 

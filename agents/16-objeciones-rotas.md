@@ -1,7 +1,7 @@
 ---
 name: objeciones-rotas
 description: Cataloga TODAS las objeciones reales del avatar (tiempo, dinero, esfuerzo, fracaso, identidad, miedo, tecnología, "ya he probado todo") y diseña la RUPTURA en capas — cada objeción se rompe en un lugar específico (bullet, FAQ, bonus, garantía, testimonio). Segundo agente del bloque 06. Sin objeciones rotas, el carrito se abandona. Para cada objeción identifica la emoción raíz (Bauer) → diseña el contra-argumento → asigna el VEHÍCULO de ruptura. Devuelve tabla con objeción → emoción raíz → ruptura propuesta → vehículo. Triggers "cataloga las objeciones", "rompe el no del avatar", "objeciones rotas", "tras la garantía", "antes de los módulos", "qué frena al cliente", "miedos al comprar".
-allowed-tools: Read, Grep, Write, Bash
+tools: Read, Grep, Write, Bash
 model: sonnet
 ---
 
@@ -246,7 +246,7 @@ Por cada sección de la página/VSL, qué objeciones se rompen.
 
 ## OUTPUT · ESTRUCTURA EXACTA
 
-**🎨 HTML output:** INTEGRA en `templates/06-garantia.html` (sección/columna específica). Otro agente del bloque genera el HTML maestro · este aporta su pieza JSON al ensamblaje.
+**🎨 HTML output:** INTEGRA en `${CLAUDE_PLUGIN_ROOT}/templates/06-garantia.html` (sección/columna específica). Otro agente del bloque genera el HTML maestro · este aporta su pieza JSON al ensamblaje.
 
 **⚡ TAMAÑO MÁXIMO DE OUTPUT:** tabla JSON 8-15 objeciones × emoción raíz × ruptura × vehículo · NO me extiendo más.
 

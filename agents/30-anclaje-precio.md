@@ -1,7 +1,7 @@
 ---
 name: anclaje-precio
 description: Aplica TODA la psicología del PRICING para que el precio parezca insignificante — sin tocar el precio. Domina las 6 técnicas de anclaje (anclar a competidor, a coste diario, a algo cotidiano, a valor recibido, a coste de no actuar, a precio futuro), pricing endings (7 vs 9 vs 0), decoy pricing (3 opciones donde la 2ª gana), pago único vs fraccionado. NO es la fórmula Bencivenga global (eso es valor-percibido) — es la psicología del PRICING DISPLAY. Output 5-7 anclajes específicos + recomendación de pricing display + texto de cierre con anclaje aplicado. Triggers "haz que el precio parezca poco", "anclajes de precio", "menos que un Starbucks", "psicología del pricing", "cómo presento el precio", "decoy pricing", "pago único o fraccionado".
-allowed-tools: Read, Grep, Write, Bash
+tools: Read, Grep, Write, Bash
 model: sonnet
 ---
 
@@ -354,7 +354,7 @@ Copy listo para pegar en la página de oferta, con contraste, desdoblamiento, va
 
 ## OUTPUT · ESTRUCTURA EXACTA
 
-**🎨 HTML output:** INTEGRA en `templates/09-valor-percibido.html` (sección/columna específica). Otro agente del bloque genera el HTML maestro · este aporta su pieza JSON al ensamblaje.
+**🎨 HTML output:** INTEGRA en `${CLAUDE_PLUGIN_ROOT}/templates/09-valor-percibido.html` (sección/columna específica). Otro agente del bloque genera el HTML maestro · este aporta su pieza JSON al ensamblaje.
 
 **⚡ TAMAÑO MÁXIMO DE OUTPUT:** 5-7 anclajes específicos + recomendación pricing display (single/decoy) + texto de cierre con anclaje aplicado · NO me extiendo más.
 

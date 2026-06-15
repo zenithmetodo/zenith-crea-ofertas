@@ -1,7 +1,7 @@
 ---
 name: intangibles-extractor
-description: Saca los INTANGIBLES emocionales que el avatar conseguirá al transformarse — sensaciones, estados internos, micro-momentos vivibles que NO son ni características (tangibles) ni beneficios (medibles) ni deseos profundos (identitarios). Son la capa que ata el copy al cuerpo del lector. Cuarto agente del bloque 04. Ataca 10 dominios: autoestima, energía, confianza, libertad, control, orgullo, paz mental, validación social, identidad, propósito. Devuelve 15-25 intangibles con descripción de momento concreto + activador físico (donde se siente en el cuerpo). Triggers "saca los intangibles", "qué va a SENTIR la persona", "sensaciones del avatar", "estados internos", "después de los deseos", "qué experiencia emocional vive".
-allowed-tools: Read, Grep, Write, Bash
+description: 'Saca los INTANGIBLES emocionales que el avatar conseguirá al transformarse — sensaciones, estados internos, micro-momentos vivibles que NO son ni características (tangibles) ni beneficios (medibles) ni deseos profundos (identitarios). Son la capa que ata el copy al cuerpo del lector. Cuarto agente del bloque 04. Ataca 10 dominios: autoestima, energía, confianza, libertad, control, orgullo, paz mental, validación social, identidad, propósito. Devuelve 15-25 intangibles con descripción de momento concreto + activador físico (donde se siente en el cuerpo). Triggers "saca los intangibles", "qué va a SENTIR la persona", "sensaciones del avatar", "estados internos", "después de los deseos", "qué experiencia emocional vive".'
+tools: Read, Grep, Write, Bash
 model: haiku
 ---
 
@@ -221,7 +221,7 @@ De los 15-25 intangibles, marco los 3-5 más fuertes como `hero: true`. Son los 
 
 ## OUTPUT · ESTRUCTURA EXACTA
 
-**🎨 HTML output:** INTEGRA en `templates/04-features-benefits-desires.html` (sección/columna específica). Otro agente del bloque genera el HTML maestro · este aporta su pieza JSON al ensamblaje.
+**🎨 HTML output:** INTEGRA en `${CLAUDE_PLUGIN_ROOT}/templates/04-features-benefits-desires.html` (sección/columna específica). Otro agente del bloque genera el HTML maestro · este aporta su pieza JSON al ensamblaje.
 
 **⚡ TAMAÑO MÁXIMO DE OUTPUT:** 15-25 intangibles × descripción de momento concreto + activador físico · NO me extiendo más.
 
@@ -360,7 +360,7 @@ Dominio ENERGÍA:
 |--------------|----------|
 | `promesa-ganadora` | Los HEROES alimentan la sección "sin dolor / sin miedo" |
 | `valor-percibido` | Apila los intangibles como "BONUS DE TRANSFORMACIÓN EMOCIONAL" en el stack |
-| `bencivenga-formula` | Activa la Ley de Predominant Emotion · 1 emoción dominante |
+| `bencivenga-formula-valor-percibido.md` | Activa la Ley de Predominant Emotion · 1 emoción dominante |
 | `modulos-namer` | Inspiración para tono y vocabulario de los nombres |
 | `bonus-architect` | Detecta intangibles no cubiertos por el programa → crea bonus para taparlos |
 | `output-architect` | Renderiza la tabla en HTML estético |

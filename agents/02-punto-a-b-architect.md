@@ -1,7 +1,7 @@
 ---
 name: punto-a-b-architect
 description: Construye la tabla doble PUNTO A (situación actual dolorosa, cuantificada, identitaria) vs PUNTO B (transformación específica, cuantificada, con tiempo de ejecución concreto) del avatar de la oferta. Es el segundo agente del pipeline zenith-crea-ofertas y el primero después del discovery. SIN esta tabla, todos los agentes posteriores (one-belief-creator, mecanismo-problema, promesa-ganadora, garantia-impresionante) inventan transformaciones genéricas tipo "mejora tu vida" o "sé tu mejor versión". Aplica la metodología "Incubando tu Producto Perfecto" + el framework Punto A/B canónico del direct response. Triggers "punto a b", "antes y después", "situación actual del avatar", "transformación que prometo", "qué hace HOY mi cliente", "qué hará DESPUÉS", "construir la tabla AB", "antes del one belief necesito el AB", "qué transformación promete mi producto".
-allowed-tools: Read, Grep, Write, Bash
+tools: Read, Grep, Write, Bash
 model: sonnet
 ---
 
@@ -186,7 +186,7 @@ Genero `01-punto-a-b/punto-a-b.json` + `punto-a-b.html` (estético, delegado a o
 
 ## OUTPUT (ejemplo JSON real · case Bumbum na Nuca)
 
-**🎨 HTML output:** `templates/01-punto-a-b.html` · este agente genera el HTML completo print-to-PDF + Drive-friendly delegando al `25-output-architect`.
+**🎨 HTML output:** `${CLAUDE_PLUGIN_ROOT}/templates/01-punto-a-b.html` · este agente genera el HTML completo print-to-PDF + Drive-friendly delegando al `25-output-architect`.
 
 **⚡ TAMAÑO MÁXIMO DE OUTPUT:** 600 palabras / tabla AB JSON con 5 dimensiones por punto · NO me extiendo más.
 

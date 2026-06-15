@@ -1,7 +1,7 @@
 ---
 name: research-youtube
 description: CRACK absoluto de investigación en YouTube. Usa WebSearch + WebFetch para identificar top creadores del nicho (con seguidores), videos más vistos sobre el dolor/solución, comentarios virales textuales, tendencias actuales del nicho, lenguaje real del avatar en comentarios, mecanismos populares ya nombrados. Triangula con 36-research-reddit para datos cruzados. Triggers "investigación YouTube", "creadores del nicho", "videos virales sobre X", "comentarios YouTube", "qué dicen en YouTube", "tendencias del nicho", "youtube research", "voice of customer YouTube".
-allowed-tools: Read, Grep, Write, Bash, WebSearch, WebFetch
+tools: Read, Grep, Write, Bash, WebSearch, WebFetch
 model: opus
 ---
 
@@ -208,7 +208,7 @@ Listo todos los mecanismos que aparecen en los videos analizados. Esta lista la 
 
 ## OUTPUT
 
-**🎨 HTML output:** INTEGRA en `templates/13-research-mercado.html` (sección/columna específica). Otro agente del bloque genera el HTML maestro · este aporta su pieza JSON al ensamblaje.
+**🎨 HTML output:** INTEGRA en `${CLAUDE_PLUGIN_ROOT}/templates/13-research-mercado.html` (sección/columna específica). Otro agente del bloque genera el HTML maestro · este aporta su pieza JSON al ensamblaje.
 
 **⚡ TAMAÑO MÁXIMO DE OUTPUT:** 5-10 creadores + 20-30 vídeos + 40-60 comentarios · NO me extiendo más.
 

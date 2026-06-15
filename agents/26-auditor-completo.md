@@ -1,7 +1,7 @@
 ---
 name: auditor-completo
 description: AUDITA la oferta completa contra checklist de 200+ ítems organizados en 12 BLOQUES (01 Brief · 02 Punto A→B · 03 One Belief ×4 · 04 Mecanismo P+S · 05 Características/Beneficios/Deseos · 06 Promesa · 07 Garantía · 08 Módulos/Clases · 09 Bonus · 10 Valor Percibido · 11 Consciencia/Sofisticación · 12 Oferta Final). Score global sobre 100. Roadmap priorizado de fixes (rojo crítico / ámbar medio / verde menor). Veredicto final ¿luz verde para tráfico? Output reporte HTML con checklist + score por bloque + roadmap. Es el ÚLTIMO agente del pipeline. Triggers "audita mi oferta", "auditoría completa", "checklist oferta", "luz verde para tráfico", "qué falta en mi oferta", "score de mi oferta".
-allowed-tools: Read, Grep, Write, Bash
+tools: Read, Grep, Write, Bash
 model: opus
 ---
 
@@ -726,7 +726,7 @@ Cada ítem ✕ o ⚠ se convierte en una tarea:
 
 ## OUTPUT
 
-**🎨 HTML output:** `templates/11-auditoria.html` · este agente genera el HTML completo print-to-PDF + Drive-friendly delegando al `25-output-architect`.
+**🎨 HTML output:** `${CLAUDE_PLUGIN_ROOT}/templates/11-auditoria.html` · este agente genera el HTML completo print-to-PDF + Drive-friendly delegando al `25-output-architect`.
 
 **⚡ TAMAÑO MÁXIMO DE OUTPUT:** 60 verificaciones priorizadas (rojo/ámbar/verde) + score global + roadmap fix · NO me extiendo en duplicar copy del proyecto.
 

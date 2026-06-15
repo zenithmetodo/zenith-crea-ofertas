@@ -1,7 +1,7 @@
 ---
 name: one-belief-creator
-description: Genera SIEMPRE 4 VARIANTES del One Belief Statement (regla innegociable de esta skill — nunca 1 ni 2, siempre 4). Aplica la FÓRMULA CANÓNICA DE EVALDO ALBUQUERQUE, ADAPTADA POR JOSEPH MORENO al lenguaje y mercado low-ticket español/latam: "La [NUEVA OPORTUNIDAD] es la llave para obtener [RESULTADO DESEADO], y eso solo es posible a través de [NUEVO MECANISMO]". Las 4 variantes son V1 Identidad pura, V2 Anti-identidad pura, V3 Nueva oportunidad/fenómeno, V4 Combo identidad+anti-identidad. Recomienda cuál usar como ganadora según Schwartz nivel + Stage sofisticación. NO crea identidades (eso lo hace identidad-anti-identidad). NO nombra mecanismos (eso lo hace nombre-chicle). Solo ensambla la frase ancla. Triggers "one belief", "creencia raíz", "frase ancla de la oferta", "4 variantes", "fórmula Evaldo adaptada Joseph Moreno", "16-word sales letter", "one belief statement", "creencia que vende sola", "ancla mental del embudo".
-allowed-tools: Read, Grep, Write, Bash
+description: 'Genera SIEMPRE 4 VARIANTES del One Belief Statement (regla innegociable de esta skill — nunca 1 ni 2, siempre 4). Aplica la FÓRMULA CANÓNICA DE EVALDO ALBUQUERQUE, ADAPTADA POR JOSEPH MORENO al lenguaje y mercado low-ticket español/latam: "La [NUEVA OPORTUNIDAD] es la llave para obtener [RESULTADO DESEADO], y eso solo es posible a través de [NUEVO MECANISMO]". Las 4 variantes son V1 Identidad pura, V2 Anti-identidad pura, V3 Nueva oportunidad/fenómeno, V4 Combo identidad+anti-identidad. Recomienda cuál usar como ganadora según Schwartz nivel + Stage sofisticación. NO crea identidades (eso lo hace identidad-anti-identidad). NO nombra mecanismos (eso lo hace nombre-chicle). Solo ensambla la frase ancla. Triggers "one belief", "creencia raíz", "frase ancla de la oferta", "4 variantes", "fórmula Evaldo adaptada Joseph Moreno", "16-word sales letter", "one belief statement", "creencia que vende sola", "ancla mental del embudo".'
+tools: Read, Grep, Write, Bash
 model: opus
 ---
 
@@ -229,7 +229,7 @@ Guardo en `proyecto-{slug}/02-one-belief/one-belief.json` y delego HTML.
 
 ## OUTPUT (ejemplo JSON real · case Bumbum na Nuca)
 
-**🎨 HTML output:** `templates/02-one-belief.html` · este agente genera el HTML completo print-to-PDF + Drive-friendly delegando al `25-output-architect`.
+**🎨 HTML output:** `${CLAUDE_PLUGIN_ROOT}/templates/02-one-belief.html` · este agente genera el HTML completo print-to-PDF + Drive-friendly delegando al `25-output-architect`.
 
 **⚡ TAMAÑO MÁXIMO DE OUTPUT:** 4 variantes × 50 palabras cada una + recomendación (200 palabras) · NO me extiendo más.
 

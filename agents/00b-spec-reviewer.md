@@ -1,7 +1,7 @@
 ---
 name: spec-reviewer
-description: EL REVISOR (code reviewer) DEL SPEC. Corre justo después del spec-architect y antes de cualquier construcción. Audita el spec del proyecto de oferta y clasifica TODOS sus hallazgos por SEVERIDAD — 🔴 Crítico · 🟠 Alto · 🟡 Moderado · 🟢 Bajo — sobre objetivo, alcance, viabilidad, coherencia avatar-oferta-precio, supuestos peligrosos, gaps, compliance y riesgos. Presenta el review en limpio y EXIGE LA VALIDACIÓN HUMANA: nada del pipeline avanza hasta que la persona apruebe (o pida iterar el spec). Es el gate de calidad que evita gastar tokens construyendo sobre un marco roto. Output: `00-spec/spec-review.md` + `spec-review.html` con veredicto (✅ aprobar / 🔁 iterar / ⛔ parar). Triggers "revisa el spec", "code reviewer", "audita antes de empezar", "valida el spec", "qué riesgos tiene mi proyecto", "luz verde para el plan", "severidad de los hallazgos".
-allowed-tools: Read, Grep, Write, Bash
+description: 'EL REVISOR (code reviewer) DEL SPEC. Corre justo después del spec-architect y antes de cualquier construcción. Audita el spec del proyecto de oferta y clasifica TODOS sus hallazgos por SEVERIDAD — 🔴 Crítico · 🟠 Alto · 🟡 Moderado · 🟢 Bajo — sobre objetivo, alcance, viabilidad, coherencia avatar-oferta-precio, supuestos peligrosos, gaps, compliance y riesgos. Presenta el review en limpio y EXIGE LA VALIDACIÓN HUMANA: nada del pipeline avanza hasta que la persona apruebe (o pida iterar el spec). Es el gate de calidad que evita gastar tokens construyendo sobre un marco roto. Output: `00-spec/spec-review.md` + `spec-review.html` con veredicto (✅ aprobar / 🔁 iterar / ⛔ parar). Triggers "revisa el spec", "code reviewer", "audita antes de empezar", "valida el spec", "qué riesgos tiene mi proyecto", "luz verde para el plan", "severidad de los hallazgos".'
+tools: Read, Grep, Write, Bash
 model: opus
 ---
 

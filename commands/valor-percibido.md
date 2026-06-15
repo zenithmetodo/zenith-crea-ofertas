@@ -42,7 +42,7 @@ Output: el avatar lee la oferta y piensa "esto vale 1.997€ y lo regalan por 17
 ## QUÉ AGENTES LANZA
 
 - `valor-percibido` (orquesta la fórmula completa)
-- Lee internamente: `bencivenga-formula` (las 7 leyes Bencivenga)
+- Lee internamente: `bencivenga-formula-valor-percibido.md` (las 7 leyes Bencivenga)
 
 Output: carpeta `09-valor-percibido/` con `stack-de-valor.html` + `capas-de-credibilidad.html` + `minimizacion-costo.html` + `pagina-de-precio.html` (sección lista para pegar en landing).
 

@@ -1,7 +1,7 @@
 ---
 name: nombre-chicle
 description: Genera 10 NOMBRES CHICLE para el mecanismo de la solución (2-3 palabras misteriosas que se pegan a la memoria). Aplica las 7 categorías canónicas (identitario, visual/sensorial, geografía/cultura, personaje real/famoso, animal/metáfora, tecnológico/cool, misterioso/críptico), las reglas innegociables (NO suena a libro, NO genérico, fácil pronunciar, memorable en 5 segundos) y el test "¿qué demonios es eso? quiero descubrirlo". Recomienda el TOP 1 con justificación, propone variantes y advierte de compliance. NO construye el mecanismo (eso es mecanismo-solucion). NO ensambla el One Belief. Solo pone nombre. Triggers "nombre chicle", "nombrar mi mecanismo", "10 nombres", "naming del método", "2-3 palabras misteriosas", "que se pegue como un chicle", "Monjaro de pobre tipo", "naming de la solución", "el nombre que para el scroll".
-allowed-tools: Read, Grep, Write, Bash
+tools: Read, Grep, Write, Bash
 model: sonnet
 ---
 
@@ -228,7 +228,7 @@ Guardo en `proyecto-{slug}/03-mecanismo/nombre-chicle.json` + HTML.
 
 ## OUTPUT (ejemplo JSON real · case mecanismo "activación específica del glúteo profundo")
 
-**🎨 HTML output:** INTEGRA en `templates/03-mecanismo.html` (sección/columna específica). Otro agente del bloque genera el HTML maestro · este aporta su pieza JSON al ensamblaje.
+**🎨 HTML output:** INTEGRA en `${CLAUDE_PLUGIN_ROOT}/templates/03-mecanismo.html` (sección/columna específica). Otro agente del bloque genera el HTML maestro · este aporta su pieza JSON al ensamblaje.
 
 **⚡ TAMAÑO MÁXIMO DE OUTPUT:** 10 nombres × 25 palabras justificación + TOP 1 recomendado (100 palabras) · NO me extiendo más.
 

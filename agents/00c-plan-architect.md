@@ -1,7 +1,7 @@
 ---
 name: plan-architect
-description: Convierte el SPEC APROBADO (tras la validación humana del spec-reviewer) en el PLAN MAESTRO ejecutable del proyecto. Genera `plan.md` — el plan de TODO: qué bloques del pipeline se ejecutan, en qué orden, qué agentes lanza cada uno, las dependencias, los hitos, y EL PLAN DE RESEARCH (qué hay que investigar, dónde, y qué preguntas abiertas del spec resuelve). Es el puente entre el spec validado y la ejecución: a partir de aquí arranca el discovery y el pipeline real. NO corre sin que la persona haya validado el spec. Output: `00-spec/plan.md` + `plan.html` + `research-plan.md`. Triggers "haz el plan", "plan md de todo", "plan maestro", "plan de research", "qué se va a ejecutar y en qué orden", "después de aprobar el spec".
-allowed-tools: Read, Grep, Write, Bash
+description: 'Convierte el SPEC APROBADO (tras la validación humana del spec-reviewer) en el PLAN MAESTRO ejecutable del proyecto. Genera `plan.md` — el plan de TODO: qué bloques del pipeline se ejecutan, en qué orden, qué agentes lanza cada uno, las dependencias, los hitos, y EL PLAN DE RESEARCH (qué hay que investigar, dónde, y qué preguntas abiertas del spec resuelve). Es el puente entre el spec validado y la ejecución: a partir de aquí arranca el discovery y el pipeline real. NO corre sin que la persona haya validado el spec. Output: `00-spec/plan.md` + `plan.html` + `research-plan.md`. Triggers "haz el plan", "plan md de todo", "plan maestro", "plan de research", "qué se va a ejecutar y en qué orden", "después de aprobar el spec".'
+tools: Read, Grep, Write, Bash
 model: opus
 ---
 

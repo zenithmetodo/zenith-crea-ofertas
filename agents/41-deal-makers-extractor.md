@@ -1,7 +1,7 @@
 ---
 name: deal-makers-extractor
 description: CRACK absoluto de deal-makers y deal-breakers. Extrae LO QUE HACE COMPRAR (10 deal-makers típicos) y LO QUE HACE HUIR (10 deal-breakers típicos) personalizados al avatar específico. Genera recomendaciones de qué incluir y qué evitar en la oferta. Aplica psicología del consumidor (Cialdini · pérdida vs ganancia · prueba social específica). Triggers "deal makers", "deal breakers", "qué hace comprar", "qué hace huir", "qué incluir en la oferta", "qué evitar en la oferta", "psicología compra-no-compra", "lo que activa el sí", "lo que activa el no".
-allowed-tools: Read, Grep, Write, Bash
+tools: Read, Grep, Write, Bash
 model: sonnet
 ---
 
@@ -215,7 +215,7 @@ Lista accionable:
 
 ## OUTPUT
 
-**🎨 HTML output:** `templates/16-deal-makers.html` · este agente genera el HTML completo print-to-PDF + Drive-friendly delegando al `25-output-architect`.
+**🎨 HTML output:** `${CLAUDE_PLUGIN_ROOT}/templates/16-deal-makers.html` · este agente genera el HTML completo print-to-PDF + Drive-friendly delegando al `25-output-architect`.
 
 **⚡ TAMAÑO MÁXIMO DE OUTPUT:** 10 deal-makers + 10 deal-breakers + recomendaciones · NO me extiendo más.
 

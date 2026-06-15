@@ -1,7 +1,7 @@
 ---
 name: super-estructura
-description: Encuentra la SUPER ESTRUCTURA cultural ganadora (celebridad real, etnicidad/cultura, ocupación de élite, marca aspiracional, grupo cultural cerrado) que amplifica el mecanismo cuando el mercado está en STAGE 5 de sofisticación (todo saturado, solo queda la identidad). Es el agente que entra cuando ya no basta con el mecanismo + nombre chicle — necesitas anclar la oferta a un grupo cultural deseable y específico que el avatar quiera emular. Ejemplos canónicos: "Lo que hacen las mujeres italianas de Milán de 55 con cuerpo de 35", "El método CIA", "Protocolo Cristina Pedroche", "Cómo entrenan los marines navy seals", "La rutina secreta de las modelos de Victoria's Secret". Entrega 3-5 super estructuras priorizadas con ángulo, compliance risk, snippet de uso en hook + landing + email. Triggers "super estructura", "mercado saturado nivel 5", "anclar a celebridad", "anclar a cultura", "stage 5 sofisticación", "lo que hacen los X", "el método de los Y", "ya no funciona el mecanismo sin identidad cultural", "amplificar el mecanismo con autoridad cultural".
-allowed-tools: Read, Grep, Write, Bash
+description: 'Encuentra la SUPER ESTRUCTURA cultural ganadora (celebridad real, etnicidad/cultura, ocupación de élite, marca aspiracional, grupo cultural cerrado) que amplifica el mecanismo cuando el mercado está en STAGE 5 de sofisticación (todo saturado, solo queda la identidad). Es el agente que entra cuando ya no basta con el mecanismo + nombre chicle — necesitas anclar la oferta a un grupo cultural deseable y específico que el avatar quiera emular. Ejemplos canónicos: "Lo que hacen las mujeres italianas de Milán de 55 con cuerpo de 35", "El método CIA", "Protocolo Cristina Pedroche", "Cómo entrenan los marines navy seals", "La rutina secreta de las modelos de Victoria''s Secret". Entrega 3-5 super estructuras priorizadas con ángulo, compliance risk, snippet de uso en hook + landing + email. Triggers "super estructura", "mercado saturado nivel 5", "anclar a celebridad", "anclar a cultura", "stage 5 sofisticación", "lo que hacen los X", "el método de los Y", "ya no funciona el mecanismo sin identidad cultural", "amplificar el mecanismo con autoridad cultural".'
+tools: Read, Grep, Write, Bash
 model: sonnet
 ---
 
@@ -236,7 +236,7 @@ Guardo en `proyecto-{slug}/03-mecanismo/super-estructura.json` + HTML.
 
 ## OUTPUT (ejemplo JSON real · case mujeres +45 adelgazamiento Stage 5)
 
-**🎨 HTML output:** INTEGRA en `templates/03-mecanismo.html` (sección/columna específica). Otro agente del bloque genera el HTML maestro · este aporta su pieza JSON al ensamblaje.
+**🎨 HTML output:** INTEGRA en `${CLAUDE_PLUGIN_ROOT}/templates/03-mecanismo.html` (sección/columna específica). Otro agente del bloque genera el HTML maestro · este aporta su pieza JSON al ensamblaje.
 
 **⚡ TAMAÑO MÁXIMO DE OUTPUT:** 3-5 super estructuras × 80 palabras + TOP 1 recomendado con compliance · NO me extiendo más.
 

@@ -1,7 +1,7 @@
 ---
 name: research-reddit
 description: CRACK absoluto de investigación en Reddit. Usa WebSearch + WebFetch para extraer 30-50 frases TEXTUALES reales del avatar, mapear subreddits relevantes del nicho, identificar top threads más votados sobre el dolor, listar soluciones que ya probaron y por qué fallaron, detectar frustraciones latentes, identificar productos/competidores mencionados. NO inventa datos. Solo cita Reddit real con upvotes y links. Triggers "investigación Reddit", "frases reales avatar", "qué dice la gente en Reddit", "reddit research", "voice of customer", "subreddits del nicho", "qué piensa la audiencia real", "Reddit deep dive".
-allowed-tools: Read, Grep, Write, Bash, WebSearch, WebFetch
+tools: Read, Grep, Write, Bash, WebSearch, WebFetch
 model: opus
 ---
 
@@ -189,7 +189,7 @@ Agrupo todas las citas en las 7 categorías y extraigo:
 
 ## OUTPUT
 
-**🎨 HTML output:** INTEGRA en `templates/13-research-mercado.html` (sección/columna específica). Otro agente del bloque genera el HTML maestro · este aporta su pieza JSON al ensamblaje.
+**🎨 HTML output:** INTEGRA en `${CLAUDE_PLUGIN_ROOT}/templates/13-research-mercado.html` (sección/columna específica). Otro agente del bloque genera el HTML maestro · este aporta su pieza JSON al ensamblaje.
 
 **⚡ TAMAÑO MÁXIMO DE OUTPUT:** 30-50 citas textuales + 7 categorías · NO me extiendo más.
 

@@ -1,7 +1,7 @@
 ---
 name: zenith-quick-discovery
 description: ENTRY POINT del Método Zenith. Hace SOLO 5 preguntas críticas mínimas (qué vendes, a quién, resultado, precio, branding) y luego MUESTRA UN RESUMEN claro pidiendo CONFIRMACIÓN EXPLÍCITA antes de lanzar el pipeline. Es la versión rápida y conversacional de 01-discovery-master, pensada para operadores con prisa que quieren arrancar Zenith ya. Triggers "quick discovery", "modo Zenith", "vamos rápido", "arranca Zenith", "empezar oferta express", "5 preguntas y dale", "discovery rápido", "Zenith start", "pipeline rápido", "vamos al lío".
-allowed-tools: Read, Grep, Write, Bash
+tools: Read, Grep, Write, Bash
 model: opus
 ---
 
@@ -202,7 +202,7 @@ Después de las 5 respuestas, presento un resumen en formato tabla limpia:
 
 ## OUTPUT
 
-**🎨 HTML output:** `templates/00-brief.html` (versión Zenith) · este agente genera el HTML completo print-to-PDF + Drive-friendly delegando al `25-output-architect`.
+**🎨 HTML output:** `${CLAUDE_PLUGIN_ROOT}/templates/00-brief.html` (versión Zenith) · este agente genera el HTML completo print-to-PDF + Drive-friendly delegando al `25-output-architect`.
 
 **⚡ TAMAÑO MÁXIMO DE OUTPUT:** 800 palabras / brief JSON estructurado · NO me extiendo más.
 

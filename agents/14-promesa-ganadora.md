@@ -1,7 +1,7 @@
 ---
 name: promesa-ganadora
 description: Construye LA PROMESA principal de la oferta — la frase que ata avatar + probabilidad de éxito + resultado específico + tiempo + sin dolor/miedo + aunque objeción + aumento del éxito (garantía). Es el agente único del bloque 05 del pipeline. Sin promesa potente, la oferta es ruido. Aplica la fórmula completa del usuario (Ejercicio 7) + frame Evaldo Albuquerque (transformación específica × tiempo × sin sacrificio × mecanismo) + filtros Bencivenga (especificidad + credibilidad). Devuelve 3 versiones de promesa (segura, agresiva, identitaria) + recomendación + justificación. La promesa generada se usará en headline, lead, oferta, cierre y email seq. Triggers "construye la promesa", "promesa ganadora", "frase maestra de la oferta", "después de los deseos", "antes de la garantía", "ejercicio 7 promesa".
-allowed-tools: Read, Grep, Write, Bash
+tools: Read, Grep, Write, Bash
 model: opus
 ---
 
@@ -263,7 +263,7 @@ La recomendación se basa en:
 
 ## OUTPUT · ESTRUCTURA EXACTA
 
-**🎨 HTML output:** `templates/05-promesa.html` · este agente genera el HTML completo print-to-PDF + Drive-friendly delegando al `25-output-architect`.
+**🎨 HTML output:** `${CLAUDE_PLUGIN_ROOT}/templates/05-promesa.html` · este agente genera el HTML completo print-to-PDF + Drive-friendly delegando al `25-output-architect`.
 
 **⚡ TAMAÑO MÁXIMO DE OUTPUT:** 3 versiones de promesa × 30 palabras (segura/agresiva/identitaria) + recomendación (150 palabras) · NO me extiendo más.
 

@@ -49,7 +49,7 @@ Si pasas argumento, el `34-zenith-quick-discovery` lo usa como semilla y te hace
 7. `garantia-impresionante` + `objeciones-rotas`
 8. `modulos-namer` + `clases-namer`
 9. `bonus-architect` + `bonus-irresistible`
-10. `valor-percibido` + `bencivenga-formula`
+10. `valor-percibido`
 11. `schwartz-consciousness` + `great-leads-masterson`
 12. `offer-master` (ensambla)
 13. `angulos-architect` ⭐ **OBLIGATORIO** (5-10 ángulos al 1000% · nombres DESCRIPTIVOS, no raros · por cada uno: A qué apela + Qué cree + CÓMO LO ROMPEMOS + reconocimiento + hook · HTML específico editable)

@@ -335,7 +335,7 @@ Ver [`knowledge/`](knowledge/). Cada agente consulta el suyo. Esencial:
 
 ## TEMPLATES HTML
 
-Ver [`templates/`](templates/). 12 plantillas print-to-PDF (Cmd/Ctrl + P → Guardar como PDF). Diseño cohesivo (dark mode + accent morado/ámbar, tipografía Space Grotesk + Inter + JetBrains Mono). El `output-architect` rellena cada una con el contenido del agente correspondiente.
+Ver [`${CLAUDE_PLUGIN_ROOT}/templates/`](${CLAUDE_PLUGIN_ROOT}/templates/). 12 plantillas print-to-PDF (Cmd/Ctrl + P → Guardar como PDF). Diseño cohesivo (dark mode + accent morado/ámbar, tipografía Space Grotesk + Inter + JetBrains Mono). El `output-architect` rellena cada una con el contenido del agente correspondiente.
 
 ## EJEMPLOS CANÓNICOS
 

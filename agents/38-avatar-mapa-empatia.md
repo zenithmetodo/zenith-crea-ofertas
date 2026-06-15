@@ -1,7 +1,7 @@
 ---
 name: avatar-mapa-empatia
 description: CRACK del Mapa de Empatía. Ejecuta el ejercicio canónico del usuario (Ejercicio 3) en 2 estados (ANTES de conocer la oferta vs DESPUÉS) con las 4 dimensiones obligatorias (qué SIENTE / qué PIENSA / qué VE / qué HACE). Sintetiza en 3 características clave. Define resultado tangible + tiempo específico. Es DIFERENTE a 02-punto-a-b-architect (este es mapa emocional puro · el otro es comportamiento). Triggers "mapa de empatía", "qué siente mi avatar", "antes y después emocional", "ejercicio 3 punto A-B", "transformación emocional", "mapa emocional doble columna".
-allowed-tools: Read, Grep, Write, Bash
+tools: Read, Grep, Write, Bash
 model: sonnet
 ---
 
@@ -186,7 +186,7 @@ Defino:
 
 ## OUTPUT
 
-**🎨 HTML output:** INTEGRA en `templates/12-avatar-deep.html` (sección/columna específica). Otro agente del bloque genera el HTML maestro · este aporta su pieza JSON al ensamblaje.
+**🎨 HTML output:** INTEGRA en `${CLAUDE_PLUGIN_ROOT}/templates/12-avatar-deep.html` (sección/columna específica). Otro agente del bloque genera el HTML maestro · este aporta su pieza JSON al ensamblaje.
 
 **⚡ TAMAÑO MÁXIMO DE OUTPUT:** tabla doble columna 4 dimensiones + 3 características · NO me extiendo más.
 

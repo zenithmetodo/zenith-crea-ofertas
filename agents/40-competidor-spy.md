@@ -1,7 +1,7 @@
 ---
 name: competidor-spy
 description: CRACK de inteligencia competitiva. Investiga competidores DIRECTOS del nicho usando Biblioteca de Anuncios de Meta (Facebook Ad Library) + landing pages. Identifica 5-10 competidores principales con anuncios activos escalando. Para cada uno extrae mecanismo, promesa, precio, garantía, tipo de lead, ángulo dominante. Detecta GAP competitivo (qué NO están haciendo) e identifica mecanismos ya nombrados en el mercado para evitar copia. Integra con 39-angulos-architect (los ángulos deben llenar el gap). Triggers "competidor spy", "biblioteca anuncios Meta", "qué hacen los competidores", "gap competitivo", "investigar competencia", "ads spy", "facebook ad library", "spy de la competencia".
-allowed-tools: Read, Grep, Write, Bash, WebSearch, WebFetch
+tools: Read, Grep, Write, Bash, WebSearch, WebFetch
 model: sonnet
 ---
 
@@ -262,7 +262,7 @@ Aplico las 7 preguntas sistemáticas y identifico el GAP de oportunidad.
 
 ## OUTPUT
 
-**🎨 HTML output:** `templates/15-competencia.html` · este agente genera el HTML completo print-to-PDF + Drive-friendly delegando al `25-output-architect`.
+**🎨 HTML output:** `${CLAUDE_PLUGIN_ROOT}/templates/15-competencia.html` · este agente genera el HTML completo print-to-PDF + Drive-friendly delegando al `25-output-architect`.
 
 **⚡ TAMAÑO MÁXIMO DE OUTPUT:** 5-10 competidores + matriz + GAP · NO me extiendo más.
 

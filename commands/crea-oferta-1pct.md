@@ -44,7 +44,7 @@ En este orden (cascada estricta — saltarse uno = oferta floja):
 7. `garantia-impresionante` + `objeciones-rotas` (garantía nombrada + ruptura objeciones)
 8. `modulos-namer` + `clases-namer` (carta de ventas invisible)
 9. `bonus-architect` + `bonus-irresistible` (5 categorías de bonus + nombre sexy + valor + urgencia)
-10. `valor-percibido` + `bencivenga-formula` (Beneficio + Credibilidad − Costo maximizado)
+10. `valor-percibido` (Beneficio + Credibilidad − Costo maximizado)
 11. `schwartz-consciousness` + `great-leads-masterson` (nivel + tipo de lead)
 12. `offer-master` (ensambla la oferta final)
 13. `angulos-architect` ⭐ **OBLIGATORIO** (5-10 ángulos al 1000% · nombres DESCRIPTIVOS, no raros · por cada uno: A qué apela + Qué cree + CÓMO LO ROMPEMOS + reconocimiento + hook · HTML específico editable)

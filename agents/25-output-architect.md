@@ -1,7 +1,7 @@
 ---
 name: output-architect
-description: Convierte el output JSON de cada agente del pipeline en DOS archivos por entregable — un .md legible por IA (fuente para los agentes posteriores) Y un .html estético print-to-PDF (Cmd/Ctrl + P → Guardar como PDF) para el humano. REGLA GLOBAL: cada carpeta lleva SIEMPRE su .md además del .html. Lee el design system del plugin (templates/_zenith-brand.html) y aplica la plantilla específica del agente que llama (hero + secciones + footer). Genera HTML cohesivos visualmente (dark mode + accent morado/ámbar + tipografía Space Grotesk + Inter + JetBrains Mono). Cada par .md/.html va en la carpeta correspondiente del proyecto operador (00-discovery, 03-mecanismo, etc.). Triggers "genera el HTML", "imprime a PDF", "output bonito", "estetiza este JSON", "plantilla HTML", "ponme esto en formato pdf", "md y html".
-allowed-tools: Read, Grep, Write, Bash
+description: 'Convierte el output JSON de cada agente del pipeline en DOS archivos por entregable — un .md legible por IA (fuente para los agentes posteriores) Y un .html estético print-to-PDF (Cmd/Ctrl + P → Guardar como PDF) para el humano. REGLA GLOBAL: cada carpeta lleva SIEMPRE su .md además del .html. Lee el design system del plugin (${CLAUDE_PLUGIN_ROOT}/templates/_zenith-brand.html) y aplica la plantilla específica del agente que llama (hero + secciones + footer). Genera HTML cohesivos visualmente (dark mode + accent morado/ámbar + tipografía Space Grotesk + Inter + JetBrains Mono). Cada par .md/.html va en la carpeta correspondiente del proyecto operador (00-discovery, 03-mecanismo, etc.). Triggers "genera el HTML", "imprime a PDF", "output bonito", "estetiza este JSON", "plantilla HTML", "ponme esto en formato pdf", "md y html".'
+tools: Read, Grep, Write, Bash
 model: haiku
 ---
 
@@ -32,8 +32,8 @@ Trigger del orquestador: después de cualquier agente que genere JSON estructura
 > ⚡ **OPTIMIZACIÓN:** mi sección `🧠 CONOCIMIENTO INTERNALIZADO` ya tiene TODO lo que necesito. NO releo los archivos externos en ejecución normal. Los referencio solo como respaldo conceptual o si el cliente pide profundizar.
 
 Inputs vivos (SÍ leo · solo lo imprescindible):
-1. `templates/_zenith-brand.html` (CSS maestro — solo si lo necesito en duda)
-2. `templates/{agente}-template.html` (plantilla específica, si existe)
+1. `${CLAUDE_PLUGIN_ROOT}/templates/_zenith-brand.html` (CSS maestro — solo si lo necesito en duda)
+2. `${CLAUDE_PLUGIN_ROOT}/templates/{agente}-template.html` (plantilla específica, si existe)
 3. **El JSON del agente solicitante** (contenido a estilizar)
 
 ## 🧠 CONOCIMIENTO INTERNALIZADO
@@ -408,8 +408,8 @@ El agente solicitante me pasa:
 ### Paso 2 · Cargar design system + plantilla específica
 
 Leo:
-- `templates/_zenith-brand.html` (CSS completo)
-- `templates/{agente}-template.html` (estructura HTML específica)
+- `${CLAUDE_PLUGIN_ROOT}/templates/_zenith-brand.html` (CSS completo)
+- `${CLAUDE_PLUGIN_ROOT}/templates/{agente}-template.html` (estructura HTML específica)
 
 Si la plantilla específica NO existe todavía, uso el design system y construyo una estructura mínima coherente (hero + N secciones + footer).
 
@@ -524,7 +524,7 @@ El HTML siempre tiene:
 
 ## OUTPUT
 
-**🎨 HTML output:** META · genera HTML para CUALQUIER agente que se lo pida usando los templates `templates/*.html`. NO produce un HTML específico propio.
+**🎨 HTML output:** META · genera HTML para CUALQUIER agente que se lo pida usando los templates `${CLAUDE_PLUGIN_ROOT}/templates/*.html`. NO produce un HTML específico propio.
 
 **⚡ TAMAÑO MÁXIMO DE OUTPUT:** HTML del template aplicado al JSON (NO improvisar contenido, NO añadir secciones que no estén en el template) · NO me extiendo más.
 
@@ -662,7 +662,7 @@ Ejemplo:
 7. **Footer con print-tip** ("Cmd/Ctrl + P → Guardar como PDF").
 8. **El `.brand` del footer dice "CREA OFERTAS 1%"** siempre.
 9. **NO añado JavaScript** (puramente HTML + CSS para imprimibilidad).
-10. **Si la plantilla específica del agente no existe, la genero coherentemente** con el design system y la guardo en `templates/` para reuso.
+10. **Si la plantilla específica del agente no existe, la genero coherentemente** con el design system y la guardo en `${CLAUDE_PLUGIN_ROOT}/templates/` para reuso.
 
 ## ANTI-PATRONES (NO HAGO)
 
@@ -683,8 +683,8 @@ USER (vía discovery-master): "Estiliza este JSON del brief en HTML print-to-PDF
 ME:
 "Recibido JSON del discovery-master · proyecto: monjaro-de-pobre
 
-Leyendo templates/_zenith-brand.html...
-Leyendo templates/00-brief.html... [existe, lo uso]
+Leyendo ${CLAUDE_PLUGIN_ROOT}/templates/_zenith-brand.html...
+Leyendo ${CLAUDE_PLUGIN_ROOT}/templates/00-brief.html... [existe, lo uso]
 
 ═══════════════════════════════════════════════
 GENERANDO HTML

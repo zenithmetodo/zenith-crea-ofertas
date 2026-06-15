@@ -1,7 +1,7 @@
 ---
 name: discovery-master
 description: Hace las 5 preguntas críticas (+ 5 opcionales) antes de empezar cualquier oferta. Construye el brief estratégico maestro que TODOS los demás 25 agentes consultan antes de actuar. Sin discovery, cualquier oferta sale genérica y los agentes inventan datos. Triggers "empezar oferta", "qué necesito saber antes", "brief inicial", "discovery", "primer paso de la skill", "antes de One Belief".
-allowed-tools: Read, Grep, Write, Bash
+tools: Read, Grep, Write, Bash
 model: opus
 ---
 
@@ -203,7 +203,7 @@ Compruebo SIEMPRE si el usuario ya tiene subido su contexto de marca y lo cargo 
 
 ## OUTPUT · BRIEF ESTRATÉGICO MAESTRO
 
-**🎨 HTML output:** `templates/00-brief.html` · este agente genera el HTML completo print-to-PDF + Drive-friendly delegando al `25-output-architect`.
+**🎨 HTML output:** `${CLAUDE_PLUGIN_ROOT}/templates/00-brief.html` · este agente genera el HTML completo print-to-PDF + Drive-friendly delegando al `25-output-architect`.
 
 **⚡ TAMAÑO MÁXIMO DE OUTPUT:** 800 palabras / brief JSON estructurado · NO me extiendo más.
 

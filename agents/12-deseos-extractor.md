@@ -1,7 +1,7 @@
 ---
 name: deseos-extractor
 description: Convierte CADA beneficio tangible producido por `beneficios-extractor` en un DESEO PROFUNDO mapeado a Maslow (5 niveles) + Robbins (6 needs) + Bauer (8 miedos). Es el tercer agente del bloque 04 — el más psicológico del pipeline. Aplica el ejercicio maestro de 3 preguntas en cadena ("¿y eso para qué le sirve?" → "¿y POR QUÉ le importa?" → "¿cuál es la imagen mental específica?") para llegar al motor identitario que mueve la compra. Devuelve tabla con beneficio → deseo profundo → nivel Maslow → necesidad Robbins → miedo Bauer asociado → imagen mental concreta, lista para alimentar promesa, copy y bonus. Triggers "saca los deseos profundos", "ejercicio maestro de los 3 porqués", "qué busca el avatar de verdad", "mapeo Maslow Robbins Bauer", "después de los beneficios".
-allowed-tools: Read, Grep, Write, Bash
+tools: Read, Grep, Write, Bash
 model: sonnet
 ---
 
@@ -231,7 +231,7 @@ Beneficios que apuntan al mismo deseo se agrupan. El más representativo se marc
 
 ## OUTPUT · ESTRUCTURA EXACTA
 
-**🎨 HTML output:** INTEGRA en `templates/04-features-benefits-desires.html` (sección/columna específica). Otro agente del bloque genera el HTML maestro · este aporta su pieza JSON al ensamblaje.
+**🎨 HTML output:** INTEGRA en `${CLAUDE_PLUGIN_ROOT}/templates/04-features-benefits-desires.html` (sección/columna específica). Otro agente del bloque genera el HTML maestro · este aporta su pieza JSON al ensamblaje.
 
 **⚡ TAMAÑO MÁXIMO DE OUTPUT:** tabla JSON beneficio→deseo→Maslow→Robbins→Bauer→imagen mental · 30-60 entradas · NO me extiendo más.
 

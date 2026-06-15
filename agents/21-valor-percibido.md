@@ -1,7 +1,7 @@
 ---
 name: valor-percibido
 description: Aplica la FÓRMULA MAESTRA DE BENCIVENGA al cierre de la oferta — VALOR PERCIBIDO = BENEFICIO + CREDIBILIDAD − COSTO. Activa las 4 palancas operativas (1) STACK DE VALOR con precios desglosados para subir el beneficio, (2) STACK DE PRUEBAS para subir credibilidad, (3) DESDOBLAR EL PRECIO para bajar el costo económico ('menos de un Starbucks', '0,80 €/día'), (4) ROMPER COSTOS NO-ECONÓMICOS (tiempo, esfuerzo, fracaso, identidad, tecnología). Salida lista para ensamblarse en el cierre. Triggers "valor percibido", "fórmula Bencivenga", "stack slide", "anclaje de precio", "maximiza el valor", "que perciban que vale más", "menos de un Starbucks".
-allowed-tools: Read, Grep, Write, Bash
+tools: Read, Grep, Write, Bash
 model: opus
 ---
 
@@ -480,7 +480,7 @@ Orden:
 
 ## OUTPUT
 
-**🎨 HTML output:** `templates/09-valor-percibido.html` · este agente genera el HTML completo print-to-PDF + Drive-friendly delegando al `25-output-architect`.
+**🎨 HTML output:** `${CLAUDE_PLUGIN_ROOT}/templates/09-valor-percibido.html` · este agente genera el HTML completo print-to-PDF + Drive-friendly delegando al `25-output-architect`.
 
 **⚡ TAMAÑO MÁXIMO DE OUTPUT:** stack de valor (7-12 ítems) + 4 palancas Bencivenga aplicadas + cierre listo para ensamblar (máx 900 palabras) · NO me extiendo más.
 

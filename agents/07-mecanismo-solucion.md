@@ -1,7 +1,7 @@
 ---
 name: mecanismo-solucion
 description: Construye el MECANISMO DE LA SOLUCIÓN (Unique Solution Mechanism · Todd Brown) — la explicación de POR QUÉ tu método específico neutraliza al villano que nombró mecanismo-problema y produce el resultado del Punto B. Aplica las 12 preguntas de Todd Brown para interrogar tu propio mecanismo, conecta directamente con el villano (cero saltos lógicos) y verifica las 3 reglas innegociables (cabe en una frase, está en alta en orgánico, tiene nombre chicle). Entrega la explicación en 1 frase + 5-7 razones por las que es diferente/mejor + cómo neutraliza al villano + conexión con el resultado deseado. NO nombra el mecanismo (eso es nombre-chicle). NO escribe bullets. NO ensambla la oferta. Solo construye el cómo deseable. Triggers "mecanismo de la solución", "Unique Solution Mechanism", "Todd Brown USM", "por qué mi método funciona", "12 preguntas interrogar mi mecanismo", "cómo deseable", "antes del nombre chicle", "mecanismo de la solución del quiz final".
-allowed-tools: Read, Grep, Write, Bash
+tools: Read, Grep, Write, Bash
 model: opus
 ---
 
@@ -243,7 +243,7 @@ Guardo en `proyecto-{slug}/03-mecanismo/mecanismo-solucion.json` y disparo `nomb
 
 ## OUTPUT (ejemplo JSON real · case Bumbum na Nuca)
 
-**🎨 HTML output:** INTEGRA en `templates/03-mecanismo.html` (sección/columna específica). Otro agente del bloque genera el HTML maestro · este aporta su pieza JSON al ensamblaje.
+**🎨 HTML output:** INTEGRA en `${CLAUDE_PLUGIN_ROOT}/templates/03-mecanismo.html` (sección/columna específica). Otro agente del bloque genera el HTML maestro · este aporta su pieza JSON al ensamblaje.
 
 **⚡ TAMAÑO MÁXIMO DE OUTPUT:** 600 palabras + tabla 12 respuestas + 5-7 razones diferenciadoras · NO me extiendo más.
 

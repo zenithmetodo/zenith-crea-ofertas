@@ -1,7 +1,7 @@
 ---
 name: bonus-irresistible
 description: Convierte cada bonus normal del stack en un BONUS IRRESISTIBLE — nombre sexy + obstáculo que resuelve + beneficio post-cursarlo + pruebas (testimonios/ejemplos) + valor real justificado + urgencia o escasez. Aplica la plantilla canónica del usuario (Ejercicio 20 · Incubando tu Producto Perfecto). Cada bonus sale en HTML maquetado, listo para pegar en la página de oferta. NO arquitecta el stack (eso lo hace bonus-architect) — solo pinta de oro lo que ya está arquitecturado. Triggers "convierte el bonus en sexy", "naming sexy bonus", "bonus irresistibles", "presenta los bonus", "los bonus suenan aburridos", "haz el bonus seductor".
-allowed-tools: Read, Grep, Write, Bash
+tools: Read, Grep, Write, Bash
 model: sonnet
 ---
 
@@ -361,7 +361,7 @@ Cada bonus sale en una "card" maquetada con el design system del plugin. Ver tem
 
 ## OUTPUT
 
-**🎨 HTML output:** INTEGRA en `templates/08-bonus.html` (sección/columna específica). Otro agente del bloque genera el HTML maestro · este aporta su pieza JSON al ensamblaje.
+**🎨 HTML output:** INTEGRA en `${CLAUDE_PLUGIN_ROOT}/templates/08-bonus.html` (sección/columna específica). Otro agente del bloque genera el HTML maestro · este aporta su pieza JSON al ensamblaje.
 
 **⚡ TAMAÑO MÁXIMO DE OUTPUT:** 6 bonus irresistibles con plantilla 6 componentes (nombre sexy + obstáculo + beneficio + pruebas + valor + urgencia) · HTML maquetado · NO me extiendo más.
 

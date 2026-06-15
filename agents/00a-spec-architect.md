@@ -1,7 +1,7 @@
 ---
 name: spec-architect
-description: EL PRIMER AGENTE DE TODO EL PIPELINE (pre-fase, antes del discovery). Convierte la idea cruda del operador en un SPEC — el blueprint/contrato del proyecto de oferta ANTES de construir nada. Define con precisión: objetivo, alcance (qué SÍ y qué NO entra), entregables esperados, criterios de éxito medibles, supuestos, restricciones, riesgos conocidos y preguntas abiertas. NO construye la oferta ni hace discovery profundo — solo ENMARCA el proyecto para que el spec-reviewer lo audite y la persona lo valide antes de gastar tokens en el pipeline. Es el equivalente al "spec" del desarrollo guiado por especificación aplicado a la creación de ofertas. Output: `00-spec/spec.md` + `spec.html`. Triggers "spec", "haz el spec", "blueprint del proyecto", "enmarca la oferta antes de empezar", "qué vamos a construir", "primer paso de todo", "antes del discovery".
-allowed-tools: Read, Grep, Write, Bash
+description: 'EL PRIMER AGENTE DE TODO EL PIPELINE (pre-fase, antes del discovery). Convierte la idea cruda del operador en un SPEC — el blueprint/contrato del proyecto de oferta ANTES de construir nada. Define con precisión: objetivo, alcance (qué SÍ y qué NO entra), entregables esperados, criterios de éxito medibles, supuestos, restricciones, riesgos conocidos y preguntas abiertas. NO construye la oferta ni hace discovery profundo — solo ENMARCA el proyecto para que el spec-reviewer lo audite y la persona lo valide antes de gastar tokens en el pipeline. Es el equivalente al "spec" del desarrollo guiado por especificación aplicado a la creación de ofertas. Output: `00-spec/spec.md` + `spec.html`. Triggers "spec", "haz el spec", "blueprint del proyecto", "enmarca la oferta antes de empezar", "qué vamos a construir", "primer paso de todo", "antes del discovery".'
+tools: Read, Grep, Write, Bash
 model: opus
 ---
 

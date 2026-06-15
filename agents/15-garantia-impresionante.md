@@ -1,7 +1,7 @@
 ---
 name: garantia-impresionante
 description: Elige el TIPO de garantía adecuada (de los 11 documentados en el Ejercicio 23 del usuario) según la tasa de éxito real del producto, le pone un nombre atractivo (gracioso o metafórico, NUNCA aburrido) y la conecta con la promesa para romper la objeción final del avatar. Primer agente del bloque 06. Sin garantía descomunal, el avatar percibe riesgo y abandona el carrito. Aplica la lógica del usuario (1-3 garantías máximo · nombre que enganche · conectada con la promesa) + decisión basada en tasa de éxito (≥70% → incondicional · 50-70% → condicional o de servicio · <50% → de proceso o crédito). Devuelve 2-3 propuestas + recomendada + nombre + texto exacto listo para pegar. Triggers "garantía impresionante", "qué garantía pongo", "ejercicio 23 garantía", "rompe el riesgo final", "tras la promesa, la garantía".
-allowed-tools: Read, Grep, Write, Bash
+tools: Read, Grep, Write, Bash
 model: sonnet
 ---
 
@@ -268,7 +268,7 @@ Sin proceso, la garantía dispara devoluciones. Diseño:
 
 ## OUTPUT · ESTRUCTURA EXACTA
 
-**🎨 HTML output:** `templates/06-garantia.html` · este agente genera el HTML completo print-to-PDF + Drive-friendly delegando al `25-output-architect`.
+**🎨 HTML output:** `${CLAUDE_PLUGIN_ROOT}/templates/06-garantia.html` · este agente genera el HTML completo print-to-PDF + Drive-friendly delegando al `25-output-architect`.
 
 **⚡ TAMAÑO MÁXIMO DE OUTPUT:** 2-3 propuestas de garantía (de los 11 tipos) + nombre + texto exacto para pegar (máx 500 palabras total) · NO me extiendo más.
 

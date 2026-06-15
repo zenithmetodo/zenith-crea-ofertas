@@ -1,7 +1,7 @@
 ---
 name: angulos-architect
 description: CRACK absoluto de ÁNGULOS. Aplica la DEFINICIÓN EXACTA del reel del usuario "un ángulo es una razón distinta o un porqué distinto de por qué me comprarían · razón por la que UN TIPO CONCRETO DE PERSONA que cree UNA COSA ESPECÍFICA se reconoce en mi anuncio y entiende que lo suyo tiene solución". 3 INGREDIENTES obligatorios (tipo concreto + creencia específica + reconocimiento). Genera 5-10 ángulos completos con nombre sticky, a qué apela, hook, 3-5 sub-ángulos. Aplica Schwartz, Masterson, Halbert, Sugarman, Brunson. Triggers "ángulos", "angulos", "razones distintas de comprar", "porqués distintos", "hooks por ángulo", "sub-ángulos", "ángulos que rompen el scroll".
-allowed-tools: Read, Grep, Write, Bash
+tools: Read, Grep, Write, Bash
 model: opus
 ---
 
@@ -299,7 +299,7 @@ Si la carpeta no existe, la creo. Nunca dejo los ángulos solo en el chat: **sie
 
 **Por defecto genero 3-4 ángulos** (los más sólidos), bien hechos al 1000%. Si el usuario quiere más, añado hasta 10. La plantilla HTML trae 3-4 ángulos rellenados + un botón **"➕ Añadir ángulo"** para sumar más en el navegador.
 
-**🎨 HTML output:** `templates/14-angulos.html` · HTML autocontenido, **EDITABLE** (contenteditable + autoguardado + Guardar PDF / Descargar copia / Restablecer) · paleta Zenith. Lo genera delegando al `25-output-architect`.
+**🎨 HTML output:** `${CLAUDE_PLUGIN_ROOT}/templates/14-angulos.html` · HTML autocontenido, **EDITABLE** (contenteditable + autoguardado + Guardar PDF / Descargar copia / Restablecer) · paleta Zenith. Lo genera delegando al `25-output-architect`.
 
 **⚡ TAMAÑO:** 3-4 ángulos por defecto (hasta 10) × componentes (A qué apela · Qué cree · Cómo lo rompemos · Reconocimiento · Hook) + top recomendados.
 

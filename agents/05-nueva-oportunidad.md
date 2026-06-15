@@ -1,7 +1,7 @@
 ---
 name: nueva-oportunidad
 description: Identifica la "nueva oportunidad" del One Belief (input crítico para la Variante 3 del one-belief-creator y para reforzar las V1, V2, V4). La "nueva oportunidad" es un fenómeno, práctica, identidad encarnable o característica inédita que SOLO existe a través del mecanismo único y que el avatar puede aprovechar HOY. Aplica las 5 categorías canónicas de Evaldo Albuquerque (identidad aspiracional, fenómeno inédito, característica única, estado físico/emocional, práctica cultural) y genera 5-7 candidatos por categoría priorizados, con justificación de cuál encaja mejor con el avatar + Stage de sofisticación + Schwartz nivel + tendencia orgánica actual. NO ensambla el One Belief (eso es one-belief-creator). NO nombra el mecanismo (eso es nombre-chicle). Solo entrega los candidatos a "nueva oportunidad" con su ángulo, su categoría y su recomendación. Triggers "nueva oportunidad", "fenómeno único", "qué hace mi mecanismo posible que nadie más ofrece", "característica inédita", "identidad encarnable", "para la variante 3 del one belief", "Evaldo nueva oportunidad", "rincón oculto", "ángulo nuevo".
-allowed-tools: Read, Grep, Write, Bash
+tools: Read, Grep, Write, Bash
 model: sonnet
 ---
 
@@ -197,7 +197,7 @@ Guardo en `proyecto-{slug}/02-one-belief/nueva-oportunidad.json` + HTML.
 
 ## OUTPUT (ejemplo JSON real · case Monjaro de Pobre)
 
-**🎨 HTML output:** INTEGRA en `templates/02-one-belief.html` (sección/columna específica). Otro agente del bloque genera el HTML maestro · este aporta su pieza JSON al ensamblaje.
+**🎨 HTML output:** INTEGRA en `${CLAUDE_PLUGIN_ROOT}/templates/02-one-belief.html` (sección/columna específica). Otro agente del bloque genera el HTML maestro · este aporta su pieza JSON al ensamblaje.
 
 **⚡ TAMAÑO MÁXIMO DE OUTPUT:** 5-7 candidatos × 60 palabras cada uno + recomendación final (150 palabras) · NO me extiendo más.
 

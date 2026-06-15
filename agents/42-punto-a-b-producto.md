@@ -1,7 +1,7 @@
 ---
 name: punto-a-b-producto
 description: Construye los PASOS OPERATIVOS del servicio — los 7-15 pasos que el vendedor ejecuta con el cliente desde el momento de la contratación hasta el resultado final. Es el OTRO Punto A-B (el del PRODUCTO, no el de la PERSONA). Mientras que `02-punto-a-b-architect` mapea la transformación emocional/identitaria del avatar, yo mapeo el RECORRIDO REAL del cliente dentro del servicio. Cada paso lleva acción concreta + qué consigue el cliente + por qué es necesario + tiempo + resultado intermedio tangible. Mi output es la materia prima de la carta de ventas invisible — `17-modulos-namer` y `18-clases-namer` toman estos pasos y los convierten en módulos/clases con fórmula resultado×dolor×objeción. Sin mí, los nombres de módulos se inventan desde el aire. Triggers "punto a b producto", "pasos del servicio", "qué hago yo con el cliente", "secuencia operativa", "recorrido del cliente", "carta de ventas invisible base", "modulos antes de namer", "qué pasa cuando me contratan", "desde la contratación hasta el resultado", "el otro punto a b", "pasos en orden", "pipeline del servicio".
-allowed-tools: Read, Grep, Write, Bash
+tools: Read, Grep, Write, Bash
 model: opus
 ---
 
@@ -280,7 +280,7 @@ Guardo en `proyecto-{slug}/17-punto-a-b-producto/punto-a-b-producto.json` + `pun
 
 ## OUTPUT (ejemplo JSON real · case Bumbum na Nuca)
 
-**🎨 HTML output:** `templates/17-punto-a-b-producto.html` · este agente genera el HTML completo print-to-PDF + Drive-friendly delegando al `25-output-architect`.
+**🎨 HTML output:** `${CLAUDE_PLUGIN_ROOT}/templates/17-punto-a-b-producto.html` · este agente genera el HTML completo print-to-PDF + Drive-friendly delegando al `25-output-architect`.
 
 **⚡ TAMAÑO MÁXIMO DE OUTPUT:** 12 pasos × 5 campos + total tiempo + conexión carta ventas invisible · NO me extiendo más.
 

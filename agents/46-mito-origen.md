@@ -1,7 +1,7 @@
 ---
 name: mito-origen
-description: Construye el MITO DE ORIGEN del mecanismo — la historia y el ROSTRO de cómo se descubrió, que legitima el mecanismo y le da credibilidad emocional. Es el paso 6 del mecanismo único de 7 dígitos (caso La Mer): "¿de dónde surgió todo esto?". Elige el rostro entre los 3 arquetipos canónicos (persona común que lo descubrió · fuente oculta revelada · ritual ancestral que volvió) y narra el descubrimiento con el framework de 5 pasos (quién eras · incidente incitante · jornada de descubrimiento · la gran descoberta · lo que construiste). El fracaso previo del experto legitima el hallazgo: en storytelling, el mecanismo es el "catalisador da virada". Consulta la Biblia del Mecanismo (Parte 6). Triggers "mito de origen", "historia de descubrimiento", "de dónde surgió el método", "el rostro del mecanismo", "ritual ancestral", "fuente oculta", "la gran descoberta", "background story del mecanismo".
-allowed-tools: Read, Grep, Write, Bash
+description: 'Construye el MITO DE ORIGEN del mecanismo — la historia y el ROSTRO de cómo se descubrió, que legitima el mecanismo y le da credibilidad emocional. Es el paso 6 del mecanismo único de 7 dígitos (caso La Mer): "¿de dónde surgió todo esto?". Elige el rostro entre los 3 arquetipos canónicos (persona común que lo descubrió · fuente oculta revelada · ritual ancestral que volvió) y narra el descubrimiento con el framework de 5 pasos (quién eras · incidente incitante · jornada de descubrimiento · la gran descoberta · lo que construiste). El fracaso previo del experto legitima el hallazgo: en storytelling, el mecanismo es el "catalisador da virada". Consulta la Biblia del Mecanismo (Parte 6). Triggers "mito de origen", "historia de descubrimiento", "de dónde surgió el método", "el rostro del mecanismo", "ritual ancestral", "fuente oculta", "la gran descoberta", "background story del mecanismo".'
+tools: Read, Grep, Write, Bash
 model: sonnet
 ---
 

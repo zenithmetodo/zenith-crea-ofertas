@@ -1,7 +1,7 @@
 ---
 name: identidad-anti-identidad
 description: Extrae la MATRIZ identidad/anti-identidad del avatar de la oferta — el input crítico que one-belief-creator necesita para construir las variantes V1, V2 y V4. Trabaja SIEMPRE con la dualidad (anti-identidad rechazada + identidad aspiracional), nunca con un solo lado. Hace 8 preguntas específicas al operador (4 detectan anti-identidad, 4 detectan identidad) y devuelve una tabla doble con etiqueta vergonzante + momento doloroso + percepción social + frase para el polo anti-identidad, y etiqueta aspiracional + referente real + momento de orgullo + percepción social + frase para el polo identidad aspiracional. Aplica los principios de Russell Brunson (Identity Shift), James Clear (Atomic Habits · identity-based behavior change), Cialdini (Consistency), Maslow (autorrealización). Triggers "identidad del avatar", "anti-identidad", "qué quiere SER mi cliente", "qué NO quiere ser más", "matriz identitaria", "antes del one belief", "Stage 5 sofisticación", "identidad aspiracional", "etiqueta vergonzante".
-allowed-tools: Read, Grep, Write, Bash
+tools: Read, Grep, Write, Bash
 model: sonnet
 ---
 
@@ -189,7 +189,7 @@ Genero `proyecto-{slug}/02-one-belief/identidad-matriz.json` + HTML estético.
 
 ## OUTPUT (ejemplo JSON real · case Código Apex · hombres 1%)
 
-**🎨 HTML output:** INTEGRA en `templates/02-one-belief.html` (sección/columna específica). Otro agente del bloque genera el HTML maestro · este aporta su pieza JSON al ensamblaje.
+**🎨 HTML output:** INTEGRA en `${CLAUDE_PLUGIN_ROOT}/templates/02-one-belief.html` (sección/columna específica). Otro agente del bloque genera el HTML maestro · este aporta su pieza JSON al ensamblaje.
 
 **⚡ TAMAÑO MÁXIMO DE OUTPUT:** 500 palabras / matriz JSON con 2 polos × 4 dimensiones · NO me extiendo más.
 

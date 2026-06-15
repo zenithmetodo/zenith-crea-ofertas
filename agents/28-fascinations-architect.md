@@ -1,7 +1,7 @@
 ---
 name: fascinations-architect
 description: Crea los FASCINATIONS — los bullets hipnóticos que activan curiosidad obligatoria y arrastran al lector hasta el CTA. Es el motor de la página de oferta (segundo elemento más leído después del headline, según Halbert y Bencivenga). Genera 25-40 bullets agrupados en 5 categorías (cosa que aprenderá / cosa que dejará de hacer / cosa que descubrirá / cosa que evitará / cosa que ganará), ordenados por potencia, con open loops dentro y específico vence a genérico siempre. NO es la tabla análisis de beneficios (eso es beneficios-extractor) — es el COPY LISTO PARA PEGAR. Triggers "dame los bullets", "fascinations", "los puntos de la página", "qué va a aprender", "bullets de la oferta", "curiosity bullets", "copy de los puntos".
-allowed-tools: Read, Grep, Write, Bash
+tools: Read, Grep, Write, Bash
 model: sonnet
 ---
 
@@ -274,7 +274,7 @@ Checklist: ¿específico? ¿open loop? ¿power words? ¿4 tipos mezclados? ¿sli
 
 ## OUTPUT · ESTRUCTURA EXACTA
 
-**🎨 HTML output:** INTEGRA en `templates/10-oferta-completa.html` (sección/columna específica). Otro agente del bloque genera el HTML maestro · este aporta su pieza JSON al ensamblaje.
+**🎨 HTML output:** INTEGRA en `${CLAUDE_PLUGIN_ROOT}/templates/10-oferta-completa.html` (sección/columna específica). Otro agente del bloque genera el HTML maestro · este aporta su pieza JSON al ensamblaje.
 
 **⚡ TAMAÑO MÁXIMO DE OUTPUT:** 25-40 bullets agrupados en 5 categorías + ordenados por potencia · copy listo para pegar · NO me extiendo más.
 
@@ -502,7 +502,7 @@ DISTRIBUCIÓN
 | `auditor-completo` | Verifica que hay 25-40 bullets, 5 categorías, 4 tipos Georgi |
 | `valor-percibido` | Mis bullets alimentan el stack de pruebas (los más factual) |
 | `great-leads-masterson` | Puede coger 3-5 bullets del top para el lead |
-| `bencivenga-formula` | Confirma que cada bullet activa curiosidad + beneficio |
+| `bencivenga-formula-valor-percibido.md` | Confirma que cada bullet activa curiosidad + beneficio |
 
 ## CITAS DE AUTORIDAD
 

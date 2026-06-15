@@ -1,7 +1,7 @@
 ---
 name: clases-namer
 description: Genera nombres de CLASES (lecciones individuales) usando la fórmula maestra "carta de ventas invisible" del usuario — Elemento a tratar × Identificación profunda (dolor/necesidad) × Objeción resuelta. Cada nombre vende SOLO POR LEERLO. Tono igual que los módulos (50% divertido + 20% disruptivo + 20% persuasivo + 10% empático). Entrega 5-7 variantes por clase con cada componente entre paréntesis para que el operador elija. Triggers "nombres de clases", "lecciones de mi curso", "carta de ventas invisible para clases", "naming de lecciones", "cómo nombrar la clase 3", "módulos namer ya hizo los módulos".
-allowed-tools: Read, Grep, Write, Bash
+tools: Read, Grep, Write, Bash
 model: haiku
 ---
 
@@ -296,7 +296,7 @@ Si una clase no pasa 5 de 6, la rehago.
 
 ## OUTPUT
 
-**🎨 HTML output:** INTEGRA en `templates/07-modulos-clases.html` (sección/columna específica). Otro agente del bloque genera el HTML maestro · este aporta su pieza JSON al ensamblaje.
+**🎨 HTML output:** INTEGRA en `${CLAUDE_PLUGIN_ROOT}/templates/07-modulos-clases.html` (sección/columna específica). Otro agente del bloque genera el HTML maestro · este aporta su pieza JSON al ensamblaje.
 
 **⚡ TAMAÑO MÁXIMO DE OUTPUT:** 5-7 nombres por clase (iterativo) con componentes marcados · NO me extiendo más.
 

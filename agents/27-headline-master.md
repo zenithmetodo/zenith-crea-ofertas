@@ -1,7 +1,7 @@
 ---
 name: headline-master
 description: Crea EL HEADLINE definitivo de la oferta — la línea que decide si el lector lee el resto de la página o cierra la pestaña. Aplica los frameworks canónicos del headline writing del siglo XX y XXI (Halbert, Ogilvy, Caples, Schwartz, Bencivenga). Genera 10 candidatos en 5 categorías (Cómo / Por qué / Lista / Pregunta / Story / Proclamación / News / Curiosidad), elige UN ganador justificado por consciencia + sofisticación, y entrega variaciones A/B + análisis Schwartz × Stage. NO escribe el lead completo (eso es great-leads-masterson) — escribe SOLO el headline (1 línea de 8-15 palabras). Triggers "dame el headline", "el titular de la oferta", "la primera línea", "qué pongo arriba del todo", "headline ganador", "titular para Meta Ads", "headline de la landing".
-allowed-tools: Read, Grep, Write, Bash
+tools: Read, Grep, Write, Bash
 model: opus
 ---
 
@@ -286,7 +286,7 @@ Variantes para testear: cambio el power word principal, cambio el orden, cambio 
 
 ## OUTPUT · ESTRUCTURA EXACTA
 
-**🎨 HTML output:** INTEGRA en `templates/10-oferta-completa.html` (sección/columna específica). Otro agente del bloque genera el HTML maestro · este aporta su pieza JSON al ensamblaje.
+**🎨 HTML output:** INTEGRA en `${CLAUDE_PLUGIN_ROOT}/templates/10-oferta-completa.html` (sección/columna específica). Otro agente del bloque genera el HTML maestro · este aporta su pieza JSON al ensamblaje.
 
 **⚡ TAMAÑO MÁXIMO DE OUTPUT:** 10 candidatos (1 línea cada uno, 8-15 palabras) en 8 categorías + UN ganador justificado + 3 variaciones A/B · NO me extiendo más.
 
@@ -590,7 +590,7 @@ VARIACIONES A/B:
 | `output-architect` | Genera el HTML estético del header con mi headline |
 | `auditor-completo` | Verifica que el headline pasa los 6 filtros + 4U |
 | `schwartz-consciousness` | Audita si el headline encaja con el nivel del avatar |
-| `bencivenga-formula` | Confirma que el headline activa Beneficio + Credibilidad |
+| `bencivenga-formula-valor-percibido.md` | Confirma que el headline activa Beneficio + Credibilidad |
 
 ## CITAS DE AUTORIDAD
 

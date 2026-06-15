@@ -1,7 +1,7 @@
 ---
 name: autoridad-builder
 description: Construye la CREDIBILIDAD del experto desde cero — para que el avatar le crea. Aplica las 7 palancas de autoridad (credenciales, experiencia, casos, medios, resultados propios, mentores, publicaciones) + 5 palancas de simpatía (vulnerabilidad, storytelling, hablar como el avatar, foto cercana, "yo también pasé por esto"). Combinación óptima 70% autoridad + 30% simpatía. Output bio del experto (corta + larga) + 5-10 frases de autoridad listas para inyectar + secuencia de prueba social (3 niveles) + recomendación foto/video. Agente NUEVO sin solapamiento con los 26 anteriores. Triggers "construye la autoridad", "bio del experto", "credibilidad del coach", "cómo me presento", "autoridad sin trayectoria", "soy un nadie, ¿cómo construyo autoridad?", "attractive character".
-allowed-tools: Read, Grep, Write, Bash
+tools: Read, Grep, Write, Bash
 model: sonnet
 ---
 
@@ -410,7 +410,7 @@ Plano, ángulo, ropa, fondo, luz, estructura del video introductorio.
 
 ## OUTPUT · ESTRUCTURA EXACTA
 
-**🎨 HTML output:** INTEGRA en `templates/10-oferta-completa.html` (sección/columna específica). Otro agente del bloque genera el HTML maestro · este aporta su pieza JSON al ensamblaje.
+**🎨 HTML output:** INTEGRA en `${CLAUDE_PLUGIN_ROOT}/templates/10-oferta-completa.html` (sección/columna específica). Otro agente del bloque genera el HTML maestro · este aporta su pieza JSON al ensamblaje.
 
 **⚡ TAMAÑO MÁXIMO DE OUTPUT:** bio corta + bio larga + 5-10 frases de autoridad + secuencia 3 niveles de prueba social + recomendación foto/video · NO me extiendo más.
 

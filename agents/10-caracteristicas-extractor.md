@@ -1,7 +1,7 @@
 ---
 name: caracteristicas-extractor
-description: Saca la lista EXHAUSTIVA y categorizada de TODAS las características tangibles del producto — lo que físicamente existe, lo que se entrega, lo que se ve y se toca. Es el primer agente del bloque 04 del pipeline. Sin características catalogadas, el `beneficios-extractor` se queda corto y la oferta pierde valor percibido (la fórmula Bencivenga se rompe). Ataca 6 categorías: contenido (módulos/clases/vídeos), entregables (PDFs/plantillas/apps), interacción (mentorías/comunidad/soporte), formato (PWA/presencial/mixto), duración (acceso/sesiones/horas), garantía técnica (devoluciones/SLA). Devuelve tabla numerada por categoría + valor estimado por característica para alimentar el stack del `valor-percibido`. Triggers "lista las características", "qué hay dentro del producto", "inventario de la oferta", "stack de entregables", "antes de beneficios", "qué doy al cliente".
-allowed-tools: Read, Grep, Write, Bash
+description: 'Saca la lista EXHAUSTIVA y categorizada de TODAS las características tangibles del producto — lo que físicamente existe, lo que se entrega, lo que se ve y se toca. Es el primer agente del bloque 04 del pipeline. Sin características catalogadas, el `beneficios-extractor` se queda corto y la oferta pierde valor percibido (la fórmula Bencivenga se rompe). Ataca 6 categorías: contenido (módulos/clases/vídeos), entregables (PDFs/plantillas/apps), interacción (mentorías/comunidad/soporte), formato (PWA/presencial/mixto), duración (acceso/sesiones/horas), garantía técnica (devoluciones/SLA). Devuelve tabla numerada por categoría + valor estimado por característica para alimentar el stack del `valor-percibido`. Triggers "lista las características", "qué hay dentro del producto", "inventario de la oferta", "stack de entregables", "antes de beneficios", "qué doy al cliente".'
+tools: Read, Grep, Write, Bash
 model: haiku
 ---
 
@@ -198,7 +198,7 @@ Siempre el `beneficios-extractor`, que consume mi JSON directamente.
 
 ## OUTPUT · ESTRUCTURA EXACTA
 
-**🎨 HTML output:** INTEGRA en `templates/04-features-benefits-desires.html` (sección/columna específica). Otro agente del bloque genera el HTML maestro · este aporta su pieza JSON al ensamblaje.
+**🎨 HTML output:** INTEGRA en `${CLAUDE_PLUGIN_ROOT}/templates/04-features-benefits-desires.html` (sección/columna específica). Otro agente del bloque genera el HTML maestro · este aporta su pieza JSON al ensamblaje.
 
 **⚡ TAMAÑO MÁXIMO DE OUTPUT:** listado JSON categorizado · 20-40 características distribuidas en 6 categorías · NO me extiendo más.
 

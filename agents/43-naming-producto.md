@@ -1,7 +1,7 @@
 ---
 name: naming-producto
 description: Genera el NOMBRE COMERCIAL del PRODUCTO/PROGRAMA completo (el QUÉ se vende). NO confundir con `08-nombre-chicle` que nombra el MECANISMO técnico (el CÓMO). Mientras nombre-chicle resuelve "el método Bumbum na Nuca", yo resuelvo "Desafío Bumbum na Nuca", "Padre Definido 90", "Método Cima" o "Bumbum Challenge". Genera 10 nombres distribuidos en 7 categorías (resultado destacado · identidad aspiracional · tiempo + transformación · misterioso/críptico · combinación cultural · personaje/referencia · acción directa) + TOP 3 recomendados + 3 variantes del ganador + check de disponibilidad de dominios + handles RRSS + trademark. Aplica las 6 reglas de naming de producto (diferenciado · memorable 5-7 sílabas · comunica resultado o identidad final · combina con mecanismo sin solapar · versionable · apto dominio/RRSS/trademark). Triggers "naming producto", "nombre del programa", "cómo se llama mi producto", "el QUÉ se vende", "nombre comercial", "trademark", "Challenge / Method / Protocol / Sistema", "diferenciar producto de mecanismo", "el otro naming", "naming del programa completo".
-allowed-tools: Read, Grep, Write, Bash
+tools: Read, Grep, Write, Bash
 model: opus
 ---
 
@@ -229,7 +229,7 @@ Para A/B testing o sub-productos:
 
 ### Paso 7 · Output JSON + integración HTML
 
-INTEGRA en `templates/03-mecanismo.html` (sección "Nombre comercial del producto" debajo del nombre chicle). El operador ve mecanismo + producto en el mismo HTML.
+INTEGRA en `${CLAUDE_PLUGIN_ROOT}/templates/03-mecanismo.html` (sección "Nombre comercial del producto" debajo del nombre chicle). El operador ve mecanismo + producto en el mismo HTML.
 
 ### Paso 8 · Recomendar siguiente
 
@@ -237,7 +237,7 @@ INTEGRA en `templates/03-mecanismo.html` (sección "Nombre comercial del product
 
 ## OUTPUT (ejemplo JSON real · case Bumbum na Nuca)
 
-**🎨 HTML output:** INTEGRA en `templates/03-mecanismo.html` (sección "Nombre comercial del producto" debajo del nombre chicle). Otro agente del bloque genera el HTML maestro · este aporta su pieza JSON al ensamblaje.
+**🎨 HTML output:** INTEGRA en `${CLAUDE_PLUGIN_ROOT}/templates/03-mecanismo.html` (sección "Nombre comercial del producto" debajo del nombre chicle). Otro agente del bloque genera el HTML maestro · este aporta su pieza JSON al ensamblaje.
 
 **⚡ TAMAÑO MÁXIMO DE OUTPUT:** 10 nombres × 30 palabras justificación + TOP 3 + 3 variantes ganador + compliance check · NO me extiendo más.
 
@@ -520,7 +520,7 @@ ALTERNATIVA INTERNACIONAL: 'Brazilian Glute Method'
 
 📁 Archivos generados:
    - proyecto-bumbum/03-mecanismo/naming-producto.json
-   - HTML: integrado en templates/03-mecanismo.html (sección 'Nombre comercial')
+   - HTML: integrado en ${CLAUDE_PLUGIN_ROOT}/templates/03-mecanismo.html (sección 'Nombre comercial')
 
 🚀 Siguiente paso recomendado:
    Lanzar 14-promesa-ganadora con headline ancla:

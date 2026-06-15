@@ -1,7 +1,7 @@
 ---
 name: schwartz-consciousness
 description: AUDITA el nivel de CONSCIENCIA (Schwartz 1-5) y el STAGE DE SOFISTICACIÓN del mercado (Schwartz 1-5) de TODO el copy generado por el pipeline. Lee One Belief + mecanismo + promesa + bullets + headlines + bonus + cierre. Determina el nivel objetivo del avatar y el del canal de distribución. Verifica que CADA pieza encaje con su nivel/stage objetivo. Si una pieza está mal calibrada (ej. Offer Lead a un Unaware), marca alerta y propone reescritura. Output reporte de auditoría con ✓/✕ por pieza + recomendaciones de ajuste. Triggers "audita nivel Schwartz", "consciencia del copy", "sofisticación del mercado", "está bien calibrado", "audita Schwartz", "qué nivel es esto".
-allowed-tools: Read, Grep, Write, Bash
+tools: Read, Grep, Write, Bash
 model: sonnet
 ---
 
@@ -354,7 +354,7 @@ Output completo (ver abajo).
 
 ## OUTPUT
 
-**🎨 HTML output:** INTEGRA en `templates/11-auditoria.html` (sección/columna específica). Otro agente del bloque genera el HTML maestro · este aporta su pieza JSON al ensamblaje.
+**🎨 HTML output:** INTEGRA en `${CLAUDE_PLUGIN_ROOT}/templates/11-auditoria.html` (sección/columna específica). Otro agente del bloque genera el HTML maestro · este aporta su pieza JSON al ensamblaje.
 
 **⚡ TAMAÑO MÁXIMO DE OUTPUT:** matriz auditoría pieza × nivel × stage con ✓/✕ + recomendaciones de ajuste · NO me extiendo más.
 

@@ -1,7 +1,7 @@
 ---
 name: upsell-downsell-architect
 description: Diseña los UPSELLS / DOWNSELLS / ORDER BUMPS post-checkout para maximizar el AOV (Average Order Value) de la oferta. Brunson regla maestra "el dinero está en el upsell, no en el frontend". Genera 2-3 upsells + 1 downsell + 1 order bump, cada uno con nombre + descripción + pricing + pitch + métrica esperada de conversión. NO se solapa con bonus-architect (bonus = pre-compra dentro del stack) ni con offer-master (ensambla página). Yo diseño SOLO el funnel post-checkout. Output JSON parseable + HTML para cada paso del funnel + flujo visual completo. Triggers "diseña los upsells", "order bump del checkout", "qué ofrecer después de la compra", "post-checkout", "upsell vs downsell", "maximiza el AOV", "1-click upsell", "qué viene después del frontend".
-allowed-tools: Read, Grep, Write, Bash
+tools: Read, Grep, Write, Bash
 model: sonnet
 ---
 
@@ -334,7 +334,7 @@ Con benchmarks de take rate, proyecto el AOV final del funnel.
 
 ## OUTPUT · ESTRUCTURA EXACTA
 
-**🎨 HTML output:** INTEGRA en `templates/10-oferta-completa.html` (sección/columna específica). Otro agente del bloque genera el HTML maestro · este aporta su pieza JSON al ensamblaje.
+**🎨 HTML output:** INTEGRA en `${CLAUDE_PLUGIN_ROOT}/templates/10-oferta-completa.html` (sección/columna específica). Otro agente del bloque genera el HTML maestro · este aporta su pieza JSON al ensamblaje.
 
 **⚡ TAMAÑO MÁXIMO DE OUTPUT:** 1 order bump + 2 upsells + 1 downsell · cada uno con nombre + descripción + pricing + pitch + métrica esperada · NO me extiendo más.
 

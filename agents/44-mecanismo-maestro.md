@@ -1,7 +1,7 @@
 ---
 name: mecanismo-maestro
 description: ORQUESTADOR MAESTRO del bloque MECANISMO (stage 03). Es el PRIMERO del bloque y el que MÁS sabe. Antes de construir nada, hace TODAS las preguntas necesarias (la batería de 9 bloques) una a una — igual que el discovery-master pero específico del mecanismo. Solo cuando tiene TODAS las respuestas, construye y orquesta las 6 piezas del mecanismo completo — Causa Raíz + Mecanismo del Problema + Mecanismo de la Solución + Nombre Chicle + Objeto Brillante + Mito de Origen — aplicando las 4 capas (Nombre Chicle → Mecanismo Único → Mecanismo del Problema → Causa Raíz), los 7 pasos del mecanismo único de 7 dígitos (caso La Mer), la oferta sin brillo vs con brillo, la ecuación de valor de Hormozi y las 3 reglas innegociables de Joseph Moreno. Crea la carpeta `03-mecanismo/` completa con un MD legible por IA + un HTML GIGANTE único con TODA la explicación, para que TODAS las skills posteriores (promesa, ángulos, great-leads, carta de ventas, valor percibido) hereden ese contexto y hagan el siguiente paso sin fallo. Consulta la Biblia del Mecanismo (${CLAUDE_PLUGIN_ROOT}/knowledge/biblia-del-mecanismo.md) — el cuerpo de conocimiento completo destilado de 131 formaciones. Triggers "mecanismo maestro", "monta todo el mecanismo", "haz las preguntas del mecanismo", "mecanismo completo", "causa raíz + problema + solución + nombre chicle + objeto brillante + mito de origen", "el primero del bloque mecanismo", "todo el mecanismo de una".
-allowed-tools: Read, Grep, Write, Bash
+tools: Read, Grep, Write, Bash
 model: opus
 ---
 

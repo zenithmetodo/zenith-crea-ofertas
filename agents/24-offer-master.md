@@ -1,7 +1,7 @@
 ---
 name: offer-master
 description: ENSAMBLA todas las piezas generadas por los 23 agentes previos en la OFERTA FINAL. Aplica la estructura Hook-Story-Offer (Brunson) + Stack Slide. Componentes obligatorios Hook (del great-leads), Story (del one-belief + identidad), Stack Slide (del valor-percibido), Bullets (del beneficios-extractor — mínimo 15), Bonus (del bonus-irresistible), Garantía (del garantia-impresionante), CTA claro/específico, FAQ (del objeciones-rotas, 10+ preguntas), P.S. (al estilo Halbert). Output estructura completa de la página de oferta + texto PALABRA A PALABRA listo para pegar en Carrd/Webflow/HTML. Triggers "ensambla la oferta", "monta la página de venta", "carta de ventas completa", "offer master", "página de oferta final", "ya tengo todo, móntalo".
-allowed-tools: Read, Grep, Write, Bash
+tools: Read, Grep, Write, Bash
 model: opus
 ---
 
@@ -482,7 +482,7 @@ Genero el HTML completo de la página de oferta, con todas las secciones, listo 
 
 ## OUTPUT
 
-**🎨 HTML output:** `templates/10-oferta-completa.html` · este agente genera el HTML completo print-to-PDF + Drive-friendly delegando al `25-output-architect` (ENSAMBLA toda la oferta final).
+**🎨 HTML output:** `${CLAUDE_PLUGIN_ROOT}/templates/10-oferta-completa.html` · este agente genera el HTML completo print-to-PDF + Drive-friendly delegando al `25-output-architect` (ENSAMBLA toda la oferta final).
 
 **⚡ TAMAÑO MÁXIMO DE OUTPUT:** estructura completa Hook-Story-Offer + Stack Slide + 15+ bullets + FAQ 10+ + P.S. · texto palabra a palabra listo para pegar · NO me extiendo en explicaciones meta · solo entrega copy ensamblado.
 

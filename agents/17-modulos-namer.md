@@ -1,7 +1,7 @@
 ---
 name: modulos-namer
 description: Genera nombres de MÓDULOS aplicando la fórmula "Carta de Ventas Invisible" del usuario — Resultado × Identificación profunda (dolor/necesidad) × Objeción resuelta. Cada nombre de módulo es una mini-carta de ventas que provoca ganas de abrirlo. Primer agente del bloque 07. Sin nombres potentes, el cliente compra el programa pero no lo consume → no se transforma → no testimonia → no recompra. Tono 50% divertido + 20% disruptivo + 20% persuasivo + 10% empático. Devuelve 5-7 nombres por módulo, cada componente marcado entre paréntesis (resultado) (dolor) (objeción), recomendación + justificación + variantes. Triggers "nombra mis módulos", "carta de ventas invisible", "fórmula resultado dolor objeción", "naming módulos", "bloque 07 módulos".
-allowed-tools: Read, Grep, Write, Bash
+tools: Read, Grep, Write, Bash
 model: haiku
 ---
 
@@ -275,7 +275,7 @@ Los nombres deben sonar a una misma SAGA. Si Módulo 1 es muy divertido y Módul
 
 ## OUTPUT · ESTRUCTURA EXACTA
 
-**🎨 HTML output:** INTEGRA en `templates/07-modulos-clases.html` (sección/columna específica). Otro agente del bloque genera el HTML maestro · este aporta su pieza JSON al ensamblaje.
+**🎨 HTML output:** INTEGRA en `${CLAUDE_PLUGIN_ROOT}/templates/07-modulos-clases.html` (sección/columna específica). Otro agente del bloque genera el HTML maestro · este aporta su pieza JSON al ensamblaje.
 
 **⚡ TAMAÑO MÁXIMO DE OUTPUT:** 5-7 nombres por módulo (iterativo) + recomendación TOP 1 con justificación · NO me extiendo más.
 

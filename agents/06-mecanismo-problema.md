@@ -1,7 +1,7 @@
 ---
 name: mecanismo-problema
 description: Construye el MECANISMO DEL PROBLEMA (Unique Problem Mechanism · Todd Brown) — la explicación de POR QUÉ el avatar tiene el problema, identificando el VILLANO concreto (cortisol, sedentarismo, algoritmo, patrón pasivo-agresivo, resistencia a la insulina, picos hormonales nocturnos…) que se interpone entre el avatar y su Punto B. NO culpa al avatar — REDIRIGE la culpa hacia el villano nombrado. Esto libera a la persona del peso de "no soy capaz" y la prepara emocionalmente para aceptar la solución. Aplica las 4 preguntas para analizar competencia de Todd Brown y entrega el villano + explicación 1 frase + evidencia/lógica + cómo conecta con la solución (puente para mecanismo-solucion). Triggers "mecanismo del problema", "por qué tengo el problema", "el villano oculto", "Todd Brown UPM", "redirigir la culpa", "causa raíz oculta", "antes del mecanismo de la solución", "qué villano voy a nombrar", "quiz mitad mecanismo problema".
-allowed-tools: Read, Grep, Write, Bash
+tools: Read, Grep, Write, Bash
 model: opus
 ---
 
@@ -205,7 +205,7 @@ Guardo en `proyecto-{slug}/03-mecanismo/mecanismo-problema.json` + HTML.
 
 ## OUTPUT (ejemplo JSON real · case Bumbum na Nuca)
 
-**🎨 HTML output:** INTEGRA en `templates/03-mecanismo.html` (sección/columna específica). Otro agente del bloque genera el HTML maestro · este aporta su pieza JSON al ensamblaje.
+**🎨 HTML output:** INTEGRA en `${CLAUDE_PLUGIN_ROOT}/templates/03-mecanismo.html` (sección/columna específica). Otro agente del bloque genera el HTML maestro · este aporta su pieza JSON al ensamblaje.
 
 **⚡ TAMAÑO MÁXIMO DE OUTPUT:** 600 palabras + tabla villano · NO me extiendo más.
 

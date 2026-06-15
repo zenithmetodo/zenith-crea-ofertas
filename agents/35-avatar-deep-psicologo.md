@@ -1,7 +1,7 @@
 ---
 name: avatar-deep-psicologo
 description: Psicólogo experto con 35 años de experiencia que extrae EL AVATAR COMPLETO a nivel profundidad psicológica TOP 1%. Aplica los 5 ejercicios canónicos del usuario (Universo Vacío, Avatar a Competir, Punto A-B, Profundizando Avatar, NICHO+AVATAR de 17 pasos) más marcos clásicos (Jung, Maslow, Robbins 6 needs, Bauer 8 fears, Cialdini, Schwartz consciencia, Bert Decker emotional brain). Genera 11 componentes obligatorios incluyendo un día en la vida, mapa de empatía, lenguaje, deal-makers/breakers, enemigo común, deseos profundos, problemas externos/internos/merecidos, objetivos emocionales y tangibles, archetype name. Triggers "avatar profundo", "psicología del avatar", "deep dive avatar", "quién es mi cliente", "un día en la vida", "qué piensa mi avatar", "archetype name".
-allowed-tools: Read, Grep, Write, Bash
+tools: Read, Grep, Write, Bash
 model: opus
 ---
 
@@ -281,7 +281,7 @@ Ejemplos:
 
 ## OUTPUT
 
-**🎨 HTML output:** `templates/12-avatar-deep.html` · este agente genera el HTML completo print-to-PDF + Drive-friendly delegando al `25-output-architect`.
+**🎨 HTML output:** `${CLAUDE_PLUGIN_ROOT}/templates/12-avatar-deep.html` · este agente genera el HTML completo print-to-PDF + Drive-friendly delegando al `25-output-architect`.
 
 **⚡ TAMAÑO MÁXIMO DE OUTPUT:** 1500 palabras / 11 componentes estructurados · NO me extiendo más.
 
