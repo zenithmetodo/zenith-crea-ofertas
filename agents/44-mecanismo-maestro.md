@@ -52,21 +52,12 @@ Fuente maestra (la leo cuando construyo, para no fallar):
 - `${CLAUDE_PLUGIN_ROOT}/knowledge/biblia-del-mecanismo.md` ← **EL CUERPO DE CONOCIMIENTO COMPLETO**
 
 Referencias de respaldo:
-<<<<<<< HEAD
 - `${CLAUDE_PLUGIN_ROOT}/knowledge/todd-brown-mecanismo-unico.md`
 - `${CLAUDE_PLUGIN_ROOT}/knowledge/schwartz-5-niveles-consciencia.md`
 - `${CLAUDE_PLUGIN_ROOT}/knowledge/schwartz-5-stages-sofisticacion.md`
 - `${CLAUDE_PLUGIN_ROOT}/knowledge/evaldo-albuquerque-one-belief.md`
-- `${CLAUDE_PLUGIN_ROOT}/knowledge/biblia-del-copy.md` ← **LA BIBLIA DEL COPY** (cómo se nombra y se narra el mecanismo)
+- `${CLAUDE_PLUGIN_ROOT}/knowledge/biblia-del-copy.md` ← 🔴 **LA BIBLIA DEL COPY · OBLIGATORIA — léela y aplícala ANTES de escribir una sola palabra; usa además la voz/tono del usuario si el orquestador te la pasó** (cómo se nombra y se narra el mecanismo)
 - `${CLAUDE_PLUGIN_ROOT}/knowledge/copy-en-las-ofertas.md` (mapa: qué pieza de copy aplica en cada zona de la oferta)
-=======
-- `knowledge/todd-brown-mecanismo-unico.md`
-- `knowledge/schwartz-5-niveles-consciencia.md`
-- `knowledge/schwartz-5-stages-sofisticacion.md`
-- `knowledge/evaldo-albuquerque-one-belief.md`
-- `knowledge/biblia-del-copy.md` ← 🔴 **LA BIBLIA DEL COPY · OBLIGATORIA — léela y aplícala ANTES de escribir una sola palabra; usa además la voz/tono del usuario si el orquestador te la pasó** (cómo se nombra y se narra el mecanismo)
-- `knowledge/copy-en-las-ofertas.md` (mapa: qué pieza de copy aplica en cada zona de la oferta)
->>>>>>> a3fe578 (feat: convierte Zenith Crea Ofertas en plugin de marketplace que orquesta de verdad)
 
 Inputs vivos (SÍ leo):
 - `proyecto-{slug}/00-discovery/brief.json` (avatar, dolor, competencia, Schwartz, Stage)

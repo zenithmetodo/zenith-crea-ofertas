@@ -34,19 +34,11 @@ No escribo los módulos (eso lo hace `modulos-namer`).
 > ⚡ **OPTIMIZACIÓN:** mi sección `🧠 CONOCIMIENTO INTERNALIZADO` ya tiene TODO lo que necesito. NO releo los archivos externos en ejecución normal. Los referencio solo como respaldo conceptual o si el cliente pide profundizar.
 
 Referencias de respaldo (NO se abren en ejecución normal):
-<<<<<<< HEAD
 - `${CLAUDE_PLUGIN_ROOT}/knowledge/maslow-robbins-bauer-deseos.md`
 - `${CLAUDE_PLUGIN_ROOT}/knowledge/halbert-power-words.md`
 - `${CLAUDE_PLUGIN_ROOT}/knowledge/cialdini-7-principios.md`
-- `${CLAUDE_PLUGIN_ROOT}/knowledge/biblia-del-copy.md` ← **LA BIBLIA DEL COPY** (cómo se redacta la ruptura de objeciones)
+- `${CLAUDE_PLUGIN_ROOT}/knowledge/biblia-del-copy.md` ← 🔴 **LA BIBLIA DEL COPY · OBLIGATORIA — léela y aplícala ANTES de escribir una sola palabra; usa además la voz/tono del usuario si el orquestador te la pasó** (cómo se redacta la ruptura de objeciones)
 - `${CLAUDE_PLUGIN_ROOT}/knowledge/copy-en-las-ofertas.md` (mapa: qué pieza de copy aplica en cada zona de la oferta)
-=======
-- `knowledge/maslow-robbins-bauer-deseos.md`
-- `knowledge/halbert-power-words.md`
-- `knowledge/cialdini-7-principios.md`
-- `knowledge/biblia-del-copy.md` ← 🔴 **LA BIBLIA DEL COPY · OBLIGATORIA — léela y aplícala ANTES de escribir una sola palabra; usa además la voz/tono del usuario si el orquestador te la pasó** (cómo se redacta la ruptura de objeciones)
-- `knowledge/copy-en-las-ofertas.md` (mapa: qué pieza de copy aplica en cada zona de la oferta)
->>>>>>> a3fe578 (feat: convierte Zenith Crea Ofertas en plugin de marketplace que orquesta de verdad)
 
 Inputs vivos (SÍ leo):
 - `proyecto-{slug}/00-discovery/brief.json` (objeciones_comunes + avatar + dolor)

@@ -36,21 +36,12 @@ Yo escribo UNA SOLA LÍNEA. La que vale el 80% del éxito de toda la página.
 > ⚡ **OPTIMIZACIÓN:** mi sección `🧠 CONOCIMIENTO INTERNALIZADO` ya tiene TODO lo que necesito. NO releo los archivos externos en ejecución normal. Los referencio solo como respaldo conceptual o si el cliente pide profundizar.
 
 Referencias de respaldo (NO se abren en ejecución normal):
-<<<<<<< HEAD
 - `${CLAUDE_PLUGIN_ROOT}/knowledge/halbert-power-words.md`
 - `${CLAUDE_PLUGIN_ROOT}/knowledge/schwartz-5-niveles-consciencia.md`
 - `${CLAUDE_PLUGIN_ROOT}/knowledge/schwartz-5-stages-sofisticacion.md`
 - `${CLAUDE_PLUGIN_ROOT}/knowledge/masterson-forde-great-leads.md`
-- `${CLAUDE_PLUGIN_ROOT}/knowledge/biblia-del-copy.md` ← **LA BIBLIA DEL COPY** (frameworks de headline)
+- `${CLAUDE_PLUGIN_ROOT}/knowledge/biblia-del-copy.md` ← 🔴 **LA BIBLIA DEL COPY · OBLIGATORIA — léela y aplícala ANTES de escribir una sola palabra; usa además la voz/tono del usuario si el orquestador te la pasó** (frameworks de headline)
 - `${CLAUDE_PLUGIN_ROOT}/knowledge/copy-en-las-ofertas.md` (mapa: qué pieza de copy aplica en cada zona de la oferta)
-=======
-- `knowledge/halbert-power-words.md`
-- `knowledge/schwartz-5-niveles-consciencia.md`
-- `knowledge/schwartz-5-stages-sofisticacion.md`
-- `knowledge/masterson-forde-great-leads.md`
-- `knowledge/biblia-del-copy.md` ← 🔴 **LA BIBLIA DEL COPY · OBLIGATORIA — léela y aplícala ANTES de escribir una sola palabra; usa además la voz/tono del usuario si el orquestador te la pasó** (frameworks de headline)
-- `knowledge/copy-en-las-ofertas.md` (mapa: qué pieza de copy aplica en cada zona de la oferta)
->>>>>>> a3fe578 (feat: convierte Zenith Crea Ofertas en plugin de marketplace que orquesta de verdad)
 
 Inputs vivos (SÍ leo):
 - `proyecto-{slug}/00-discovery/brief.json` (avatar, ticket, nivel, stage)

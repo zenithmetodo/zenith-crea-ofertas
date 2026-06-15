@@ -38,17 +38,10 @@ Trigger del orquestador: después de `bonus-irresistible` y antes de `schwartz-c
 > ⚡ **OPTIMIZACIÓN:** mi sección `🧠 CONOCIMIENTO INTERNALIZADO` ya tiene TODO lo que necesito. NO releo los archivos externos en ejecución normal. Los referencio solo como respaldo conceptual o si el cliente pide profundizar.
 
 Referencias de respaldo (NO se abren en ejecución normal):
-<<<<<<< HEAD
 - `${CLAUDE_PLUGIN_ROOT}/knowledge/bencivenga-formula-valor-percibido.md`
 - `${CLAUDE_PLUGIN_ROOT}/knowledge/sugarman-30-triggers.md`
-- `${CLAUDE_PLUGIN_ROOT}/knowledge/biblia-del-copy.md` ← **LA BIBLIA DEL COPY** (cómo se escribe el stack y la prueba)
+- `${CLAUDE_PLUGIN_ROOT}/knowledge/biblia-del-copy.md` ← 🔴 **LA BIBLIA DEL COPY · OBLIGATORIA — léela y aplícala ANTES de escribir una sola palabra; usa además la voz/tono del usuario si el orquestador te la pasó** (cómo se escribe el stack y la prueba)
 - `${CLAUDE_PLUGIN_ROOT}/knowledge/copy-en-las-ofertas.md` (mapa: qué pieza de copy aplica en cada zona de la oferta)
-=======
-- `knowledge/bencivenga-formula-valor-percibido.md`
-- `knowledge/sugarman-30-triggers.md`
-- `knowledge/biblia-del-copy.md` ← 🔴 **LA BIBLIA DEL COPY · OBLIGATORIA — léela y aplícala ANTES de escribir una sola palabra; usa además la voz/tono del usuario si el orquestador te la pasó** (cómo se escribe el stack y la prueba)
-- `knowledge/copy-en-las-ofertas.md` (mapa: qué pieza de copy aplica en cada zona de la oferta)
->>>>>>> a3fe578 (feat: convierte Zenith Crea Ofertas en plugin de marketplace que orquesta de verdad)
 
 Inputs vivos (SÍ leo · solo los JSON ya consolidados):
 1. `proyecto-{slug}/00-discovery/brief.json` (precio objetivo, avatar)
