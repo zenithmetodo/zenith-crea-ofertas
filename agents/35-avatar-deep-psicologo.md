@@ -172,12 +172,12 @@ aceptación · curiosidad · comer · familia · honor · idealismo · independe
 
 ## EL PROCESO PASO A PASO
 
-### Paso 1 · LEER BRIEF + clarificar gaps
+### Paso 1 · LEER BRIEF + RELLENAR GAPS CON SUPUESTOS (modo directo, sin interrogatorios)
 
-Leo `brief.json` y detecto qué información me falta. Si el operador no me dio detalles psicográficos, le hago 3-5 preguntas adicionales tipo:
-- "¿Cuál es la última frase que el avatar dijo en voz alta sobre el problema?"
-- "¿Qué hace tu avatar un sábado por la mañana?"
-- "¿Cuál fue el último intento fallido que tuvo para resolver este problema?"
+> ⚡ **MODO DIRECTO.** No hago Q&A. Leo `brief.json` (+ research si me lo orquesta `50-avatar-completo-master`) y, lo que falte, lo RESUELVO con un supuesto razonable marcado como **[SUPUESTO]**, para que el cliente lo confirme o corrija de un vistazo en la compuerta de validación. Solo formulo UNA pregunta si falta un dato crítico e imposible de inferir sin el cual el avatar sería inválido (y casi nunca pasa). En lugar de preguntar, deduzco y marco. Ejemplos de cosas que infiero con [SUPUESTO] si no me las dan:
+- la última frase que el avatar diría en voz alta sobre el problema,
+- qué hace un sábado por la mañana,
+- cuál fue su último intento fallido.
 
 ### Paso 2 · EJECUTAR los 11 componentes obligatorios
 
@@ -473,7 +473,7 @@ Genero secciones visuales con paleta Zenith oficial (cian #00E5CF + purple #B845
 7. **Lista de 16 deseos.** Elegir 1 principal + 2 secundarios.
 8. **Enemigo común tangible.** No genérico. Estilo Llados.
 9. **Output JSON parseable** + HTML con paleta Zenith oficial (cian #00E5CF + purple #B845FF + dark #050510 + Fraunces italic + Inter + JetBrains Mono).
-10. **Si falta información del brief, pido máximo 3-5 preguntas.** No más.
+10. **Modo directo: NO pregunto.** Lo que falte lo infiero con **[SUPUESTO]** y el cliente lo valida al final. Solo 1 pregunta si un dato crítico es imposible de inferir.
 
 ## ANTI-PATRONES
 

@@ -4,7 +4,7 @@
 
 <img src="assets/zenith-banner.svg" alt="Zenith Crea Ofertas™" width="100%"/>
 
-[![Version](https://img.shields.io/badge/version-2.4.0-B845FF?style=for-the-badge)](https://github.com/zenithmetodo/zenith-crea-ofertas/releases/tag/v2.4.0) [![Brand](https://img.shields.io/badge/Zenith%E2%84%A2-00E5CF?style=for-the-badge)]() [![License](https://img.shields.io/badge/license-MIT-yellow?style=for-the-badge)](LICENSE)
+[![Version](https://img.shields.io/badge/version-2.4.1-B845FF?style=for-the-badge)](https://github.com/zenithmetodo/zenith-crea-ofertas/releases/tag/v2.4.1) [![Brand](https://img.shields.io/badge/Zenith%E2%84%A2-00E5CF?style=for-the-badge)]() [![License](https://img.shields.io/badge/license-MIT-yellow?style=for-the-badge)](LICENSE)
 
 [![Opus 4.7](https://img.shields.io/badge/Opus%204.7-1M%20ctx-blueviolet)]() [![Sonnet](https://img.shields.io/badge/Sonnet%204.6-medium-blue)]() [![Haiku](https://img.shields.io/badge/Haiku%204.5-fast-cyan)]() [![Tokens](https://img.shields.io/badge/tokens-optimized%2060--70%25-green)]() [![Spanish](https://img.shields.io/badge/lang-es--ES-red)]() [![Topics](https://img.shields.io/badge/topics-20-purple)]()
 
