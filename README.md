@@ -303,6 +303,7 @@ AVATAR     RESEARCH  COMPETENCIA     ONE BELIEF    MECANISMO   OFERTA
 | `one-belief-creator` | opus | Genera SIEMPRE 4 variantes del One Belief Statement aplicando **Fórmula de Evaldo Albuquerque · adaptada por Joseph Moreno**. V1 Identidad / V2 Anti-identidad / V3 Nueva oportunidad / V4 Combo. |
 | `identidad-anti-identidad` | sonnet | Matriz dual identidad aspiracional vs anti-identidad rechazada con 8 preguntas operativas. |
 | `nueva-oportunidad` | sonnet | Genera la "nueva oportunidad" del One Belief (V3) según las 5 categorías Evaldo. |
+| `punto-a-b-producto` | opus | Construye los 7-15 PASOS OPERATIVOS del servicio (el Punto A→B del PRODUCTO, no de la persona) · base de la carta de ventas invisible para módulos/clases. |
 
 ### Mecanismo + Ángulos
 | Agente | Model | Qué hace |
@@ -315,6 +316,7 @@ AVATAR     RESEARCH  COMPETENCIA     ONE BELIEF    MECANISMO   OFERTA
 | `nombre-chicle` | sonnet | Naming del mecanismo · 10 nombres en 7 categorías · 2-3 palabras misteriosas que se pegan a la memoria. |
 | `super-estructura` | sonnet | Stage 5 sofisticación · super-estructura cultural (celebridad/etnicidad/ocupación/marca) que amplifica el mecanismo. |
 | `angulos-architect` | opus | Genera 5-10 **ángulos** con la **definición exacta del autor**: *"razón distinta de por qué me comprarían"* + 3 ingredientes (tipo concreto + creencia específica + reconocimiento) + sub-ángulos. |
+| `naming-producto` | opus | Genera el NOMBRE COMERCIAL del programa (el QUÉ se vende, no el mecanismo) · 10 nombres en 7 categorías + TOP 3 + check dominio/RRSS/trademark. |
 
 ### Features · Benefits · Desires
 | Agente | Model | Qué hace |
@@ -458,6 +460,8 @@ La carpeta `templates/` contiene **18 plantillas HTML estéticas** con branding 
 | `/audit-oferta` | Auditor 200+ ítems |
 | `/setup-crea-ofertas` | Auto-instalador (Python + Whisper + ffmpeg + jq) |
 | `/setup-apis` | Asistente APIs opcionales (Apify + PRAW + YouTube API + Meta API + MCPs) |
+| `/spec` | Pre-fase guiada por especificación · spec-architect → spec-reviewer (severidad) → validación humana → plan-architect |
+| `/crea-oferta-1pct` | Pipeline completo de la skill (discovery + 12 etapas + 26 sub-agentes) · construye toda la oferta de cero |
 
 ---
 
