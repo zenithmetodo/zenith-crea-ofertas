@@ -83,7 +83,7 @@ open https://apify.com/sign-up
 # Apify Console → Settings → Integrations → API tokens → Create new
 
 # 3. Guardar token en .env del plugin
-echo "APIFY_TOKEN=apify_api_xxxxxxxxxxxxx" >> ~/.claude/skills/zenith-crea-ofertas/.env
+echo "APIFY_TOKEN=apify_api_xxxxxxxxxxxxx" >> ${CLAUDE_PLUGIN_ROOT}/.env
 
 # 4. Instalar SDK Python (opcional · si quieres scripts personalizados)
 pip3 install --user apify-client
@@ -126,7 +126,7 @@ open https://www.reddit.com/prefs/apps
 # 3. Copia client_id y client_secret
 
 # 4. Guardar en .env
-cat >> ~/.claude/skills/zenith-crea-ofertas/.env << EOF
+cat >> ${CLAUDE_PLUGIN_ROOT}/.env << EOF
 REDDIT_CLIENT_ID=tu_client_id
 REDDIT_CLIENT_SECRET=tu_client_secret
 REDDIT_USER_AGENT=zenith-crea-ofertas/2.0.0
@@ -162,7 +162,7 @@ open https://console.cloud.google.com/
 # 4. Restringir API key a YouTube Data API v3 (recomendado)
 
 # 5. Guardar en .env
-echo "YOUTUBE_API_KEY=tu_api_key" >> ~/.claude/skills/zenith-crea-ofertas/.env
+echo "YOUTUBE_API_KEY=tu_api_key" >> ${CLAUDE_PLUGIN_ROOT}/.env
 ```
 
 **Cuota gratis:** 10,000 unidades/día (≈100 búsquedas + 1,000 detalles vídeo).
@@ -191,7 +191,7 @@ open https://developers.facebook.com/
 # App Dashboard → Tools → Graph API Explorer → Generate Token
 
 # 5. Guardar en .env
-echo "META_AD_LIBRARY_TOKEN=tu_token" >> ~/.claude/skills/zenith-crea-ofertas/.env
+echo "META_AD_LIBRARY_TOKEN=tu_token" >> ${CLAUDE_PLUGIN_ROOT}/.env
 ```
 
 **Nota:** la API tiene límites estrictos. Para uso casual, el scraping vía WebFetch es más simple.

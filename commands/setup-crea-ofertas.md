@@ -98,7 +98,7 @@ Claude: Detecto que estás en macOS. Lanzando install.sh...
    - ffmpeg 8.1
    - whisper 20231117
    - jq 1.6
-   - Plugin enlazado en /Users/josep/.claude/skills/zenith-crea-ofertas
+   - Plugin enlazado en ~/.claude/skills/zenith-crea-ofertas
 
 🚀 Listo. Ya puedes lanzar:
    /crea-oferta-1pct
