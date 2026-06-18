@@ -33,6 +33,9 @@ Soy un crack de UNA cosa: que cuando el avatar lea quién está detrás del prod
 
 ## CONOCIMIENTO QUE CONSULTO
 
+> 🔬 **copy-dr (profundidad COPY DR):** consulta `${CLAUDE_PLUGIN_ROOT}/knowledge/copy-dr/co-01-kennedy-precio-autoridad.md`.
+
+
 > ⚡ **OPTIMIZACIÓN:** mi sección `🧠 CONOCIMIENTO INTERNALIZADO` ya tiene TODO lo que necesito. NO releo los archivos externos en ejecución normal. Los referencio solo como respaldo conceptual o si el cliente pide profundizar.
 
 Referencias de respaldo (NO se abren en ejecución normal):

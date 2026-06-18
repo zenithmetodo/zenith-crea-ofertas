@@ -4,6 +4,18 @@
 >
 > Destilado de la formación COPY DR (copy de respuesta directa) + fundamentos de neurocopy + lanzamientos. Excluye deliberadamente *ángulos* y *formato* de anuncio (ya cubiertos en los plugins de ads). Incluye cuerpos de anuncio y la práctica de escribir el anuncio.
 
+## 🔬 Profundización · carpeta `copy-dr/` (la formación COPY DR destilada clase a clase)
+
+Cuando necesites MÁS profundidad de la que cabe en esta biblia, abre el índice `${CLAUDE_PLUGIN_ROOT}/knowledge/copy-dr/00-INDEX.md`. Son destilaciones largas y operativas de la formación COPY DR, una por clase. Las más usadas aquí:
+- `${CLAUDE_PLUGIN_ROOT}/knowledge/copy-dr/co-01-kennedy-precio-autoridad.md` · precio, posicionamiento y autoridad (Dan Kennedy)
+- `${CLAUDE_PLUGIN_ROOT}/knowledge/copy-dr/co-02-pesquisa-publico.md` · pesquisa del público / segmentación / fatias
+- `${CLAUDE_PLUGIN_ROOT}/knowledge/copy-dr/co-03-dominar-nicho-24h.md` · dominar un nicho nuevo
+- `${CLAUDE_PLUGIN_ROOT}/knowledge/copy-dr/co-04-pesquisa-avatar.md` · pesquisa profunda del avatar (voz del cliente)
+- `${CLAUDE_PLUGIN_ROOT}/knowledge/copy-dr/co-05-oferta-irresistible.md` · construir la oferta irresistible
+- `${CLAUDE_PLUGIN_ROOT}/knowledge/copy-dr/co-06-storytelling.md` · storytelling de venta
+- `${CLAUDE_PLUGIN_ROOT}/knowledge/copy-dr/co-07-posicionamiento-portafolio.md` · posicionamiento y portafolio
+> **Regla:** si vas a afirmar algo del avatar/mercado, contrástalo aquí o en la investigación real (Reddit/YouTube/Trends). No inventes.
+
 ---
 
 ## ÍNDICE

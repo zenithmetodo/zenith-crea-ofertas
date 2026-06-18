@@ -4,18 +4,18 @@
 
 <img src="assets/zenith-banner.svg" alt="Zenith Crea Ofertas™" width="100%"/>
 
-[![Version](https://img.shields.io/badge/version-2.3.9-B845FF?style=for-the-badge)](https://github.com/zenithmetodo/zenith-crea-ofertas/releases/tag/v2.3.9) [![Brand](https://img.shields.io/badge/Zenith%E2%84%A2-00E5CF?style=for-the-badge)]() [![License](https://img.shields.io/badge/license-MIT-yellow?style=for-the-badge)](LICENSE)
+[![Version](https://img.shields.io/badge/version-2.4.0-B845FF?style=for-the-badge)](https://github.com/zenithmetodo/zenith-crea-ofertas/releases/tag/v2.4.0) [![Brand](https://img.shields.io/badge/Zenith%E2%84%A2-00E5CF?style=for-the-badge)]() [![License](https://img.shields.io/badge/license-MIT-yellow?style=for-the-badge)](LICENSE)
 
 [![Opus 4.7](https://img.shields.io/badge/Opus%204.7-1M%20ctx-blueviolet)]() [![Sonnet](https://img.shields.io/badge/Sonnet%204.6-medium-blue)]() [![Haiku](https://img.shields.io/badge/Haiku%204.5-fast-cyan)]() [![Tokens](https://img.shields.io/badge/tokens-optimized%2060--70%25-green)]() [![Spanish](https://img.shields.io/badge/lang-es--ES-red)]() [![Topics](https://img.shields.io/badge/topics-20-purple)]()
 
-**`/zenith-crea-ofertas:zenith-quick-discovery` · 49 agentes · 19 commands · 19 HTMLs print-to-PDF · 31 knowledge files**
+**`/zenith-crea-ofertas:zenith-quick-discovery` · 53 agentes · 20 commands · 19 HTMLs print-to-PDF · 32 knowledge files**
 
 </div>
 
 
 Sistema completo de agentes Claude Code para construir **OFERTAS TOP 1%** de alto valor percibido en español de España. **Creado por Josep · Método Zenith™** a partir de los frameworks canónicos del Direct Response (Schwartz · Masterson · Bencivenga · Evaldo · Todd Brown · Hormozi · Brunson · Halbert · Sugarman · Cialdini) + transcripciones operativas del autor.
 
-Un orquestador padre coordina **49 sub-agentes especializados** (Opus/Sonnet/Haiku optimizado) + **31 knowledge files** + **19 templates HTML** print-to-PDF + Drive-friendly. El proyecto arranca con una **pre-fase guiada por especificación** (`spec-architect` enmarca → `spec-reviewer` audita por severidad 🔴🟠🟡🟢 → **validación humana** → `plan-architect` hace el plan.md de todo + research). Después, cada agente domina una pieza del puzzle: desde el avatar deep (psicólogo + Reddit + YouTube) hasta la auditoría de 200+ ítems de la oferta final. El bloque 03 (mecanismo) lo lidera **`mecanismo-maestro`**, que pregunta 9 bloques primero y construye 6 piezas cargando la **Biblia del Mecanismo** (131 formaciones destiladas).
+Un orquestador padre coordina **53 sub-agentes especializados** (Opus/Sonnet/Haiku optimizado) + **32 knowledge files** + **19 templates HTML** print-to-PDF + Drive-friendly. El proyecto arranca con una **pre-fase guiada por especificación** (`spec-architect` enmarca → `spec-reviewer` audita por severidad 🔴🟠🟡🟢 → **validación humana** → `plan-architect` hace el plan.md de todo + research). Después, cada agente domina una pieza del puzzle: desde el avatar deep (psicólogo + Reddit + YouTube) hasta la auditoría de 200+ ítems de la oferta final. El bloque 03 (mecanismo) lo lidera **`mecanismo-maestro`**, que pregunta 9 bloques primero y construye 6 piezas cargando la **Biblia del Mecanismo** (131 formaciones destiladas).
 
 > *"De la cima se ve mejor el avatar."*
 
@@ -23,7 +23,7 @@ Un orquestador padre coordina **49 sub-agentes especializados** (Opus/Sonnet/Hai
 
 ## Instalación
 
-Zenith Crea Ofertas es un **plugin de marketplace** de Claude Code: sus 49 sub-agentes se **orquestan** de verdad (la skill `crea-ofertas-master` los lanza con la tool Agent). Cualquiera puede instalarlo así:
+Zenith Crea Ofertas es un **plugin de marketplace** de Claude Code: sus 53 sub-agentes se **orquestan** de verdad (la skill `crea-ofertas-master` los lanza con la tool Agent). Cualquiera puede instalarlo así:
 
 **Opción A · dentro de Claude Code** (recomendada · pégale esto a Claude):
 ```
@@ -45,7 +45,7 @@ Luego **reinicia Claude Code**. Para arrancar: di **"crea mi oferta"** / **"mét
 @agent-zenith-crea-ofertas:one-belief-creator   # un agente concreto
 ```
 
-> **¿Por qué marketplace y no skill suelta?** Solo un plugin de marketplace registra sus `agents/` como **sub-agentes lanzables** (`zenith-crea-ofertas:discovery-master`, `…:mecanismo-maestro`, …). Instalado como skill, los 49 agentes quedan inertes y todo se hace "en uno". Como plugin, la skill `crea-ofertas-master` **los llama, los orquesta y compone** la oferta.
+> **¿Por qué marketplace y no skill suelta?** Solo un plugin de marketplace registra sus `agents/` como **sub-agentes lanzables** (`zenith-crea-ofertas:discovery-master`, `…:mecanismo-maestro`, …). Instalado como skill, los 53 agentes quedan inertes y todo se hace "en uno". Como plugin, la skill `crea-ofertas-master` **los llama, los orquesta y compone** la oferta.
 
 > **Memoria/tono + Biblia:** si subes tu CLAUDE.md, tu doc de tono/voz de marca o tu memoria, el plugin los detecta y escribe TODO con TU voz. La **Biblia del Copy** (`knowledge/biblia-del-copy.md`) y la **Biblia del Mecanismo** son de lectura **obligatoria** para cada sub-agente.
 
@@ -89,6 +89,7 @@ Si quieres **decidir tú mismo** qué etapa lanzar después del brief:
 
 ```bash
 # Después del discovery, lanzas las etapas que quieras, en el orden que quieras:
+/zenith-crea-ofertas:avatar-completo     ← bloque 00b · avatar & nicho completo OPCIONAL (nicho + competición subavatares + research obligatorio + 5 porqués + compuerta)
 /zenith-crea-ofertas:avatar-deep         ← etapa 01 · avatar completo
 /zenith-crea-ofertas:research-mercado    ← etapa 01 · Reddit + YouTube
 /zenith-crea-ofertas:competidor          ← etapa 02 · competencia
@@ -186,7 +187,7 @@ Si ya tienes una oferta hecha y quieres saber qué falla:
 
 <img src="assets/architecture-diagram.svg" alt="Arquitectura del plugin Zenith Crea Ofertas" width="100%"/>
 
-*Un orquestador padre coordina los 49 sub-agentes especializados, agrupados por bloque funcional.*
+*Un orquestador padre coordina los 53 sub-agentes especializados, agrupados por bloque funcional.*
 
 </div>
 
@@ -223,7 +224,7 @@ AVATAR     RESEARCH  COMPETENCIA     ONE BELIEF    MECANISMO   OFERTA
 
 ---
 
-## Pipeline completo (pre-fase + 17 etapas · 49 agentes)
+## Pipeline completo (pre-fase + 17 etapas · 53 agentes)
 
 <div align="center">
 
@@ -236,6 +237,7 @@ AVATAR     RESEARCH  COMPETENCIA     ONE BELIEF    MECANISMO   OFERTA
 | # | Etapa | Agentes implicados | Output HTML |
 |---|---|---|---|
 | **PRE** ⭐ | **Spec → Review → Validación humana → Plan** (gate guiado por especificación antes de gastar tokens) | `spec-architect` · `spec-reviewer` (severidad 🔴🟠🟡🟢) · `plan-architect` | `00-spec/` (spec.md · spec-review.md · plan.md · research-plan.md) |
+| **00b** ⭐ | **Bloque Avatar & Nicho** (OPCIONAL · `/avatar-completo`) — nicho-perfecto (opcional) → competición de subavatares con NOMBRES NORMALES a 6 factores → avatar profundo → investigación OBLIGATORIA (Reddit + YouTube + Google Trends, nada inventado) → núcleo con los 5 porqués → **compuerta de validación HTML** antes de seguir | `avatar-completo-master` · `nicho-perfecto` · `avatar-competidor` · `research-trends` (+ 35/36/37/38) | `AVATAR-COMPLETO.html` |
 | **00** | Discovery (5 preguntas + confirmación) | `zenith-quick-discovery` | `00-brief.html` |
 | **01** | **Avatar Deep + Research** (5 agentes paralelos) | `avatar-deep-psicologo` · `research-reddit` · `research-youtube` · `avatar-mapa-empatia` · `deal-makers-extractor` | `12-avatar-deep.html` + `13-research-mercado.html` + `16-deal-makers.html` |
 | **02** | Competencia (Meta Ad Library + GAP) | `competidor-spy` | `15-competencia.html` |

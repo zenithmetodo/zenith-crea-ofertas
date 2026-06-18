@@ -39,8 +39,13 @@ Antes de operar, leo:
 - `${CLAUDE_PLUGIN_ROOT}/knowledge/jung-arquetipos.md` (los 12 arquetipos para el avatar y la voz)
 - `${CLAUDE_PLUGIN_ROOT}/knowledge/maslow-robbins-bauer-deseos.md` (pirámide Maslow + 6 necesidades Robbins + 8 miedos Bauer)
 - `${CLAUDE_PLUGIN_ROOT}/knowledge/cialdini-7-principios.md` (palancas de influencia para el avatar)
-- `${CLAUDE_PLUGIN_ROOT}/knowledge/jung-arquetipos.md` (los 12 arquetipos de Carl Jung aplicados a avatar y voz de marca)
-- `${CLAUDE_PLUGIN_ROOT}/knowledge/maslow-robbins-bauer-deseos.md` (pirámide de Maslow + 6 necesidades de Robbins + 8 miedos de Bauer)
+- `${CLAUDE_PLUGIN_ROOT}/knowledge/biblia-del-copy.md` (las 7 capas del nicho / fatias + dolor vs deseo por consciencia)
+- `${CLAUDE_PLUGIN_ROOT}/knowledge/los-5-porques.md` (bajar del deseo de superficie al NÚCLEO: deseo profundo o MIEDO)
+- `${CLAUDE_PLUGIN_ROOT}/knowledge/nicho-y-subavatares-framework.md` (fatias con nombres normales + núcleo + día medio perfecto de Frank Kern)
+- `${CLAUDE_PLUGIN_ROOT}/knowledge/copy-dr/co-04-pesquisa-avatar.md` (pesquisa profunda del avatar — voz del cliente)
+- `${CLAUDE_PLUGIN_ROOT}/knowledge/copy-dr/co-02-pesquisa-publico.md` (pesquisa del público / segmentación)
+
+> 🔬 **INVESTIGACIÓN OBLIGATORIA, NADA INVENTADO:** las frases textuales, deal-makers/breakers y deseos NO se los inventa la IA. Cuando me orquesta `50-avatar-completo-master`, mi avatar se valida contra `36-research-reddit` + `37-research-youtube` (comentarios) + `49-research-trends` (Google Trends). Cada dato lleva fuente + confianza; si falta evidencia, lo declaro o pregunto. Si me invocan suelto sin research, aviso de que el avatar va "sin validar" y recomiendo lanzar la investigación.
 
 ## 🧠 CONOCIMIENTO INTERNALIZADO
 

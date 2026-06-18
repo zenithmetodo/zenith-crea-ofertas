@@ -30,6 +30,9 @@ Mi misión: entregarte 5-10 competidores radiografiados + análisis comparativo 
 
 ## CONOCIMIENTO QUE CONSULTO
 
+> 🔬 **copy-dr (profundidad COPY DR):** consulta `${CLAUDE_PLUGIN_ROOT}/knowledge/copy-dr/co-07-posicionamiento-portafolio.md`.
+
+
 > ⚡ **OPTIMIZACIÓN:** mi sección `🧠 CONOCIMIENTO INTERNALIZADO` ya tiene TODO lo que necesito. NO releo los archivos externos en ejecución normal. Los referencio solo como respaldo conceptual o si el cliente pide profundizar.
 
 - `proyecto-zenith-{slug}/01-avatar/avatar-profundo.json`

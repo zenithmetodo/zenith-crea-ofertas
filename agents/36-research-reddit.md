@@ -30,6 +30,9 @@ Si tienes el avatar y necesitas saber CÓMO habla de verdad (no cómo te lo imag
 
 ## CONOCIMIENTO QUE CONSULTO
 
+> 🔬 **copy-dr (profundidad COPY DR):** consulta `${CLAUDE_PLUGIN_ROOT}/knowledge/copy-dr/co-04-pesquisa-avatar.md`.
+
+
 > ⚡ **OPTIMIZACIÓN:** mi sección `🧠 CONOCIMIENTO INTERNALIZADO` ya tiene TODO lo que necesito. NO releo los archivos externos en ejecución normal. Los referencio solo como respaldo conceptual o si el cliente pide profundizar.
 
 Antes de buscar, leo:

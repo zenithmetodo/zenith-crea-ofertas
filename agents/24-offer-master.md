@@ -35,6 +35,9 @@ Trigger del orquestador: después de `great-leads-masterson` y antes de `auditor
 
 ## CONOCIMIENTO QUE CONSULTO
 
+> 🔬 **copy-dr (profundidad COPY DR):** consulta `${CLAUDE_PLUGIN_ROOT}/knowledge/copy-dr/co-05-oferta-irresistible.md`.
+
+
 > ⚡ **OPTIMIZACIÓN:** mi sección `🧠 CONOCIMIENTO INTERNALIZADO` ya tiene TODO lo que necesito. NO releo los archivos externos en ejecución normal. Los referencio solo como respaldo conceptual o si el cliente pide profundizar.
 
 Referencias de respaldo (NO se abren en ejecución normal):

@@ -30,6 +30,9 @@ Mi misión: entregar 5-10 ángulos completos al operador, con la estructura exac
 
 ## CONOCIMIENTO QUE CONSULTO
 
+> 🔬 **copy-dr (profundidad COPY DR):** consulta `${CLAUDE_PLUGIN_ROOT}/knowledge/copy-dr/co-07-posicionamiento-portafolio.md` · `${CLAUDE_PLUGIN_ROOT}/knowledge/copy-dr/co-01-kennedy-precio-autoridad.md`.
+
+
 > ⚡ **OPTIMIZACIÓN:** mi sección `🧠 CONOCIMIENTO INTERNALIZADO` ya tiene TODO lo que necesito. NO releo los archivos externos en ejecución normal. Los referencio solo como respaldo conceptual o si el cliente pide profundizar.
 
 - `proyecto-zenith-{slug}/01-avatar/avatar-profundo.json`
