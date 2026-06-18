@@ -16,7 +16,7 @@ Instala TODO lo necesario para que el plugin `zenith-crea-ofertas` funcione al 1
 - ✅ openai-whisper (transcripción de vídeos del usuario)
 - ✅ jq (procesamiento JSON)
 - ✅ requests + BeautifulSoup (para agentes que consultan web)
-- ✅ Enlaza el plugin en `~/.claude/skills/zenith-crea-ofertas`
+- ✅ Enlaza el plugin en `${CLAUDE_PLUGIN_ROOT}`
 
 Al final hace una verificación completa.
 
@@ -98,7 +98,7 @@ Claude: Detecto que estás en macOS. Lanzando install.sh...
    - ffmpeg 8.1
    - whisper 20231117
    - jq 1.6
-   - Plugin enlazado en ~/.claude/skills/zenith-crea-ofertas
+   - Plugin enlazado en ${CLAUDE_PLUGIN_ROOT}
 
 🚀 Listo. Ya puedes lanzar:
    /crea-oferta-1pct

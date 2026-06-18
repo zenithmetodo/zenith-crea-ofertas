@@ -166,7 +166,7 @@ Asistente:
 
 ✅ Conexión OK · usuario: zenithmetodo
 ✅ Plan: Free (5,000 unidades disponibles)
-✅ Token guardado en ~/.claude/skills/zenith-crea-ofertas/.env (permisos 600)
+✅ Token guardado en ${CLAUDE_PLUGIN_ROOT}/.env (permisos 600)
 
 LISTO. Los agentes 36-research-reddit, 37-research-youtube y 40-competidor-spy
 ahora detectarán Apify automáticamente y lo usarán para scraping masivo
@@ -175,7 +175,7 @@ cuando WebFetch no sea suficiente."
 
 ## ARCHIVO .env GENERADO
 
-El comando guarda los tokens en `~/.claude/skills/zenith-crea-ofertas/.env` con este formato:
+El comando guarda los tokens en `${CLAUDE_PLUGIN_ROOT}/.env` con este formato:
 
 ```bash
 # Zenith Crea Ofertas™ · APIs opcionales
