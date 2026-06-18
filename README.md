@@ -4,18 +4,18 @@
 
 <img src="assets/zenith-banner.svg" alt="Zenith Crea Ofertas™" width="100%"/>
 
-[![Version](https://img.shields.io/badge/version-2.0.0-B845FF?style=for-the-badge)](https://github.com/zenithmetodo/zenith-crea-ofertas/releases/tag/v2.0.0) [![Brand](https://img.shields.io/badge/Zenith%E2%84%A2-00E5CF?style=for-the-badge)]() [![License](https://img.shields.io/badge/license-MIT-yellow?style=for-the-badge)](LICENSE)
+[![Version](https://img.shields.io/badge/version-2.3.9-B845FF?style=for-the-badge)](https://github.com/zenithmetodo/zenith-crea-ofertas/releases/tag/v2.3.9) [![Brand](https://img.shields.io/badge/Zenith%E2%84%A2-00E5CF?style=for-the-badge)]() [![License](https://img.shields.io/badge/license-MIT-yellow?style=for-the-badge)](LICENSE)
 
 [![Opus 4.7](https://img.shields.io/badge/Opus%204.7-1M%20ctx-blueviolet)]() [![Sonnet](https://img.shields.io/badge/Sonnet%204.6-medium-blue)]() [![Haiku](https://img.shields.io/badge/Haiku%204.5-fast-cyan)]() [![Tokens](https://img.shields.io/badge/tokens-optimized%2060--70%25-green)]() [![Spanish](https://img.shields.io/badge/lang-es--ES-red)]() [![Topics](https://img.shields.io/badge/topics-20-purple)]()
 
-**`/zenith-crea-ofertas:zenith-quick-discovery` · 49 agentes · 19 commands · 19 HTMLs print-to-PDF · 29 knowledge files**
+**`/zenith-crea-ofertas:zenith-quick-discovery` · 49 agentes · 19 commands · 19 HTMLs print-to-PDF · 31 knowledge files**
 
 </div>
 
 
 Sistema completo de agentes Claude Code para construir **OFERTAS TOP 1%** de alto valor percibido en español de España. **Creado por Josep · Método Zenith™** a partir de los frameworks canónicos del Direct Response (Schwartz · Masterson · Bencivenga · Evaldo · Todd Brown · Hormozi · Brunson · Halbert · Sugarman · Cialdini) + transcripciones operativas del autor.
 
-Un orquestador padre coordina **49 sub-agentes especializados** (Opus/Sonnet/Haiku optimizado) + **29 knowledge files** + **19 templates HTML** print-to-PDF + Drive-friendly. El proyecto arranca con una **pre-fase guiada por especificación** (`spec-architect` enmarca → `spec-reviewer` audita por severidad 🔴🟠🟡🟢 → **validación humana** → `plan-architect` hace el plan.md de todo + research). Después, cada agente domina una pieza del puzzle: desde el avatar deep (psicólogo + Reddit + YouTube) hasta la auditoría de 200+ ítems de la oferta final. El bloque 03 (mecanismo) lo lidera **`mecanismo-maestro`**, que pregunta 9 bloques primero y construye 6 piezas cargando la **Biblia del Mecanismo** (131 formaciones destiladas).
+Un orquestador padre coordina **49 sub-agentes especializados** (Opus/Sonnet/Haiku optimizado) + **31 knowledge files** + **19 templates HTML** print-to-PDF + Drive-friendly. El proyecto arranca con una **pre-fase guiada por especificación** (`spec-architect` enmarca → `spec-reviewer` audita por severidad 🔴🟠🟡🟢 → **validación humana** → `plan-architect` hace el plan.md de todo + research). Después, cada agente domina una pieza del puzzle: desde el avatar deep (psicólogo + Reddit + YouTube) hasta la auditoría de 200+ ítems de la oferta final. El bloque 03 (mecanismo) lo lidera **`mecanismo-maestro`**, que pregunta 9 bloques primero y construye 6 piezas cargando la **Biblia del Mecanismo** (131 formaciones destiladas).
 
 > *"De la cima se ve mejor el avatar."*
 
@@ -223,7 +223,7 @@ AVATAR     RESEARCH  COMPETENCIA     ONE BELIEF    MECANISMO   OFERTA
 
 ---
 
-## Pipeline completo (pre-fase + 17 etapas · 47 agentes)
+## Pipeline completo (pre-fase + 17 etapas · 49 agentes)
 
 <div align="center">
 
@@ -271,7 +271,7 @@ AVATAR     RESEARCH  COMPETENCIA     ONE BELIEF    MECANISMO   OFERTA
 
 ---
 
-## Agentes incluidos (41)
+## Agentes incluidos (49)
 
 ### Pre-fase · Spec → Review → Validación → Plan ⭐
 | Agente | Model | Qué hace |
@@ -437,7 +437,7 @@ La carpeta `templates/` contiene **18 plantillas HTML estéticas** con branding 
 
 ---
 
-## Slash Commands (17)
+## Slash Commands (19)
 
 | Command | Función |
 |---|---|
@@ -546,4 +546,8 @@ Eugene Schwartz · Michael Masterson · John Forde · Gary Bencivenga · Evaldo 
 
 ---
 
-*v2.0.0 · 2026-05-28*
+*v2.3.9 · 2026-06-18*
+
+## Dependencias
+
+Este plugin **delega el handoff final en el plugin externo `zenith-audience`**, que **no viene incluido** y se vende/instala por separado. Tras generar los angulos (etapa 13), `zenith-crea-ofertas` auto-invoca `zenith-audience` para crear el contenido a partir de esos angulos. Si `zenith-audience` no esta instalado, el plugin **no rompe**: avisa y deja los angulos listos (degradacion con aviso).
