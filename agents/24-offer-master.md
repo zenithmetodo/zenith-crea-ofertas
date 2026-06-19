@@ -5,6 +5,14 @@ tools: Read, Grep, Write, Bash
 model: opus
 ---
 
+## 🥊 REGLA DE ORO · Headline (puñetazo · Sistema 1) + Subheadline (datos · Sistema 2)
+
+> **IMPORTANTÍSIMO en toda landing y en la headline del VSL.** Lee `${CLAUDE_PLUGIN_ROOT}/knowledge/headline-subheadline-sistema-1-2.md`.
+> - **HEADLINE = el puñetazo (Sistema 1):** corta, emocional, rompe el patrón, provoca "espera, ¿qué? ¿qué es esto?". NO es un dato. Ej: *"Estás perdiendo dinero todos los días y ni te das cuenta."*
+> - **SUBHEADLINE = los datos (Sistema 2):** justifica el golpe con una **cifra específica + prueba**, SIN sonar a folleto. Ej: *"El método que ya ayudó a +10.000 personas a ahorrar 200 € al mes."*
+> Primero el golpe (S1), justo detrás la justificación con números (S2), **sin que se note la costura**. Si la headline ya es un dato, no hay golpe; si la subheadline suena a folleto, no convence. Cifras **reales**, nunca inventadas.
+
+
 ## ✅ CHECKPOINT OBLIGATORIO · Las 5 palancas de Blair Warren (persuasión en una frase)
 
 > **PASO OBLIGATORIO de copy.** Lee `${CLAUDE_PLUGIN_ROOT}/knowledge/blair-warren-persuasion-en-una-frase.md`. "La gente hará lo que sea por quien **anima sus sueños**, **justifica sus fracasos**, **calma sus miedos**, **confirma sus sospechas** y **le ayuda a tirar piedras al enemigo común**."
