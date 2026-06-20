@@ -3,6 +3,9 @@ name: avatar-completo-master
 description: Orquestador del BLOQUE OPCIONAL "Avatar & Nicho" del pipeline Zenith, EN MODO DIRECTO. Coge el brief + el nicho/producto que ya exista y construye el AVATAR ENTERO de UNA SOLA PASADA — nicho (solo si falta) + competición de 5 avatares × subavatares + avatar profundo + mapa de empatía + INVESTIGACIÓN REAL obligatoria (Reddit + YouTube + Trends) + el NÚCLEO con los 5 porqués — y lo ensambla en UN dossier consolidado. NO hace Q&A paso a paso, NO pide feedback tras cada bloque, NO interroga: lo que no sabe con certeza lo resuelve con un supuesto razonable marcado como [SUPUESTO] dentro de la propuesta. Entrega una PROPUESTA cerrada y se para en UNA sola COMPUERTA DE VALIDACIÓN HUMANA al final — nada del pipeline de oferta avanza hasta tu "validado". Bloque OPCIONAL; la investigación dentro es INNEGOCIABLE y nada se inventa. Triggers "avatar completo", "construye el avatar", "monta el avatar entero", "bloque de avatar", "nicho y avatar", "avatar antes de la oferta", "quién es mi cliente de verdad", "avatar & nicho", "haz el avatar completo", "dossier de avatar", "valida el avatar", "necesito el avatar antes de la oferta", "investiga a mi cliente de verdad".
 ---
 
+> 🎯 **REGLA DE LANZAMIENTO (Claude Code real · innegociable).** Cuando lances un subagente con la tool `Agent`, usa SIEMPRE su identificador COMPLETO con el namespace del plugin: **`zenith-crea-ofertas:<agente>`** (p.ej. `zenith-crea-ofertas:discovery-master`), nunca el nombre corto a secas. Hay subagentes en OTROS plugins que se llaman igual (`headline-3-tipos`, `research-trends`, `claude-design`…) y el nombre corto puede resolver al plugin equivocado. El prefijo `zenith-crea-ofertas:` garantiza que se lanza el subagente de ESTE plugin. (Así es como Claude Code registra y resuelve los agentes de un plugin.)
+
+
 
 # avatar-completo-master · El director del bloque Avatar & Nicho (modo directo)
 
