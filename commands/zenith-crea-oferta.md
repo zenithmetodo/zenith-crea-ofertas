@@ -38,7 +38,7 @@ Si pasas argumento, el `34-zenith-quick-discovery` lo usa como semilla y te hace
 
 **Fase 0 · Bloque Avatar & Nicho (OPCIONAL · se ofrece al arrancar)**
 - Antes de nada, el quick-discovery te pregunta: **"¿Construimos primero el avatar completo (nicho + subavatares + investigación real) o ya lo tienes claro?"**
-- Si dices que sí → lanza `50-avatar-completo-master` (= el comando `/avatar-completo`): `47-nicho-perfecto` (opcional) → `48-avatar-competidor` (5 avatares × subavatares con nombres NORMALES + competición a 6 factores) → `35-avatar-deep-psicologo` → `38-avatar-mapa-empatia` → **investigación OBLIGATORIA** (`36-research-reddit` + `37-research-youtube` + `49-research-trends`) → núcleo con los 5 porqués → dossier HTML Zenith → **COMPUERTA DE VALIDACIÓN**. Solo cuando validas el avatar, sigue la Fase 2.
+- Si dices que sí → lanza `avatar-completo-master` (= el comando `/avatar-completo`): `47-nicho-perfecto` (opcional) → `48-avatar-competidor` (5 avatares × subavatares con nombres NORMALES + competición a 6 factores) → `35-avatar-deep-psicologo` → `38-avatar-mapa-empatia` → **investigación OBLIGATORIA** (`36-research-reddit` + `37-research-youtube` + `49-research-trends`) → núcleo con los 5 porqués → dossier HTML Zenith → **COMPUERTA DE VALIDACIÓN**. Solo cuando validas el avatar, sigue la Fase 2.
 - Si ya tienes el avatar claro → se salta este bloque y va directo a la Fase 2.
 
 **Fase 1 · Quick Discovery (siempre)**

@@ -45,7 +45,7 @@ Antes de operar, leo:
 - `${CLAUDE_PLUGIN_ROOT}/knowledge/copy-dr/co-04-pesquisa-avatar.md` (pesquisa profunda del avatar — voz del cliente)
 - `${CLAUDE_PLUGIN_ROOT}/knowledge/copy-dr/co-02-pesquisa-publico.md` (pesquisa del público / segmentación)
 
-> 🔬 **INVESTIGACIÓN OBLIGATORIA, NADA INVENTADO:** las frases textuales, deal-makers/breakers y deseos NO se los inventa la IA. Cuando me orquesta `50-avatar-completo-master`, mi avatar se valida contra `36-research-reddit` + `37-research-youtube` (comentarios) + `49-research-trends` (Google Trends). Cada dato lleva fuente + confianza; si falta evidencia, lo declaro o pregunto. Si me invocan suelto sin research, aviso de que el avatar va "sin validar" y recomiendo lanzar la investigación.
+> 🔬 **INVESTIGACIÓN OBLIGATORIA, NADA INVENTADO:** las frases textuales, deal-makers/breakers y deseos NO se los inventa la IA. Cuando me orquesta `avatar-completo-master`, mi avatar se valida contra `36-research-reddit` + `37-research-youtube` (comentarios) + `49-research-trends` (Google Trends). Cada dato lleva fuente + confianza; si falta evidencia, lo declaro o pregunto. Si me invocan suelto sin research, aviso de que el avatar va "sin validar" y recomiendo lanzar la investigación.
 
 ## 🧠 CONOCIMIENTO INTERNALIZADO
 
@@ -174,7 +174,7 @@ aceptación · curiosidad · comer · familia · honor · idealismo · independe
 
 ### Paso 1 · LEER BRIEF + RELLENAR GAPS CON SUPUESTOS (modo directo, sin interrogatorios)
 
-> ⚡ **MODO DIRECTO.** No hago Q&A. Leo `brief.json` (+ research si me lo orquesta `50-avatar-completo-master`) y, lo que falte, lo RESUELVO con un supuesto razonable marcado como **[SUPUESTO]**, para que el cliente lo confirme o corrija de un vistazo en la compuerta de validación. Solo formulo UNA pregunta si falta un dato crítico e imposible de inferir sin el cual el avatar sería inválido (y casi nunca pasa). En lugar de preguntar, deduzco y marco. Ejemplos de cosas que infiero con [SUPUESTO] si no me las dan:
+> ⚡ **MODO DIRECTO.** No hago Q&A. Leo `brief.json` (+ research si me lo orquesta `avatar-completo-master`) y, lo que falte, lo RESUELVO con un supuesto razonable marcado como **[SUPUESTO]**, para que el cliente lo confirme o corrija de un vistazo en la compuerta de validación. Solo formulo UNA pregunta si falta un dato crítico e imposible de inferir sin el cual el avatar sería inválido (y casi nunca pasa). En lugar de preguntar, deduzco y marco. Ejemplos de cosas que infiero con [SUPUESTO] si no me las dan:
 - la última frase que el avatar diría en voz alta sobre el problema,
 - qué hace un sábado por la mañana,
 - cuál fue su último intento fallido.

@@ -33,7 +33,7 @@ Si pasas argumento, el comando lo usa como semilla para el `discovery-master`. S
 
 ## QUÉ AGENTES LANZA
 
-> 🧬 **Bloque Avatar & Nicho (OPCIONAL · antes de la cascada).** Si no tienes el avatar clavado, lanza primero `/avatar-completo` (orquesta `50-avatar-completo-master`): nicho (opcional) → competición de subavatares con nombres NORMALES (6 factores) → avatar profundo → investigación OBLIGATORIA (Reddit + YouTube + Google Trends, nada inventado) → núcleo con los 5 porqués → dossier HTML Zenith → COMPUERTA DE VALIDACIÓN. Cuando lo validas, esta cascada arranca desde el paso 2 (el avatar ya está hecho). Si ya tienes avatar, ignora este bloque.
+> 🧬 **Bloque Avatar & Nicho (OPCIONAL · antes de la cascada).** Si no tienes el avatar clavado, lanza primero `/avatar-completo` (orquesta `avatar-completo-master`): nicho (opcional) → competición de subavatares con nombres NORMALES (6 factores) → avatar profundo → investigación OBLIGATORIA (Reddit + YouTube + Google Trends, nada inventado) → núcleo con los 5 porqués → dossier HTML Zenith → COMPUERTA DE VALIDACIÓN. Cuando lo validas, esta cascada arranca desde el paso 2 (el avatar ya está hecho). Si ya tienes avatar, ignora este bloque.
 
 En este orden (cascada estricta — saltarse uno = oferta floja):
 

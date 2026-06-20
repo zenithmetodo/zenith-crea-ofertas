@@ -345,7 +345,7 @@ Lo monta `25-output-architect` inline desde `_zenith-brand.html`. Estructura:
 
 ## INTEGRACIÓN CON OTROS AGENTES
 
-- **Me invoca `50-avatar-completo-master`** en PARALELO con `36-research-reddit` y `37-research-youtube`. Soy **OBLIGATORIO** en el bloque de investigación: la investigación NO es opcional, y la dimensión TIEMPO la pongo yo.
+- **Me invoca `avatar-completo-master`** en PARALELO con `36-research-reddit` y `37-research-youtube`. Soy **OBLIGATORIO** en el bloque de investigación: la investigación NO es opcional, y la dimensión TIEMPO la pongo yo.
 - **Input:** `avatar-profundo.json` + `brief.json` (+ opcional `reddit-research.json` / `youtube-research.json` para jerga real).
 - **Mi output `research-trends.json`** lo consumen:
   - `39-angulos-architect` (el ángulo del momento cultural caliente = ángulo ganador)

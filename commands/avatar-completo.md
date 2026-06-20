@@ -1,6 +1,6 @@
 ---
 name: avatar-completo
-description: ENTRY POINT del BLOQUE OPCIONAL "Avatar & Nicho". Lanza el orquestador 50-avatar-completo-master en MODO DIRECTO — sin interrogatorios, sin Q&A paso a paso: produce TODO de una sola pasada como PROPUESTA cerrada (lo dudoso lo marca como [SUPUESTO]). Cubre nicho (opcional) → competición de subavatares con nombres NORMALES y profundidad de biblia → avatar profundo → mapa de empatía → INVESTIGACIÓN REAL OBLIGATORIA (Reddit + YouTube + Google Trends, nada inventado) → núcleo con los 5 porqués → dossier HTML estético Zenith → COMPUERTA: tú lo revisas y validas; solo entonces sigue el pipeline de oferta. Triggers "avatar completo", "nicho y avatar", "elegir fatia", "qué subavatar ataco", "avatar antes de la oferta", "no tengo nicho ayúdame", "investiga el avatar de verdad", "avatar validado", "bloque avatar opcional", "propuesta de avatar", "avatar de una pasada".
+description: ENTRY POINT del BLOQUE OPCIONAL "Avatar & Nicho". Lanza el orquestador avatar-completo-master en MODO DIRECTO — sin interrogatorios, sin Q&A paso a paso: produce TODO de una sola pasada como PROPUESTA cerrada (lo dudoso lo marca como [SUPUESTO]). Cubre nicho (opcional) → competición de subavatares con nombres NORMALES y profundidad de biblia → avatar profundo → mapa de empatía → INVESTIGACIÓN REAL OBLIGATORIA (Reddit + YouTube + Google Trends, nada inventado) → núcleo con los 5 porqués → dossier HTML estético Zenith → COMPUERTA: tú lo revisas y validas; solo entonces sigue el pipeline de oferta. Triggers "avatar completo", "nicho y avatar", "elegir fatia", "qué subavatar ataco", "avatar antes de la oferta", "no tengo nicho ayúdame", "investiga el avatar de verdad", "avatar validado", "bloque avatar opcional", "propuesta de avatar", "avatar de una pasada".
 argument-hint: "[opcional: nicho/producto en 1 frase · ej: 'app glúteo mujeres 25-50' o 'no tengo nicho, ayúdame a encontrarlo']"
 ---
 
@@ -8,7 +8,7 @@ argument-hint: "[opcional: nicho/producto en 1 frase · ej: 'app glúteo mujeres
 
 ## QUÉ HACE
 
-Es el **punto de entrada del BLOQUE OPCIONAL "Avatar & Nicho"**. Cuando lo lanzas, no corre un solo agente: arranca el orquestador `50-avatar-completo-master`, que dirige una cascada completa hasta dejarte un **avatar validado por ti** y listo para alimentar todo el pipeline de oferta.
+Es el **punto de entrada del BLOQUE OPCIONAL "Avatar & Nicho"**. Cuando lo lanzas, no corre un solo agente: tú (hilo principal) activas la skill orquestadora `avatar-completo-master`, que dirige una cascada completa hasta dejarte un **avatar validado por ti** y listo para alimentar todo el pipeline de oferta.
 
 La diferencia con el flujo de antes: aquí **no hay interrogatorio**. ⚡ Funciona en **MODO DIRECTO**.
 
@@ -59,7 +59,7 @@ Con una frase, salta directo a la competición de subavatares y monta la propues
 
 ## QUÉ AGENTES LANZA
 
-Orquestador raíz: **`50-avatar-completo-master`** (dirige toda la cascada de una pasada, sin preguntas, y la compuerta final).
+Orquestador raíz: **skill `avatar-completo-master`** (hilo principal · lanza la cascada con `Agent`) (dirige toda la cascada de una pasada, sin preguntas, y la compuerta final).
 
 Cascada que ejecuta:
 

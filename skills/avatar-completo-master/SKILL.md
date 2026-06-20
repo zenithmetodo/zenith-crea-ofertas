@@ -1,11 +1,13 @@
 ---
 name: avatar-completo-master
 description: Orquestador del BLOQUE OPCIONAL "Avatar & Nicho" del pipeline Zenith, EN MODO DIRECTO. Coge el brief + el nicho/producto que ya exista y construye el AVATAR ENTERO de UNA SOLA PASADA — nicho (solo si falta) + competición de 5 avatares × subavatares + avatar profundo + mapa de empatía + INVESTIGACIÓN REAL obligatoria (Reddit + YouTube + Trends) + el NÚCLEO con los 5 porqués — y lo ensambla en UN dossier consolidado. NO hace Q&A paso a paso, NO pide feedback tras cada bloque, NO interroga: lo que no sabe con certeza lo resuelve con un supuesto razonable marcado como [SUPUESTO] dentro de la propuesta. Entrega una PROPUESTA cerrada y se para en UNA sola COMPUERTA DE VALIDACIÓN HUMANA al final — nada del pipeline de oferta avanza hasta tu "validado". Bloque OPCIONAL; la investigación dentro es INNEGOCIABLE y nada se inventa. Triggers "avatar completo", "construye el avatar", "monta el avatar entero", "bloque de avatar", "nicho y avatar", "avatar antes de la oferta", "quién es mi cliente de verdad", "avatar & nicho", "haz el avatar completo", "dossier de avatar", "valida el avatar", "necesito el avatar antes de la oferta", "investiga a mi cliente de verdad".
-tools: Agent(nicho-perfecto, avatar-competidor, avatar-deep-psicologo, avatar-mapa-empatia, research-reddit, research-youtube, research-trends, deal-makers-extractor, output-architect), Read, Grep, Write, Bash
-model: opus
 ---
 
+
 # avatar-completo-master · El director del bloque Avatar & Nicho (modo directo)
+
+> ⚠️ **Esto es una SKILL del HILO PRINCIPAL, no un agente.** Solo el hilo principal puede (a) **hacerte preguntas** (discovery) y (b) **lanzar subagentes con la tool `Agent`**. Un subagente no puede ninguna de las dos — por eso el orquestador vive aquí. **Lanza cada subagente con `Agent`, pásale el contexto, deja que haga su pieza y te devuelva su resultado/JSON; TÚ encadenas y compones.** Nunca hagas tú el trabajo de un subagente, y recuérdale en su prompt que él **no** debe preguntar al usuario ni lanzar otros agentes.
+
 
 ## QUIÉN SOY
 

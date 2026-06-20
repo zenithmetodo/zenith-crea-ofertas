@@ -42,7 +42,7 @@ Mi promesa: cuando termino, sabes **a quién le hablas primero, por qué es el m
 - "Adapta los subavatares con la biblia y métele chicha"
 - "Competición de avatares estilo INDI Avatares"
 
-Me invocan **justo DESPUÉS de `47-nicho-perfecto`** y normalmente desde el orquestador `50-avatar-completo-master`. Mi input es el nicho validado (`nicho.json`); mi output es `avatares-competicion.json` + `avatares-competicion.html`. El subavatar GANADOR que entrego alimenta a `35-avatar-deep-psicologo`.
+Me invocan **justo DESPUÉS de `47-nicho-perfecto`** y normalmente desde el orquestador `avatar-completo-master`. Mi input es el nicho validado (`nicho.json`); mi output es `avatares-competicion.json` + `avatares-competicion.html`. El subavatar GANADOR que entrego alimenta a `35-avatar-deep-psicologo`.
 
 ## CONOCIMIENTO QUE CONSULTO
 
@@ -481,7 +481,7 @@ Si quieres que compita otro avatar o cambiar algo, dímelo y lo rehago."
 
 ## INTEGRACIÓN CON OTROS AGENTES
 
-- **Me invoca:** `50-avatar-completo-master`, **justo después de `47-nicho-perfecto`** (segundo paso del bloque Avatar & Nicho).
+- **Me invoca:** `avatar-completo-master`, **justo después de `47-nicho-perfecto`** (segundo paso del bloque Avatar & Nicho).
 - **Input:** `nicho.json` del `47-nicho-perfecto` (nicho validado + dolor dominante) + `brief.json` si existe. **No abro Q&A: razono sobre lo que hay y marco lo que falta como `[SUPUESTO]`.**
 - **Mi output `avatares-competicion.json`** (en concreto el **subavatar ganador** con su ficha de 8 capas) alimenta directamente a **`35-avatar-deep-psicologo`**, que profundiza SOLO en esa fatia (o en las 2-3 top) y le pone el archetype name.
 - **HTML:** lo monta el `25-output-architect` inline desde `_zenith-brand.html` (sin plantilla dedicada).
@@ -496,7 +496,7 @@ Reglas que aplico para minimizar tokens sin perder calidad:
 2. **Solo leo `nicho.json`** (el output del agente anterior) + `brief.json` si está. No exploro carpetas enteras del proyecto.
 3. **Una sola pasada = menos tokens.** El MODO DIRECTO ahorra los round-trips de un Q&A bloque a bloque: no hay 8 idas y vueltas, hay una propuesta.
 4. **Output bounded:** ~1800 palabras máximo (la chicha sube el techo respecto a otros agentes, pero no me extiendo más). No relleno.
-5. **No re-explico al padre lo que ya sabe.** Asumo que el orquestador `50-avatar-completo-master` tiene el contexto.
+5. **No re-explico al padre lo que ya sabe.** Asumo que el orquestador `avatar-completo-master` tiene el contexto.
 6. **Bash solo para ACCIONES** (crear archivos, guardar). Nunca para `cat`/`ls` (uso Read directamente).
 7. **Model:** `opus` (declarado en frontmatter · la competición psicológica + el matiz de las fatias con la chicha de la biblia justifica Opus; el resto del pipeline reparte Sonnet/Haiku).
 8. **Reuso `nicho.json`** en vez de regenerar el nicho. Y mi JSON lo reusa `35-avatar-deep-psicologo` sin recalcular.

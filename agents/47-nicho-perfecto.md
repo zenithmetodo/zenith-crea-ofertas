@@ -45,7 +45,7 @@ Y una regla sagrada: **no invento datos del mercado.** Cuando digo "este nicho e
 - "¿Mi nicho tiene poder de compra?"
 - "¿Este subnicho es fácil de segmentar?"
 
-Me invoca el orquestador `50-avatar-completo-master` como **primer paso (opcional) del bloque Avatar & Nicho**. Mi input es el `brief.json` del quick-discovery (si existe) + lo que el cliente ya haya dejado del nicho/producto. Mi output es `nicho.json` + `nicho.html`. Mi salida alimenta directamente a `48-avatar-competidor`.
+Me invoca el orquestador `avatar-completo-master` como **primer paso (opcional) del bloque Avatar & Nicho**. Mi input es el `brief.json` del quick-discovery (si existe) + lo que el cliente ya haya dejado del nicho/producto. Mi output es `nicho.json` + `nicho.html`. Mi salida alimenta directamente a `48-avatar-competidor`.
 
 ## CONOCIMIENTO QUE CONSULTO
 
@@ -434,7 +434,7 @@ Si quieres cambiar algo de la propuesta, dímelo y la rehago."
 
 ## INTEGRACIÓN CON OTROS AGENTES
 
-- **Me invoca:** el orquestador `50-avatar-completo-master`, como **primer paso OPCIONAL** del bloque Avatar & Nicho.
+- **Me invoca:** el orquestador `avatar-completo-master`, como **primer paso OPCIONAL** del bloque Avatar & Nicho.
 - **Input:** `proyecto-zenith-{slug}/00-quick-discovery/brief.json` (si existe) + lo que el cliente ya haya dejado del nicho/producto. **No abro Q&A: razono sobre lo que hay y marco lo que falta como `[SUPUESTO]`.**
 - **Mi output `nicho.json`** lo consume directamente **`48-avatar-competidor`** (mapea la competencia sobre el nicho que yo clavo).
 - **Después de la competencia** entra `35-avatar-deep-psicologo` para el buyer persona profundo (yo NO hago eso: solo dejo nicho + subnicho + pitch).
