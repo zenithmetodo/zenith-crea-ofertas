@@ -277,9 +277,9 @@ Este documento es el cerebro compartido del bloque de nicho + avatar. Cada agent
 | **48-avatar-competidor** | Las **fatias (naming normal)** + la **competición de 6 factores**. Genera las rebanadas, las puntúa, marca los factores 3 y 4 como "estimación · revisar cliente" y elige la fatia ganadora. |
 | **35-avatar-deep-psicologo** | El **núcleo del deseo (5 porqués)** + el **día medio perfecto (Core Influence)**. Baja al miedo raíz y construye el "Un día en la vida (DESPUÉS)" con detalle sensorial. |
 | **49-research-trends** | La sección de **investigación obligatoria**: Google Trends para el filtro crecimiento + triangulación con Reddit/YouTube, todo con fuente y confianza. |
-| **50-avatar-completo-master** | **Todo el documento.** Ensambla nicho + fatias + competición + núcleo + research en el avatar completo, listo para que escriban promesa, mecanismo, ángulos y copy. |
+| **avatar-completo-master** | **Todo el documento.** Ensambla nicho + fatias + competición + núcleo + research en el avatar completo, listo para que escriban promesa, mecanismo, ángulos y copy. |
 
-> **Flujo típico:** `47-nicho-perfecto` (clava nicho) → `48-avatar-competidor` (rebana en fatias y elige ganadora) → `49-research-trends` + `36/37-research-*` (valida con datos reales) → `35-avatar-deep-psicologo` (baja al núcleo + día perfecto) → `50-avatar-completo-master` (ensambla). De ahí salen, ya con bisturí: `39-angulos-architect` (un ángulo por fatia), `14-promesa-ganadora`, `03-one-belief-creator`, `44-mecanismo-maestro`.
+> **Flujo típico:** `47-nicho-perfecto` (clava nicho) → `48-avatar-competidor` (rebana en fatias y elige ganadora) → `49-research-trends` + `36/37-research-*` (valida con datos reales) → `35-avatar-deep-psicologo` (baja al núcleo + día perfecto) → `avatar-completo-master` (ensambla). De ahí salen, ya con bisturí: `39-angulos-architect` (un ángulo por fatia), `14-promesa-ganadora`, `03-one-belief-creator`, `44-mecanismo-maestro`.
 
 ### Enlaces a conocimiento hermano
 
